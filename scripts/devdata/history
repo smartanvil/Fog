@@ -1,0 +1,12 @@
+
+unlock
+admin.unlock
+admin
+account
+admin.getContractInfo('0x32434534535')
+admin.getContractInfo
+echo "asd"
+admin.getContractInfo()
+admin.getContractInfo('asd')
+admin.getContractinfo('asd')
+admin.getContractInfo('asd')

@@ -16,8 +16,8 @@ baseline: spec
 						version: #stable;
 						repository: 'http://mc.stfx.eu/Neo' ].
 			
-			spec package: #FogFB with: [ spec requires: #('FogSolidityAST' 'FogCommunication' 'TaskItShell' ) ].
-			spec package: #FogFBTests with: [ spec requires: #('FogFB') ]. ]
+			spec package: #FogDB with: [ spec requires: #('FogSolidityAST' 'FogCommunication' 'TaskItShell' ) ].
+			spec package: #FogFBTests with: [ spec requires: #('FogDB') ]. ]
 		
 	
 

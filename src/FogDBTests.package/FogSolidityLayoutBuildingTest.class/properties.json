@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "FogDBTests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"contract"
+	],
+	"instvars" : [
+		"mirror"
+	],
+	"name" : "FogSolidityLayoutBuildingTest",
+	"type" : "normal"
+}

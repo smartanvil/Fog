@@ -1,0 +1,16 @@
+{
+	"instance" : {
+		"testContractCallSetMethodInTransactionModifiesValue" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"testContractHasMethods" : "SantiagoBragagnolo 1/24/2017 18:23",
+		"testContractViewerOnSimpleStorageRespectOrder" : "SantiagoBragagnolo 1/24/2017 18:25",
+		"testContractViewerOnSimpleStorageTypes" : "SantiagoBragagnolo 1/24/2017 18:26",
+		"testContractSetMethodSignature" : "SantiagoBragagnolo 1/24/2017 18:23",
+		"testContractViewerOnSimpleStorageHas3Variables" : "SantiagoBragagnolo 1/24/2017 18:24",
+		"testContractHasSetMethod" : "SantiagoBragagnolo 1/24/2017 18:23",
+		"fetchVariableValue" : "SantiagoBragagnolo 12/12/2016 11:12",
+		"testContractViewerOnSimpleStorageValuesAreTheExpected" : "SantiagoBragagnolo 1/24/2017 18:28",
+		"testContractSetMethodModifiesState" : "SantiagoBragagnolo 1/24/2017 18:23",
+		"setUp" : "SantiagoBragagnolo 12/9/2016 22:24"
+	},
+	"class" : { }
+}

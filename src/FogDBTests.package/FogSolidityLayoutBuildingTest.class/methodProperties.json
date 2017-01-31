@@ -1,0 +1,20 @@
+{
+	"instance" : {
+		"ownerAccount" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"testBool1IsTrue" : "SantiagoBragagnolo 1/25/2017 15:52",
+		"account" : "SantiagoBragagnolo 1/24/2017 12:25",
+		"testOwnerIsInSlot0FromByte0ToByte19" : "SantiagoBragagnolo 1/25/2017 15:57",
+		"testOwnerIsTheGivenAccount" : "SantiagoBragagnolo 1/25/2017 15:53",
+		"testMidintIsInSlot1FromByte1ToByte3" : "SantiagoBragagnolo 1/25/2017 15:57",
+		"testBool2IsTrue" : "SantiagoBragagnolo 1/25/2017 15:53",
+		"testSimpleExampleIsInSlot2And3FromByte0ToByte" : "SantiagoBragagnolo 1/25/2017 15:58",
+		"testContractIsStructContract" : "SantiagoBragagnolo 1/24/2017 11:54",
+		"testMidintIs32" : "SantiagoBragagnolo 1/25/2017 15:53",
+		"testSimpleExampleIsWellSetUp" : "SantiagoBragagnolo 1/25/2017 15:53",
+		"testBool1IsInSlot1FromByte0ToByte1" : "SantiagoBragagnolo 1/25/2017 15:57",
+		"testArrayIsInSlot3AndUsesItfully" : "SantiagoBragagnolo 1/25/2017 15:57",
+		"testBool2IsInSlot1FromByte3ToByte4" : "SantiagoBragagnolo 1/25/2017 15:57",
+		"setUp" : "SantiagoBragagnolo 1/30/2017 17:10"
+	},
+	"class" : { }
+}

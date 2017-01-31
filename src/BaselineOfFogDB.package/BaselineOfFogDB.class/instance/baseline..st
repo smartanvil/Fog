@@ -6,8 +6,9 @@ baseline: spec
 		do: [ 
 			spec blessing: #baseline.
 			spec baseline: 'TaskItShell' with: [ spec repository: 'github://sbragagnolo/taskit:pre-release-3-scale' ].
-			spec baseline: 'FogCommunication' with: [ spec repository: 'github://sbragagnolo/Fog' ].
-			spec baseline: 'FogSolidityAST' with: [ spec repository: 'github://sbragagnolo/Fog' ].
+			spec baseline: 'FogCommunication' with: [ spec repository: 'github://sbragagnolo/Fog/src' ].
+			spec baseline: 'FogSolidityAST' with: [ spec repository: 'github://sbragagnolo/Fog/src' ].
+			
 			spec
 				project: 'NeoJSON'
 				with: [ spec
@@ -15,7 +16,7 @@ baseline: spec
 						version: #stable;
 						repository: 'http://mc.stfx.eu/Neo' ].
 			
-			spec package: #EthereumDB with: [ spec requires: #('FogCommuncation' 'TaskItShell' ) ].
+			spec package: #EthereumDB with: [ spec requires: #('FogSolidityAST' 'FogCommunication' 'TaskItShell' ) ].
 			spec package: #EthereumDBTests with: [ spec requires: #('EthereumDB') ]. ]
 		
 	

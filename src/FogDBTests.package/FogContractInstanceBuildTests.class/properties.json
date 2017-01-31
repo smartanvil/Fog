@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogArbitraryAddressesTestCase",
+	"category" : "FogDBTests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"simpleStorage"
+	],
+	"name" : "FogContractInstanceBuildTests",
+	"type" : "normal"
+}

@@ -16,8 +16,8 @@ baseline: spec
 						version: #stable;
 						repository: 'http://mc.stfx.eu/Neo' ].
 			
-			spec package: #EthereumDB with: [ spec requires: #('FogSolidityAST' 'FogCommunication' 'TaskItShell' ) ].
-			spec package: #EthereumDBTests with: [ spec requires: #('EthereumDB') ]. ]
+			spec package: #FogFB with: [ spec requires: #('FogSolidityAST' 'FogCommunication' 'TaskItShell' ) ].
+			spec package: #FogFBTests with: [ spec requires: #('FogFB') ]. ]
 		
 	
 

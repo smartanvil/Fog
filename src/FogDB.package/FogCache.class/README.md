@@ -1,0 +1,1 @@
+Cache object has a dictionary that instantiate for each key a newCollection. Which depending on the caching set it is a real set or a fake set (that does not stores anything )

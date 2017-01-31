@@ -1,0 +1,1 @@
+Maps the special case of the array. 

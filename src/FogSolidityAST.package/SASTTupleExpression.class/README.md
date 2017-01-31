@@ -1,0 +1,1 @@
+This node referes to tuple kind of ordered data. Solidity allows multiple values return in way of tuples 

@@ -1,0 +1,1 @@
+This node represents the list of parameters that may receive or return a funtion / event 

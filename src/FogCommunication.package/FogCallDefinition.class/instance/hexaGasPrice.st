@@ -1,0 +1,3 @@
+accessing
+hexaGasPrice
+	^ gasPrice asBKHexa

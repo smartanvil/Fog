@@ -1,0 +1,1 @@
+Given a Json ast (output of the solidity compiler), gives a  reification with real objects and real connections 

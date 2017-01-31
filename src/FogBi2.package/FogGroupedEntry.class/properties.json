@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:23",
+	"super" : "Object",
+	"category" : "FogBi2-Charting",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"kind",
+		"amount",
+		"ammount"
+	],
+	"name" : "FogGroupedEntry",
+	"type" : "normal"
+}

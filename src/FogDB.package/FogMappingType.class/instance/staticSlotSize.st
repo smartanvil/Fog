@@ -1,0 +1,3 @@
+testing
+staticSlotSize
+	^ 32

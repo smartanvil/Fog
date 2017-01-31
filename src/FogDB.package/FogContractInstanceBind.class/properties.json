@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/7/2016 13:47",
+	"super" : "FogConnectedObject",
+	"category" : "FogDB-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"address",
+		"contract"
+	],
+	"name" : "FogContractInstanceBind",
+	"type" : "normal"
+}

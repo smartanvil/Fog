@@ -1,0 +1,30 @@
+{
+	"instance" : {
+		"literal_string" : "SantiagoBragagnolo 11/30/2016 16:27",
+		"msg" : "SantiagoBragagnolo 11/30/2016 16:27",
+		"resolve:" : "SantiagoBragagnolo 12/5/2016 17:25",
+		"initialize" : "SantiagoBragagnolo 11/29/2016 12:18",
+		"uint32" : "SantiagoBragagnolo 12/1/2016 13:36",
+		"int16" : "SantiagoBragagnolo 1/24/2017 11:11",
+		"uint" : "SantiagoBragagnolo 12/1/2016 13:34",
+		"int8" : "SantiagoBragagnolo 12/1/2016 13:37",
+		"bytes32" : "SantiagoBragagnolo 12/1/2016 13:38",
+		"uint8" : "SantiagoBragagnolo 12/1/2016 13:37",
+		"int32" : "SantiagoBragagnolo 12/1/2016 13:37",
+		"selector:" : "SantiagoBragagnolo 12/1/2016 13:30",
+		"int" : "SantiagoBragagnolo 12/1/2016 13:37",
+		"types" : "SantiagoBragagnolo 12/15/2016 11:19",
+		"string" : "SantiagoBragagnolo 11/30/2016 16:27",
+		"bool" : "SantiagoBragagnolo 11/30/2016 16:27",
+		"int256" : "SantiagoBragagnolo 12/1/2016 13:37",
+		"uint64" : "SantiagoBragagnolo 11/30/2016 16:27",
+		"install:" : "SantiagoBragagnolo 11/30/2016 16:10",
+		"int_const" : "SantiagoBragagnolo 11/30/2016 16:27",
+		"tuple" : "SantiagoBragagnolo 12/1/2016 13:31",
+		"getOrCreateFunctionTypeFor:" : "SantiagoBragagnolo 11/30/2016 14:46",
+		"index:" : "SantiagoBragagnolo 11/29/2016 15:51",
+		"uint256" : "SantiagoBragagnolo 12/1/2016 12:59",
+		"address" : "SantiagoBragagnolo 11/30/2016 16:26"
+	},
+	"class" : { }
+}

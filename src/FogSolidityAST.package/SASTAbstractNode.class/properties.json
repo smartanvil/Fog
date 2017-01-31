@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/14/2016 18:24",
+	"super" : "Object",
+	"category" : "FogSolidityAST-Nodes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SASTAbstractNode",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 15:57",
+	"super" : "Object",
+	"category" : "FogCommunication-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogAdminAPI",
+	"type" : "normal"
+}

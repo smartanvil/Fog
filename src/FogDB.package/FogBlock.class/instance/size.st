@@ -1,0 +1,3 @@
+properties
+size 
+	^ size

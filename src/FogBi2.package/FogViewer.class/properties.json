@@ -1,0 +1,16 @@
+{
+	"classtraitcomposition" : "TFogShowable classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"instance",
+		"mirror"
+	],
+	"name" : "FogViewer",
+	"commentStamp" : "SantiagoBragagnolo 12/16/2016 16:27",
+	"super" : "FogConnectedObject",
+	"traitcomposition" : "TFogShowable",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FogBi2"
+}

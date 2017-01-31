@@ -1,0 +1,1 @@
+This nodes represents a clasical binary operation, as, a && b. 

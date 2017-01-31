@@ -1,0 +1,1 @@
+This is an abstract node that represents any container that works as container 

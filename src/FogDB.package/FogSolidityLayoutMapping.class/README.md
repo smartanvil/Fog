@@ -1,0 +1,1 @@
+This object represents a map of a property in the memory layout

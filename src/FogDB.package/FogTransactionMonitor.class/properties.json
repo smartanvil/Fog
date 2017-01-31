@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 1/31/2017 14:58",
+	"super" : "Object",
+	"category" : "FogDB-Service",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"transactionHash",
+		"future",
+		"timeLeft"
+	],
+	"name" : "FogTransactionMonitor",
+	"type" : "normal"
+}

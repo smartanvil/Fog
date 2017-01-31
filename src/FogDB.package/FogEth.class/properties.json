@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:18",
+	"super" : "FogAPIAccess",
+	"category" : "FogDB-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogEth",
+	"type" : "normal"
+}

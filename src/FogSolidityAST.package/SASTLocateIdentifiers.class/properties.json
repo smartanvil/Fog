@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogSolidityAST-Builder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"identifiers",
+		"contexts",
+		"suicideFunction"
+	],
+	"name" : "SASTLocateIdentifiers",
+	"type" : "normal"
+}

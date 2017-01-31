@@ -1,0 +1,3 @@
+*FogCommunication
+allInstVarNamesForEqualityComparison
+	^self superclass allInstVarNamesForEqualityComparison, self instVarNamesForEqualityComparison

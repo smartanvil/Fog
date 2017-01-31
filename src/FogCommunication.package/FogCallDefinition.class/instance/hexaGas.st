@@ -1,0 +1,3 @@
+accessing
+hexaGas
+	^ gas asBKHexa

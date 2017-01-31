@@ -1,0 +1,27 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:21",
+	"super" : "RTBuilder",
+	"category" : "FogBi2-Charting",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classes",
+		"classesGroup",
+		"classname",
+		"instanceVariables",
+		"methodsNames",
+		"superclass",
+		"methodselector",
+		"methodShape",
+		"layout",
+		"attributeselector",
+		"attributeShape",
+		"lineShape",
+		"boxShape",
+		"classNameShape",
+		"edgeActions"
+	],
+	"name" : "FogAbstractBuilder",
+	"type" : "normal"
+}

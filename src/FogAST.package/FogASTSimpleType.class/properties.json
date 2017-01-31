@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FogASTNamedNode",
+	"category" : "FogAST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogASTSimpleType",
+	"type" : "normal"
+}

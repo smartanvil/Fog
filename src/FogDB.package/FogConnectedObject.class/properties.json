@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "TFogCached classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogConnectedObject",
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:29",
+	"super" : "Object",
+	"traitcomposition" : "TFogCached",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FogDB-Domain"
+}

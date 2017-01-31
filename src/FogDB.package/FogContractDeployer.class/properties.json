@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "FogConnectedObject",
+	"category" : "FogDB-Util",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contract",
+		"owner",
+		"arguments"
+	],
+	"name" : "FogContractDeployer",
+	"type" : "normal"
+}

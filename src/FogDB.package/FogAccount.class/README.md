@@ -1,0 +1,1 @@
+Represents an Account in ethereum network. It may be external, contract or nil 

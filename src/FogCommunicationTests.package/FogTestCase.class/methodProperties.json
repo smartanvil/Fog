@@ -1,0 +1,10 @@
+{
+	"instance" : {
+		"assert:isKindOf:" : "SantiagoBragagnolo 12/8/2016 17:17",
+		"assertEntityFromMessage:equalsToJson:" : "SantiagoBragagnolo 11/4/2016 17:35",
+		"url" : "SantiagoBragagnolo 11/10/2016 10:48",
+		"setUp" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"transferEntityFromJsonString:" : "SantiagoBragagnolo 1/30/2017 17:10"
+	},
+	"class" : { }
+}

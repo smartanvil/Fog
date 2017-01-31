@@ -1,0 +1,3 @@
+accessing
+totalDifficulty 
+	^ totalDifficulty asBKNumber

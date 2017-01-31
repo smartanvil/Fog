@@ -1,0 +1,3 @@
+equality
+isContract
+	^ false

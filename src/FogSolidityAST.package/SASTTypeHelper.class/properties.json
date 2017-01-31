@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:36",
+	"super" : "Object",
+	"category" : "FogSolidityAST-Builder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"types"
+	],
+	"name" : "SASTTypeHelper",
+	"type" : "normal"
+}

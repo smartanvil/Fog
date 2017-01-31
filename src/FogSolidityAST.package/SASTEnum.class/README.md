@@ -1,0 +1,1 @@
+this ast node referes to an enum clasical type declaration 

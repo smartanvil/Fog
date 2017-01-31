@@ -1,0 +1,22 @@
+{
+	"classtraitcomposition" : "TFogCached classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"binary",
+		"runtime",
+		"abi",
+		"ast",
+		"name",
+		"mirror",
+		"methods",
+		"aTypeSet"
+	],
+	"name" : "FogContractDescription",
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:26",
+	"super" : "Object",
+	"traitcomposition" : "TFogCached",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FogDB-Meta-Description"
+}

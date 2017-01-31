@@ -1,0 +1,1 @@
+This object is the regular transfer entity. It has an id of request, message name and parameters 

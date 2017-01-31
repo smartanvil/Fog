@@ -1,0 +1,3 @@
+as yet unclassified
+addUserDefinedTypeName: aSASTUserDefinedTypeName 
+	self setType: aSASTUserDefinedTypeName

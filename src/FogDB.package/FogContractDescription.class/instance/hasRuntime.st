@@ -1,0 +1,3 @@
+testing
+hasRuntime
+	^ runtime isNotNil

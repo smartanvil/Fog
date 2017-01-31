@@ -1,0 +1,3 @@
+as yet unclassified
+readingAccessWith: anETHASTVisitorForSolidity
+	^ anETHASTVisitorForSolidity createPropertyGetter: self

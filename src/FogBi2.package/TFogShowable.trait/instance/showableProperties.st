@@ -1,0 +1,3 @@
+required
+showableProperties
+	^ self required 

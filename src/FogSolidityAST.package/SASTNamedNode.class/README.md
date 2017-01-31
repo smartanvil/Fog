@@ -1,0 +1,1 @@
+Still abstract .Just adds name property 

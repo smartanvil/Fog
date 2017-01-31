@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "FogASTNode",
+	"category" : "FogAST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selector",
+		"arguments",
+		"return",
+		"body"
+	],
+	"name" : "FogASTMethod",
+	"type" : "normal"
+}

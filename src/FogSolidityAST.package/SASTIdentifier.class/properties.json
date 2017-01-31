@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:45",
+	"super" : "SASTNode",
+	"category" : "FogSolidityAST-Nodes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"value",
+		"type",
+		"type_conversion",
+		"referencesTo"
+	],
+	"name" : "SASTIdentifier",
+	"type" : "normal"
+}

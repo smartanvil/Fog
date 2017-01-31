@@ -1,0 +1,19 @@
+{
+	"instance" : {
+		"staticSlotSize" : "SantiagoBragagnolo 1/24/2017 11:36",
+		"unpack:using:" : "SantiagoBragagnolo 12/14/2016 22:48",
+		"pack:using:" : "SantiagoBragagnolo 12/15/2016 12:30",
+		"name" : "SantiagoBragagnolo 12/14/2016 22:45",
+		"name:" : "SantiagoBragagnolo 12/14/2016 22:41"
+	},
+	"class" : {
+		"sizeOfAddress" : "SantiagoBragagnolo 1/24/2017 16:11",
+		"sizeOfUint64" : "SantiagoBragagnolo 1/24/2017 11:59",
+		"sizeOfUint" : "SantiagoBragagnolo 1/24/2017 11:58",
+		"sizeOfString" : "SantiagoBragagnolo 1/24/2017 11:59",
+		"sizeOfBool" : "SantiagoBragagnolo 1/24/2017 11:56",
+		"sizeOfInt16" : "SantiagoBragagnolo 1/24/2017 11:57",
+		"sizeOfUint256" : "SantiagoBragagnolo 1/24/2017 11:58",
+		"sizeOfUint32" : "SantiagoBragagnolo 1/24/2017 11:58"
+	}
+}

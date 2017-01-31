@@ -1,0 +1,3 @@
+equality
+name
+	^ name

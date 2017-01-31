@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/16/2016 16:27",
+	"super" : "FogType",
+	"category" : "FogDB-Domain-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fields"
+	],
+	"name" : "FogStructType",
+	"type" : "normal"
+}

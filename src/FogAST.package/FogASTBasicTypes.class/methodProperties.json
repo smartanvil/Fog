@@ -1,0 +1,14 @@
+{
+	"instance" : {
+		"string" : "SantiagoBragagnolo 1/11/2017 11:14",
+		"uint" : "SantiagoBragagnolo 12/18/2016 00:10",
+		"uint64" : "SantiagoBragagnolo 1/11/2017 11:09",
+		"at:" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"initialize" : "SantiagoBragagnolo 12/18/2016 00:04",
+		"address" : "SantiagoBragagnolo 12/18/2016 00:10",
+		"uint8" : "SantiagoBragagnolo 1/11/2017 11:20",
+		"bool" : "SantiagoBragagnolo 12/18/2016 00:09",
+		"bytes32" : "SantiagoBragagnolo 1/11/2017 11:09"
+	},
+	"class" : { }
+}

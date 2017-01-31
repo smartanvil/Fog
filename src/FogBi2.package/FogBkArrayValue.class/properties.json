@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:23",
+	"super" : "FogArrayValue",
+	"category" : "FogBi2-Charting",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogBkArrayValue",
+	"type" : "normal"
+}

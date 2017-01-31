@@ -1,0 +1,1 @@
+This node referes to an function declaration. It related type is a function type 

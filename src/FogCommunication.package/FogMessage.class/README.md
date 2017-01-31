@@ -1,0 +1,1 @@
+Message represents a message send from this image to the RPC server 

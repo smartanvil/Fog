@@ -1,0 +1,1 @@
+Trait that implements an equality by attirbutes 

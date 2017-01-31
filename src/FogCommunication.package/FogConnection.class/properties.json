@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 15:59",
+	"super" : "Object",
+	"category" : "FogCommunication-Connection",
+	"classinstvars" : [
+		"connection"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"url",
+		"json",
+		"requestId",
+		"eth",
+		"service"
+	],
+	"name" : "FogConnection",
+	"type" : "normal"
+}

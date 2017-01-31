@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:04",
+	"super" : "Object",
+	"category" : "FogCommunication-Transfer-Filters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogNullFilter",
+	"type" : "normal"
+}

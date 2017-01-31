@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:05",
+	"super" : "Object",
+	"category" : "FogCommunication-Transfer-Filters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"a",
+		"b"
+	],
+	"name" : "FogFilterChain",
+	"type" : "normal"
+}

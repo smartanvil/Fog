@@ -1,0 +1,3 @@
+testing
+hasAbi
+	^ abi isNotNil

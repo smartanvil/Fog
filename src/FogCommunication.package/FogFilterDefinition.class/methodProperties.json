@@ -1,0 +1,17 @@
+{
+	"instance" : {
+		"fromBlock" : "SantiagoBragagnolo 11/4/2016 18:04",
+		"address:" : "SantiagoBragagnolo 11/4/2016 14:59",
+		"toBlock" : "SantiagoBragagnolo 11/4/2016 18:04",
+		"address" : "SantiagoBragagnolo 11/4/2016 16:15",
+		"from:" : "SantiagoBragagnolo 11/4/2016 16:15",
+		"to:" : "SantiagoBragagnolo 11/4/2016 16:15",
+		"from" : "SantiagoBragagnolo 11/4/2016 16:15",
+		"topics:" : "SantiagoBragagnolo 11/4/2016 16:01",
+		"generateTopicsForTransfer" : "SantiagoBragagnolo 11/4/2016 16:16",
+		"to" : "SantiagoBragagnolo 11/4/2016 16:15"
+	},
+	"class" : {
+		"neoJsonMapping:" : "SantiagoBragagnolo 11/4/2016 17:56"
+	}
+}

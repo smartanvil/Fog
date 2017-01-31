@@ -1,0 +1,12 @@
+{
+	"instance" : { },
+	"class" : {
+		"detect:ifNoneCreate:" : "SantiagoBragagnolo 12/7/2016 14:56",
+		"nonCachedNew" : "SantiagoBragagnolo 12/7/2016 13:42",
+		"instances" : "SantiagoBragagnolo 12/7/2016 13:41",
+		"cachedNew" : "SantiagoBragagnolo 12/7/2016 14:33",
+		"cache" : "SantiagoBragagnolo 12/7/2016 13:40",
+		"collectionSelector" : "SantiagoBragagnolo 12/7/2016 14:02",
+		"newCachedIfNotDetected:" : "SantiagoBragagnolo 12/7/2016 14:55"
+	}
+}

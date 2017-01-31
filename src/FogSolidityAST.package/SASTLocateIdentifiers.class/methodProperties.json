@@ -1,0 +1,27 @@
+{
+	"instance" : {
+		"visitExpressionStatement:" : "SantiagoBragagnolo 12/21/2016 00:41",
+		"visitLiteral:" : "SantiagoBragagnolo 12/28/2016 21:08",
+		"visitPragma:" : "SantiagoBragagnolo 12/20/2016 22:58",
+		"visitTupleExpression:" : "SantiagoBragagnolo 1/23/2017 13:55",
+		"initialize" : "SantiagoBragagnolo 12/21/2016 00:28",
+		"visitContract:" : "SantiagoBragagnolo 12/21/2016 00:28",
+		"visitReturn:" : "SantiagoBragagnolo 12/28/2016 20:59",
+		"suicideFunction:" : "SantiagoBragagnolo 1/11/2017 17:38",
+		"visitFunctionCall:" : "SantiagoBragagnolo 1/11/2017 15:32",
+		"visitForStatement:" : "SantiagoBragagnolo 1/23/2017 13:55",
+		"visitSourceUnit:" : "SantiagoBragagnolo 12/20/2016 22:58",
+		"identifiers" : "SantiagoBragagnolo 12/20/2016 22:57",
+		"visitIfStatement:" : "SantiagoBragagnolo 12/28/2016 21:21",
+		"visitElementaryTypenameExpression:" : "SantiagoBragagnolo 1/23/2017 14:01",
+		"visitVariable:" : "SantiagoBragagnolo 12/28/2016 21:00",
+		"visitMemberAccess:" : "SantiagoBragagnolo 12/21/2016 00:46",
+		"visitFunction:" : "SantiagoBragagnolo 1/11/2017 17:24",
+		"visitIdentifier:" : "SantiagoBragagnolo 1/23/2017 14:04",
+		"visitBlock:" : "SantiagoBragagnolo 12/21/2016 00:39",
+		"visitAssignment:" : "SantiagoBragagnolo 12/21/2016 00:43",
+		"suicideFunction" : "SantiagoBragagnolo 1/11/2017 17:38",
+		"visitBinaryOperation:" : "SantiagoBragagnolo 12/28/2016 21:00"
+	},
+	"class" : { }
+}

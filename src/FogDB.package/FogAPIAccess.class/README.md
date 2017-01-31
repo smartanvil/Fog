@@ -1,0 +1,1 @@
+Base API Module. This hierarichy represents the same as the EthereumAPI project one, but it transforms the responses into real objects 

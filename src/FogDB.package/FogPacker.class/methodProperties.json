@@ -1,0 +1,19 @@
+{
+	"instance" : {
+		"unpackAddress:" : "SantiagoBragagnolo 1/27/2017 14:22",
+		"pack:withTypes:" : "SantiagoBragagnolo 12/15/2016 12:29",
+		"unpack:withTypes:" : "SantiagoBragagnolo 12/15/2016 12:21",
+		"unpackUint32:" : "SantiagoBragagnolo 12/15/2016 16:38",
+		"unpackBool:" : "SantiagoBragagnolo 1/24/2017 15:19",
+		"unpackString:" : "SantiagoBragagnolo 1/24/2017 15:20",
+		"unpackInt16:" : "SantiagoBragagnolo 1/24/2017 15:18",
+		"packUint256:" : "SantiagoBragagnolo 12/14/2016 12:51",
+		"unpack:with:" : "SantiagoBragagnolo 12/14/2016 12:35",
+		"unpackUint256:" : "SantiagoBragagnolo 12/14/2016 12:58",
+		"pack:with:" : "SantiagoBragagnolo 12/14/2016 12:42",
+		"unpackUint8:" : "SantiagoBragagnolo 1/24/2017 15:20",
+		"unpackUint:" : "SantiagoBragagnolo 12/15/2016 16:36",
+		"unpackUint64:" : "SantiagoBragagnolo 12/15/2016 16:38"
+	},
+	"class" : { }
+}

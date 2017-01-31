@@ -1,0 +1,12 @@
+tests
+testEthSubmitWork
+	self
+		assertEntityFromMessage:
+			(eth
+				messageSubmitWork: '0x0000000000000001'
+				header: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef'
+				digest: '0xD1FE5700000000000000000000000000D1FE5700000000000000000000000000')
+		equalsToJson:
+			'{"jsonrpc":"2.0","method":"eth_submitWork","params":[ "0x0000000000000001",
+  "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+  "0xD1FE5700000000000000000000000000D1FE5700000000000000000000000000"],"id":1}'

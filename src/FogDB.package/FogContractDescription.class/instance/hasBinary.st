@@ -1,0 +1,3 @@
+testing
+hasBinary
+	^ binary isNotNil

@@ -1,0 +1,3 @@
+as yet unclassified
+writtingNodeWith: anETHASTVisitorForSolidity
+	^ anETHASTVisitorForSolidity createPropertySetter: self

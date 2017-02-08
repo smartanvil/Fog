@@ -1,3 +1,1 @@
-This objects mirrors a contract. 
-
-Allowing to fetch raw content and execute methods on given instances
+This mirror exposes Contract level meta. as the types defined by the contract and the constructor method mirror .

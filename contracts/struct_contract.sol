@@ -25,9 +25,10 @@ contract StructTestContract {
 	simpleExample.uservalue = myenum.B;
 	simpleExample.commonvalue = 6355432;
 	arrayExample.push(mystruct(true, myenum.A, 134));
-	arrayExample.push(mystruct(false, myenum.B, 235));
-	arrayExample.push(mystruct(true, myenum.C, 34));
+	arrayExample.push(mystruct(false, myenum.B, 235 ));
+	arrayExample.push(mystruct(true, myenum.C, 34 ));
     }
+   
     function kill() {
         suicide(_owner);
     }

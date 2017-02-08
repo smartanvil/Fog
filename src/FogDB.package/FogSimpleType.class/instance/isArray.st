@@ -1,0 +1,3 @@
+testing
+isArray
+	^ name = #string

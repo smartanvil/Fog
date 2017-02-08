@@ -1,4 +1,5 @@
-as yet unclassified
+initialization
 setUp
 	super setUp.
-	simpleStorage := self createContract
+	self timeLimit: 3 minutes.
+	simpleStorage ifNil: [ simpleStorage := self createContract ]

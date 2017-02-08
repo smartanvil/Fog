@@ -4,10 +4,10 @@
 	"category" : "FogDBTests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
+	"classvars" : [
 		"simpleStorage"
 	],
+	"instvars" : [ ],
 	"name" : "FogContractInstanceBuildTests",
 	"type" : "normal"
 }

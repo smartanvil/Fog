@@ -1,3 +1,4 @@
 as yet unclassified
-buildInto: anETHContractMirror 
-	anETHContractMirror methods: methods
+buildInto: aContractMirror 
+	aContractMirror instanceMirror methods: methods.
+	aContractMirror constructor: constructor

@@ -1,12 +1,11 @@
 {
 	"instance" : {
-		"valuesFor:" : "SantiagoBragagnolo 1/25/2017 15:52",
-		"methods:" : "SantiagoBragagnolo 1/23/2017 15:15",
-		"properties:" : "SantiagoBragagnolo 1/23/2017 09:37",
-		"property:at:" : "SantiagoBragagnolo 1/25/2017 15:52",
-		"methods" : "SantiagoBragagnolo 1/24/2017 18:15",
-		"property:" : "SantiagoBragagnolo 1/23/2017 09:38",
-		"properties" : "SantiagoBragagnolo 1/24/2017 18:24"
+		"constructor:" : "SantiagoBragagnolo 2/3/2017 10:17",
+		"constructor" : "SantiagoBragagnolo 2/3/2017 12:31",
+		"initialize" : "SantiagoBragagnolo 2/3/2017 12:13",
+		"instanceMirror" : "SantiagoBragagnolo 2/3/2017 12:12",
+		"types" : "SantiagoBragagnolo 2/3/2017 12:32",
+		"types:" : "SantiagoBragagnolo 2/3/2017 10:17"
 	},
 	"class" : { }
 }

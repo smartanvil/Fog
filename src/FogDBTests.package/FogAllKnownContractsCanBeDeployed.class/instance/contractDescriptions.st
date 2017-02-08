@@ -1,0 +1,3 @@
+tests
+contractDescriptions
+	^ FogContractDescription instances

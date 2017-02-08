@@ -3,6 +3,7 @@
 		"literal_string" : "SantiagoBragagnolo 11/30/2016 16:27",
 		"msg" : "SantiagoBragagnolo 11/30/2016 16:27",
 		"resolve:" : "SantiagoBragagnolo 12/5/2016 17:25",
+		"uint256" : "SantiagoBragagnolo 12/1/2016 12:59",
 		"initialize" : "SantiagoBragagnolo 11/29/2016 12:18",
 		"uint32" : "SantiagoBragagnolo 12/1/2016 13:36",
 		"int16" : "SantiagoBragagnolo 1/24/2017 11:11",
@@ -20,10 +21,10 @@
 		"uint64" : "SantiagoBragagnolo 11/30/2016 16:27",
 		"install:" : "SantiagoBragagnolo 11/30/2016 16:10",
 		"int_const" : "SantiagoBragagnolo 11/30/2016 16:27",
-		"tuple" : "SantiagoBragagnolo 12/1/2016 13:31",
 		"getOrCreateFunctionTypeFor:" : "SantiagoBragagnolo 11/30/2016 14:46",
 		"index:" : "SantiagoBragagnolo 11/29/2016 15:51",
-		"uint256" : "SantiagoBragagnolo 12/1/2016 12:59",
+		"isInstalled:" : "SantiagoBragagnolo 2/3/2017 09:43",
+		"tuple" : "SantiagoBragagnolo 12/1/2016 13:31",
 		"address" : "SantiagoBragagnolo 11/30/2016 16:26"
 	},
 	"class" : { }

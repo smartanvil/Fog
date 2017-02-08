@@ -1,16 +1,19 @@
 {
 	"instance" : {
-		"testContractCallSetMethodInTransactionModifiesValue" : "SantiagoBragagnolo 1/30/2017 17:10",
-		"testContractHasMethods" : "SantiagoBragagnolo 1/24/2017 18:23",
-		"testContractViewerOnSimpleStorageRespectOrder" : "SantiagoBragagnolo 1/24/2017 18:25",
-		"testContractViewerOnSimpleStorageTypes" : "SantiagoBragagnolo 1/24/2017 18:26",
-		"testContractSetMethodSignature" : "SantiagoBragagnolo 1/24/2017 18:23",
-		"testContractViewerOnSimpleStorageHas3Variables" : "SantiagoBragagnolo 1/24/2017 18:24",
-		"testContractHasSetMethod" : "SantiagoBragagnolo 1/24/2017 18:23",
+		"testContractCallSetMethodInTransactionModifiesValue" : "SantiagoBragagnolo 2/6/2017 14:56",
+		"testContractHasMethods" : "SantiagoBragagnolo 2/3/2017 12:28",
+		"testContractViewerOnSimpleStorageRespectOrder" : "SantiagoBragagnolo 2/3/2017 12:28",
+		"testContractViewerOnSimpleStorageTypes" : "SantiagoBragagnolo 2/3/2017 12:28",
+		"testContractSetMethodSignature" : "SantiagoBragagnolo 2/6/2017 15:00",
+		"testContractHasConstructor" : "SantiagoBragagnolo 2/3/2017 12:31",
+		"testContractHasTypes" : "SantiagoBragagnolo 2/3/2017 12:36",
+		"testContractHasSetMethod" : "SantiagoBragagnolo 2/3/2017 12:28",
+		"testContractMethodSignatureIsJustNameAndParenthesisWithParameters" : "SantiagoBragagnolo 2/6/2017 15:05",
+		"testContractViewerOnSimpleStorageHas3Variables" : "SantiagoBragagnolo 2/3/2017 12:28",
 		"fetchVariableValue" : "SantiagoBragagnolo 12/12/2016 11:12",
-		"testContractViewerOnSimpleStorageValuesAreTheExpected" : "SantiagoBragagnolo 1/24/2017 18:28",
-		"testContractSetMethodModifiesState" : "SantiagoBragagnolo 1/24/2017 18:23",
-		"setUp" : "SantiagoBragagnolo 12/9/2016 22:24"
+		"testContractViewerOnSimpleStorageValuesAreTheExpected" : "SantiagoBragagnolo 2/3/2017 12:28",
+		"testContractSetMethodModifiesState" : "SantiagoBragagnolo 2/3/2017 12:28",
+		"setUp" : "SantiagoBragagnolo 2/6/2017 12:37"
 	},
 	"class" : { }
 }

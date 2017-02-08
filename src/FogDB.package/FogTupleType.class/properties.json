@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogType",
+	"category" : "FogDB-Meta-Mirror",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"types"
+	],
+	"name" : "FogTupleType",
+	"type" : "normal"
+}

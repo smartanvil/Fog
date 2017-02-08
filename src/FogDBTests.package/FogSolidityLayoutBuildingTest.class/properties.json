@@ -1,15 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "TestCase",
+	"super" : "FogDeployedOnceContractTest",
 	"category" : "FogDBTests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [
-		"contract"
-	],
-	"instvars" : [
-		"mirror"
-	],
+	"classvars" : [ ],
+	"instvars" : [ ],
 	"name" : "FogSolidityLayoutBuildingTest",
 	"type" : "normal"
 }

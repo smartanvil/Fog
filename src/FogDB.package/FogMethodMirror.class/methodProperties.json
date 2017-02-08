@@ -1,0 +1,22 @@
+{
+	"instance" : {
+		"encodeMethodCall:" : "SantiagoBragagnolo 2/7/2017 14:36",
+		"returnType" : "SantiagoBragagnolo 2/7/2017 16:35",
+		"name" : "SantiagoBragagnolo 2/7/2017 16:24",
+		"signature" : "SantiagoBragagnolo 2/6/2017 12:39",
+		"isStateModifier" : "SantiagoBragagnolo 12/9/2016 23:10",
+		"parameters:" : "SantiagoBragagnolo 2/3/2017 11:31",
+		"modifiesState:" : "SantiagoBragagnolo 12/9/2016 23:00",
+		"name:" : "SantiagoBragagnolo 12/9/2016 23:00",
+		"applyOn:valueWithArguments:sender:" : "SantiagoBragagnolo 2/3/2017 16:17",
+		"printOn:" : "SantiagoBragagnolo 2/3/2017 17:48",
+		"encodeArguments:" : "SantiagoBragagnolo 2/3/2017 12:00",
+		"resolveAsCall:valueWithArguments:sender:" : "SantiagoBragagnolo 2/7/2017 17:07",
+		"resolveAsTransaction:valueWithArguments:sender:" : "SantiagoBragagnolo 2/3/2017 11:31",
+		"return:" : "SantiagoBragagnolo 12/9/2016 23:00",
+		"selector" : "SantiagoBragagnolo 12/9/2016 23:07",
+		"decodeReturn:" : "SantiagoBragagnolo 2/7/2017 16:36",
+		"signatureName" : "SantiagoBragagnolo 2/6/2017 12:32"
+	},
+	"class" : { }
+}

@@ -1,0 +1,16 @@
+{
+	"instance" : {
+		"contractSourceCodeName" : "SantiagoBragagnolo 2/2/2017 17:01",
+		"deploy:withArguments:" : "SantiagoBragagnolo 2/6/2017 15:51",
+		"testSetLong256String" : "SantiagoBragagnolo 2/7/2017 14:58",
+		"testGetExample" : "SantiagoBragagnolo 2/7/2017 17:42",
+		"testSetLong64String" : "SantiagoBragagnolo 2/7/2017 14:58",
+		"testSetLong128String" : "SantiagoBragagnolo 2/7/2017 14:58",
+		"deploy:" : "SantiagoBragagnolo 2/7/2017 12:12",
+		"testAllGettersWork" : "SantiagoBragagnolo 2/7/2017 11:42",
+		"testSetString" : "SantiagoBragagnolo 2/7/2017 17:41"
+	},
+	"class" : {
+		"reset" : "SantiagoBragagnolo 2/6/2017 16:24"
+	}
+}

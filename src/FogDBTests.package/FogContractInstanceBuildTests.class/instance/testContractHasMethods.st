@@ -1,3 +1,3 @@
 tests
 testContractHasMethods
-	self assert: simpleStorage contract mirror methods size equals: 6
+	self assert: simpleStorage contract mirror instanceMirror methods size equals: 6

@@ -29,7 +29,7 @@ contract SimpleStorage {
         storedData = x;
     }
     function get() constant returns (uint retVal) {
-        return storedData;
+	retVal = storedData;
     }
     
     

@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 1/23/2017 09:11",
+	"commentStamp" : "SantiagoBragagnolo 2/3/2017 12:13",
 	"super" : "Object",
 	"category" : "FogDB-Meta-Mirror",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"properties",
-		"methods"
+		"types",
+		"constructor",
+		"instanceMirror"
 	],
 	"name" : "FogContractMirror",
 	"type" : "normal"

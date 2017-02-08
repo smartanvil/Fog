@@ -1,0 +1,3 @@
+accessing
+propertiesBuilder
+	^ FogMirrorPropertiesBuilder new

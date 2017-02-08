@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 2/3/2017 12:15",
+	"super" : "Object",
+	"category" : "FogDB-Meta-Mirror",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ast",
+		"abi"
+	],
+	"name" : "FogMirrorBuilder",
+	"type" : "normal"
+}

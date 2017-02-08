@@ -3,11 +3,11 @@ visitVariable: aSASTVariable
 	| slot |
 	aSASTVariable type accept: self.
 	slot := aSASTVariable isConstant
-		ifTrue: [ FogContractConstantMirror new
+		ifTrue: [ FogConstantMirror new
 				name: aSASTVariable name;
 				type: (types at: aSASTVariable type);
 				constant: aSASTVariable value ]
-		ifFalse: [ slot := FogContractPropertyMirror new
+		ifFalse: [ slot := FogPropertyMirror new
 				name: aSASTVariable name;
 				type: (types at: aSASTVariable type).
 			variableSlots add: slot.

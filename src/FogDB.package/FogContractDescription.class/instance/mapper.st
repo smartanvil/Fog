@@ -1,3 +1,0 @@
-accessing
-mapper
-	^ FogSolidityLayoutMapper new.

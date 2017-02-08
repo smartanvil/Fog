@@ -1,6 +1,6 @@
 required
 showableProperties
-	^ mirror properties
+	^ mirror instanceMirror properties
 		collect: [ :property | 
 			FogValue new
 				name: property name;

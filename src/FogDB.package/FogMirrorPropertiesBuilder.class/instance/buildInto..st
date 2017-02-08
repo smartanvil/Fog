@@ -1,5 +1,4 @@
 as yet unclassified
 buildInto: aMirror
-	^ aMirror
-		properties: contractSlots;
-		yourself
+	aMirror types: types.
+	aMirror instanceMirror properties: contractSlots

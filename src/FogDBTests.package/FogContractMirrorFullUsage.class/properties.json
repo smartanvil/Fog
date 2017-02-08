@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FogDeployedOnceContractTest",
+	"category" : "FogDBTests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogContractMirrorFullUsage",
+	"type" : "normal"
+}

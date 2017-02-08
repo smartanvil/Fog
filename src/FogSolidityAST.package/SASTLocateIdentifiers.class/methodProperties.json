@@ -5,6 +5,7 @@
 		"visitPragma:" : "SantiagoBragagnolo 12/20/2016 22:58",
 		"visitTupleExpression:" : "SantiagoBragagnolo 1/23/2017 13:55",
 		"initialize" : "SantiagoBragagnolo 12/21/2016 00:28",
+		"visitUnaryOperation:" : "SantiagoBragagnolo 2/6/2017 17:50",
 		"visitContract:" : "SantiagoBragagnolo 12/21/2016 00:28",
 		"visitReturn:" : "SantiagoBragagnolo 12/28/2016 20:59",
 		"suicideFunction:" : "SantiagoBragagnolo 1/11/2017 17:38",

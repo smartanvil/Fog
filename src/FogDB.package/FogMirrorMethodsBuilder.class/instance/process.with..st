@@ -1,16 +1,11 @@
 as yet unclassified
 process: abi with: typesAst
-	| input output conversor |
+	| conversor |
 	conversor := FogTypeConversor new.
 	conversor configure: typesAst.
+	constructor := self
+		createConstructorMirror: (abi detect: [ :e | (e at: #type) = 'constructor' ])
+		with: conversor.
 	methods := abi
 		select: [ :e | (e at: #type) = 'function' ]
-		thenCollect: [ :e | 
-			input := (e at: #inputs) collect: [ :n | conversor fetchType: (n at: #type) ].
-			output := (e at: #outputs) collect: [ :n | conversor fetchType: (n at: #type) ].
-			FogContractMethodMirror new
-				name: (e at: #name);
-				parameters: input;
-				return: output;
-				modifiesState: (e at: #constant) not;
-				yourself ]
+		thenCollect: [ :e | self createMethodMirror: e with: conversor ]

@@ -9,7 +9,8 @@
 		"name",
 		"mirror",
 		"methods",
-		"aTypeSet"
+		"aTypeSet",
+		"class"
 	],
 	"name" : "FogContractDescription",
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:26",

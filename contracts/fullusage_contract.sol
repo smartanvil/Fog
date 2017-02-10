@@ -97,6 +97,9 @@ contract FullUsage {
        ret = positiveInt;
     }
 
+    function getArray () constant returns (int256 []) {
+	return commonArray;
+    } 
  /* Setting And getting Enum  */
     function setEnum (EnumDefinition value) {
         enumEntry = value;

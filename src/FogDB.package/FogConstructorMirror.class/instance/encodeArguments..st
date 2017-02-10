@@ -1,3 +1,3 @@
 as yet unclassified
 encodeArguments: arguments
-	^ FogPacker new pack: arguments withTypes: parameters
+	^ parameters pack: arguments with: FogPacker new

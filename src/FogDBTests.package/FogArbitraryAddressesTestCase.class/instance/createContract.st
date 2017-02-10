@@ -1,10 +1,10 @@
 as yet unclassified
 createContract
-	testingContract := FogContractDeployer new
-		contract: self createContractDescription;
-		owner: self ownerAccount;
-		constructorArguments: {};
-		createAndDeployInstance.
-	^ testingContract
+	| description |
+	description := self createContractDescription.
+	^ (description mirror constructor
+		applyOn: description
+		valueWithArguments: {}
+		sender: self ownerAccount)
 		waitIsReady;
 		yourself

@@ -1,3 +1,3 @@
-as yet unclassified
+unpack
 unpackAddress: aString 
 	^ aString asBKNumber asBKHexa

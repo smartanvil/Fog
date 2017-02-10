@@ -1,8 +1,9 @@
-as yet unclassified
+visiting
 visitElementaryType: aSASTElementaryType
-	types
-		at: aSASTElementaryType
-		put:
-			(FogSimpleType new
+	| type |
+	type := aSASTElementaryType name = #string
+		ifTrue: [ FogStringType new ]
+		ifFalse: [ FogSimpleType new
 				name: aSASTElementaryType name;
-				yourself)
+				yourself ].
+	types at: aSASTElementaryType ifAbsentPut: [ type ].

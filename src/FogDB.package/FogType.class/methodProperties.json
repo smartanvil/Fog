@@ -2,10 +2,10 @@
 	"instance" : {
 		"collect:" : "SantiagoBragagnolo 1/24/2017 11:40",
 		"staticSlotSize" : "SantiagoBragagnolo 1/24/2017 11:42",
-		"isArray" : "SantiagoBragagnolo 2/7/2017 16:27",
+		"isArrayType" : "SantiagoBragagnolo 2/8/2017 16:57",
+		"unpack:using:" : "SantiagoBragagnolo 2/8/2017 15:55",
 		"isStruct" : "SantiagoBragagnolo 1/24/2017 11:40",
-		"consume:using:" : "SantiagoBragagnolo 2/7/2017 16:57",
-		"consume:" : "SantiagoBragagnolo 2/7/2017 16:56"
+		"unpackReturn:using:" : "SantiagoBragagnolo 2/8/2017 17:06"
 	},
 	"class" : { }
 }

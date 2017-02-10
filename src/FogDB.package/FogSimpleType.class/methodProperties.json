@@ -1,13 +1,10 @@
 {
 	"instance" : {
-		"consume:" : "SantiagoBragagnolo 2/7/2017 16:56",
 		"printOn:" : "SantiagoBragagnolo 2/3/2017 17:48",
 		"staticSlotSize" : "SantiagoBragagnolo 1/24/2017 11:36",
 		"pack:using:" : "SantiagoBragagnolo 12/15/2016 12:30",
-		"isArray" : "SantiagoBragagnolo 2/7/2017 16:27",
 		"unpack:using:" : "SantiagoBragagnolo 12/14/2016 22:48",
 		"name" : "SantiagoBragagnolo 12/14/2016 22:45",
-		"consume:using:" : "SantiagoBragagnolo 2/7/2017 17:05",
 		"name:" : "SantiagoBragagnolo 12/14/2016 22:41"
 	},
 	"class" : {

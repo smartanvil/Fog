@@ -1,3 +1,0 @@
-testing
-isArray
-	^ name = #string

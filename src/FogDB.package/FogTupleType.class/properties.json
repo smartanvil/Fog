@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FogType",
-	"category" : "FogDB-Meta-Mirror",
+	"category" : "FogDB-Domain-Types",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

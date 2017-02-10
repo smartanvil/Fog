@@ -1,4 +1,4 @@
-as yet unclassified
+pack
 pack: aCollection withTypes: typeCollection
 	| result |
 	self assert: aCollection size = typeCollection size.

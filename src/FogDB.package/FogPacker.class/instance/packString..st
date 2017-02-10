@@ -1,4 +1,4 @@
-as yet unclassified
+pack
 packString: aString
 	| pack | 
 	pack := (ZnUTF8Encoder new encodeString: aString)

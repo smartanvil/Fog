@@ -21,6 +21,7 @@ contract FullUsage {
     int256 positiveInt; 
     EnumDefinition enumEntry;
     int256[] commonArray;
+    string str2;
     
      /* Constructor */
     function FullUsage () { 
@@ -29,7 +30,7 @@ contract FullUsage {
 	positiveInt = 255; 
 	commonArray.push(1);
 	commonArray.push(20);
-	str = 'Hola';
+	str = 'String';
 	enumEntry = EnumDefinition.NEUTRAL;
     }
 
@@ -39,6 +40,16 @@ contract FullUsage {
     }
     function getString () constant returns (string ret) {
       ret = str;
+    }
+    function setTwoStrings( string value1, string value2 ) {
+      str = value1;
+      str2 = value2;
+    }
+    function setTwoStringsEnumInt( string value1, EnumDefinition valEnum, int256 valInt, string value2 ) {
+      str = value1;
+      str2 = value2;
+      enumEntry = valEnum;
+      positiveInt = valInt;
     }
 
     function getExample () constant returns (int256 val, string val2, string val4, int256 val3, EnumDefinition en) {

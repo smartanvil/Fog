@@ -1,3 +1,3 @@
-as yet unclassified
+unpack
 unpackUint: aString
 	^ aString asBKNumber

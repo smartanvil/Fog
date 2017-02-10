@@ -1,7 +1,7 @@
 as yet unclassified
 selector
-	parameters size = 0
+	parameters types size = 0
 		ifTrue: [ ^ name asSymbol ].
-	parameters size = 1
+	parameters types size = 1
 		ifTrue: [ ^ (name , ':') asSymbol ].
-	self error: 'not yet implemented'
+	^ ((2 to: parameters types size) inject: name , ':' into: [ :acc :each | acc , 'and:' ]) asSymbol

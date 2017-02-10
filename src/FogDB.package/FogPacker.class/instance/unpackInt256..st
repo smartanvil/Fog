@@ -1,4 +1,6 @@
-as yet unclassified
-unpackInt256: aString 
-	self flag: #CheckSigns.
-	^ aString asBKNumber 
+unpack
+unpackInt256: aString
+	|  size inverse |
+	size := 57896044618658097711785492504343953926634992332820282019728792003956564819967.
+	inverse := 115792089237316195423570985008687907853269984665640564039457584007913129639936.
+	^ self unpackInt: aString maxPositive: size maxNumber: inverse. 

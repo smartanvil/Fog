@@ -1,4 +1,4 @@
-as yet unclassified
+unpack
 unpackBool: aString
 	| value |
 	value := self unpackUint8: aString.

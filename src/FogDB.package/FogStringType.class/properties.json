@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FogType",
+	"category" : "FogDB-Domain-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogStringType",
+	"type" : "normal"
+}

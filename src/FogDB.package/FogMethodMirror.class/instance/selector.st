@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 selector
 	parameters types size = 0
 		ifTrue: [ ^ name asSymbol ].

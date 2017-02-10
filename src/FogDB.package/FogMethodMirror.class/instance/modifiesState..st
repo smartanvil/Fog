@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 modifiesState: aFalse 
 	modifiesState := aFalse

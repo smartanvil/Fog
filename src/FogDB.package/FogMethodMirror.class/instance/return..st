@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 return: aCollection 
 	return := aCollection

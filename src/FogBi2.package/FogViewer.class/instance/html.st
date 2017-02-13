@@ -1,7 +1,7 @@
 accessing
 html
 	| content |
-	content := mirror properties inject: '' into: [ :acc :p | acc , '<tr><td>' , p name , '</td>' , '<td>' , (p value: instance) html , '</td></tr>' ].
+	content := mirror instanceMirror properties inject: '' into: [ :acc :p | acc , '<tr><td>' , p name , '</td>' , '<td>' , (p value: instance) html , '</td></tr>' ].
 	^ '
 <!DOCTYPE html>
 

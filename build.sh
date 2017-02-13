@@ -8,5 +8,6 @@ wget -O- get.pharo.org/50+vm | bash
 cd ..
 cp ../*.sh .
 cp ../*.st .
+cp ../contracts . -r
 rm build.sh 
 cd .. 

@@ -2142,3 +2142,68 @@
 17:46:57.102473 table@remove removed @571
 17:47:34.257159 db@close closing
 17:47:34.257256 db@close done T·94.134µs
+=============== Feb 13, 2017 (CET) ===============
+17:51:30.332173 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:51:30.332375 version@stat F·[0 21] S·39MiB[0B 39MiB] Sc·[0.00 0.39]
+17:51:30.332388 db@open opening
+17:51:30.332486 journal@recovery F·1
+17:51:30.337127 journal@recovery recovering @576
+17:51:30.343819 memdb@flush created L0@598 N·225 S·15KiB "\x01u*..\r\r\x10,v631033":"\xf1\xad\xe4..W\xde\xe0,v631103"
+17:51:30.346386 version@stat F·[1 21] S·39MiB[15KiB 39MiB] Sc·[0.25 0.39]
+17:51:30.346820 db@janitor F·24 G·0
+17:51:30.346836 db@open done T·14.44232ms
+17:51:30.347545 db@close closing
+17:51:30.347592 db@close done T·45.462µs
+=============== Feb 13, 2017 (CET) ===============
+17:51:30.348142 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:51:30.348241 version@stat F·[1 21] S·39MiB[15KiB 39MiB] Sc·[0.25 0.39]
+17:51:30.348250 db@open opening
+17:51:30.348315 journal@recovery F·1
+17:51:30.355028 journal@recovery recovering @599
+17:51:30.363495 version@stat F·[1 21] S·39MiB[15KiB 39MiB] Sc·[0.25 0.39]
+17:51:30.363719 db@janitor F·24 G·0
+17:51:30.363719 db@open done T·15.467781ms
+17:52:27.281815 table@compaction L0·1 -> L1·19 S·38MiB Q·631274
+17:52:27.332487 table@build created L1@603 N·8439 S·2MiB "\x00\x01\x1d..T\xc8\x1b,v9765":"\x13w\xf5..\xb6\r~,v421157"
+17:52:27.387603 table@build created L1@604 N·8382 S·2MiB "\x13w\xfb..\x9f$\x11,v289099":"&\x816..3\x88\xff,v106994"
+17:52:27.429546 table@build created L1@605 N·8385 S·2MiB "&\x81\x92..,0\xfb,v1248":"9\xd8\x1e..\xf00r,v327390"
+17:52:27.470525 table@build created L1@606 N·8290 S·2MiB "9\xd8E..\xb5\xf0\x87,v470462":"L\xc8^..\xb1\x11\xaf,v226784"
+17:52:27.522128 table@build created L1@607 N·8531 S·2MiB "L\xc8n..\x88P\xf8,v453048":"`jC..\xf0^\x06,v444004"
+17:52:27.613855 table@build created L1@608 N·23646 S·2MiB "`jl..\xaaO\xc2,v183076":"blo..der,v257912"
+17:52:27.707718 table@build created L1@609 N·25768 S·2MiB "blo..-td,v257910":"blo..-\x03\xc5,v15529"
+17:52:27.803358 table@build created L1@610 N·43351 S·2MiB "blo..-\x03\xc6,v15545":"blo..der,v369601"
+17:52:27.909571 table@build created L1@611 N·25287 S·2MiB "blo..-td,v369599":"blo..der,v597487"
+17:52:28.009620 table@build created L1@612 N·25095 S·2MiB "blo..-td,v597485":"blo..der,v399241"
+17:52:28.069202 table@build created L1@613 N·11986 S·2MiB "blo..-td,v399239":"qo?..\n\xb3\xea,v96378"
+17:52:28.202913 table@build created L1@614 N·39700 S·2MiB "qq*..\xb4{\x89,v339476":"vj\x15..\xc0\x1a\x1f,v190720"
+17:52:28.249189 table@build created L1@615 N·8403 S·2MiB "vj/..\x05Y\xa0,v495658":"\x89\xb6$..^\x9a\xb1,v433141"
+17:52:28.295008 table@build created L1@616 N·8316 S·2MiB "\x89\xb6n..\xf6\xf03,v276280":"\x9c\xe5\x96..\xe9\bs,v302786"
+17:52:28.343379 table@build created L1@617 N·8315 S·2MiB "\x9c\xe5\xe0..\b3\xd1,v63120":"\xb0\x12k..\xe9\x88\xe2,v611907"
+17:52:28.388330 table@build created L1@618 N·8393 S·2MiB "\xb0\x12\xc2..\xf5\xaf\x17,v136940":"×\x02..\xba\x11\xd3,v65653"
+17:52:28.432403 table@build created L1@619 N·8435 S·2MiB "×\"..\xaa{v,v373948":"\xd6\xf5o..ζ\xa2,v382772"
+17:52:28.476220 table@build created L1@620 N·8417 S·2MiB "\xd6\xf6\x8d..\xedn\xad,v516639":"\xeab\xcc..d\xd9\xe9,v377367"
+17:52:28.566281 table@build created L1@621 N·8355 S·2MiB "\xeac\xcc..\x0ez\xb7,v69563":"\xfd\x8aE..\xf4\xfa\x93,v503699"
+17:52:28.566366 version@stat F·[0 21] S·39MiB[0B 39MiB] Sc·[0.00 0.39]
+17:52:28.567529 table@compaction committed F-1 S-6KiB Ke·0 D·121 T·1.28567402s
+17:52:28.567594 table@remove removed @598
+17:52:28.567861 table@remove removed @578
+17:52:28.568102 table@remove removed @579
+17:52:28.568302 table@remove removed @580
+17:52:28.568479 table@remove removed @581
+17:52:28.568663 table@remove removed @582
+17:52:28.568848 table@remove removed @583
+17:52:28.569011 table@remove removed @584
+17:52:28.569179 table@remove removed @585
+17:52:28.569344 table@remove removed @586
+17:52:28.569508 table@remove removed @587
+17:52:28.569680 table@remove removed @588
+17:52:28.569841 table@remove removed @589
+17:52:28.569922 table@remove removed @590
+17:52:28.570119 table@remove removed @591
+17:52:28.570243 table@remove removed @592
+17:52:28.570484 table@remove removed @593
+17:52:28.570678 table@remove removed @594
+17:52:28.571554 table@remove removed @595
+17:52:28.571758 table@remove removed @596
+17:52:41.685984 db@close closing
+17:52:41.686029 db@close done T·42.835µs

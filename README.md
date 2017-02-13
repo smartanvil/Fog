@@ -53,6 +53,16 @@ cd myfolder
 
 #Usage 
 
+## adding contract source codes
+
+
+This tool works with known contracts developed in solidity. 
+For this subject we have to copy all the contracts we want to inspect into the contract folder located into the build folder. 
+
+
+cd build/contracts
+cp /path/to/contracts/*.sol .
+
 
 ## configuring the app
 

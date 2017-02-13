@@ -5,42 +5,47 @@
 
 ## Pharo
  * Version Ubuntu 14.04 or later 
-
+``` 
  sudo dpkg --add-architecture i386 
  sudo apt-get update 
  sudo apt-get install libx11-6:i386 
  sudo apt-get install libgl1-mesa-glx:i386 
  sudo apt-get install libfontconfig1:i386 
  sudo apt-get install libssl1.0.0:i386 
+``` 
 
 * Version Lesser than Ubuntu 14.04
+``` 
   sudo dpkg --add-architecture i386
   sudo apt-get update
   sudo apt-get install ia32-libs
+``` 
 
 ## RHash
-
+``` 
  sudo apt-get install rhash
-
+``` 
 ## Solidity
+``` 
  npm install solc
-
+``` 
 
 # Installation 
 
 ## Download the code 
-
+``` 
 mkdir myfolder
 git clone git@github.com:sbragagnolo/Fog.git
-git checkout 
-
+git checkout v0.1
+``` 
 
 ## Building the application 
 
   After installing all the dependencies proceed to execute the installation script into the cloned folder
- 
+``` 
 cd myfolder
 ./build.sh
+``` 
 
   Now you can copy the content of the build folder wherever you want, add it to the path and execute the viewer just by calling it 
 
@@ -59,10 +64,10 @@ cd myfolder
 This tool works with known contracts developed in solidity. 
 For this subject we have to copy all the contracts we want to inspect into the contract folder located into the build folder. 
 
-
+``` 
 cd build/contracts
 cp /path/to/contracts/*.sol .
-
+``` 
 
 ## configuring the app
 
@@ -80,10 +85,10 @@ gethURL := 'http://localhost:8545'.
 
 The viewer script returns a Json/Html encoded object with the variable values and the contract name.
 
-
-viewer.sh json <ADDRESS-TO-CONTRACT>
-viewer.sh html <ADDRESS-TO-CONTRACT> > output.html 
-
+``` 
+viewer.sh json ADDRESS-TO-CONTRACT
+viewer.sh html ADDRESS-TO-CONTRACT > output.html 
+``` 
 
 
 

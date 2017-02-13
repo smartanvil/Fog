@@ -636,3 +636,14 @@
 16:06:37.951041 db@open done T·3.321143ms
 16:50:03.486268 db@close closing
 16:50:03.486268 db@close done T·52ns
+=============== Feb 13, 2017 (CET) ===============
+17:14:03.317636 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:14:03.317732 version@stat F·[] S·0B[] Sc·[]
+17:14:03.317740 db@open opening
+17:14:03.317767 journal@recovery F·1
+17:14:03.321290 journal@recovery recovering @116
+17:14:03.325032 version@stat F·[] S·0B[] Sc·[]
+17:14:03.326527 db@janitor F·2 G·0
+17:14:03.326558 db@open done T·8.806868ms
+17:41:18.136697 db@close closing
+17:41:18.136726 db@close done T·28.261µs

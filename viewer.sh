@@ -8,12 +8,12 @@ if [ "$#" -ne 2 ]; then
 fi
 
 if [ "$1" = "json" ]; then
-    ./build/pharo ./build/Pharo st ../json-viewer.st $2
+    ./files/pharo ./files/Pharo st ../json-viewer.st $2
     exit 0
 fi
 
 if [ "$1" = "html" ]; then
-    ./build/pharo ./build/Pharo st ../html-viewer.st $2
+    ./files/pharo ./files/Pharo st ../html-viewer.st $2
     exit 0
 fi
 

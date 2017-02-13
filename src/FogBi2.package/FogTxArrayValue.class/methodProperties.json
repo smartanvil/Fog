@@ -1,7 +1,9 @@
 {
 	"instance" : {
-		"collectionBrief" : "SantiagoBragagnolo 11/21/2016 14:14",
-		"gtInspeactorBlockchainStats:" : "SantiagoBragagnolo 1/30/2017 17:10"
+		"gtTxInspection:" : "SantiagoBragagnolo 2/13/2017 15:02",
+		"value" : "SantiagoBragagnolo 2/13/2017 14:59",
+		"gtInspeactorBlockchainStats:" : "SantiagoBragagnolo 2/13/2017 15:16",
+		"bi2Properties" : "SantiagoBragagnolo 2/13/2017 15:10"
 	},
 	"class" : { }
 }

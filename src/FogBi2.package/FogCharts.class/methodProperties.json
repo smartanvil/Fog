@@ -6,14 +6,14 @@
 		"blockBasedTxGasCorrelation:on:" : "SantiagoBragagnolo 11/25/2016 16:29",
 		"transactionBasedAccountsParticipantsFromPie:on:" : "SantiagoBragagnolo 1/30/2017 17:10",
 		"transactionBasedAccountsByToKindPie:on:" : "SantiagoBragagnolo 1/30/2017 17:10",
-		"transactionsBasedEtherOfTxBar:on:" : "SantiagoBragagnolo 11/28/2016 14:36",
+		"transactionsBasedEtherOfTxBar:on:" : "SantiagoBragagnolo 2/13/2017 15:20",
 		"blockBasedMinersPie:on:" : "SantiagoBragagnolo 1/30/2017 17:10",
 		"blockBasedGasPrice:on:" : "SantiagoBragagnolo 11/28/2016 16:48",
 		"transactionBasedAccountsParticipantsToPie:on:" : "SantiagoBragagnolo 1/30/2017 17:10",
-		"transactionsBasedGasPriceEther:on:" : "SantiagoBragagnolo 11/28/2016 14:52",
+		"transactionsBasedGasPriceEther:on:" : "SantiagoBragagnolo 2/13/2017 15:19",
 		"blockBasedTransactionsPerHourPerDate:on:" : "SantiagoBragagnolo 11/25/2016 17:54",
 		"blockBasedAmmountOfTxBar:on:" : "SantiagoBragagnolo 11/25/2016 16:29",
-		"transactionsBasedMultiChart:" : "SantiagoBragagnolo 11/28/2016 14:59"
+		"transactionsBasedMultiChart:" : "SantiagoBragagnolo 2/13/2017 15:20"
 	},
 	"class" : { }
 }

@@ -1,1 +1,0 @@
-Block uml-kind of view builder for what-ever 

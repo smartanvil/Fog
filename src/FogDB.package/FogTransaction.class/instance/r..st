@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 r: aString
 	r := aString

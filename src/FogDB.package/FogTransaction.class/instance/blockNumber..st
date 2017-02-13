@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 blockNumber: aString
 	blockNumber := aString asBKNumber

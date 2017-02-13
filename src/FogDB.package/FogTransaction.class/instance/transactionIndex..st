@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 transactionIndex: aString
 	transactionIndex := aString asBKNumber

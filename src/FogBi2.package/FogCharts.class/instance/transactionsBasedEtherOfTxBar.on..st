@@ -7,7 +7,7 @@ transactionsBasedEtherOfTxBar: transactions on: aView
 	ds := RTData new.
 	ds interaction popup.
 	ds points: transactions.
-	ds y: #value.
+	ds y: #ammount.
 	ds barShape rectangle color: Color lightRed .
 	bar add: ds.
 	bar build.

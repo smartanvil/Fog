@@ -1,3 +1,3 @@
-as yet unclassified
+testing
 isFull
 	^ full ifNil: [ false ]

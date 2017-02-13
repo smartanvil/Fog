@@ -2,14 +2,13 @@
 	"instance" : {
 		"to:" : "SantiagoBragagnolo 11/21/2016 15:09",
 		"to" : "SantiagoBragagnolo 11/18/2016 18:34",
-		"valuesToCompareForEquality" : "SantiagoBragagnolo 11/25/2016 17:51",
 		"accounts" : "SantiagoBragagnolo 12/8/2016 00:28",
 		"gas:" : "SantiagoBragagnolo 11/17/2016 17:16",
 		"gasPrice" : "SantiagoBragagnolo 11/18/2016 17:25",
 		"gas" : "SantiagoBragagnolo 11/18/2016 17:25",
 		"nonce:" : "SantiagoBragagnolo 11/17/2016 17:14",
+		"ammount" : "SantiagoBragagnolo 2/13/2017 15:10",
 		"gasPrice:" : "SantiagoBragagnolo 11/17/2016 17:15",
-		"knownAccounts" : "SantiagoBragagnolo 11/18/2016 18:15",
 		"v:" : "SantiagoBragagnolo 11/17/2016 17:22",
 		"blockNumber:" : "SantiagoBragagnolo 11/17/2016 17:13",
 		"hash:" : "SantiagoBragagnolo 11/17/2016 17:16",
@@ -22,12 +21,13 @@
 		"s:" : "SantiagoBragagnolo 11/17/2016 17:09",
 		"=" : "",
 		"input:" : "SantiagoBragagnolo 11/17/2016 17:18",
+		"transactionIndex" : "SantiagoBragagnolo 2/13/2017 14:00",
 		"source:" : "SantiagoBragagnolo 11/18/2016 14:31",
-		"printOn:" : "SantiagoBragagnolo 11/23/2016 15:41",
+		"printOn:" : "SantiagoBragagnolo 2/13/2017 15:11",
 		"blockHash:" : "SantiagoBragagnolo 11/17/2016 17:14",
 		"r:" : "SantiagoBragagnolo 11/17/2016 17:13",
-		"value" : "SantiagoBragagnolo 11/18/2016 17:52",
-		"value:" : "SantiagoBragagnolo 11/17/2016 17:15"
+		"value:" : "SantiagoBragagnolo 11/17/2016 17:15",
+		"valuesToCompareForEquality" : "SantiagoBragagnolo 11/25/2016 17:51"
 	},
 	"class" : {
 		"on:" : "SantiagoBragagnolo 11/14/2016 16:43",

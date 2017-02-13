@@ -1,3 +1,3 @@
-as yet unclassified
+equality
 valuesToCompareForEquality
 	^ {hash}

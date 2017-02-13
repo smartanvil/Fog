@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 2/13/2017 14:09",
+	"super" : "Object",
+	"category" : "FogBi2-Charting",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogInspection",
+	"type" : "normal"
+}

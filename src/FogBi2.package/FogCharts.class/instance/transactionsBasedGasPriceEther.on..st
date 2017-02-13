@@ -15,7 +15,7 @@ transactionsBasedGasPriceEther: transactions on: aView
 		x: [ :block | block gas ].
 	
 	ds
-		dotSize: #value
+		dotSize: #ammount
 		min: 4
 		max: 60
 		using: #sqrt.

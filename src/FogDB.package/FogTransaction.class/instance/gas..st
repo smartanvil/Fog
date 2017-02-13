@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 gas: aString
 	gas := aString asBKNumber

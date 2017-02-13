@@ -1,3 +1,0 @@
-shapes
-classNameShape
-	^ classNameShape

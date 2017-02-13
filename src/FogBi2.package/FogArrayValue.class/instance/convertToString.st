@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 convertToString
-	^ name , ' -> ' , (GTObjectPrinter new asTruncatedTextFrom: self collectionBrief)
+	^  (GTObjectPrinter new asTruncatedTextFrom: self collectionBrief) asString

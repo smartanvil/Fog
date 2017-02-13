@@ -1,3 +1,0 @@
-initialization
-forETH
-	self subclassResponsibility 

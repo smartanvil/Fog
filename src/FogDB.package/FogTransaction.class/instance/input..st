@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 input: aString
 	input := aString 

@@ -1,7 +1,6 @@
-as yet unclassified
+printing
 printOn: aStream
-	^ ('Block- {1} Created {2} ago {3} transaction(s) '
+	^ ('Block- {1} - {2} transaction(s) '
 		format:
 			{self number asString.
-			(DateAndTime now - self timestamp) asString.
 			transactionsHashes size asString}) printOn: aStream

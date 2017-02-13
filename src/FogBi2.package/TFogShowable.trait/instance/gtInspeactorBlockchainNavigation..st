@@ -2,7 +2,7 @@ gtextention
 gtInspeactorBlockchainNavigation: composite
 	<gtInspectorPresentationOrder: 0>
 	^ composite table
-		title: 'Block';
+		title: 'Properties';
 		display: [ self propertiesToShowInTable];
 		children: [ :each | #() ];
 		column: 'Name' evaluated: [ :each | GTObjectPrinter new asTruncatedTextFrom: each name ];

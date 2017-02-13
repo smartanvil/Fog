@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 gasPrice: aString
 	gasPrice := aString asBKNumber

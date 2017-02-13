@@ -13,8 +13,7 @@ transactionsBasedMultiChart: txToAnalyze
 	composer group: #AccountsTo.
 	txxEther := self transactionsBasedEtherOfTxBar: txToAnalyze on: composer view.
 	composer group: #txEther.
-	
-	txEtherGasPrice:= self transactionsBasedGasPriceEther: txToAnalyze on: composer view.
+	txEtherGasPrice := self transactionsBasedGasPriceEther: txToAnalyze on: composer view.
 	composer group: #txEtherGasPrice.
 	composer
 		move: #AccountsFrom onTheRightOf: #BriefFrom;
@@ -28,6 +27,5 @@ transactionsBasedMultiChart: txToAnalyze
 		nameGroup: #AccountsTo as: 'Accounts To';
 		nameBelowGroup: #txEther as: 'Ether x Tx ';
 		nameBelowGroup: #txEtherGasPrice as: 'Gas x Gas Price x Value';
-				
 		propagateHighlightToAll.
 	^ composer view

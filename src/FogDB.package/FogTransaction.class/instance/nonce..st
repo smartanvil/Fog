@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 nonce: aString 
 	nonce := aString asBKNumber 

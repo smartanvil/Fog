@@ -1,3 +1,0 @@
-shapes
-boxShape
-	^ boxShape

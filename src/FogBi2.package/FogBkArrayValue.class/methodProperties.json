@@ -1,7 +1,9 @@
 {
 	"instance" : {
+		"gtBlockInspection:" : "SantiagoBragagnolo 2/13/2017 15:02",
 		"gtInspeactorBlockchainTxStats:" : "SantiagoBragagnolo 1/30/2017 17:10",
-		"gtInspeactorBlockchainStats:" : "SantiagoBragagnolo 1/30/2017 17:10"
+		"gtInspeactorBlockchainStats:" : "SantiagoBragagnolo 2/13/2017 15:16",
+		"bi2Properties" : "SantiagoBragagnolo 2/13/2017 15:02"
 	},
 	"class" : { }
 }

@@ -1,12 +1,9 @@
 {
 	"instance" : {
-		"showableProperties" : "SantiagoBragagnolo 1/23/2017 08:34",
-		"gtInspeactorBlockchainNavigation:" : "SantiagoBragagnolo 1/23/2017 08:33",
 		"propertiesToShowRoassalBlock" : "SantiagoBragagnolo 1/23/2017 08:33",
-		"propertiesToShowInTable" : "SantiagoBragagnolo 1/23/2017 08:33",
-		"gtInspeactorBlockchainRoassalBrowse:" : "SantiagoBragagnolo 1/23/2017 08:33"
+		"showableProperties" : "SantiagoBragagnolo 1/23/2017 08:34",
+		"gtInspeactorBlockchainNavigation:" : "SantiagoBragagnolo 2/12/2017 20:57",
+		"propertiesToShowInTable" : "SantiagoBragagnolo 1/23/2017 08:33"
 	},
-	"class" : {
-		"relatedBuilder" : "SantiagoBragagnolo 1/31/2017 14:19"
-	}
+	"class" : { }
 }

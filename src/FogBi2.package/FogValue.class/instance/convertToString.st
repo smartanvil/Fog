@@ -1,3 +1,3 @@
 accessing
 convertToString
-	^ name , ' -> ' , (GTObjectPrinter new asTruncatedTextFrom: value)
+	^ (GTObjectPrinter new asTruncatedTextFrom: value value) asString 

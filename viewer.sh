@@ -1,4 +1,10 @@
 #!/bin/sh
+# some magic to find out the real location of this script dealing with symlinks
+DIR=`readlink "$0"` || DIR="$0";
+DIR=`dirname "$DIR"`;
+cd "$DIR"
+DIR=`pwd`
+cd - > /dev/null 
 
 
 if [ "$#" -ne 2 ]; then
@@ -8,12 +14,12 @@ if [ "$#" -ne 2 ]; then
 fi
 
 if [ "$1" = "json" ]; then
-    ./files/pharo ./files/Pharo st ../json-viewer.st $2
+    "$DIR"/files/pharo "$DIR"/files/Pharo st "$DIR"/json-viewer.st $2
     exit 0
 fi
 
 if [ "$1" = "html" ]; then
-    ./files/pharo ./files/Pharo st ../html-viewer.st $2
+    "$DIR"/files/pharo "$DIR"/files/Pharo st "$DIR"/html-viewer.st $2
     exit 0
 fi
 

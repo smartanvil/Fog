@@ -1,7 +1,6 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"propertiesToShowFrom:" : "SantiagoBragagnolo 2/13/2017 14:08",
-		"inspect:asTableInto:" : "SantiagoBragagnolo 2/13/2017 15:04"
-	},
-	"class" : { }
-}
+		"inspect:asTableInto:" : "SantiagoBragagnolo 2/13/2017 15:04",
+		"propertiesToShowFrom:" : "SantiagoBragagnolo 2/13/2017 14:08" } }

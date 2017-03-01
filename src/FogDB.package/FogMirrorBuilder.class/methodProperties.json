@@ -1,11 +1,10 @@
 {
+	"class" : {
+		 },
 	"instance" : {
+		"abi:" : "SantiagoBragagnolo 2/3/2017 10:33",
 		"ast:" : "SantiagoBragagnolo 2/3/2017 10:33",
-		"mirror" : "SantiagoBragagnolo 2/3/2017 12:23",
 		"memoryMapper" : "SantiagoBragagnolo 2/3/2017 12:10",
 		"methodsBuilders" : "SantiagoBragagnolo 2/3/2017 12:09",
-		"abi:" : "SantiagoBragagnolo 2/3/2017 10:33",
-		"propertiesBuilder" : "SantiagoBragagnolo 2/3/2017 12:08"
-	},
-	"class" : { }
-}
+		"mirror" : "SantiagoBragagnolo 2/3/2017 12:23",
+		"propertiesBuilder" : "SantiagoBragagnolo 2/3/2017 12:08" } }

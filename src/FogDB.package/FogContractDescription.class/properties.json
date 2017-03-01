@@ -1,6 +1,11 @@
 {
+	"category" : "FogDB-Meta-Description",
+	"classinstvars" : [
+		 ],
 	"classtraitcomposition" : "TFogCached classTrait",
-	"classvars" : [ ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:26",
 	"instvars" : [
 		"binary",
 		"runtime",
@@ -10,14 +15,10 @@
 		"mirror",
 		"methods",
 		"aTypeSet",
-		"class"
-	],
+		"class" ],
 	"name" : "FogContractDescription",
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:26",
+	"pools" : [
+		 ],
 	"super" : "Object",
 	"traitcomposition" : "TFogCached",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "FogDB-Meta-Description"
-}
+	"type" : "normal" }

@@ -1,4 +1,4 @@
-block
+transactions
 transactionsBasedGasPriceEther: transactions on: aView
 	| correlation ds |
 	correlation := RTGrapher new.

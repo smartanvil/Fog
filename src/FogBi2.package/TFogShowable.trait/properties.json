@@ -1,5 +1,4 @@
 {
-	"name" : "TFogShowable",
+	"category" : "FogBi2-Charting",
 	"commentStamp" : "SantiagoBragagnolo 1/23/2017 08:36",
-	"category" : "FogBi2-Charting"
-}
+	"name" : "TFogShowable" }

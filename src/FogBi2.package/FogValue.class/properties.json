@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:23",
-	"super" : "RTBuilder",
 	"category" : "FogBi2-Charting",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:23",
 	"instvars" : [
 		"name",
 		"value",
-		"showInRoassalBlock"
-	],
+		"showInRoassalBlock" ],
 	"name" : "FogValue",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

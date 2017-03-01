@@ -1,8 +1,6 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"builderInstance" : "SantiagoBragagnolo 11/21/2016 13:41",
-		"convertToString" : "SantiagoBragagnolo 2/13/2017 14:51",
-		"collectionBrief" : "SantiagoBragagnolo 2/13/2017 15:13"
-	},
-	"class" : { }
-}
+		"collectionBrief" : "SantiagoBragagnolo 2/13/2017 15:13",
+		"convertToString" : "SantiagoBragagnolo 2/13/2017 14:51" } }

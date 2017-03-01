@@ -1,15 +1,14 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"style" : "SantiagoBragagnolo 1/27/2017 13:34",
-		"html" : "SantiagoBragagnolo 2/13/2017 16:47",
-		"json" : "SantiagoBragagnolo 2/13/2017 16:47",
-		"propertiesToShowRoassalBlock" : "",
-		"instance:" : "SantiagoBragagnolo 1/27/2017 10:09",
-		"propertiesToShowInTable" : "",
 		"gtInspeactorBlockchainNavigation:" : "",
-		"showableProperties" : "SantiagoBragagnolo 2/3/2017 12:48",
+		"gtInspeactorBlockchainRoassalBrowse:" : "",
 		"gtInspeactorInspectorNavigation:" : "SantiagoBragagnolo 1/27/2017 10:39",
-		"gtInspeactorBlockchainRoassalBrowse:" : ""
-	},
-	"class" : { }
-}
+		"html" : "SantiagoBragagnolo 2/13/2017 16:47",
+		"instance:" : "SantiagoBragagnolo 1/27/2017 10:09",
+		"json" : "SantiagoBragagnolo 2/13/2017 16:47",
+		"propertiesToShowInTable" : "",
+		"propertiesToShowRoassalBlock" : "",
+		"showableProperties" : "SantiagoBragagnolo 2/3/2017 12:48",
+		"style" : "SantiagoBragagnolo 1/27/2017 13:34" } }

@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:33",
-	"super" : "Object",
 	"category" : "FogDB-Util",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:33",
+	"instvars" : [
+		 ],
 	"name" : "FogBlockFetcher",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

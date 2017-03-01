@@ -1,10 +1,9 @@
 {
+	"class" : {
+		 },
 	"instance" : {
 		"keyType:" : "SantiagoBragagnolo 12/14/2016 23:05",
+		"name" : "SantiagoBragagnolo 1/24/2017 12:03",
 		"staticSlotSize" : "SantiagoBragagnolo 1/24/2017 11:42",
 		"unpack:using:" : "SantiagoBragagnolo 1/27/2017 14:17",
-		"valueType:" : "SantiagoBragagnolo 12/14/2016 23:05",
-		"name" : "SantiagoBragagnolo 1/24/2017 12:03"
-	},
-	"class" : { }
-}
+		"valueType:" : "SantiagoBragagnolo 12/14/2016 23:05" } }

@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:30",
-	"super" : "FogAccount",
 	"category" : "FogDB-Domain",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:30",
 	"instvars" : [
 		"code",
 		"abi",
-		"contractInstance"
-	],
+		"contractInstance" ],
 	"name" : "FogContractAccount",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "FogAccount",
+	"type" : "normal" }

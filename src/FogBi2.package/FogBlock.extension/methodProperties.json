@@ -1,8 +1,7 @@
 {
+	"class" : {
+		 },
 	"instance" : {
+		"bi2Properties" : "SantiagoBragagnolo 2/13/2017 14:45",
 		"gtBlockCharting:" : "SantiagoBragagnolo 2/13/2017 14:15",
-		"gtBlockInspection:" : "SantiagoBragagnolo 2/13/2017 14:16",
-		"bi2Properties" : "SantiagoBragagnolo 2/13/2017 14:45"
-	},
-	"class" : { }
-}
+		"gtBlockInspection:" : "SantiagoBragagnolo 2/13/2017 14:16" } }

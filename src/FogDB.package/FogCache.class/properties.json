@@ -1,16 +1,15 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:20",
-	"super" : "Object",
 	"category" : "FogDB-Cache",
 	"classinstvars" : [
-		"current"
-	],
-	"pools" : [ ],
-	"classvars" : [ ],
+		"current" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:20",
 	"instvars" : [
 		"cache",
-		"caching"
-	],
+		"caching" ],
 	"name" : "FogCache",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:26",
-	"super" : "FogContractDescription",
 	"category" : "FogDB-Meta-Description",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:26",
 	"instvars" : [
-		"fromFile"
-	],
+		"fromFile" ],
 	"name" : "FogFileContractDescription",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "FogContractDescription",
+	"type" : "normal" }

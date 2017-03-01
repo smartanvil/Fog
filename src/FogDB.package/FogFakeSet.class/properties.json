@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:21",
-	"super" : "Set",
 	"category" : "FogDB-Cache",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:21",
+	"instvars" : [
+		 ],
 	"name" : "FogFakeSet",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Set",
+	"type" : "normal" }

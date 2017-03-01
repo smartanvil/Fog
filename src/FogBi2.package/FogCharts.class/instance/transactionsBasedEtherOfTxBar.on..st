@@ -1,4 +1,4 @@
-block
+transactions
 transactionsBasedEtherOfTxBar: transactions on: aView
 	| bar ds |
 	bar := RTGrapher new.

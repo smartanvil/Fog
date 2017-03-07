@@ -830,3 +830,49 @@
 =============== Mar 1, 2017 (CET) ===============
 17:22:43.640182 db@close closing
 17:22:43.640213 db@close done T·30.733µs
+=============== Mar 1, 2017 (CET) ===============
+17:44:19.830026 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:44:19.830094 version@stat F·[] S·0B[] Sc·[]
+17:44:19.830100 db@open opening
+17:44:19.830124 journal@recovery F·1
+17:44:19.830597 journal@recovery recovering @152
+17:44:19.831161 version@stat F·[] S·0B[] Sc·[]
+17:44:19.831673 db@janitor F·2 G·0
+17:44:19.831685 db@open done T·1.581177ms
+17:46:52.537289 db@close closing
+17:46:52.537321 db@close done T·30.622µs
+=============== Mar 2, 2017 (CET) ===============
+11:16:55.077032 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:16:55.079197 version@stat F·[] S·0B[] Sc·[]
+11:16:55.079218 db@open opening
+11:16:55.079251 journal@recovery F·1
+11:16:55.081241 journal@recovery recovering @154
+11:16:55.081808 version@stat F·[] S·0B[] Sc·[]
+11:16:55.081963 db@janitor F·2 G·0
+11:16:55.081974 db@open done T·2.751575ms
+=============== Mar 3, 2017 (CET) ===============
+16:56:28.948680 db@close closing
+16:56:28.948710 db@close done T·28.934µs
+=============== Mar 3, 2017 (CET) ===============
+16:56:30.385761 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:56:30.385837 version@stat F·[] S·0B[] Sc·[]
+16:56:30.385843 db@open opening
+16:56:30.385886 journal@recovery F·1
+16:56:30.386350 journal@recovery recovering @156
+16:56:30.386962 version@stat F·[] S·0B[] Sc·[]
+16:56:30.388430 db@janitor F·2 G·0
+16:56:30.388444 db@open done T·2.596289ms
+17:11:27.913802 db@close closing
+17:11:27.913832 db@close done T·29.233µs
+=============== Mar 6, 2017 (CET) ===============
+11:14:12.567500 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:14:12.567567 version@stat F·[] S·0B[] Sc·[]
+11:14:12.567573 db@open opening
+11:14:12.567605 journal@recovery F·1
+11:14:12.569185 journal@recovery recovering @158
+11:14:12.569608 version@stat F·[] S·0B[] Sc·[]
+11:14:12.571091 db@janitor F·2 G·0
+11:14:12.571107 db@open done T·3.528785ms
+=============== Mar 7, 2017 (CET) ===============
+17:59:58.290478 db@close closing
+17:59:58.290506 db@close done T·27.102µs

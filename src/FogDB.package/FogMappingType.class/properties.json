@@ -1,15 +1,14 @@
 {
-	"category" : "FogDB-Domain-Types",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/16/2016 16:26",
+	"super" : "FogType",
+	"category" : "FogDB-Domain-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"keyType",
-		"valueType" ],
+		"valueType"
+	],
 	"name" : "FogMappingType",
-	"pools" : [
-		 ],
-	"super" : "FogType",
-	"type" : "normal" }
+	"type" : "normal"
+}

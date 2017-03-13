@@ -7,5 +7,5 @@ testAllFullUsageConstructorsDeploy
 		thenCollect: [ :d | d mirror constructor applyOn: d valueWithArguments: {'arbitraryString'} sender: account ].
 	instances do: [ :i | i waitIsReady ].
 	self assert: (instances allSatisfy: #isReady).
-	detectedContracts := instances collect: [ :i | (FogConnection currentConnection eth getCode: i address blockTag: 'latest') contract ].
+	detectedContracts := instances collect: [ :i | (FogConnection currentConnection eth getContract: i address blockTag: 'latest') contract ].
 	self assert: detectedContracts equals: (instances collect: #contract)

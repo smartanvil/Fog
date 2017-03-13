@@ -7,7 +7,7 @@ resolveAccount: aString blockNumber: aBlockNumber
 		detect: [ :a | a privateAccountHash = hashAccount ]
 		ifFound: [ :a | ^ a ]
 		ifNone: [  ].
-	compiledCode := self eth getCode: hashAccount blockNumber: aBlockNumber.
+	compiledCode := self eth getContract: hashAccount blockNumber: aBlockNumber.
 	account := compiledCode
 		ifNotNil: [ FogContractAccount for: compiledCode and: hashAccount ]
 		ifNil: [ FogExternalAccount for: hashAccount ].

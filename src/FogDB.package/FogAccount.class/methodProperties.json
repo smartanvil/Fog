@@ -1,14 +1,17 @@
 {
-	"class" : {
-		"collectionSelector" : "SantiagoBragagnolo 12/7/2016 14:06",
-		"nilAccount" : "SantiagoBragagnolo 1/30/2017 17:10" },
 	"instance" : {
-		"=" : "",
-		"address" : "SantiagoBragagnolo 12/8/2016 12:24",
-		"hash" : "",
+		"valuesToCompareForEquality" : "SantiagoBragagnolo 11/25/2016 17:51",
 		"hash:" : "SantiagoBragagnolo 11/23/2016 12:26",
+		"=" : "",
+		"hash" : "",
 		"isContract" : "SantiagoBragagnolo 11/23/2016 12:27",
+		"address" : "SantiagoBragagnolo 12/8/2016 12:24",
 		"name" : "SantiagoBragagnolo 11/23/2016 12:26",
-		"name:" : "SantiagoBragagnolo 11/23/2016 12:26",
 		"privateAccountHash" : "SantiagoBragagnolo 11/23/2016 12:26",
-		"valuesToCompareForEquality" : "SantiagoBragagnolo 11/25/2016 17:51" } }
+		"name:" : "SantiagoBragagnolo 11/23/2016 12:26"
+	},
+	"class" : {
+		"nilAccount" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"collectionSelector" : "SantiagoBragagnolo 12/7/2016 14:06"
+	}
+}

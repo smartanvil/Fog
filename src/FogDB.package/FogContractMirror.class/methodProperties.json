@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"constructor" : "SantiagoBragagnolo 2/3/2017 12:31",
 		"constructor:" : "SantiagoBragagnolo 2/3/2017 10:17",
+		"constructor" : "SantiagoBragagnolo 2/3/2017 12:31",
 		"initialize" : "SantiagoBragagnolo 2/3/2017 12:13",
 		"instanceMirror" : "SantiagoBragagnolo 2/3/2017 12:12",
 		"types" : "SantiagoBragagnolo 2/3/2017 12:32",
-		"types:" : "SantiagoBragagnolo 2/3/2017 10:17" } }
+		"types:" : "SantiagoBragagnolo 2/3/2017 10:17"
+	},
+	"class" : { }
+}

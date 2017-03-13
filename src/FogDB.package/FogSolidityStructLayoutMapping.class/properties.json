@@ -1,14 +1,13 @@
 {
-	"category" : "FogDB-Meta-SolidityLayout",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 1/24/2017 11:02",
-	"instvars" : [
-		"mappings" ],
-	"name" : "FogSolidityStructLayoutMapping",
-	"pools" : [
-		 ],
 	"super" : "FogSolidityLayoutMapping",
-	"type" : "normal" }
+	"category" : "FogDB-Meta-SolidityLayout",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mappings"
+	],
+	"name" : "FogSolidityStructLayoutMapping",
+	"type" : "normal"
+}

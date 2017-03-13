@@ -1,11 +1,12 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"name" : "SantiagoBragagnolo 2/7/2017 16:46",
 		"pack:with:" : "SantiagoBragagnolo 2/10/2017 15:09",
-		"size" : "SantiagoBragagnolo 2/13/2017 14:48",
 		"staticSlotSize" : "SantiagoBragagnolo 2/10/2017 15:00",
 		"types" : "SantiagoBragagnolo 2/10/2017 12:21",
 		"types:" : "SantiagoBragagnolo 2/7/2017 16:26",
-		"unpack:using:" : "SantiagoBragagnolo 2/8/2017 13:37" } }
+		"unpack:using:" : "SantiagoBragagnolo 2/8/2017 13:37",
+		"name" : "SantiagoBragagnolo 2/7/2017 16:46",
+		"size" : "SantiagoBragagnolo 2/13/2017 14:48"
+	},
+	"class" : { }
+}

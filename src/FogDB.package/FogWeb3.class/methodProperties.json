@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"clientVersion" : "SantiagoBragagnolo 11/9/2016 17:04",
 		"setApi" : "SantiagoBragagnolo 1/30/2017 17:10",
-		"sha3:" : "SantiagoBragagnolo 12/9/2016 23:26",
-		"sha3_256:" : "SantiagoBragagnolo 1/30/2017 17:10" } }
+		"sha3_256:" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"clientVersion" : "SantiagoBragagnolo 11/9/2016 17:04",
+		"sha3:" : "SantiagoBragagnolo 12/9/2016 23:26"
+	},
+	"class" : { }
+}

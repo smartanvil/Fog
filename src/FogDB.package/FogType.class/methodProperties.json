@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"collect:" : "SantiagoBragagnolo 1/24/2017 11:40",
-		"isArrayType" : "SantiagoBragagnolo 2/8/2017 16:57",
-		"isStruct" : "SantiagoBragagnolo 1/24/2017 11:40",
 		"staticSlotSize" : "SantiagoBragagnolo 1/24/2017 11:42",
+		"isArrayType" : "SantiagoBragagnolo 2/8/2017 16:57",
 		"unpack:using:" : "SantiagoBragagnolo 2/8/2017 15:55",
-		"unpackReturn:using:" : "SantiagoBragagnolo 2/8/2017 17:06" } }
+		"isStruct" : "SantiagoBragagnolo 1/24/2017 11:40",
+		"unpackReturn:using:" : "SantiagoBragagnolo 2/8/2017 17:06"
+	},
+	"class" : { }
+}

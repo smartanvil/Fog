@@ -1,24 +1,25 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"applyOn:valueWithArguments:configuration:" : "SantiagoBragagnolo 2/10/2017 17:11",
-		"applyOn:valueWithArguments:sender:" : "SantiagoBragagnolo 2/10/2017 17:22",
-		"decodeReturn:" : "SantiagoBragagnolo 2/8/2017 16:23",
 		"encodeArguments:" : "SantiagoBragagnolo 2/10/2017 14:22",
-		"encodeMethodCall:" : "SantiagoBragagnolo 2/10/2017 15:13",
-		"isStateModifier" : "SantiagoBragagnolo 12/9/2016 23:10",
-		"modifiesState:" : "SantiagoBragagnolo 12/9/2016 23:00",
+		"selector" : "SantiagoBragagnolo 2/10/2017 12:21",
+		"decodeReturn:" : "SantiagoBragagnolo 2/8/2017 16:23",
+		"signature" : "SantiagoBragagnolo 2/6/2017 12:39",
+		"returnType" : "SantiagoBragagnolo 2/7/2017 16:35",
 		"name" : "SantiagoBragagnolo 2/7/2017 16:24",
-		"name:" : "SantiagoBragagnolo 12/9/2016 23:00",
-		"parameters:" : "SantiagoBragagnolo 2/3/2017 11:31",
-		"printOn:" : "SantiagoBragagnolo 2/3/2017 17:48",
-		"resolveAsCall:valueWithArguments:configuration:" : "SantiagoBragagnolo 2/10/2017 17:07",
-		"resolveAsCall:valueWithArguments:sender:" : "SantiagoBragagnolo 2/7/2017 17:07",
-		"resolveAsTransaction:valueWithArguments:configuration:" : "SantiagoBragagnolo 2/10/2017 17:07",
+		"applyOn:valueWithArguments:sender:" : "SantiagoBragagnolo 2/10/2017 17:22",
 		"resolveAsTransaction:valueWithArguments:sender:" : "SantiagoBragagnolo 2/3/2017 11:31",
 		"return:" : "SantiagoBragagnolo 12/9/2016 23:00",
-		"returnType" : "SantiagoBragagnolo 2/7/2017 16:35",
-		"selector" : "SantiagoBragagnolo 2/10/2017 12:21",
-		"signature" : "SantiagoBragagnolo 2/6/2017 12:39",
-		"signatureName" : "SantiagoBragagnolo 2/6/2017 12:32" } }
+		"signatureName" : "SantiagoBragagnolo 2/6/2017 12:32",
+		"name:" : "SantiagoBragagnolo 12/9/2016 23:00",
+		"resolveAsTransaction:valueWithArguments:configuration:" : "SantiagoBragagnolo 2/10/2017 17:07",
+		"resolveAsCall:valueWithArguments:configuration:" : "SantiagoBragagnolo 2/10/2017 17:07",
+		"applyOn:valueWithArguments:configuration:" : "SantiagoBragagnolo 2/10/2017 17:11",
+		"encodeMethodCall:" : "SantiagoBragagnolo 2/10/2017 15:13",
+		"modifiesState:" : "SantiagoBragagnolo 12/9/2016 23:00",
+		"printOn:" : "SantiagoBragagnolo 2/3/2017 17:48",
+		"resolveAsCall:valueWithArguments:sender:" : "SantiagoBragagnolo 2/7/2017 17:07",
+		"parameters:" : "SantiagoBragagnolo 2/3/2017 11:31",
+		"isStateModifier" : "SantiagoBragagnolo 12/9/2016 23:10"
+	},
+	"class" : { }
+}

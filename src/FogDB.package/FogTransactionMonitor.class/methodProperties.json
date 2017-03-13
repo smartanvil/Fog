@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"check" : "SantiagoBragagnolo 1/30/2017 17:10",
-		"future" : "SantiagoBragagnolo 12/15/2016 14:27",
 		"isResolved" : "SantiagoBragagnolo 12/15/2016 14:35",
 		"register:" : "SantiagoBragagnolo 12/15/2016 15:26",
-		"timeLeft" : "SantiagoBragagnolo 12/15/2016 15:26",
-		"transactionHash:" : "SantiagoBragagnolo 12/15/2016 14:27" } }
+		"check" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"transactionHash:" : "SantiagoBragagnolo 12/15/2016 14:27",
+		"future" : "SantiagoBragagnolo 12/15/2016 14:27",
+		"timeLeft" : "SantiagoBragagnolo 12/15/2016 15:26"
+	},
+	"class" : { }
+}

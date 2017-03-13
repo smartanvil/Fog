@@ -1,12 +1,9 @@
 initialization
 setUp
-	| description |
 	super setUp.
 	self timeLimit: 3 minutes.
 	self class contract
-		ifNil: [ description := FogContractDescription instances
-				detect: [ :a | a fromFile basename = self contractSourceCodeName ].
-			contract := self deploy: description.
+		ifNil: [ contract := self createContract.
 			contract waitIsReady.
 			self class contract: contract ].
 	contract := self class contract.

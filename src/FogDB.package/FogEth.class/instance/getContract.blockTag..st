@@ -1,5 +1,5 @@
 as yet unclassified
-getCode: aContractAddress blockTag: aBlockTag
+getContract: aContractAddress blockTag: aBlockTag
 	| code unknownContract |
 	self cache contractInstances
 		detect: [ :instance | instance address = aContractAddress asAddress ]

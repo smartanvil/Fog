@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"name" : "SantiagoBragagnolo 1/24/2017 12:02",
 		"staticSlotSize" : "SantiagoBragagnolo 1/24/2017 11:42",
 		"unpack:using:" : "SantiagoBragagnolo 1/24/2017 15:29",
-		"values:" : "SantiagoBragagnolo 12/14/2016 23:03" } }
+		"values:" : "SantiagoBragagnolo 12/14/2016 23:03"
+	},
+	"class" : { }
+}

@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"buildInto:" : "SantiagoBragagnolo 2/3/2017 11:06",
-		"createConstructorMirror:with:" : "SantiagoBragagnolo 2/10/2017 12:12",
+		"process:with:" : "SantiagoBragagnolo 2/3/2017 12:24",
 		"createMethodMirror:with:" : "SantiagoBragagnolo 2/10/2017 12:12",
-		"process:with:" : "SantiagoBragagnolo 2/3/2017 12:24" } }
+		"createConstructorMirror:with:" : "SantiagoBragagnolo 2/10/2017 12:12",
+		"buildInto:" : "SantiagoBragagnolo 2/3/2017 11:06"
+	},
+	"class" : { }
+}

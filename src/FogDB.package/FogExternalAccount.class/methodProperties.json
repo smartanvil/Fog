@@ -1,10 +1,13 @@
 {
+	"instance" : {
+		"hash" : "",
+		"=" : "",
+		"printOn:" : "SantiagoBragagnolo 11/23/2016 15:05"
+	},
 	"class" : {
 		"for:" : "SantiagoBragagnolo 1/30/2017 17:10",
 		"kindOfAccount" : "SantiagoBragagnolo 11/25/2016 14:16",
 		"loadKnownAccounts" : "SantiagoBragagnolo 12/16/2016 16:54",
-		"loadKnownAccounts:" : "SantiagoBragagnolo 12/16/2016 16:54" },
-	"instance" : {
-		"=" : "",
-		"hash" : "",
-		"printOn:" : "SantiagoBragagnolo 11/23/2016 15:05" } }
+		"loadKnownAccounts:" : "SantiagoBragagnolo 12/16/2016 16:54"
+	}
+}

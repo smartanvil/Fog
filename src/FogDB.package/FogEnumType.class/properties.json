@@ -1,14 +1,13 @@
 {
-	"category" : "FogDB-Domain-Types",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/16/2016 16:26",
-	"instvars" : [
-		"values" ],
-	"name" : "FogEnumType",
-	"pools" : [
-		 ],
 	"super" : "FogType",
-	"type" : "normal" }
+	"category" : "FogDB-Domain-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"values"
+	],
+	"name" : "FogEnumType",
+	"type" : "normal"
+}

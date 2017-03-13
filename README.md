@@ -57,17 +57,17 @@ Once done the setup of your image, you can start using the library.
       - Real accounts
       - Deployed contract instances 
    
-   The library gives us access to all this information as reifyied objects.
+   The library gives us access to all this information as reifyied objects. Each of these objects has a GTTool inspection extension, focusing on the navigability and in the main data of each object.
    
-### Blocks
+### Fetching a block, and inspecting from the block 
     
- The block is the time related abstraction in blockchain systems. Inside of it, we can find a father, the included transactions, and the timestamp, inbetween other less remarkable pieces of information. 
+ The block is the time related abstraction in blockchain systems. [Glossary - Block](http://ethdocs.org/en/latest/glossary.html?highlight=block) Inside of it, we can find a father, the included transactions, and the timestamp, inbetween other less remarkable pieces of information. 
     
     
 ```
  block := FogConnection currentConnection eth getBlockByTag: 'latest' full: true.
 ```
- This pcode gives us the last processed block. 
+ This piece of code gives us the last processed block. 
  We can use this block as entry point for navigating to the previous blocks by asking for the parent block
  
 ```
@@ -79,10 +79,49 @@ Once done the setup of your image, you can start using the library.
   uncles := block uncles. 
 ```
 
+Finally, from the block object, we can also navigate to transaction objects [Glossary - Transaction](http://ethdocs.org/en/latest/glossary.html?highlight=transaction). 
+
+```
+  transactions := block transactions.
+```
 
 
 
+### Fetching a transaction and inspecting from the transaction
 
+   A transaction is an change operated into the blockchain distributed ledger. It is included inside a block. It relates accounts with modifications. This modifications may be money transference or code execution. 
+   For accessing a transaction, you can do it from the block, as we saw in the 'From the block' navigation part. But we also can fetch an specific transaction, pointing it by hash 
+   
+```
+  transaction := FogConnection currentConnection eth getTransactionByHash: 'hash'.
+```
+ 
+ From a transaction we can access to the owning block
 
+```
+   ownerBlock := transaction block. 
+```
+  
+ And also to the related accounts 
+```
+   to := transaction to. 
+   from := transaction from. 
+```
+ This accounts may be [external or internal accounts](http://ethdocs.org/en/latest/glossary.html?highlight=account)
+
+### Fetching a deployed contract
+
+   Finally, deployed contracts have a particular interest, since is one of the most important functionalities of the Ethereum flavor. 
+```
+  instance := FogConnection eth  getContract: 'ContractHash'  blockNumber: 124312  
+```
+   This code will bring the contract instance binded to the state it had at the given block number. As well you can use tags instead of numbers
+   
+```
+  instance := FogConnection eth  getContract: 'ContractHash'  blockTag: 'latest'  
+```
+  If the contract source code was loaded as a known contract (check in the configuration section), the contract instance will be browsable with GTTools, and it will provide a mirror for interacting with it (check the contract section) 
+  
+   
 
 

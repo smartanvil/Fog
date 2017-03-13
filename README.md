@@ -123,5 +123,127 @@ Finally, from the block object, we can also navigate to transaction objects [Glo
   If the contract source code was loaded as a known contract (check in the configuration section), the contract instance will be browsable with GTTools, and it will provide a mirror for interacting with it (check the contract section) 
   
    
+## Contracts
 
+  Finally we have the contracts. Contracts are probably the reason for using Ethereum. 
+  A deployed contract, in the end, is like a deployed object that is interacted by sending messages, that are executed in transactional fashion, or function, depending on if they do or do not state changes.
+  
+  So far our implementation does not have a real reification of the contract instance, since it should be based on a session concept, that we do not have yet. Then the current proposed usage is based on the generated reflective system. 
+### Create an account
+  For interacting with contracts you will need to have an account. For the database side you may want to check out the documentation [Account management](http://ethdocs.org/en/latest/account-management.html). 
+  
+  By the side of Pharo you will need to create an account object with it related hash ID. 
+  
+```
+    account := FogExternalAccount new
+		hash: self ownerAccountAddress ;
+		name: 'My Account';
+		yourself
+```
+
+### Deploy a contract using reflection
+
+First we need to access what we call the Contract description. This object relates the source code with it AST, binary and deployable representations. 
+
+```
+ contractDescription := FogFileContractDescription fromFile: 'path/to/contract'
+```
+The contract description object respond to the #mirror message. Giving as return a FogContractMirror. This mirror is the representation of the Contract class side. Exposes the constructor method.
+
+```
+   constructor := contractDescription mirror constructor.
+```
+This constructor method is as well a mirror of the contructing method, and it allows to execute the remote method by sending the proper message to the object.
+Before showing how to do it, we may need to explain the configuration association array: 
+Ethereum method activation ask for execution metadata. As the ammount of gas the gas price, and the account you are using for activating this method (The one that will be charged with the execution price). 
+For this meta data we use an array of associations. 
+
+```
+  configuration := 
+  {(#from -> account address).
+	(#gas -> 3000000).
+	(#gasPrice -> 60)}.
+  
+	contractInstance := constructor applyOn: contractDescription valueWithArguments: {} configuration: configuration
+```
+  The contractInstance variable, now points to a deployed contract instance, of the class FogContractInstanceBind. 
+  This contract instance it may not be ready, since the transaction will be reduced when the new proof of work is solved. 
+  
+  For being sure that this object is ready to use, you may want to send the message #waitIsReady to it. It will force a synchronisation. Disclaimer: this may take some minutes. 
+  
+
+### Activate methods by reflection 
+  
+  Once we have a usable FogContractInstanceBind object, we can use it for activatig remote method activations. 
+  But first, we have to get the contract instance mirror, to being able to lookup for the contract instance available methods. 
+  
+```
+  instanceMirror := contractDescription mirror instanceMirror. 
+  instanceMirror methods inspect 
+```
+  
+  For looking up for a method, you can use the related selector. The generated selector for each method is
+  
+  * No arguments selector uses the name of the function
+  * One argument selector uses the name of the function plus $: character. 
+  * N > 1 argument selector uses the name of the function plus $: character and adds #and: for each extra parameter. 
+  
+```
+  getMethod := instanceMirror method: #get. 
+  setMethod := instanceMirror method: #set:. 
+  twoParamsMethod: instanceMirror method: #method:and:
+```
+  
+  Finally with the method and the bind object at hand we can activate it by sending a similar message as the one we used to the constructor. Depending on the kind of message, if it changes or no state the kind of return of the activation may be different
+  
+  The following case shows a getter. It should not mean any change of state. So the return is a regular value. 
+```
+  configuration := 
+  {(#from -> account address).
+	(#gas -> 3000000).
+	(#gasPrice -> 60)}.
+  
+  directReturn := getMethod applyOn: contractInstance valueWithArguments: {} configuration: configuration.
+```
+
+  The following case illustrates a setter. It means of course a change of state. Then the return will be a transaction receipt hash. 
+  
+```
+  configuration := 
+  {(#from -> account address).
+	(#gas -> 3000000).
+	(#gasPrice -> 60)}.
+  
+  receiptHash := setMethod applyOn: contractInstance valueWithArguments: { #Value } configuration: configuration.
+```
+ This receipt hash may be used for synchronizing or checking the remote state of the execution by the user if needed by using the transaction monitor, whom will provide us a future to deal with this execution. 
+ 
+```
+  future := FogTransactionMonitorService current receiptFor: receiptHash. 
+```
+ The future is a TaskIt Future. You can learn more about futures on the [TaskIt project documentation](https://github.com/sbragagnolo/taskit).
+
+Quick some of the things we can do with a future is to force a synchronization:
+```
+	future synchronizeTimeout: 10 minutes.
+```
+
+Or to register some callbacks 
+```
+	future onSuccessDo:[: transactionReceipt | #doSomething ]; onFailureDo:[:error | #doSomething ].
+```
+
+
+### Access properties by reflection 
+ 
+  The same way we can access on the methods of a Contract instance mirror by sending #method: message we can do get specific property mirrors by sending the #property: message.
+  
+```
+   property := instanceMirror property: #variableName.
+```
+  This property mirror allow us to have read access to remote variables even if they do not have any getter. 
+  
+  
+
+  
 

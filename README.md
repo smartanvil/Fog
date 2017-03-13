@@ -282,5 +282,5 @@ Or to register some callbacks
   
   You will need to run some time this client for having enough ether for being able to deploy and execute contracts. And you will need to check the account hash of your related miner. 
   
-  
+  For the rest of the methods implemented on the connection you can use the ehereum javascript api, since they are the same .
 

@@ -22,9 +22,9 @@ Metacello
 
 ### By hand 
 You may want to use this version for having access to some scripts and contracts samples. 
-
+```
 git checkout git@github.com:sbragagnolo/Fog.git
-
+```
 ```
 Metacello
 	new

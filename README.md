@@ -1,11 +1,37 @@
 # Fog
+
+
+
 Pharo Ethereum Driver 
 
 Fog is a library that allows the user to connect to an ethereum based blockchain data base. 
 
 Is based on the Javascript canonical implementation done by Ethereum community [Ethereum Javascript API](https://github.com/ethereum/wiki/wiki/JavaScript-API).
 
+## Download code
 
+### Iceberg / Baseline 
+
+```
+Metacello
+	new
+	baseline: 'Fog';
+	repository: 'github://sbragagnolo/Fog/src';
+	load.
+```
+
+### By hand 
+You may want to use this version for having access to some scripts and contracts samples. 
+
+git checkout git@github.com:sbragagnolo/Fog.git
+
+```
+Metacello
+	new
+	baseline: 'Fog';
+	repository: 'filetree:///path/to/git-repository/Fog/src';;
+	load.
+```
 
 ## Before starting - configuration
 

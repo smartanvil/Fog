@@ -40,9 +40,9 @@ Is based on the Javascript canonical implementation done by Ethereum community [
   Finally you need to startup the Monitor service. 
   This service will monitorize any transaction started by the user of the library up to the moment when this transaction is fully executed. 
   
-  ```
+```
   FogTransactionMonitorService reset; current. 
-  ```
+```
 
 
 Once done the setup of your image, you can start using the library. 
@@ -59,11 +59,25 @@ Once done the setup of your image, you can start using the library.
    
    The library gives us access to all this information as reifyied objects.
    
-   
-
-
-
-
+### Blocks
+    
+ The block is the time related abstraction in blockchain systems. Inside of it, we can find a father, the included transactions, and the timestamp, inbetween other less remarkable pieces of information. 
+    
+    
+```
+ block := FogConnection currentConnection eth getBlockByTag: 'latest' full: true.
+```
+ This pcode gives us the last processed block. 
+ We can use this block as entry point for navigating to the previous blocks by asking for the parent block
+ 
+```
+  block := block parent
+```
+ As well in ethereum we have the concept of uncle blocks, for blocks that were processed at the same time as the parent block [Glossary - Uncle](http://ethdocs.org/en/latest/glossary.html?highlight=uncle)
+ 
+```
+  uncles := block uncles. 
+```
 
 
 

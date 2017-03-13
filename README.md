@@ -8,6 +8,18 @@ Fog is a library that allows the user to connect to an ethereum based blockchain
 
 Is based on the Javascript canonical implementation done by Ethereum community [Ethereum Javascript API](https://github.com/ethereum/wiki/wiki/JavaScript-API).
 
+
+## Dependencies 
+
+### RHash
+``` 
+ sudo apt-get install rhash
+``` 
+### Solidity
+``` 
+ npm install solc
+``` 
+
 ## Download code
 
 ### Iceberg / Baseline 

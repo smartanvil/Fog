@@ -230,7 +230,7 @@ Quick some of the things we can do with a future is to force a synchronization:
 
 Or to register some callbacks 
 ```
-	future onSuccessDo:[: transactionReceipt | #doSomething ]; onFailureDo:[:error | #doSomething ].
+	future onSuccessDo:[: transactionReceipt | #doSomething ]; onFailureDo:[:error | #doSomething ].##
 ```
 
 
@@ -241,9 +241,20 @@ Or to register some callbacks
 ```
    property := instanceMirror property: #variableName.
 ```
-  This property mirror allow us to have read access to remote variables even if they do not have any getter. 
-  
+  This property mirror allow us to have read access to remote variables even if they do not have any getter. For accessing it value, just execute: 
+
+```
+  value := property value: contractInstance. 
+```
+  So far we do support any kind of simple type and structs. We do not yet support arrays (strings neither) or dictionaries. 
   
 
+
+## Misc
+
+  For testing the usage, the checked out project provides a script called dev.sh, at the script folder. This script executes the client with some accounts already created, and in a isolated network, with a single miner. 
+  
+  You will need to run some time this client for having enough ether for being able to deploy and execute contracts. And you will need to check the account hash of your related miner. 
+  
   
 

@@ -1,15 +1,14 @@
 {
-	"category" : "FogDB-API",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:18",
+	"super" : "Object",
+	"category" : "FogDB-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"connection",
-		"api" ],
+		"api"
+	],
 	"name" : "FogAPIAccess",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

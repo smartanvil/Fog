@@ -1,14 +1,11 @@
 {
-	"category" : "FogDB-API",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:18",
-	"instvars" : [
-		 ],
-	"name" : "FogWeb3",
-	"pools" : [
-		 ],
 	"super" : "FogAPIAccess",
-	"type" : "normal" }
+	"category" : "FogDB-API",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogWeb3",
+	"type" : "normal"
+}

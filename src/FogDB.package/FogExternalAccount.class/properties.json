@@ -1,16 +1,13 @@
 {
-	"category" : "FogDB-Domain",
-	"classinstvars" : [
-		 ],
 	"classtraitcomposition" : "TEquality classTrait",
-	"classvars" : [
-		 ],
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:30",
-	"instvars" : [
-		 ],
+	"classvars" : [ ],
+	"instvars" : [ ],
 	"name" : "FogExternalAccount",
-	"pools" : [
-		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:30",
 	"super" : "FogAccount",
 	"traitcomposition" : "TEquality",
-	"type" : "normal" }
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FogDB-Domain"
+}

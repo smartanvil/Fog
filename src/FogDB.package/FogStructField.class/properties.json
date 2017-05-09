@@ -1,15 +1,14 @@
 {
-	"category" : "FogDB-Domain-Types",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 1/24/2017 15:38",
+	"super" : "Object",
+	"category" : "FogDB-Domain-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"name",
-		"type" ],
+		"type"
+	],
 	"name" : "FogStructField",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

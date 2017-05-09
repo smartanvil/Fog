@@ -1,14 +1,11 @@
 {
-	"category" : "FogDB-Meta-Mirror",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 2/10/2017 16:13",
-	"instvars" : [
-		 ],
-	"name" : "FogTypeEmpty",
-	"pools" : [
-		 ],
 	"super" : "FogType",
-	"type" : "normal" }
+	"category" : "FogDB-Meta-Mirror",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogTypeEmpty",
+	"type" : "normal"
+}

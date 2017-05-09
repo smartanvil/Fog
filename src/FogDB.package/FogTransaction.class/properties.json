@@ -1,11 +1,6 @@
 {
-	"category" : "FogDB-Domain",
-	"classinstvars" : [
-		 ],
 	"classtraitcomposition" : "TEquality classTrait",
-	"classvars" : [
-		 ],
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:32",
+	"classvars" : [ ],
 	"instvars" : [
 		"source",
 		"s",
@@ -22,10 +17,14 @@
 		"to",
 		"transactionIndex",
 		"v",
-		"block" ],
+		"block"
+	],
 	"name" : "FogTransaction",
-	"pools" : [
-		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:32",
 	"super" : "FogConnectedObject",
 	"traitcomposition" : "TEquality",
-	"type" : "normal" }
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FogDB-Domain"
+}

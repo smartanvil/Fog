@@ -1,3 +1,3 @@
 accessing
 versionHash
-	^ binary hash
+	^ binary hash asString

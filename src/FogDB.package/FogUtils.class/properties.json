@@ -1,14 +1,11 @@
 {
-	"category" : "FogDB-Util",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:34",
-	"instvars" : [
-		 ],
-	"name" : "FogUtils",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "FogDB-Util",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogUtils",
+	"type" : "normal"
+}

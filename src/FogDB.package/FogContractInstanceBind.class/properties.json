@@ -1,15 +1,14 @@
 {
-	"category" : "FogDB-Domain",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/7/2016 13:47",
+	"super" : "FogConnectedObject",
+	"category" : "FogDB-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"address",
-		"contract" ],
+		"contract"
+	],
 	"name" : "FogContractInstanceBind",
-	"pools" : [
-		 ],
-	"super" : "FogConnectedObject",
-	"type" : "normal" }
+	"type" : "normal"
+}

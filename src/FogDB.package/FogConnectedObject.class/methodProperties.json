@@ -1,10 +1,7 @@
 {
-	"instance" : {
-		"connection" : "SantiagoBragagnolo 11/14/2016 15:31"
-	},
 	"class" : {
 		"cache" : "SantiagoBragagnolo 1/30/2017 17:10",
-		"currentConnection" : "SantiagoBragagnolo 1/30/2017 17:10",
-		"collectionSelector" : "SantiagoBragagnolo 12/7/2016 14:05"
-	}
-}
+		"collectionSelector" : "SantiagoBragagnolo 12/7/2016 14:05",
+		"currentConnection" : "SantiagoBragagnolo 1/30/2017 17:10" },
+	"instance" : {
+		"connection" : "SantiagoBragagnolo 11/14/2016 15:31" } }

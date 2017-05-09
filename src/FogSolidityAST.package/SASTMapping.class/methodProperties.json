@@ -1,13 +1,12 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"printOn:" : "SantiagoBragagnolo 11/30/2016 16:46",
-		"keyType:" : "SantiagoBragagnolo 11/30/2016 16:45",
 		"keyType" : "SantiagoBragagnolo 12/14/2016 22:58",
-		"referencesTo" : "SantiagoBragagnolo 12/1/2016 13:05",
+		"keyType:" : "SantiagoBragagnolo 11/30/2016 16:45",
 		"matches:" : "SantiagoBragagnolo 11/30/2016 16:47",
-		"valueType:" : "SantiagoBragagnolo 11/30/2016 16:45",
 		"name" : "SantiagoBragagnolo 11/29/2016 16:58",
-		"valueType" : "SantiagoBragagnolo 12/14/2016 22:58"
-	},
-	"class" : { }
-}
+		"printOn:" : "SantiagoBragagnolo 11/30/2016 16:46",
+		"referencesTo" : "SantiagoBragagnolo 12/1/2016 13:05",
+		"valueType" : "SantiagoBragagnolo 12/14/2016 22:58",
+		"valueType:" : "SantiagoBragagnolo 11/30/2016 16:45" } }

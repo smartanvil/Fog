@@ -1,7 +1,6 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"mapping:" : "SantiagoBragagnolo 1/25/2017 16:17",
-		"fetchContentsFrom:" : "SantiagoBragagnolo 1/25/2017 15:34"
-	},
-	"class" : { }
-}
+		"fetchContentsFrom:" : "SantiagoBragagnolo 1/25/2017 15:34",
+		"mapping:" : "SantiagoBragagnolo 1/25/2017 16:17" } }

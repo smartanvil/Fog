@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:41",
-	"super" : "SASTNode",
 	"category" : "FogSolidityAST-Nodes",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:41",
+	"instvars" : [
+		 ],
 	"name" : "SASTContainer",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SASTNode",
+	"type" : "normal" }

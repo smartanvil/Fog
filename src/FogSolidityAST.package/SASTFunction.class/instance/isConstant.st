@@ -1,4 +1,5 @@
 as yet unclassified
 isConstant
-	self assert: (constant and: [ block hasAssignations not ]) = constant.
+	self flag: #CheckThis.
+	"self assert: (constant and: [ block hasAssignations not ]) = constant."
 	^ constant

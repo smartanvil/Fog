@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:55",
-	"super" : "SASTNode",
 	"category" : "FogSolidityAST-Nodes",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:55",
 	"instvars" : [
-		"entries"
-	],
+		"entries" ],
 	"name" : "SASTTupleExpression",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SASTNode",
+	"type" : "normal" }

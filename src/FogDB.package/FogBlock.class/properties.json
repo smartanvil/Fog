@@ -1,6 +1,11 @@
 {
+	"category" : "FogDB-Domain",
+	"classinstvars" : [
+		 ],
 	"classtraitcomposition" : "TEquality classTrait",
-	"classvars" : [ ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:31",
 	"instvars" : [
 		"full",
 		"transactions",
@@ -28,14 +33,10 @@
 		"unclesHashes",
 		"relatedContracts",
 		"relatedStorage",
-		"receiptRoot"
-	],
+		"receiptRoot" ],
 	"name" : "FogBlock",
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:31",
+	"pools" : [
+		 ],
 	"super" : "FogConnectedObject",
 	"traitcomposition" : "TEquality",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "FogDB-Domain"
-}
+	"type" : "normal" }

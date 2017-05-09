@@ -1,3 +1,3 @@
 accessing
 methodsBuilders
-	^ FogMirrorMethodsBuilder new
+	^ FogMirrorAbiMethodsBuilder new

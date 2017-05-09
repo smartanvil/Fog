@@ -1,0 +1,14 @@
+{
+	"category" : "FogDB-Meta-Description",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 5/9/2017 11:30",
+	"instvars" : [
+		 ],
+	"name" : "FogContractPropertySlot",
+	"pools" : [
+		 ],
+	"super" : "Slot",
+	"type" : "normal" }

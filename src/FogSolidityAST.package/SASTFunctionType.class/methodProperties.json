@@ -1,12 +1,11 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"printOn:" : "SantiagoBragagnolo 12/1/2016 14:24",
-		"referencesTo" : "SantiagoBragagnolo 12/1/2016 13:05",
-		"parameters:" : "SantiagoBragagnolo 11/30/2016 14:29",
+		"isElementaryType" : "SantiagoBragagnolo 11/30/2016 14:42",
 		"matches:" : "SantiagoBragagnolo 12/1/2016 13:15",
 		"name" : "SantiagoBragagnolo 11/30/2016 15:43",
-		"isElementaryType" : "SantiagoBragagnolo 11/30/2016 14:42",
-		"returns:" : "SantiagoBragagnolo 11/30/2016 14:29"
-	},
-	"class" : { }
-}
+		"parameters:" : "SantiagoBragagnolo 11/30/2016 14:29",
+		"printOn:" : "SantiagoBragagnolo 12/1/2016 14:24",
+		"referencesTo" : "SantiagoBragagnolo 12/1/2016 13:05",
+		"returns:" : "SantiagoBragagnolo 11/30/2016 14:29" } }

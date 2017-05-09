@@ -1,15 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 1/31/2017 14:56",
-	"super" : "TKTService",
 	"category" : "FogDB-Service",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classinstvars" : [
+		 ],
 	"classvars" : [
-		"current"
-	],
+		"current" ],
+	"commentStamp" : "SantiagoBragagnolo 1/31/2017 14:56",
 	"instvars" : [
-		"monitors"
-	],
+		"monitors" ],
 	"name" : "FogTransactionMonitorService",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "TKTService",
+	"type" : "normal" }

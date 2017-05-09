@@ -1,11 +1,11 @@
 pack
 pack: aCollection with: aFogPacker
 	| staticStream dynamicStream staticSize |
-	self assert: aCollection size = types size.
+	self assert: aCollection size = self types size.
 	staticStream := '' writeStream.
 	dynamicStream := '' writeStream.
 	staticSize := self staticSlotSize.
-	types
+	self types
 		with: aCollection
 		do: [ :type :value | 
 			type isArrayType

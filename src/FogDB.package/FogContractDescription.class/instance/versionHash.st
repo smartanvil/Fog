@@ -1,0 +1,3 @@
+accessing
+versionHash
+	^ binary hash

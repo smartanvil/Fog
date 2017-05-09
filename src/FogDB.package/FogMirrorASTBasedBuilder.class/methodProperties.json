@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"buildInto:" : "SantiagoBragagnolo 4/6/2017 17:10",
+		"createConstructor:" : "SantiagoBragagnolo 4/6/2017 16:09",
+		"createMethod:" : "SantiagoBragagnolo 4/6/2017 17:38",
+		"initialize" : "SantiagoBragagnolo 4/6/2017 16:23",
+		"types" : "SantiagoBragagnolo 1/23/2017 09:20",
+		"visitArrayType:" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"visitContract:" : "SantiagoBragagnolo 4/6/2017 15:17",
+		"visitElementaryType:" : "SantiagoBragagnolo 2/8/2017 17:04",
+		"visitEnum:" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"visitFunction:" : "SantiagoBragagnolo 4/6/2017 17:09",
+		"visitFunctionType:" : "SantiagoBragagnolo 4/6/2017 14:18",
+		"visitMapping:" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"visitSourceUnit:" : "SantiagoBragagnolo 1/23/2017 09:20",
+		"visitStruct:" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"visitTupleType:" : "SantiagoBragagnolo 1/23/2017 09:20",
+		"visitVariable:" : "SantiagoBragagnolo 2/3/2017 10:15" } }

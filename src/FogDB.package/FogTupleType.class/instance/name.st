@@ -1,3 +1,3 @@
 accessing
 name
-	^ ',' join: (types collect: #name)
+	^ ',' join: (self types collect: #name)

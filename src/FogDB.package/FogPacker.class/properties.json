@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/14/2016 13:13",
-	"super" : "Object",
 	"category" : "FogDB-Util",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/14/2016 13:13",
+	"instvars" : [
+		 ],
 	"name" : "FogPacker",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

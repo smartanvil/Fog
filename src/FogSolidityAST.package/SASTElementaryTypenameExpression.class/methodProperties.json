@@ -1,11 +1,10 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"value:" : "SantiagoBragagnolo 11/29/2016 17:17",
 		"printOn:" : "SantiagoBragagnolo 12/1/2016 14:43",
 		"referencesTo" : "SantiagoBragagnolo 1/23/2017 14:01",
 		"referencesTo:" : "SantiagoBragagnolo 11/30/2016 16:25",
 		"type:" : "SantiagoBragagnolo 11/30/2016 12:09",
-		"type_conversion:" : "SantiagoBragagnolo 11/29/2016 17:31"
-	},
-	"class" : { }
-}
+		"type_conversion:" : "SantiagoBragagnolo 11/29/2016 17:31",
+		"value:" : "SantiagoBragagnolo 11/29/2016 17:17" } }

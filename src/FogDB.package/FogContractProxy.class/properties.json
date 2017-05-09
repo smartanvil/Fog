@@ -1,0 +1,14 @@
+{
+	"category" : "FogDB-Meta-Description",
+	"classinstvars" : [
+		"mirror" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 5/9/2017 11:30",
+	"instvars" : [
+		"bind" ],
+	"name" : "FogContractProxy",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

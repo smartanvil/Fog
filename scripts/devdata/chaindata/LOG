@@ -4060,3 +4060,46 @@
 15:52:41.135430 version@stat F·[1 42] S·95MiB[10MiB 85MiB] Sc·[0.25 0.86]
 15:52:41.136447 memdb@flush committed F·1 T·557.917205ms
 15:52:41.142213 journal@remove removed @1289
+=============== May 3, 2017 (CEST) ===============
+15:59:42.656147 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:59:42.657126 db@open opening
+15:59:42.673302 version@stat F·[] S·0B[] Sc·[]
+15:59:42.674911 db@janitor F·2 G·0
+15:59:42.674935 db@open done T·17.800444ms
+15:59:42.675267 db@close closing
+15:59:42.675796 db@close done T·507.643µs
+=============== May 3, 2017 (CEST) ===============
+15:59:42.677448 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:59:42.677516 version@stat F·[] S·0B[] Sc·[]
+15:59:42.677522 db@open opening
+15:59:42.677545 journal@recovery F·1
+15:59:42.696823 journal@recovery recovering @1
+15:59:42.735216 version@stat F·[] S·0B[] Sc·[]
+15:59:42.735766 db@janitor F·2 G·0
+15:59:42.735771 db@open done T·58.242908ms
+16:22:06.160202 db@close closing
+16:22:06.160256 db@close done T·53.015µs
+=============== May 3, 2017 (CEST) ===============
+16:47:38.862876 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:47:38.862985 version@stat F·[] S·0B[] Sc·[]
+16:47:38.862992 db@open opening
+16:47:38.863026 journal@recovery F·1
+16:47:38.863843 journal@recovery recovering @2
+16:47:38.890751 memdb@flush created L0@4 N·1760 S·87KiB "\x02\x95\xaf..K\x8a\xa0,v803":"\xfe\xc4I..SUK,v1426"
+16:47:38.895058 version@stat F·[1] S·87KiB[87KiB] Sc·[0.25]
+16:47:38.895173 db@janitor F·3 G·0
+16:47:38.895173 db@open done T·32.178829ms
+16:47:38.895532 db@close closing
+16:47:38.895578 db@close done T·44.187µs
+=============== May 3, 2017 (CEST) ===============
+16:47:38.896872 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:47:38.896934 version@stat F·[1] S·87KiB[87KiB] Sc·[0.25]
+16:47:38.896939 db@open opening
+16:47:38.896965 journal@recovery F·1
+16:47:38.904695 journal@recovery recovering @5
+16:47:38.946932 version@stat F·[1] S·87KiB[87KiB] Sc·[0.25]
+16:47:38.948317 db@janitor F·3 G·0
+16:47:38.948318 db@open done T·51.376354ms
+=============== May 4, 2017 (CEST) ===============
+21:52:23.555018 db@close closing
+21:52:23.555078 db@close done T·58.411µs

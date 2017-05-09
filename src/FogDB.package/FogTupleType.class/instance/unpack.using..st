@@ -2,7 +2,7 @@ as yet unclassified
 unpack: aString using: aFogPacker
 	| tupleStream |
 	tupleStream := aString readStream.
-	^ types
+	^ self types
 		inject: OrderedCollection new
 		into: [ :acc :each | 
 			| value |

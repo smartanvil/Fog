@@ -1,10 +1,10 @@
 {
+	"class" : {
+		 },
 	"instance" : {
 		"addVariableDeclaration:" : "SantiagoBragagnolo 11/24/2016 11:48",
 		"initialize" : "SantiagoBragagnolo 11/24/2016 11:49",
+		"printOn:" : "SantiagoBragagnolo 4/6/2017 16:23",
+		"size" : "SantiagoBragagnolo 4/6/2017 16:22",
 		"types" : "SantiagoBragagnolo 11/30/2016 14:26",
-		"printOn:" : "SantiagoBragagnolo 12/1/2016 14:35",
-		"variables" : "SantiagoBragagnolo 11/24/2016 11:51"
-	},
-	"class" : { }
-}
+		"variables" : "SantiagoBragagnolo 11/24/2016 11:51" } }

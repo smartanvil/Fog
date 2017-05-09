@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:54",
-	"super" : "SASTNode",
 	"category" : "FogSolidityAST-Nodes",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:54",
 	"instvars" : [
-		"returnable"
-	],
+		"returnable" ],
 	"name" : "SASTReturn",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SASTNode",
+	"type" : "normal" }

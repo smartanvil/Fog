@@ -1,3 +1,3 @@
 as yet unclassified
 types
-	^ types
+	^ types collect: #value

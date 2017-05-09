@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 1/23/2017 14:52",
-	"super" : "FogMirrorPropertiesBuilder",
 	"category" : "FogDB-Meta-Mirror",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 1/23/2017 14:52",
 	"instvars" : [
-		"sastTypes"
-	],
+		"sastTypes" ],
 	"name" : "FogTypeConversor",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "FogMirrorASTBasedBuilder",
+	"type" : "normal" }

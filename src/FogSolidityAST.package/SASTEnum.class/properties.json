@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:43",
-	"super" : "SASTNamedContainer",
 	"category" : "FogSolidityAST-Nodes",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:43",
 	"instvars" : [
-		"values"
-	],
+		"values" ],
 	"name" : "SASTEnum",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SASTNamedContainer",
+	"type" : "normal" }

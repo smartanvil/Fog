@@ -4,3 +4,4 @@ initialize
 	types := Dictionary new.
 	variableSlots := OrderedCollection new.
 	contractSlots := OrderedCollection new.
+	methods := OrderedCollection new

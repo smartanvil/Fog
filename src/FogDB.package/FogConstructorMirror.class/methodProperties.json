@@ -1,12 +1,13 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"encodeArguments:" : "SantiagoBragagnolo 2/10/2017 15:48",
-		"parameters" : "SantiagoBragagnolo 2/3/2017 13:46",
-		"applyOn:valueWithArguments:sender:" : "SantiagoBragagnolo 2/10/2017 17:23",
-		"parameters:" : "SantiagoBragagnolo 2/3/2017 11:43",
 		"applyOn:valueWithArguments:configuration:" : "SantiagoBragagnolo 2/10/2017 17:14",
+		"applyOn:valueWithArguments:sender:" : "SantiagoBragagnolo 2/10/2017 17:23",
+		"encodeArguments:" : "SantiagoBragagnolo 2/10/2017 15:48",
 		"name" : "SantiagoBragagnolo 2/3/2017 12:26",
-		"name:" : "SantiagoBragagnolo 2/3/2017 12:03"
-	},
-	"class" : { }
-}
+		"name:" : "SantiagoBragagnolo 2/3/2017 12:03",
+		"parameters" : "SantiagoBragagnolo 2/3/2017 13:46",
+		"parameters:" : "SantiagoBragagnolo 2/3/2017 11:43",
+		"selector" : "SantiagoBragagnolo 4/10/2017 12:35",
+		"selectorWithNames" : "SantiagoBragagnolo 4/10/2017 12:34" } }

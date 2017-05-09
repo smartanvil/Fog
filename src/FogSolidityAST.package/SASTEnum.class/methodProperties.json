@@ -1,11 +1,10 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"values" : "SantiagoBragagnolo 12/14/2016 23:03",
+		"addEnumValue:" : "SantiagoBragagnolo 11/24/2016 11:09",
 		"initialize" : "SantiagoBragagnolo 11/24/2016 11:08",
-		"referencesTo" : "SantiagoBragagnolo 12/1/2016 13:05",
 		"matches:" : "SantiagoBragagnolo 11/30/2016 11:44",
 		"name" : "SantiagoBragagnolo 11/29/2016 14:20",
-		"addEnumValue:" : "SantiagoBragagnolo 11/24/2016 11:09"
-	},
-	"class" : { }
-}
+		"referencesTo" : "SantiagoBragagnolo 12/1/2016 13:05",
+		"values" : "SantiagoBragagnolo 12/14/2016 23:03" } }

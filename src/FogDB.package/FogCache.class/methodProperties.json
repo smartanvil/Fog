@@ -1,19 +1,16 @@
 {
-	"instance" : {
-		"registerTransaction:" : "SantiagoBragagnolo 11/23/2016 11:44",
-		"contractInstances" : "SantiagoBragagnolo 12/7/2016 13:23",
-		"newCollection" : "SantiagoBragagnolo 1/30/2017 17:10",
-		"transactions" : "SantiagoBragagnolo 11/23/2016 11:44",
-		"caching" : "SantiagoBragagnolo 11/24/2016 18:05",
-		"contracts" : "SantiagoBragagnolo 12/6/2016 17:27",
-		"cached:" : "SantiagoBragagnolo 11/24/2016 15:44",
-		"blocks" : "SantiagoBragagnolo 11/23/2016 11:43",
-		"initialize" : "SantiagoBragagnolo 11/23/2016 14:46",
-		"accounts" : "SantiagoBragagnolo 11/23/2016 11:44",
-		"registerBlock:" : "SantiagoBragagnolo 11/23/2016 11:43"
-	},
 	"class" : {
 		"current" : "SantiagoBragagnolo 12/16/2016 16:52",
-		"reset" : "SantiagoBragagnolo 11/23/2016 11:38"
-	}
-}
+		"reset" : "SantiagoBragagnolo 11/23/2016 11:38" },
+	"instance" : {
+		"accounts" : "SantiagoBragagnolo 11/23/2016 11:44",
+		"blocks" : "SantiagoBragagnolo 11/23/2016 11:43",
+		"cached:" : "SantiagoBragagnolo 11/24/2016 15:44",
+		"caching" : "SantiagoBragagnolo 11/24/2016 18:05",
+		"contractInstances" : "SantiagoBragagnolo 12/7/2016 13:23",
+		"contracts" : "SantiagoBragagnolo 12/6/2016 17:27",
+		"initialize" : "SantiagoBragagnolo 11/23/2016 14:46",
+		"newCollection" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"registerBlock:" : "SantiagoBragagnolo 11/23/2016 11:43",
+		"registerTransaction:" : "SantiagoBragagnolo 11/23/2016 11:44",
+		"transactions" : "SantiagoBragagnolo 11/23/2016 11:44" } }

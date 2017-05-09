@@ -1,3 +1,3 @@
 as yet unclassified
 name
-	^ self halt. 
+	^ fromFile basename copyFrom: 1 to: (fromFile basename indexOf: $.) - 1

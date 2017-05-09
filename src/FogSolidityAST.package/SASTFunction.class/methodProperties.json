@@ -1,20 +1,20 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"public:" : "SantiagoBragagnolo 11/28/2016 17:58",
-		"parameters" : "SantiagoBragagnolo 11/30/2016 14:26",
-		"fetchValueForIdentifier:" : "SantiagoBragagnolo 1/23/2017 14:04",
-		"signature" : "SantiagoBragagnolo 11/30/2016 14:35",
-		"block:" : "SantiagoBragagnolo 11/24/2016 12:32",
-		"parameters:" : "SantiagoBragagnolo 11/24/2016 12:31",
-		"constant:" : "SantiagoBragagnolo 11/28/2016 17:59",
-		"printOn:" : "SantiagoBragagnolo 12/1/2016 14:45",
-		"hasValueForIdentifier:" : "SantiagoBragagnolo 1/23/2017 14:03",
-		"return:" : "SantiagoBragagnolo 11/24/2016 12:31",
 		"block" : "SantiagoBragagnolo 12/18/2016 06:10",
-		"isConstant" : "SantiagoBragagnolo 12/18/2016 06:03",
+		"block:" : "SantiagoBragagnolo 11/24/2016 12:32",
+		"constant:" : "SantiagoBragagnolo 11/28/2016 17:59",
+		"fetchValueForIdentifier:" : "SantiagoBragagnolo 1/23/2017 14:04",
+		"hasValueForIdentifier:" : "SantiagoBragagnolo 1/23/2017 14:03",
+		"isConstant" : "SantiagoBragagnolo 4/6/2017 16:54",
+		"isConstructor" : "SantiagoBragagnolo 4/6/2017 15:18",
+		"parameters" : "SantiagoBragagnolo 11/30/2016 14:26",
+		"parameters:" : "SantiagoBragagnolo 11/24/2016 12:31",
+		"printOn:" : "SantiagoBragagnolo 12/1/2016 14:45",
+		"public:" : "SantiagoBragagnolo 11/28/2016 17:58",
 		"return" : "SantiagoBragagnolo 12/18/2016 06:09",
+		"return:" : "SantiagoBragagnolo 11/24/2016 12:31",
+		"signature" : "SantiagoBragagnolo 11/30/2016 14:35",
 		"type" : "SantiagoBragagnolo 11/30/2016 14:14",
-		"type:" : "SantiagoBragagnolo 11/30/2016 14:12"
-	},
-	"class" : { }
-}
+		"type:" : "SantiagoBragagnolo 11/30/2016 14:12" } }

@@ -1,0 +1,1 @@
+Super class of any contract proxy. It defines a mirror access and is realted to a contract bind

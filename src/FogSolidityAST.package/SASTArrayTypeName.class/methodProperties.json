@@ -1,14 +1,13 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"printOn:" : "SantiagoBragagnolo 12/1/2016 14:26",
 		"addElementaryTypeName:" : "SantiagoBragagnolo 1/23/2017 10:30",
-		"referencesTo" : "SantiagoBragagnolo 12/6/2016 16:06",
 		"addUserDefinedTypeName:" : "SantiagoBragagnolo 11/28/2016 17:40",
-		"referencesTo:" : "SantiagoBragagnolo 12/6/2016 16:06",
-		"setType:" : "SantiagoBragagnolo 11/28/2016 17:41",
 		"innerTypeName" : "SantiagoBragagnolo 12/1/2016 12:25",
 		"name" : "SantiagoBragagnolo 12/6/2016 15:34",
-		"typeName" : "SantiagoBragagnolo 12/1/2016 12:24"
-	},
-	"class" : { }
-}
+		"printOn:" : "SantiagoBragagnolo 12/1/2016 14:26",
+		"referencesTo" : "SantiagoBragagnolo 12/6/2016 16:06",
+		"referencesTo:" : "SantiagoBragagnolo 12/6/2016 16:06",
+		"setType:" : "SantiagoBragagnolo 11/28/2016 17:41",
+		"typeName" : "SantiagoBragagnolo 12/1/2016 12:24" } }

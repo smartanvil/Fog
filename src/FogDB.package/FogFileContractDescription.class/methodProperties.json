@@ -1,12 +1,10 @@
 {
+	"class" : {
+		"loadCode:" : "SantiagoBragagnolo 1/30/2017 17:10",
+		"loadFromFileReference:" : "SantiagoBragagnolo 4/5/2017 16:18",
+		"loadKnownContracts:" : "SantiagoBragagnolo 2/3/2017 15:19" },
 	"instance" : {
 		"fromFile" : "SantiagoBragagnolo 12/8/2016 12:44",
 		"fromFile:" : "SantiagoBragagnolo 11/23/2016 10:29",
-		"name" : "SantiagoBragagnolo 11/23/2016 14:10",
-		"printOn:" : "SantiagoBragagnolo 11/23/2016 14:13"
-	},
-	"class" : {
-		"loadCode:" : "SantiagoBragagnolo 1/30/2017 17:10",
-		"loadKnownContracts:" : "SantiagoBragagnolo 2/3/2017 15:19"
-	}
-}
+		"name" : "SantiagoBragagnolo 4/5/2017 16:14",
+		"printOn:" : "SantiagoBragagnolo 11/23/2016 14:13" } }

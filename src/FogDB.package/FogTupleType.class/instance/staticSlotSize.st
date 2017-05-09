@@ -1,3 +1,3 @@
 testing
 staticSlotSize
-	^ types size * 32 
+	^ self types size * 32 

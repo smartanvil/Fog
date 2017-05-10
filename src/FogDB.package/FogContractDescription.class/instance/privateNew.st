@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 privateNew
 	^ FogContractInstanceBind cachedNew
 		contract: self;

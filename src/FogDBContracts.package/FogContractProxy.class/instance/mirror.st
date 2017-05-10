@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 mirror
 	^ self class mirror instanceMirror

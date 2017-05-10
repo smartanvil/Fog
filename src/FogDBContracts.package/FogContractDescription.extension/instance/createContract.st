@@ -1,3 +1,3 @@
-as yet unclassified
+*FogDBContracts
 createContract
 	^ FogContractProxyBuilder new description: self; createContractProxy 

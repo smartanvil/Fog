@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 fromFile: aFileReference
 	fromFile := aFileReference

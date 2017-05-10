@@ -1,4 +1,4 @@
-as yet unclassified
+building methods
 compilableClassMethod: aFogMethodMirror
 	| variables |
 	variables := '{' , (' . ' join: aFogMethodMirror parameters variables) , '}'.

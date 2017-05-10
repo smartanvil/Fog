@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "SantiagoBragagnolo 5/9/2017 11:30",
 	"super" : "Object",
-	"category" : "FogDB-Meta-Description",
+	"category" : "FogDBContracts-Structure",
 	"classinstvars" : [
 		"mirror"
 	],

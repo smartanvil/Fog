@@ -1,3 +1,3 @@
-accessing
+*FogDBContracts
 fromFile
 	^ ' no-file '.

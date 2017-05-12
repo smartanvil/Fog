@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 getStorageAt: var1 upTo: var2 blockTag: var3
 	^ self send: (api messageGetStorageAt: var1 upTo: var2 blockTag: var3)

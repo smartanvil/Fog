@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 web3
 	^ FogWeb3 new
 		connection: self;

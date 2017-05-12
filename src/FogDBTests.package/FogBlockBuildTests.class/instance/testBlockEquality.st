@@ -1,4 +1,3 @@
 as yet unclassified
 testBlockEquality
-	self
-		assert: (eth getBlockByTag: 'latest' full: true) equals: (eth getBlockByTag: 'latest' full: true)
+	self assert: (connection findBlockByTag: 'latest' full: true) equals: (connection findBlockByTag: 'latest' full: true)

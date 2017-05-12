@@ -1,4 +1,4 @@
-as yet unclassified
+rpc call
 call: aETHMessageSend
 	| response |
 	response := ZnEasy post: url data: (ZnEntity json: (self encode: aETHMessageSend)).

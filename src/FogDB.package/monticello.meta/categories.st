@@ -1,6 +1,7 @@
 SystemOrganization addCategory: #FogDB!
 SystemOrganization addCategory: 'FogDB-API'!
 SystemOrganization addCategory: 'FogDB-Cache'!
+SystemOrganization addCategory: 'FogDB-Connection'!
 SystemOrganization addCategory: 'FogDB-Domain'!
 SystemOrganization addCategory: 'FogDB-Domain-Types'!
 SystemOrganization addCategory: 'FogDB-Meta-Description'!

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 eth
 	^ eth
 		ifNil: [ eth := FogEth new

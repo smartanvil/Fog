@@ -1,4 +1,3 @@
 accessing
 parent
-	^ parent
-		ifNil: [ parent := self connection eth getBlockByHash: self parentHash full: true ]
+	^ parent ifNil: [ parent := self connection findBlockByHash: self parentHash full: true ]

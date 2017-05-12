@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 current
 	^ current ifNil: [ current := self new ]

@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 name
-	^ name ifNil: [ compiledContract name ]
+	^ name ifNil: [ contractBind name ]

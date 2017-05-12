@@ -1,4 +1,4 @@
-as yet unclassified
+rpc call
 transferEntityFromMessage: aETHMessage
 	^ FogTransferEntity new
 		message: aETHMessage;

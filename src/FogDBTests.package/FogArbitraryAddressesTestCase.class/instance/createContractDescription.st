@@ -8,4 +8,4 @@ createContractDescription
 		nextPutAll: self code;
 		flush;
 		close.
-	^ FogCache current contracts add: (FogFileContractDescription loadCode: file entry)
+	^ FogFileContractDescription loadCode: file entry connection: connection

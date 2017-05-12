@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 5/12/2017 16:51",
+	"super" : "FogCache",
+	"category" : "FogDBContracts-Session",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"session"
+	],
+	"name" : "FogSessionCache",
+	"type" : "normal"
+}

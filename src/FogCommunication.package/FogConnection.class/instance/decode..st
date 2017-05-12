@@ -1,3 +1,3 @@
-as yet unclassified
+converting
 decode: aString
 	^ (NeoJSONReader on: aString readStream) next

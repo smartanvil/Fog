@@ -1,3 +1,3 @@
-as yet unclassified
+convenience-access
 contractInstances
 	^ self cached: #contractInstances

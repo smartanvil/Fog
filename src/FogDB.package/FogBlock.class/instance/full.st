@@ -1,5 +1,5 @@
 accessing
 full
 	^ full
-		ifFalse: [ self connection eth getBlockByHash: self privateBlockHash full: true ]
+		ifFalse: [ self connection findBlockByHash: self privateBlockHash full: true ]
 		ifTrue: [ self ]

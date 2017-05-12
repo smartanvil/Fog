@@ -1,3 +1,3 @@
-as yet unclassified
+convenience - register
 registerTransaction: aTransaction
-	^ self transactions add: aTransaction
+	^ self register: aTransaction into: #transactions

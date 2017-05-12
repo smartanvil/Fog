@@ -1,1 +1,0 @@
-This trait cache each instance of the class 

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 blockNumber
 	^ (self send: api messageBlockNumber) asBKNumber 
 	

@@ -1,5 +1,6 @@
 instance creation
 privateNew
-	^ FogContractInstanceBind cachedNew
+	self halt: 'This should arrive to a session'.
+	^ FogContractInstanceBind new
 		contract: self;
 		yourself

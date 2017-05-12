@@ -9,7 +9,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"cache",
-		"caching"
+		"caching",
+		"parent"
 	],
 	"name" : "FogCache",
 	"type" : "normal"

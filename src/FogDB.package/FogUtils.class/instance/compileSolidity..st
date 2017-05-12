@@ -14,11 +14,9 @@ compileSolidity: tmp
 		argument: command ] asOSTask future.
 	compiled := return synchronizeTimeout: 10 seconds.
 	compiled := tmp2 asFileReference readStream upToEnd.
-	compiledStream := (((((compiled copyReplaceAll: String lf with: '')
-		copyReplaceAll: 'Binary of the runtime part:'
-		with: '^') copyReplaceAll: 'Binary:' with: '^')
-		copyReplaceAll: 'Contract JSON ABI'
-		with: '^') copyReplaceAll: ' ' with: '') readStream.
+	compiledStream := (((((compiled copyReplaceAll: String lf with: '') copyReplaceAll: 'Binary of the runtime part:' with: '^')
+		copyReplaceAll: 'Binary:'
+		with: '^') copyReplaceAll: 'Contract JSON ABI' with: '^') copyReplaceAll: ' ' with: '') readStream.
 	compiledStream upTo: $^.
 	binary := compiledStream upTo: $^.
 	binaryRuntime := compiledStream upTo: $^.
@@ -40,9 +38,5 @@ compileSolidity: tmp
 		upToAll: '=======';
 		upToAll: '======='.
 	ast := compiledStream upToAll: '======= SimpleStorage ======='.
-	^ FogFileContractDescription cachedNew
-		binary: binary;
-		runtime: binaryRuntime;
-		abi: (NeoJSONReader fromString: abi);
-		ast: (NeoJSONReader fromString: ast);
-		yourself
+	^ {((((#binary -> binary , #runtime) -> binaryRuntime , #abi) -> (NeoJSONReader fromString: abi) , #ast) -> (NeoJSONReader fromString: ast))}
+		asDictionary

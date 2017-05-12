@@ -1,3 +1,3 @@
-as yet unclassified
+convenience-access
 contracts
 	^ self cached: #contracts

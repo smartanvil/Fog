@@ -1,3 +1,3 @@
-as yet unclassified
+initialization
 setApi
 	api := FogEthereumAPI new

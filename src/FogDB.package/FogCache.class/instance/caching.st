@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 caching
-	^ caching ifNil: [ caching := true ]
+	^ caching ifNil: [ caching := parent ifNil: [ self class defaultIsCaching ] ifNotNil: [ parent caching ] ]

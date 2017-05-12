@@ -1,6 +1,6 @@
 instance creation
 at: anAddress
-	^ FogContractInstanceBind cachedNew
+	^ FogContractInstanceBind new
 		address: anAddress;
 		contract: self;
 		yourself

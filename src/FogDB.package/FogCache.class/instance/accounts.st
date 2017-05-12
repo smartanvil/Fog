@@ -1,3 +1,3 @@
-as yet unclassified
+convenience-access
 accounts
 	^ self cached: #accounts

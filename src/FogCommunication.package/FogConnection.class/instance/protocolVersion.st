@@ -1,3 +1,3 @@
-as yet unclassified
+rpc call
 protocolVersion
 	^ '2.0'

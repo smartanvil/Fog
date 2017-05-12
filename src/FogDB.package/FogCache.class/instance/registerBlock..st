@@ -1,3 +1,3 @@
-as yet unclassified
+convenience - register
 registerBlock: aBlock
-	^ self blocks add: aBlock
+	^ self register: aBlock into: #blocks

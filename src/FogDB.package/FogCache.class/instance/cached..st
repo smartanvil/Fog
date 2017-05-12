@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 cached: aSymbol
-	^ cache at: aSymbol ifAbsentPut: [ self newCollection ]
+	^ (cache at: aSymbol ifAbsentPut: [ self newCollection ]) shallowCopy

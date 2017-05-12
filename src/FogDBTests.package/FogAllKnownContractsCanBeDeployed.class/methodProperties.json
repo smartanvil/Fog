@@ -1,9 +1,0 @@
-{
-	"instance" : {
-		"testAllFullUsageConstructorsDeploy" : "SantiagoBragagnolo 3/13/2017 11:48",
-		"testAllEmptyConstructorsDeploy" : "SantiagoBragagnolo 3/13/2017 11:48",
-		"setUp" : "SantiagoBragagnolo 2/3/2017 13:44",
-		"contractDescriptions" : "SantiagoBragagnolo 2/3/2017 13:44"
-	},
-	"class" : { }
-}

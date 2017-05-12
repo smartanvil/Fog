@@ -1,3 +1,4 @@
 private
 privateInflateTransactions
-	^ transactionsHashes collect: [ :t | self connection eth inflateTransaction: t ]
+	^ transactionsHashes
+		collect: [ :t | self connection findTransactionByDescription: t ]

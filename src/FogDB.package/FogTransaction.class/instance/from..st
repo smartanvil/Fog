@@ -1,3 +1,3 @@
 accessing
 from: aString
-	from := self connection resolveAccount: aString blockNumber: blockNumber
+	from := self connection findAccountByHash: aString blockNumber: blockNumber

@@ -1,3 +1,3 @@
 as yet unclassified
 currentConnection
-	^ connection ifNil: [ connection := FogConnection on: 'http://localhost:8545' ]
+	^ connection ifNil: [ connection := self on: 'http://localhost:8545' ]

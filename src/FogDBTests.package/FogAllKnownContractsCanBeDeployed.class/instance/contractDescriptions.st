@@ -1,3 +1,3 @@
 tests
 contractDescriptions
-	^ FogContractDescription instances
+	^ FogCache current contractDescriptions

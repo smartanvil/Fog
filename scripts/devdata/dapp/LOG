@@ -959,3 +959,23 @@
 =============== May 4, 2017 (CEST) ===============
 21:52:23.555096 db@close closing
 21:52:23.555118 db@close done T·21.211µs
+=============== May 12, 2017 (CEST) ===============
+17:58:02.119732 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:58:02.120983 version@stat F·[] S·0B[] Sc·[]
+17:58:02.120996 db@open opening
+17:58:02.121032 journal@recovery F·1
+17:58:02.121528 journal@recovery recovering @2
+17:58:02.122082 version@stat F·[] S·0B[] Sc·[]
+17:58:02.122312 db@janitor F·2 G·0
+17:58:02.122325 db@open done T·1.323533ms
+18:49:00.676948 db@close closing
+18:49:00.676976 db@close done T·27.228µs
+=============== May 14, 2017 (CEST) ===============
+17:04:15.782413 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:04:15.784410 version@stat F·[] S·0B[] Sc·[]
+17:04:15.784425 db@open opening
+17:04:15.784472 journal@recovery F·1
+17:04:15.786042 journal@recovery recovering @4
+17:04:15.787003 version@stat F·[] S·0B[] Sc·[]
+17:04:15.787185 db@janitor F·2 G·0
+17:04:15.787229 db@open done T·2.79803ms

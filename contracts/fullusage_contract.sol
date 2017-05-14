@@ -74,26 +74,26 @@ contract FullUsage {
 	en = enumEntry; 
     }
   /* Setting And getting array */
-    function setSimpleArray (int [] value) {
+    function setSimpleArray (int256 [] value) {
           commonArray = value;
     }
  
   /* Setting And getting signed int */
-    function setNegativeInt(int negative) {
+    function setNegativeInt(int256 negative) {
       if (negative > 0) throw; 
       negativeInt = negative;
     }
     
-    function setPositiveInt(int positive) {
+    function setPositiveInt(int256 positive) {
       if (positive < 0) throw;
       positiveInt = positive;
     }
     
-    function getNegativeInt() constant returns (int ret) {
+    function getNegativeInt() constant returns (int256 ret) {
        ret = negativeInt;
     }
 
-    function getPositiveInt() constant returns (int ret) {
+    function getPositiveInt() constant returns (int256 ret) {
        ret = positiveInt;
     }
 

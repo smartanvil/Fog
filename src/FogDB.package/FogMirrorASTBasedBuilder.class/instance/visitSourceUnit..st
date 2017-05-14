@@ -1,3 +1,3 @@
-as yet unclassified
+visiting
 visitSourceUnit: aSASTSourceUnit
 	(aSASTSourceUnit units detect: #isContract) accept: self

@@ -1,4 +1,4 @@
-as yet unclassified
+visiting
 visitArrayType: aSASTArrayType
 	| inner |
 	aSASTArrayType innerType accept: self.

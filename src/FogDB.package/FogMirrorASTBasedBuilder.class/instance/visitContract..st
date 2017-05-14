@@ -1,4 +1,4 @@
-as yet unclassified
+visiting
 visitContract: aSASTContract
 	aSASTContract variables do: [ :v | v accept: self ].
 	aSASTContract functions do: [ :f | f accept: self ].

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogTestCase",
+	"category" : "FogDBTests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"descriptions"
+	],
+	"name" : "FogContractDescriptionTests",
+	"type" : "normal"
+}

@@ -8,7 +8,7 @@ createMethod: aSASTFunction
 		ifTrue: [ FogTupleType new
 				types: output;
 				yourself ]
-		ifFalse: [ output ifEmpty: [ FogTypeEmpty new ] ifNotEmpty: [ output at: 1 ] ].
+		ifFalse: [ output ifEmpty: [ FogTypeEmpty new ] ifNotEmpty: [ (output at: 1) value ] ].
 	parameters := FogTupleType new
 		types: input;
 		yourself.

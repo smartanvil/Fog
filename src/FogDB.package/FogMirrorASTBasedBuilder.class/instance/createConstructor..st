@@ -1,7 +1,11 @@
 as yet unclassified
 createConstructor: aSASTFunction
-	self assert: aSASTFunction parameters size = 0.
+	| input parameters |
+	input := aSASTFunction parameters variables collect: [ :v | v name -> (types at: v type) ].
+	parameters := FogTupleType new
+		types: input;
+		yourself.
 	^ FogConstructorMirror new
 		name: #constructor;
-		parameters: aSASTFunction parameters;
+		parameters: parameters;
 		yourself

@@ -38,5 +38,7 @@ compileSolidity: tmp
 		upToAll: '=======';
 		upToAll: '======='.
 	ast := compiledStream upToAll: '======= SimpleStorage ======='.
-	^ {((((#binary -> binary , #runtime) -> binaryRuntime , #abi) -> (NeoJSONReader fromString: abi) , #ast) -> (NeoJSONReader fromString: ast))}
-		asDictionary
+	^ {(#binary -> binary).
+	(#runtime -> binaryRuntime).
+	(#abi -> (NeoJSONReader fromString: abi)).
+	(#ast -> (NeoJSONReader fromString: ast))} asDictionary

@@ -1,4 +1,4 @@
-as yet unclassified
+visiting
 visitMapping: aSASTMapping
 	| key value |
 	aSASTMapping keyType accept: self.

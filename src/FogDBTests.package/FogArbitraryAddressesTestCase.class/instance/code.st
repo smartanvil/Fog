@@ -1,11 +1,11 @@
 accessing
 code
-	^'
+	^ '
 	pragma solidity ^0.4.2;
 
 contract SimpleStorage {
     address     _owner;
-    uint storedData;
+    uint256 storedData;
     bool test2;
     bool test3;
     bool test4;
@@ -28,14 +28,13 @@ contract SimpleStorage {
     function test() {
         test2 =   _owner == msg.sender;
     }
-    function set(uint x) {
+    function set(uint256 x) {
         storedData = x;
     }
-    function get() constant returns (uint retVal) {
+    function get() constant returns (uint256 retVal) {
         return storedData;
     }
     
     
 }
 	'
-	

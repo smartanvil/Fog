@@ -7,5 +7,6 @@ testAllEmptyConstructorsDeploy
 		thenCollect: [ :d | d mirror constructor applyOn: d valueWithArguments: {} sender: account ].
 	instances do: [ :i | i waitIsReady ].
 	self assert: (instances allSatisfy: #isReady).
-	detectedContracts := instances collect: [ :i | (FogConnection currentConnection findContractBindByHash: i address blockTag: 'latest') contract ].
+	detectedContracts := instances
+		collect: [ :i | self contractDescriptions detect: [ :c | c codeMatchesWith: i contract binary ] ].
 	self assert: detectedContracts equals: (instances collect: #contract)

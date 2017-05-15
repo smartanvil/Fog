@@ -1,0 +1,3 @@
+string values
+decodedString
+	^ 'decodedString'

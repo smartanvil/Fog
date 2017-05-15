@@ -1,0 +1,3 @@
+uint values
+encodedUint256
+	^'00000000000000000000000000000000ffffffffffffffffffffffffffffffff'

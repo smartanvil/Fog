@@ -1,0 +1,2 @@
+boolean values
+maximalDecodedBool ^ self shouldBeImplemented

@@ -1,0 +1,2 @@
+boolean values
+minimalDecodedBool ^ self shouldBeImplemented

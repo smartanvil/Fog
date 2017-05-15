@@ -1,0 +1,3 @@
+uint values
+maximalEncodedUint
+	^'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'

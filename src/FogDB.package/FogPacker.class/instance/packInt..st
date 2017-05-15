@@ -1,3 +1,3 @@
 as yet unclassified
-packInt: anInteger
+packInt: anInteger 
 	^ self packInt256: anInteger

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogTestCase",
+	"category" : "FogDBTests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"packer"
+	],
+	"name" : "FogPackingTests",
+	"type" : "normal"
+}

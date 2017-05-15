@@ -1,0 +1,3 @@
+int values
+minimalEncodedInt128
+	^'80000000000000000000000000000001'

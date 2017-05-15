@@ -1,2 +1,3 @@
 boolean values
-encodedBool ^ self shouldBeImplemented
+encodedBool 
+	^'01'.

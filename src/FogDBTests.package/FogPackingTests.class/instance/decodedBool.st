@@ -1,2 +1,2 @@
 boolean values
-decodedBool ^ self shouldBeImplemented
+decodedBool ^ true

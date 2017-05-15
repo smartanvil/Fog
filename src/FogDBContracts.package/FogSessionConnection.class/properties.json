@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogCachedConnection",
+	"category" : "FogDBContracts-Session",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"session"
+	],
+	"name" : "FogSessionConnection",
+	"type" : "normal"
+}

@@ -1,6 +1,6 @@
 pack
 pack: aCollection with: aFogPacker
-	| staticStream dynamicStream staticSize |
+	| staticStream dynamicStream staticSize | 
 	self assert: aCollection size = self types size.
 	staticStream := '' writeStream.
 	dynamicStream := '' writeStream.

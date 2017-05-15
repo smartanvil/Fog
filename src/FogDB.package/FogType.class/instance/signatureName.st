@@ -1,0 +1,3 @@
+testing
+signatureName
+	^ self name

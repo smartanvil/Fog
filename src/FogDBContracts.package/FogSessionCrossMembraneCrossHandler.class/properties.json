@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 5/16/2017 17:27",
-	"super" : "FogCachedConnection",
+	"commentStamp" : "SantiagoBragagnolo 5/16/2017 17:26",
+	"super" : "Object",
 	"category" : "FogDBContracts-Session",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -8,6 +8,6 @@
 	"instvars" : [
 		"session"
 	],
-	"name" : "FogSessionConnection",
+	"name" : "FogSessionCrossMembraneCrossHandler",
 	"type" : "normal"
 }

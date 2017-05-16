@@ -1,0 +1,1 @@
+Session connection uses the session cache for caching 

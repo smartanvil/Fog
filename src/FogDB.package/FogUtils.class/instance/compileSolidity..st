@@ -6,7 +6,7 @@ compileSolidity: sourceCodeFile
 		format:
 			{sourceCodeFile fullName.
 			tmp2.
-			sourceCodeFile reference parent fullName}.
+			sourceCodeFile asFileReference parent fullName}.
 	return := [ :spec | 
 	spec
 		command: 'bash';
@@ -14,9 +14,9 @@ compileSolidity: sourceCodeFile
 		argument: command ] asOSTask future.
 	compiled := return synchronizeTimeout: 10 seconds.
 	compiled := tmp2 asFileReference readStream upToEnd.
-	compiledStream := (((((compiled copyReplaceAll: String lf with: '') copyReplaceAll: 'Binary of the runtime part:' with: '^')
-		copyReplaceAll: 'Binary:'
-		with: '^') copyReplaceAll: 'Contract JSON ABI' with: '^') copyReplaceAll: ' ' with: '') readStream.
+	compiledStream := (((((compiled copyReplaceAll: String lf with: '') copyReplaceAll: 'Binary of the runtime part:' with: '^') copyReplaceAll: 'Binary:' with: '^')
+		copyReplaceAll: 'Contract JSON ABI'
+		with: '^') copyReplaceAll: ' ' with: '') readStream.
 	compiledStream upTo: $^.
 	binary := compiledStream upTo: $^.
 	binaryRuntime := compiledStream upTo: $^.
@@ -26,7 +26,7 @@ compileSolidity: sourceCodeFile
 		format:
 			{sourceCodeFile fullName.
 			tmp2.
-			sourceCodeFile reference parent fullName}.
+			sourceCodeFile asFileReference  parent fullName}.
 	return := [ :spec | 
 	spec
 		command: 'bash';

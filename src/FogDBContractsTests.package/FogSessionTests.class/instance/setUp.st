@@ -1,4 +1,5 @@
-tests
+initialization
 setUp
 	super setUp.
-	session := FogSession new. 
+	session := FogSession new.
+	

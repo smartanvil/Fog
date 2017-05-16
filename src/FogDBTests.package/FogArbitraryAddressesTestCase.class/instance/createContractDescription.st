@@ -8,4 +8,4 @@ createContractDescription
 		nextPutAll: self code;
 		flush;
 		close.
-	^ FogFileContractDescription loadCode: file entry connection: connection
+	^ connection findContractDescriptionForFileReference: file entry

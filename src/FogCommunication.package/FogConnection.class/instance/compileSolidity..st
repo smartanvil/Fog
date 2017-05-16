@@ -1,5 +1,5 @@
 access db - contract
-compileSolidity: code
+compileSolidity: sourceCode
 	| compilationDictionary |
-	compilationDictionary := FogUtils new compileSolidity: code.
-	^ self findFileContractDescriptionForCode: compilationDictionary
+	compilationDictionary := FogUtils new compileSolidity: sourceCode.
+	^ self findFileContractDescriptionForCompilationOutput: compilationDictionary

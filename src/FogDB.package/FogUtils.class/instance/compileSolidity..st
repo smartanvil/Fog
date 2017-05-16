@@ -1,12 +1,12 @@
 as yet unclassified
-compileSolidity: tmp
+compileSolidity: sourceCodeFile
 	| command return compiled compiledStream binary binaryRuntime abi ast tmp2 |
-	tmp2 := '/tmp/out{1}.txt' format: {tmp hash asString}.
+	tmp2 := '/tmp/out{1}.txt' format: {sourceCodeFile hash asString}.
 	command := ' cd {3}; solc --abi --bin --bin-runtime {1} >{2}'
 		format:
-			{tmp fullName.
+			{sourceCodeFile fullName.
 			tmp2.
-			tmp reference parent fullName}.
+			sourceCodeFile reference parent fullName}.
 	return := [ :spec | 
 	spec
 		command: 'bash';
@@ -24,9 +24,9 @@ compileSolidity: tmp
 	tmp2 asFileReference delete.
 	command := ' cd {3}; solc --ast-json {1} 1> {2} '
 		format:
-			{tmp fullName.
+			{sourceCodeFile fullName.
 			tmp2.
-			tmp reference parent fullName}.
+			sourceCodeFile reference parent fullName}.
 	return := [ :spec | 
 	spec
 		command: 'bash';

@@ -1,5 +1,5 @@
-private
+instance creation
 newCollection
 	^ self caching
-		ifTrue: [ Set new ]
+		ifTrue: [ OrderedCollection  new ]
 		ifFalse: [ FogFakeSet new ]

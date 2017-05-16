@@ -1,3 +1,3 @@
 access db - contract
-findFileContractDescriptionForCode: description
+findFileContractDescriptionForCompilationOutput: description
 	^ self createFileContractDescriptionFor: description

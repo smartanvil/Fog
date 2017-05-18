@@ -1,3 +1,5 @@
 build
 createContractProxy
-	^ self createClassUsing: self createTrait
+	^ Smalltalk
+		at: self buildClassName asSymbol
+		ifAbsent: [ self createClassUsing: self createTrait ]

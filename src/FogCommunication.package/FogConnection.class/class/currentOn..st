@@ -1,3 +1,3 @@
 as yet unclassified
 currentOn: anUrl
-	connection := self on: anUrl
+	FogConnection connection: (self on: anUrl)

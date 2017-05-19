@@ -1,14 +1,11 @@
 {
-	"category" : "FogBi2-Charting",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:22",
-	"instvars" : [
-		 ],
-	"name" : "FogCharts",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "FogBi2-Charting",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogCharts",
+	"type" : "normal"
+}

@@ -1,17 +1,16 @@
 {
-	"category" : "FogBi2",
-	"classinstvars" : [
-		 ],
 	"classtraitcomposition" : "TFogShowable classTrait",
-	"classvars" : [
-		 ],
-	"commentStamp" : "SantiagoBragagnolo 12/16/2016 16:27",
+	"classvars" : [ ],
 	"instvars" : [
 		"instance",
-		"mirror" ],
+		"mirror"
+	],
 	"name" : "FogViewer",
-	"pools" : [
-		 ],
+	"commentStamp" : "SantiagoBragagnolo 12/16/2016 16:27",
 	"super" : "FogConnectedObject",
 	"traitcomposition" : "TFogShowable",
-	"type" : "normal" }
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FogBi2"
+}

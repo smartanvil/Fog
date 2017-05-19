@@ -1,6 +1,7 @@
 transactions
 transactionsBasedMultiChart: txToAnalyze
 	| composer from to acc txxEther txEtherGasPrice |
+	
 	composer := RTComposer new.
 	composer gap: 100.
 	from := self transactionBasedAccountsByFromKindPie: txToAnalyze on: composer view.

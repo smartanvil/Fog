@@ -3,4 +3,4 @@ printOn: aStream
 	aStream
 		nextPutAll: self mnemonic;
 		nextPutAll: ' ';
-		nextPutAll: parameter
+		nextPutAll: parameter 

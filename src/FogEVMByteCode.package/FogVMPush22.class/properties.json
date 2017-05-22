@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "FogVMPush",
+	"category" : "FogEVMByteCode",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogVMPush22",
+	"type" : "normal"
+}

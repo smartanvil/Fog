@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "FogVMDup",
+	"category" : "FogEVMByteCode",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogVMDup9",
+	"type" : "normal"
+}

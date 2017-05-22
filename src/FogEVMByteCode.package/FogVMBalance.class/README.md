@@ -1,0 +1,1 @@
+Get balance of the given account

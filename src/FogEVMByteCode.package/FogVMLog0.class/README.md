@@ -1,0 +1,1 @@
+Append log record with no topics

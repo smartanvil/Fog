@@ -1,0 +1,3 @@
+generated
+mnemonic
+	^ 'DUP2'

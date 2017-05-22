@@ -1,3 +1,3 @@
 creation
-createContractAccountFor: aContractBind and: hashAccount
-	^ FogContractAccount for: aContractBind and: hashAccount
+createContractAccountFor: compiledCode and: hashAccount
+	^ FogContractAccount for: ((self findContractDescriptionForCode: compiledCode) at: hashAccount) and: hashAccount

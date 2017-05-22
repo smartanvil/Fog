@@ -1,0 +1,1 @@
+Mark a valid destination for jumps

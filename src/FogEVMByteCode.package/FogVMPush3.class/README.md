@@ -1,0 +1,1 @@
+Place 3 byte item on stack

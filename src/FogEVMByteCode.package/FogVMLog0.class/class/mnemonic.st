@@ -1,0 +1,4 @@
+generated
+mnemonic
+		^'LOG0'.
+	

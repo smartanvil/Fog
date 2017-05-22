@@ -1,0 +1,3 @@
+generated
+instance
+	^ self new

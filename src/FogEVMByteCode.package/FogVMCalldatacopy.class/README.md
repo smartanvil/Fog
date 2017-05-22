@@ -1,0 +1,1 @@
+Copy input data in current environment to memory

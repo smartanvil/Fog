@@ -1,0 +1,1 @@
+Get the size of active memory in bytes

@@ -1,0 +1,1 @@
+Duplicates the item 4 at the stack and push it

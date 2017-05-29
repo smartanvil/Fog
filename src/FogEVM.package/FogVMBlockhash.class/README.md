@@ -1,0 +1,1 @@
+Get the hash of one of the 256 most recent complete blocks

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 5/29/2017 16:51",
+	"super" : "Object",
+	"category" : "FogEVM-Storage",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogEVMAbstractLayout",
+	"type" : "normal"
+}

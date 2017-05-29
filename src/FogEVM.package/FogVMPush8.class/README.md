@@ -1,0 +1,1 @@
+Place 8 byte item on stack

@@ -1,0 +1,1 @@
+Place 5 byte item on stack

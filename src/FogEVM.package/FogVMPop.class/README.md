@@ -1,0 +1,1 @@
+Remove item from stack

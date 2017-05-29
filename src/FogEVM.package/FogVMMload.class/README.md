@@ -1,0 +1,1 @@
+Load word from memory

@@ -1,0 +1,1 @@
+Exchange 1st and 9 stack items.

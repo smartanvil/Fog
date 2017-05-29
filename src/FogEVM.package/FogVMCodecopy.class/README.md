@@ -1,0 +1,1 @@
+Copy code running in current environment to memory

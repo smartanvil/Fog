@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 5/29/2017 16:55",
+	"super" : "FogEVMAbstractLayout",
+	"category" : "FogEVM-Storage",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"trie"
+	],
+	"name" : "FogEVMPatriciaMerkleTrieLayout",
+	"type" : "normal"
+}

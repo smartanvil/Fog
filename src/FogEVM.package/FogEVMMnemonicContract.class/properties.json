@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 5/22/2017 15:38",
+	"super" : "Object",
+	"category" : "FogEVM-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"sequence"
+	],
+	"name" : "FogEVMMnemonicContract",
+	"type" : "normal"
+}

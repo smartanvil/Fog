@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 5/22/2017 13:44",
+	"super" : "FogEVMInstruction",
+	"category" : "FogEVM-ByteCode",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"bytes",
+		"parameter"
+	],
+	"name" : "FogVMPush",
+	"type" : "normal"
+}

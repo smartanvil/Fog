@@ -1,0 +1,1 @@
+Memory layout, it implements a key-value storage by using a dictionary. Cheap to implement, expensive to use. Easy to debug 

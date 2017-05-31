@@ -1,4 +1,4 @@
-visiting
+visit - storage
 visitSstore: aFogVMSstore
 	| storageAddress value |
 	storageAddress := stack pop.

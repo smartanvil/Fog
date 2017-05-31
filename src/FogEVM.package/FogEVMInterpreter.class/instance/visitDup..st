@@ -1,4 +1,4 @@
-visiting
+visit - stack
 visitDup: aFogVMDup
 	| element | 
 	element := stack at: aFogVMDup expectedPops.

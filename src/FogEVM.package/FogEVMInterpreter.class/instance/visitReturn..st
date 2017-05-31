@@ -1,4 +1,4 @@
-visiting
+visit - flow
 visitReturn: aFogVMReturn
 	| from to |
 	from := stack pop.

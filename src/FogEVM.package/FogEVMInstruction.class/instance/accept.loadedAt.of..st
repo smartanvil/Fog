@@ -10,5 +10,6 @@ accept: anInterpreter loadedAt: byteNumber of: anExecutableMemoryReificaiton
 		ifTrue: [ localMnemonic := 'SWAP' ].
 	perform := ('visit' , localMnemonic asLowercase capitalized , ':') asSymbol.
 	stackSize := anInterpreter stackSize.
+	self manageBreakpointFor: anExecutableMemoryReificaiton atMethod: anInterpreter class >> perform.
 	anInterpreter perform: perform withArguments: {self}.
 	self assert: anInterpreter stackSize = (stackSize - self expectedPops + self expectedPushes)

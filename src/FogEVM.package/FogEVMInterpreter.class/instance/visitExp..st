@@ -1,4 +1,4 @@
-visiting
+visit - arithmetics
 visitExp: aFogVMExp
 	| value exponent |
 	value := stack pop asBKNumber.

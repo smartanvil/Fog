@@ -1,4 +1,4 @@
-visiting
+visit - arithmetics
 visitDiv: aFogVMDiv
 	| numerator denom |
 	numerator := stack pop asBKNumber.
@@ -7,4 +7,4 @@ visitDiv: aFogVMDiv
 		push:
 			(numerator isZero
 				ifTrue: [ 0 ]
-				ifFalse: [ numerator // denom ])
+				ifFalse: [ numerator // denom ]) asBKHexa

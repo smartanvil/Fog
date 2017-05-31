@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"byteNumber",
-		"instruction"
+		"instruction",
+		"breakpoint"
 	],
 	"name" : "FogEVMMnemonicExecutableMemoryEntry",
 	"type" : "normal"

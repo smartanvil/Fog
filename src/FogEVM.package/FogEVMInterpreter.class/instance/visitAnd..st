@@ -1,4 +1,4 @@
-visiting
+visit - boolean alebra
 visitAnd: aFogVMAnd
 	| a b |
 	a := self hexaToBoolean: stack pop.

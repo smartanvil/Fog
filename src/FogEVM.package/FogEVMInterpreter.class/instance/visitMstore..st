@@ -1,4 +1,4 @@
-visiting
+visit - memory
 visitMstore: aFogVMMstore 
 	| address value |
 	address := stack pop.

@@ -1,4 +1,4 @@
-visiting
+visit - call
 visitCalldataload: aFogVMCalldataload
 	| id |
 	id := stack pop asBKNumber.

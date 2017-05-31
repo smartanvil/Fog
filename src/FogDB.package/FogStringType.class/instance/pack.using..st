@@ -1,6 +1,8 @@
 as yet unclassified
 pack: aString using: aFogPacker
 	| pack size |
+	
+	" it writes the size if this size is smaller than 64. If not, it writes the location of the content into the stream, where it will write the lenght and the data ."
 	pack := (ZnUTF8Encoder new encodeString: aString)
 		inject: ''
 		into: [ :acc :each | acc , each asHeadlessHexa ].

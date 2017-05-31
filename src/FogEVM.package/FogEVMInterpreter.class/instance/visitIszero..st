@@ -1,7 +1,3 @@
-visiting
-visitIszero: aFogVMIszero 
-	stack
-		push:
-			(stack pop asBKNumber = 0
-				ifTrue: [ 1 ]
-				ifFalse: [ 0 ])
+visit - boolean alebra
+visitIszero: aFogVMIszero
+	stack push: (self booleanToHexa: stack pop asBKNumber = 0)

@@ -1,7 +1,15 @@
-visiting
+visit - flow
 visitJumpi: aFogVMJumpi
-	| condition newInstructionPointerAddress |
-	newInstructionPointerAddress := stack pop.
-	condition := stack pop.
-	condition = 0
-		ifFalse: [ self setInstructionPointerToByte: stack pop ]
+	| condition newInstructionPointer jumpDestInstruction |
+	newInstructionPointer := stack pop.
+	jumpDestInstruction := self peekInstruction: newInstructionPointer.
+	condition := self hexaToBoolean: stack pop.
+	condition
+		ifTrue: [ self
+				assert: jumpDestInstruction isValidJumpDestination
+				description:
+					('{1} is not a valid JUMPI (Conditional JUMP) destination. {2} Instruction founded'
+						format:
+							{newInstructionPointer.
+							jumpDestInstruction}).
+			self setInstructionPointerToByte: newInstructionPointer ]

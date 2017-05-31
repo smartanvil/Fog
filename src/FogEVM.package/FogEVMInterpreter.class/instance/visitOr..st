@@ -1,4 +1,4 @@
-visiting
+visit - boolean alebra
 visitOr: aFogVMOr
 	| a b |
 	a := self hexaToBoolean: stack pop.

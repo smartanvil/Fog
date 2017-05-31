@@ -1,4 +1,4 @@
-visiting
+visit - arithmetics
 visitMul: aFogVMMul
 	| numberA numberB |
 	numberA := stack pop asBKNumber.

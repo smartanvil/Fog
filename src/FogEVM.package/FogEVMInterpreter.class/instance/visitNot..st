@@ -1,9 +1,5 @@
-visiting
+visit - boolean alebra
 visitNot: aFogVMNot
 	| value |
-	value := stack pop asBKNumber.
-	stack
-		push:
-			(value = 0
-				ifTrue: [ 1 ]
-				ifFalse: [ 0 ]) asBKHexa
+	value := self hexaToBoolean: stack pop.
+	stack push: (self booleanToHexa: value not)

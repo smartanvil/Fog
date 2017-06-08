@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogEVM-Interpreter",
+	"classinstvars" : [
+		"literals"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"value"
+	],
+	"name" : "FogEVMLiteral",
+	"type" : "normal"
+}

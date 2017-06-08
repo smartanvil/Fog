@@ -1,0 +1,3 @@
+as yet unclassified
+createdAt: aFogEVMMnemonicExecutableMemoryEntry
+	createdAt := aFogEVMMnemonicExecutableMemoryEntry

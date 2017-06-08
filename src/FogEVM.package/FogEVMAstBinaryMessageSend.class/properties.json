@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEVMAstMessageSend",
+	"category" : "FogEVM-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogEVMAstBinaryMessageSend",
+	"type" : "normal"
+}

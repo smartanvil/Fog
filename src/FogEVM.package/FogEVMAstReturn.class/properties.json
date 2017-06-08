@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEVMAstNode",
+	"category" : "FogEVM-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"returns"
+	],
+	"name" : "FogEVMAstReturn",
+	"type" : "normal"
+}

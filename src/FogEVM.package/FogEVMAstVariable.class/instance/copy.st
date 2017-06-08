@@ -1,0 +1,3 @@
+accessing
+copy
+	self halt. 

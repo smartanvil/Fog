@@ -1,0 +1,3 @@
+printing
+isConstant
+	^ constant

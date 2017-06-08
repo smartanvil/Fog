@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEVMAstNode",
+	"category" : "FogEVM-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"address",
+		"value"
+	],
+	"name" : "FogEVMAstMemoryStore",
+	"type" : "normal"
+}

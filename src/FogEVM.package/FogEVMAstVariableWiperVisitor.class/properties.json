@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEVMAstVisitor",
+	"category" : "FogEVM-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"readWriteTracker",
+		"state",
+		"assignationValue",
+		"currentScope"
+	],
+	"name" : "FogEVMAstVariableWiperVisitor",
+	"type" : "normal"
+}

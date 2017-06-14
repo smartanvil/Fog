@@ -4,4 +4,4 @@ literalOrVariable: anObject
 		ifTrue: [ FogEVMLiteral for: anObject ]
 		ifFalse: [ (anObject isEVMLiteral or: [ anObject isEVMVariable ])
 				ifTrue: [ anObject ]
-				ifFalse: [ self halt: 'Should be string!'  ] ]
+				ifFalse: [ self halt: 'Should be string!' ] ]

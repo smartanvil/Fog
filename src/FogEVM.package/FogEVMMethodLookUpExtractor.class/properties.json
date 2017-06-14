@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEVMAstVisitor",
+	"category" : "FogEVM-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"finished",
+		"lookUpTable",
+		"currentMethodAnalysis"
+	],
+	"name" : "FogEVMMethodLookUpExtractor",
+	"type" : "normal"
+}

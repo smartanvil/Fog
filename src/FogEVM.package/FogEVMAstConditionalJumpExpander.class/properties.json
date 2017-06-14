@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEVMAstVisitor",
+	"category" : "FogEVM-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"method",
+		"generalBytecode",
+		"toNode",
+		"nextNode",
+		"currentStatement",
+		"visitedStatements",
+		"conditionalScope"
+	],
+	"name" : "FogEVMAstConditionalJumpExpander",
+	"type" : "normal"
+}

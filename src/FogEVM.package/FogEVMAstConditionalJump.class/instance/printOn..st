@@ -3,5 +3,5 @@ printOn: aStream
 	aStream nextPutAll: '('.
 	condition printOn: aStream.
 	aStream nextPutAll: ') ifTrue: [ interpreter jumpTo: '.
-	address literalValue printOn: aStream.
+	address  printOn: aStream.
 	aStream nextPutAll: '] '

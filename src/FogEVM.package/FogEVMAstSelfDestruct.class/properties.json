@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEVMAstNode",
+	"category" : "FogEVM-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"instruction",
+		"account"
+	],
+	"name" : "FogEVMAstSelfDestruct",
+	"type" : "normal"
+}

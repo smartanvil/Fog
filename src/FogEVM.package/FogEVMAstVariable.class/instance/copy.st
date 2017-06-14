@@ -1,3 +1,3 @@
 accessing
 copy
-	self halt. 
+	^ self  

@@ -9,4 +9,5 @@ declareMethods
 				toNode: (a value at: #endNode);
 				yourself.
 			visitor extractFrom: workingOn.
+			FogEVMAstUneededJumpsWiper new wipeJumpsFrom: visitor method.
 			visitor method ]

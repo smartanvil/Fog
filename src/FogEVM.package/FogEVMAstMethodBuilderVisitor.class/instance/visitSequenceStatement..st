@@ -7,6 +7,6 @@ visitSequenceStatement: aFogEVMAstNode
 		ifTrue: [ hasEntered := true ].
 	inMethodBody
 		ifTrue: [ (method sequence statements includes: aFogEVMAstNode)
-				ifFalse: [ (aFogEVMAstNode isConditionalJump and: [ (self isErrorHandlingJump: aFogEVMAstNode) not ])
+				ifFalse: [ aFogEVMAstNode isConditionalJump
 						ifFalse: [ method sequence addStatement: aFogEVMAstNode ] ] ].
 	aFogEVMAstNode accept: self

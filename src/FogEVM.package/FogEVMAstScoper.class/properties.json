@@ -12,6 +12,6 @@
 		"lookUpTable",
 		"decompiledMethods"
 	],
-	"name" : "FogEVMAstScoperVisitor",
+	"name" : "FogEVMAstScoper",
 	"type" : "normal"
 }

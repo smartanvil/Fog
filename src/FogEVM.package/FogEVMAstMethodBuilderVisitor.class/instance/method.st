@@ -1,3 +1,4 @@
-as yet unclassified
+accessing
 method
+	method selector: selector .
 	^ method

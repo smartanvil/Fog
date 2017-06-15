@@ -1,15 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "FogEVMAstNode",
+	"super" : "FogEVMAstMethodBuilderVisitor",
 	"category" : "FogEVM-Interpreter",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"arguments",
-		"sequence",
-		"selector"
-	],
-	"name" : "FogEVMAstMethod",
+	"instvars" : [ ],
+	"name" : "FogEVMAstScopeBuilderVisitor",
 	"type" : "normal"
 }

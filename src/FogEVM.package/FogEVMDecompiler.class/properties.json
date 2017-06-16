@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "FogEVM-Interpreter",
+	"category" : "FogEVM-Decompiler",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
@@ -12,7 +12,8 @@
 		"scopes",
 		"instructionPointer",
 		"i",
-		"currentScope"
+		"currentScope",
+		"extractedMethods"
 	],
 	"name" : "FogEVMDecompiler",
 	"type" : "normal"

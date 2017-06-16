@@ -1,4 +1,4 @@
 as yet unclassified
 installSequence: aFogEVMSequence
 	sequence := aFogEVMSequence.
-	nextNode := 1. 
+	self setNextStatement: (self statementFor: fromNode)

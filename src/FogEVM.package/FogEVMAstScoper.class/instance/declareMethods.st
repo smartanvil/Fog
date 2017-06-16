@@ -3,6 +3,7 @@ declareMethods
 	decompiledMethods := lookUpTable associations
 		collect: [ :a | 
 			| visitor |
+	
 			visitor := FogEVMAstMethodBuilderVisitor new
 				selector: a key literalValue;
 				fromNode: (a value at: #startNode);

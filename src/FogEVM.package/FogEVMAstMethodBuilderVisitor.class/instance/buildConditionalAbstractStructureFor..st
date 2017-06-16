@@ -6,9 +6,8 @@ buildConditionalAbstractStructureFor: aConditionalJump
 	visitor := FogEVMAstScopeBuilderVisitor new
 		selector: aConditionalJump address literalValue;
 		visited: visitedStatements ;
-		installSequence: sequence; 
 		fromNode: (self statementFor: aConditionalJump);
-		setNextStatement: (self statementFor: aConditionalJump);
+		installSequence: sequence; 
 		toNode: toNode;
 		yourself.
 	

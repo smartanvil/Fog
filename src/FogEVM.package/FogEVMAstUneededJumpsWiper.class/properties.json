@@ -1,12 +1,14 @@
 {
 	"commentStamp" : "",
 	"super" : "FogEVMAstVisitor",
-	"category" : "FogEVM-Interpreter",
+	"category" : "FogEVM-Decompiler",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"method"
+		"method",
+		"tags",
+		"jumps"
 	],
 	"name" : "FogEVMAstUneededJumpsWiper",
 	"type" : "normal"

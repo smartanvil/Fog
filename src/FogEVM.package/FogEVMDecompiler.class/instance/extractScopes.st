@@ -3,4 +3,4 @@ extractScopes
 	| scoper newScopes |
 	scoper := FogEVMAstScoper new.
 	scoper scope: currentScope.
-	newScopes := scoper scopes
+	extractedMethods := scoper methods 

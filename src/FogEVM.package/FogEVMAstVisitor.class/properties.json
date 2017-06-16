@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "FogEVM-Interpreter",
+	"category" : "FogEVM-Decompiler",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

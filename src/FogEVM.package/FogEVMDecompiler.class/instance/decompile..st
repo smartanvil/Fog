@@ -15,5 +15,4 @@ decompile: aFogEVMMnemonicContract
 			i accept: self with: nil ].
 	self cleanOneReadOneWriteVariables.
 	self extractScopes.
-	self linkScopes.
-	self cleanOneReadOneWriteVariables
+"	self cleanOneReadOneWriteVariables"

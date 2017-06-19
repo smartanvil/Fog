@@ -1,0 +1,3 @@
+*FogEVM
+isEVMMessageSend
+	^ false 

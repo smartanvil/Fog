@@ -1,0 +1,3 @@
+*FogEVM
+literalValue
+	^ self

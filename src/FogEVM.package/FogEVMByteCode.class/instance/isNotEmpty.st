@@ -1,0 +1,3 @@
+converting
+isNotEmpty
+	^ content isNotEmpty 

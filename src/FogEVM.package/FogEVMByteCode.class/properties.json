@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 6/22/2017 15:55",
+	"super" : "Object",
+	"category" : "FogEVM-ByteCode",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"content"
+	],
+	"name" : "FogEVMByteCode",
+	"type" : "normal"
+}

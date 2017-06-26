@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogArbitraryAddressesTestCase",
+	"category" : "FogEVM-ByteCode",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contractDescription"
+	],
+	"name" : "FogEVMByteCodeTest",
+	"type" : "normal"
+}

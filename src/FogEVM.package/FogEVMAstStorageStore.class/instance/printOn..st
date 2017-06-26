@@ -4,4 +4,4 @@ printOn: aStream
 	address printOn: aStream.
 	aStream nextPutAll: ' put: '.
 	value printOn: aStream.
-	aStream nextPutAll: ' read:)'.
+	aStream nextPutAll: ' )'

@@ -1,3 +1,3 @@
 *FogEVM
 mnemonicBinary
-	^ FogEVMMnemonicContract fromBinary: binary
+	^ FogEVMByteCode fromBinary: binary

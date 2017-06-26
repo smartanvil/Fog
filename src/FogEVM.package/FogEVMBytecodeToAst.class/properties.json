@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogEVM-Decompiler",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stack",
+		"trace",
+		"program",
+		"instructionPointer",
+		"scope",
+		"instruction"
+	],
+	"name" : "FogEVMBytecodeToAst",
+	"type" : "normal"
+}

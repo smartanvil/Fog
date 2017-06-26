@@ -1,14 +1,16 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 5/22/2017 13:44",
-	"super" : "FogEVMInstruction",
-	"category" : "FogEVM-ByteCode",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TEquality classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"bytes",
 		"parameter"
 	],
 	"name" : "FogVMPush",
-	"type" : "normal"
+	"commentStamp" : "SantiagoBragagnolo 5/22/2017 13:44",
+	"super" : "FogEVMInstruction",
+	"traitcomposition" : "TEquality",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FogEVM-ByteCode"
 }

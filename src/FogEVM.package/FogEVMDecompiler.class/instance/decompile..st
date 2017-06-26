@@ -3,7 +3,7 @@ decompile: aFogEVMMnemonicContract
 	| mainScope |
 	trace := OrderedCollection new.
 	stack := Stack new.
-	program := aFogEVMMnemonicContract sequence copy.
+	program := aFogEVMMnemonicContract content copy.
 	scopes := Dictionary new.
 	instructionPointer := 1.
 	self newScopeWithID: 0.

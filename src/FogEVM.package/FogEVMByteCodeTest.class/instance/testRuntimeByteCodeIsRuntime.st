@@ -1,0 +1,3 @@
+initialization
+testRuntimeByteCodeIsRuntime
+	self assert: contractDescription mnemonicRuntime isRuntime

@@ -1,0 +1,3 @@
+as yet unclassified
+instruction: aFogEVMMnemonicExecutableMemoryEntry 
+	instruction := aFogEVMMnemonicExecutableMemoryEntry

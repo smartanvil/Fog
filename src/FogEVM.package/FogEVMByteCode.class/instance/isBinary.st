@@ -1,0 +1,3 @@
+converting
+isBinary 
+	^ self hasConstructor 

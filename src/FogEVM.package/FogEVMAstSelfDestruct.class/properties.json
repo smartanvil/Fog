@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"instruction",
 		"account"
 	],
 	"name" : "FogEVMAstSelfDestruct",

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEVMAstVisitor",
+	"category" : "FogEVM-Decompiler",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"result",
+		"condition",
+		"found"
+	],
+	"name" : "FogEVMAstFinder",
+	"type" : "normal"
+}

@@ -1,1 +1,0 @@
-Assembly contract version

@@ -1,3 +1,3 @@
 testing
 staticSlotSize
-	self error: 'We shouldnt be calling this guy here '
+	^ fields inject: 0 into: [ :acc :f | acc + f type staticSlotSize  ]

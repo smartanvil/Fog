@@ -1,5 +1,7 @@
 accessing
 at: aKey
-	^ type valueType
-		unpackStream: (bind getStorageAt: (self storageHashFor: aKey)) readStream
-		using: FogPacker new
+	^ dictionary
+		at: aKey
+		ifAbsentPut: [ type valueType
+				unpackStream: (bind getStorageAt: (self storageHashFor: aKey)) readStream
+				using: FogPacker new ]

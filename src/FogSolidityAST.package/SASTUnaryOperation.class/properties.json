@@ -1,17 +1,16 @@
 {
-	"category" : "FogSolidityAST-Nodes",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SASTNode",
+	"category" : "FogSolidityAST-Nodes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"subject",
 		"type",
 		"prefix",
-		"operator" ],
+		"operator"
+	],
 	"name" : "SASTUnaryOperation",
-	"pools" : [
-		 ],
-	"super" : "SASTNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

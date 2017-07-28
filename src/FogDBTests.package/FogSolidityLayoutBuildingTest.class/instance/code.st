@@ -17,7 +17,8 @@ contract StructTestContract {
     mystruct simpleExample;
     bool bool2;
     mystruct[] arrayExample;
-    
+    mapping(uint=>mystruct) mappingExample;
+
     function StructTestContract (){
         _owner = msg.sender;
 	bool1 = true;
@@ -29,6 +30,7 @@ contract StructTestContract {
 	arrayExample.push(mystruct(true, myenum.A, 134));
 	arrayExample.push(mystruct(false, myenum.B, 235 ));
 	arrayExample.push(mystruct(true, myenum.C, 34 ));
+	mappingExample[2] = mystruct(true, myenum.C, 34 );
     }
    
     function kill() {

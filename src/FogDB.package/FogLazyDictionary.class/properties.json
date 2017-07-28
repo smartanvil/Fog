@@ -1,15 +1,16 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "FogSolidityAST-Builder",
+	"category" : "FogDB-Domain-Types",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"identifiers",
-		"contexts",
-		"suicideFunction"
+		"mapping",
+		"type",
+		"dictionary",
+		"bind"
 	],
-	"name" : "SASTLocateIdentifiers",
+	"name" : "FogLazyDictionary",
 	"type" : "normal"
 }

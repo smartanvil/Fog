@@ -1,15 +1,14 @@
 {
-	"category" : "FogSolidityAST-Builder",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:35",
+	"super" : "Object",
+	"category" : "FogSolidityAST-Builder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"types",
-		"postReduction" ],
+		"postReduction"
+	],
 	"name" : "SASTBuilder",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

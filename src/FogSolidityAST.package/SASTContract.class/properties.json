@@ -1,10 +1,10 @@
 {
-	"category" : "FogSolidityAST-Nodes",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:42",
+	"super" : "SASTNamedContainer",
+	"category" : "FogSolidityAST-Nodes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"enums",
 		"variables",
@@ -13,9 +13,8 @@
 		"structs",
 		"linearizedBaseContracts",
 		"isLibrary",
-		"fullyImplemented" ],
+		"fullyImplemented"
+	],
 	"name" : "SASTContract",
-	"pools" : [
-		 ],
-	"super" : "SASTNamedContainer",
-	"type" : "normal" }
+	"type" : "normal"
+}

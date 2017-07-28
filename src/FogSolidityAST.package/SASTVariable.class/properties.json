@@ -1,16 +1,15 @@
 {
-	"category" : "FogSolidityAST-Nodes",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:53",
+	"super" : "SASTNamedNode",
+	"category" : "FogSolidityAST-Nodes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"initialValue",
 		"typeName",
-		"maybeConstant" ],
+		"maybeConstant"
+	],
 	"name" : "SASTVariable",
-	"pools" : [
-		 ],
-	"super" : "SASTNamedNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

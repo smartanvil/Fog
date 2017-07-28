@@ -1,14 +1,11 @@
 {
-	"category" : "FogSolidityAST-Builder",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:38",
-	"instvars" : [
-		 ],
-	"name" : "SASTChainForceDeferredTypeResolution",
-	"pools" : [
-		 ],
 	"super" : "Error",
-	"type" : "normal" }
+	"category" : "FogSolidityAST-Builder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SASTChainForceDeferredTypeResolution",
+	"type" : "normal"
+}

@@ -1,14 +1,11 @@
 {
-	"category" : "FogSolidityAST-Nodes",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "SASTThrow",
-	"pools" : [
-		 ],
 	"super" : "SASTNode",
-	"type" : "normal" }
+	"category" : "FogSolidityAST-Nodes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SASTThrow",
+	"type" : "normal"
+}

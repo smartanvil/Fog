@@ -1,3 +1,3 @@
 pack
-packUint: anInteger 
-	^ self packUint256: anInteger
+packUint: anInteger
+	^ self packUint128: anInteger

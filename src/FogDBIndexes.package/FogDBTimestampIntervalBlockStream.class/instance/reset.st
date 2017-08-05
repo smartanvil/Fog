@@ -1,0 +1,3 @@
+stream
+reset
+	currentBlockNumber := fromBlockNumber 

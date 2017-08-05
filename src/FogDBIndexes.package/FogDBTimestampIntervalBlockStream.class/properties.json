@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogDBIndexes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fromStamp",
+		"toStamp",
+		"currentBlockNumber",
+		"fromBlockNumber",
+		"toBlockNumber"
+	],
+	"name" : "FogDBTimestampIntervalBlockStream",
+	"type" : "normal"
+}

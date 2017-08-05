@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "FogDBIndexes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"fromStamp",
+		"toStamp"
+	],
+	"name" : "FogDBTimestampIntervalBlockStreamTest",
+	"type" : "normal"
+}

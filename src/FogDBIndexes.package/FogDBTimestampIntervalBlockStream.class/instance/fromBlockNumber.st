@@ -1,0 +1,3 @@
+boundaries accessing
+fromBlockNumber
+	^ fromBlockNumber

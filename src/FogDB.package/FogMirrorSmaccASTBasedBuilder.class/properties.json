@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogDB-Meta-Mirror",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contractSlots",
+		"types",
+		"variableSlots",
+		"mirror",
+		"methods",
+		"constructor"
+	],
+	"name" : "FogMirrorSmaccASTBasedBuilder",
+	"type" : "normal"
+}

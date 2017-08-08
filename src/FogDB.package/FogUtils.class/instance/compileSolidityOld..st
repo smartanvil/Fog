@@ -1,5 +1,5 @@
 compiling
-compileSolidity: sourceCodeFile
+compileSolidityOld: sourceCodeFile
 	| command return compiled compiledStream binary binaryRuntime abi ast tmp2 |
 	tmp2 := '/tmp/out{1}.txt' format: {sourceCodeFile hash asString}.
 	command := ' cd {3}; solc --abi --bin --bin-runtime {1} >{2}'

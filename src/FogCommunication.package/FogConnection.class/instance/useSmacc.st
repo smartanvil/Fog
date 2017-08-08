@@ -1,0 +1,3 @@
+initialization
+useSmacc
+	useJson := false.

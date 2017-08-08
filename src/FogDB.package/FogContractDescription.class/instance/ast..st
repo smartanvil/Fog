@@ -1,3 +1,3 @@
 accessing
-ast: aCollection
-	ast := SASTBuilder new startOn: aCollection
+ast: anAST
+	ast := anAST

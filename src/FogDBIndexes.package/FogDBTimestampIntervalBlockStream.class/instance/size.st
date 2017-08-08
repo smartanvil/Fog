@@ -1,0 +1,3 @@
+accessing
+size
+	^ toBlockNumber - fromBlockNumber 

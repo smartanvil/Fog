@@ -5,6 +5,9 @@ code
 contract ArrayContract {
     address  _owner;
     uint256[] array;
+    mapping(uint => uint256[]) [] arrayOfMaps;
+    mapping(uint => uint256[]) mappingArrayValue;
+    mapping( uint => mapping(uint => uint256[])) mappingIntMappint;
 
     function ArrayContract (){
         _owner = msg.sender;

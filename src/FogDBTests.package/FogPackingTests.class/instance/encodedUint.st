@@ -1,3 +1,3 @@
 uint values
 encodedUint
-	^'00000000000000000000000000000000ffffffffffffffffffffffffffffffff'
+	^'0000000000000000ffffffffffffffff'

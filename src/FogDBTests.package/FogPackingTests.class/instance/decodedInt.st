@@ -1,3 +1,3 @@
 int values
 decodedInt
-	^ self decodedInt256 
+	^ self decodedInt128 

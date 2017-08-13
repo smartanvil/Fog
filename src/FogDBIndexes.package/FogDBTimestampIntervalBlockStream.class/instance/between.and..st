@@ -2,6 +2,6 @@ boundaries accessing
 between: aStamp and: otherStamp
 	fromStamp := aStamp.
 	toStamp := otherStamp.
-	fromBlockNumber := self binarySearchFindClosestTo: fromStamp .
-	toBlockNumber := self binarySearchFindClosestTo: toStamp .
+	fromBlockNumber := FogDBBinarySearch binarySearchFindClosestTo: fromStamp.
+	toBlockNumber := FogDBBinarySearch binarySearchFindClosestTo: toStamp.
 	currentBlockNumber := fromBlockNumber

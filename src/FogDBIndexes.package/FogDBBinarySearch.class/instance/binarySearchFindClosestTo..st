@@ -9,8 +9,6 @@ binarySearchFindClosestTo: aStamp
 			analysing := self connection findBlockByNumber: current full: true.
 			(analysing previous timestamp <= aStamp and: [ aStamp <= analysing timestamp ])
 				ifTrue: [ ^ analysing number ].
-			"(analysing timestamp <= aStamp and: [ aStamp <= analysing next timestamp ])
-				ifTrue: [ ^ analysing number ]."
 			aStamp > analysing timestamp
 				ifTrue: [ lower = current
 						ifTrue: [ ^ analysing number ].

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogStreamsPropertyComparisionCriteria",
+	"category" : "FogStreams-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"subproperty"
+	],
+	"name" : "FogStreamsSubpropertyComparisionCriteria",
+	"type" : "normal"
+}

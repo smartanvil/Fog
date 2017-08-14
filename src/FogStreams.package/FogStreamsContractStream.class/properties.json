@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogStreams-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"source",
+		"where",
+		"order",
+		"limit"
+	],
+	"name" : "FogStreamsContractStream",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+A fog stream is a decorable stream that allows compositions 

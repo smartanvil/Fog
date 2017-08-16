@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEQLStream",
+	"category" : "FogEQL-EQL-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"sort"
+	],
+	"name" : "FogEQLSortedStream",
+	"type" : "normal"
+}

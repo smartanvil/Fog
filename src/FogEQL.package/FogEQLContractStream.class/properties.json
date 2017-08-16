@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogEQL-StreamsAndBuffers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"source",
+		"where",
+		"order",
+		"limit"
+	],
+	"name" : "FogEQLContractStream",
+	"type" : "normal"
+}

@@ -8,4 +8,5 @@ SystemOrganization addCategory: 'FogDB-Meta-Description'!
 SystemOrganization addCategory: 'FogDB-Meta-Mirror'!
 SystemOrganization addCategory: 'FogDB-Meta-SolidityLayout'!
 SystemOrganization addCategory: 'FogDB-Service'!
+SystemOrganization addCategory: 'FogDB-Unit'!
 SystemOrganization addCategory: 'FogDB-Util'!

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "DynamicVariable",
+	"category" : "FogEQL-PersistingRuntime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"default"
+	],
+	"name" : "FogEQLDynamicGlobals",
+	"type" : "normal"
+}

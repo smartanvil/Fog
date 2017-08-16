@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogEQL-EQL-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"binding",
+		"streamName"
+	],
+	"name" : "FogEQLNamedStreamSelector",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEQLBinaryExpression",
+	"category" : "FogEQL-EQL-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogEQLBinaryBooleanExpression",
+	"type" : "normal"
+}

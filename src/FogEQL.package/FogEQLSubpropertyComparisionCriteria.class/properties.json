@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEQLPropertyComparisionCriteria",
+	"category" : "FogEQL-StreamsAndBuffers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"subproperty"
+	],
+	"name" : "FogEQLSubpropertyComparisionCriteria",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogEQL-EQL-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"left",
+		"right",
+		"operation"
+	],
+	"name" : "FogEQLBinaryExpression",
+	"type" : "normal"
+}

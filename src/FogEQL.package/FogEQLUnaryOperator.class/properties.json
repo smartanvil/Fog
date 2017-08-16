@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "FogEQLBinaryOperation",
+	"super" : "Object",
 	"category" : "FogEQL-EQL-Interpreter",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FogEQLBinaryArithmeticExpression",
+	"instvars" : [
+		"expression"
+	],
+	"name" : "FogEQLUnaryOperator",
 	"type" : "normal"
 }

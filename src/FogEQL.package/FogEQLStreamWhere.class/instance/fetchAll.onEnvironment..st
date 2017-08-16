@@ -1,3 +1,3 @@
 as yet unclassified
-fetchAll: aFogNamedDatasourceProxy onEnvironment: aFogStreamsEnvironment
-	^ filter gatherBlockNumbersForDatasource: (aFogNamedDatasourceProxy resolveFor: aFogStreamsEnvironment)
+fetchAll: aFogEQLDatasource onEnvironment: aFogStreamsEnvironment
+	^ filter gatherBlockNumbersForDatasource: (aFogEQLDatasource resolveFor: aFogStreamsEnvironment)

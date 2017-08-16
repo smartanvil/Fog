@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FogEQLBinaryArithmeticExpression",
+	"name" : "FogEQLAssignation",
 	"type" : "normal"
 }

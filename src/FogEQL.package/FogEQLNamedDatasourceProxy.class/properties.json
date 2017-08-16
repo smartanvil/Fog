@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"selector",
-		"connection"
+		"binding",
+		"selector"
 	],
 	"name" : "FogEQLNamedDatasourceProxy",
 	"type" : "normal"

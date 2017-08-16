@@ -5,8 +5,8 @@ visitSelectStatement: anEQLSelectStatementNode
 	domain := anEQLSelectStatementNode domain
 		ifNotNil: [ anEQLSelectStatementNode domain acceptVisitor: self ]
 		ifNil: [ FogConnection currentConnection ].
-	rslt := FogEQLNamedDatasourceProxy new
-		selector: from;
+	rslt := FogEQLDatasource new
+		sources: from;
 		connection: domain asConnection;
 		yourself.
 	rslt := anEQLSelectStatementNode where

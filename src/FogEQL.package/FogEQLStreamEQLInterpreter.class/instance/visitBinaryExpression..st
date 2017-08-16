@@ -6,11 +6,11 @@ visitBinaryExpression: anEQLBinaryExpressionNode
 	anEQLBinaryExpressionNode operation value isArithmeticExpression
 		ifTrue: [ rslt := FogEQLBinaryArithmeticExpression new ].
 	anEQLBinaryExpressionNode operation value isBooleanExpression
-		ifTrue: [ rslt := FogEQLBinaryBooleanExpression new ].
+		ifTrue: [ rslt := FogEQLBinaryBooleanOperator new ].
 	anEQLBinaryExpressionNode operation value isAssignmentExpression
-		ifTrue: [ rslt := FogEQLAssingmentExpression new ].
+		ifTrue: [ rslt := FogEQLAssignation new ].
 	anEQLBinaryExpressionNode operation value isComparisionExpression
-		ifTrue: [ rslt := FogEQLComparisionExpression new ].
+		ifTrue: [ rslt := FogEQLComparisionOperator new ].
 	rslt left: left.
 	rslt right: right.
 	rslt operation: anEQLBinaryExpressionNode operation value asSymbol.

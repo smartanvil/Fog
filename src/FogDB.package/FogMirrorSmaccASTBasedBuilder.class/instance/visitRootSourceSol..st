@@ -1,3 +1,3 @@
 as yet unclassified
 visitRootSourceSol: aSolRootSourceSolNode 
-	(aSolRootSourceSolNode source_units detect: #isContract) acceptVisitor: self 
+	(aSolRootSourceSolNode sourceunits detect: #isContract) acceptVisitor: self 

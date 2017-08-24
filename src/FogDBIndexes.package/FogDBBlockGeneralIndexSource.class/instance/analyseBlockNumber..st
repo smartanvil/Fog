@@ -1,4 +1,4 @@
-initialization
+source-gathering
 analyseBlockNumber: aBlockNumber
 	| block tx txFrom txTo txInput size |
 	block := self connection eth getBlockByNumber: aBlockNumber full: true.

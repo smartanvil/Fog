@@ -1,0 +1,3 @@
+*FogEQL
+isDatasource
+	^ false 

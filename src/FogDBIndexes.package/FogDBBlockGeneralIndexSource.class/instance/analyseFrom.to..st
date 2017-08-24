@@ -1,4 +1,4 @@
-initialization
+source-gathering
 analyseFrom: aStamp to: otherStamp
 	from := FogDBBinarySearch binarySearchFindClosestTo: aStamp.
 	to := FogDBBinarySearch binarySearchFindClosestTo: otherStamp.

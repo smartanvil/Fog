@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"indexes"
+		"data"
 	],
-	"name" : "FogEQLContractInstancesBuffer",
+	"name" : "FogEQLStampIndex",
 	"type" : "normal"
 }

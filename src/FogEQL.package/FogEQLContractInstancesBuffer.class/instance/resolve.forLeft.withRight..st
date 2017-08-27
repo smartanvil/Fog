@@ -1,3 +1,6 @@
 as yet unclassified
-resolve: aString forLeft: aString2 withRight: aDateAndTime 
-	self shouldBeImplemented.
+resolve: aBinaryComparition forLeft: aDataAccessor withRight: aConstantValue
+self halt. 
+	^ (self hasIndexFor: aDataAccessor)
+		ifTrue: [ (self indexOn: aDataAccessor) resolve: aBinaryComparition withRight: aConstantValue ]
+		ifFalse: [ #all ]

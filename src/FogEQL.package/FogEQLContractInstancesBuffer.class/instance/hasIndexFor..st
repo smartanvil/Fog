@@ -1,3 +1,3 @@
 as yet unclassified
-hasIndexFor: aString 
-	^ aString = 'block.timestamp'
+hasIndexFor: aFogNameAccesses
+	^ aFogNameAccesses accessingLine = 'block.timestamp'

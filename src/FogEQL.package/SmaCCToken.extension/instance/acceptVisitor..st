@@ -1,3 +1,3 @@
 *FogEQL
 acceptVisitor: aFogStreamEQLInterpreter 
-	^ self value 
+	^ aFogStreamEQLInterpreter visitSmaccToken: self 

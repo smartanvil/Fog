@@ -1,3 +1,3 @@
 as yet unclassified
 next
-	^ dataProjection value: (source next)
+	^ dataProjection collect: [ :d | source next extract: d ]

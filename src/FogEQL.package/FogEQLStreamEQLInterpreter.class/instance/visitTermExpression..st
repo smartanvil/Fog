@@ -1,3 +1,3 @@
-as yet unclassified
+visiting
 visitTermExpression: anEQLTermExpressionNode 
 	^ anEQLTermExpressionNode factor acceptVisitor: self

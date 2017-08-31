@@ -1,3 +1,5 @@
 as yet unclassified
 next
-	^ dataProjection collect: [ :d | source next extract: d ]
+	| val |
+	val := source next.
+	^ val ifNotNil: [ dataProjection collect: [ :d | d extract: val ] ]

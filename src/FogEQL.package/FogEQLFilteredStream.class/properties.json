@@ -7,7 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"filter",
-		"substream"
+		"resultstream"
 	],
 	"name" : "FogEQLFilteredStream",
 	"type" : "normal"

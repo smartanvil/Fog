@@ -1,3 +1,3 @@
 as yet unclassified
-gatherBlockNumbersForDatasource: aCollection
+gatherBlockNumbersForDatasource: aCollection 
 	^ (left gatherBlockNumbersForDatasource: aCollection) intersection: (right gatherBlockNumbersForDatasource: aCollection)

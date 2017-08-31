@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "FogEQLBlockBasedBuffer",
 	"category" : "FogEQL-PersistingRuntime",
 	"classinstvars" : [ ],
 	"pools" : [ ],

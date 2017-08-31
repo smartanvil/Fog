@@ -1,0 +1,3 @@
+resolveingIds
+all 
+	^ self subclassResponsibility 

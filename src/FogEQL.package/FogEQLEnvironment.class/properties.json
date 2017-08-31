@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"namedbuffers"
+		"namedbuffers",
+		"connection"
 	],
 	"name" : "FogEQLEnvironment",
 	"type" : "normal"

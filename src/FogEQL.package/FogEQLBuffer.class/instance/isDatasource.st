@@ -1,0 +1,3 @@
+testing
+isDatasource
+	^ true

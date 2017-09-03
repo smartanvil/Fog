@@ -4,6 +4,6 @@ installTimestampIndex
 		at: 'timestamp'
 		put:
 			(FogEQLStampIndex
-				on:
-					[ (FLMaterializer materializeFromFileNamed: '/home/santiago/stampIndex.fl')
+				on: [ (FLMaterializer
+						materializeFromFileNamed: (FileLocator indexFolder / 'stampIndex.fl') fullName)
 						select: [ :i | i isNotNil ] ])

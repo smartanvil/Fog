@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"filter",
+		"index",
 		"position"
 	],
 	"name" : "FogEQLResultStream",

@@ -18,16 +18,16 @@ visitSelectStatement: anEQLSelectStatementNode
 	rslt := anEQLSelectStatementNode orderBy
 		ifNil: [ rslt ]
 		ifNotNil: [ FogEQLSortedStream new
-				source: rslt;
+				source: rslt asStream;
 				sortBy: (anEQLSelectStatementNode orderBy acceptVisitor: self);
 				yourself ].
 	rslt := anEQLSelectStatementNode limit
 		ifNil: [ rslt ]
 		ifNotNil: [ FogEQLLimitedStream new
-				source: rslt;
+				source: rslt asStream;
 				limit: (anEQLSelectStatementNode limit acceptVisitor: self) yourself ].
 			 
 	^ FogEQLProjectionStream new
-		source: rslt;
+		source: rslt asStream;
 		outline: (anEQLSelectStatementNode binding acceptVisitor: self);
 		yourself

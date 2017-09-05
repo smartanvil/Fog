@@ -4,4 +4,7 @@ installTransactionSizeIndex
 		at: 'transactions.size'
 		put:
 			(FogEQLTransactionsAmountIndex
-				on: [ FogDBBlockGeneralIndexSource new sortTxAmountArray: (FLMaterializer materializeFromFileNamed: '/home/santiago/txamount.fl') ])
+				on: [ FogDBBlockGeneralIndexSource new
+						sortTxAmountArray:
+							(FLMaterializer
+								materializeFromFileNamed: (FileLocator indexFolder / 'txamount.fl') fullName) ])

@@ -1,0 +1,3 @@
+as yet unclassified
+visitParenthesisCompareExpression: anEQLParenthesisCompareExpressionNode 
+	^ anEQLParenthesisCompareExpressionNode exp acceptVisitor: self 

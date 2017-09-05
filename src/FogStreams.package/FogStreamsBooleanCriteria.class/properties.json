@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FogStreamsCriteria",
+	"category" : "FogStreams-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogStreamsBooleanCriteria",
+	"type" : "normal"
+}

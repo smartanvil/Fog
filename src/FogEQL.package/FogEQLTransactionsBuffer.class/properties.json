@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEQLBlockBasedBuffer",
+	"category" : "FogEQL-PersistingRuntime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogEQLTransactionsBuffer",
+	"type" : "normal"
+}

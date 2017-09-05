@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogDB-Unit",
+	"classinstvars" : [
+		"instances"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"unit"
+	],
+	"name" : "FogUnit",
+	"type" : "normal"
+}

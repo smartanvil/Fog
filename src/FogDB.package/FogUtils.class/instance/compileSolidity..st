@@ -1,4 +1,4 @@
-as yet unclassified
+compiling
 compileSolidity: sourceCodeFile
 	| command return compiled compiledStream binary binaryRuntime abi ast tmp2 |
 	tmp2 := '/tmp/out{1}.txt' format: {sourceCodeFile hash asString}.

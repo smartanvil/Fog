@@ -1,0 +1,3 @@
+initialization
+useSolc
+	useJson := true.

@@ -1,0 +1,3 @@
+initialization
+connection
+	^ FogConnection currentConnection 

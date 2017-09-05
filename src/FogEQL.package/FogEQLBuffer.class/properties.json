@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogEQL-PersistingRuntime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"indexes",
+		"connection"
+	],
+	"name" : "FogEQLBuffer",
+	"type" : "normal"
+}

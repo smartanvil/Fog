@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEQLCriteria",
+	"category" : "FogEQL-StreamsAndBuffers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogEQLBooleanCriteria",
+	"type" : "normal"
+}

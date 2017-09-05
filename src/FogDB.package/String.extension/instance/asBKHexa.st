@@ -1,0 +1,3 @@
+*FogDB
+asBKHexa
+	^ self 

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 8/14/2017 23:24",
+	"super" : "Object",
+	"category" : "FogEQL-StreamsAndBuffers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"binding",
+		"selector"
+	],
+	"name" : "FogEQLNamedDatasourceProxy",
+	"type" : "normal"
+}

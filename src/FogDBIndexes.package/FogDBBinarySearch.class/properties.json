@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 8/10/2017 19:21",
+	"super" : "Object",
+	"category" : "FogDBIndexes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogDBBinarySearch",
+	"type" : "normal"
+}

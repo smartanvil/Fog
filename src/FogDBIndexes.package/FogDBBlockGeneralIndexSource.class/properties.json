@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 8/10/2017 19:19",
+	"super" : "Object",
+	"category" : "FogDBIndexes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"from",
+		"to",
+		"blocks"
+	],
+	"name" : "FogDBBlockGeneralIndexSource",
+	"type" : "normal"
+}

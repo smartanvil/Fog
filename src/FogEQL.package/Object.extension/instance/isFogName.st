@@ -1,0 +1,3 @@
+*FogEQL
+isFogName
+	^ false 

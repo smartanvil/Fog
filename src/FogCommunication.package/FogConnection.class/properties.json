@@ -12,7 +12,8 @@
 		"json",
 		"requestId",
 		"eth",
-		"service"
+		"service",
+		"useJson"
 	],
 	"name" : "FogConnection",
 	"type" : "normal"

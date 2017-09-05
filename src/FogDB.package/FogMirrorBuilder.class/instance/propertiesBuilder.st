@@ -1,3 +1,5 @@
 accessing
 propertiesBuilder
-	^ FogMirrorASTBasedBuilder new
+	^ FogConnection currentConnection usesSmacc
+		ifTrue: [ FogMirrorSmaccASTBasedBuilder new ]
+		ifFalse: [ FogMirrorASTBasedBuilder new ]

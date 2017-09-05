@@ -1,3 +1,4 @@
 accessing
 all
-	^ (indexes at: 'timestamp') all
+	self halt. 
+	^ self first to: self last

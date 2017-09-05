@@ -1,3 +1,3 @@
 accessing
-at: aContractId
-	^ self connection findContractBindByHash: aContractId blockTag: #latest
+at: aBlockID
+	FogConnection currentConnection findBlockByNumber: aBlockID full: true.

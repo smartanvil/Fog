@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEQLIndex",
+	"category" : "FogEQL-PersistingRuntime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogEQLContractInstanceHashIndex",
+	"type" : "normal"
+}

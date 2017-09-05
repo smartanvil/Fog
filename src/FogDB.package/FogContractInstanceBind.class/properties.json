@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"address",
-		"contract"
+		"contract",
+		"account"
 	],
 	"name" : "FogContractInstanceBind",
 	"type" : "normal"

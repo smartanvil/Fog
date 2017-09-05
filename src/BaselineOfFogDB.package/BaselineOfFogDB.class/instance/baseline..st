@@ -17,5 +17,6 @@ baseline: spec
 			spec package: #FogDB with: [ spec requires: #('FogCommunication' 'TaskItShell' 'Keccak' 'SmaccSolidity') ].
 			spec package: #FogDBIndexes with: [ spec requires: #('FogDB') ].
 			spec package: #FogDBTests with: [ spec requires: #('FogDB') ].
-			spec package: #FogEVMByteCode with: [ spec requires: #('FogDB') ]
-			spec package: #FogEVM with: [ spec requires: #('FogDB' 'FogEVMByteCode') ]. ]
+			spec package: #FogEVM with: [ spec requires: #('FogDB' ) ].
+			spec package: #FogEVMByteCode with: [ spec requires: #('FogDB' FogEVM) ].
+ ]

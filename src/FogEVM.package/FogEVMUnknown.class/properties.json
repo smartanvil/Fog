@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEVMInstruction",
+	"category" : "FogEVM-ByteCode",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogEVMUnknown",
+	"type" : "normal"
+}

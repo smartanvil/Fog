@@ -1,0 +1,4 @@
+accessing
+registerIndexUsages
+	self installTimestampIndex.
+	self installTransactionSizeIndex

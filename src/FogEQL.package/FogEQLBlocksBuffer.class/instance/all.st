@@ -1,3 +1,3 @@
 accessing
 all
-	^ (indexes at: 'timestamp') all
+	^ (environment indexAt: self timestampIndexTag) all

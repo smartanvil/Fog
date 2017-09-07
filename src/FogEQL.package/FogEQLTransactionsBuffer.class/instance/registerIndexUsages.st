@@ -1,0 +1,3 @@
+initialization
+registerIndexUsages
+	self installTimestampIndex.

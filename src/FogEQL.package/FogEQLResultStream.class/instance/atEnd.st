@@ -1,3 +1,3 @@
 accessing
 atEnd
-	^ index anySatisfy: [ :i | i atEnd ]
+	^ self index anySatisfy: [ :i | i atEnd ]

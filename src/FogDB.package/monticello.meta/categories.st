@@ -3,10 +3,11 @@ SystemOrganization addCategory: 'FogDB-API'!
 SystemOrganization addCategory: 'FogDB-Cache'!
 SystemOrganization addCategory: 'FogDB-Connection'!
 SystemOrganization addCategory: 'FogDB-Domain'!
-SystemOrganization addCategory: 'FogDB-Domain-Types'!
+SystemOrganization addCategory: 'FogDB-Domain-Contracts'!
 SystemOrganization addCategory: 'FogDB-Meta-Description'!
 SystemOrganization addCategory: 'FogDB-Meta-Mirror'!
 SystemOrganization addCategory: 'FogDB-Meta-SolidityLayout'!
+SystemOrganization addCategory: 'FogDB-Meta-Types'!
 SystemOrganization addCategory: 'FogDB-Service'!
 SystemOrganization addCategory: 'FogDB-Unit'!
 SystemOrganization addCategory: 'FogDB-Util'!

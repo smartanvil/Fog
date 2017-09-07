@@ -1,3 +1,0 @@
-as yet unclassified
-createResultStreamFor: aFogNamedDatasourceProxy
-	^ self createResultStreamFor: aFogNamedDatasourceProxy onEnvironment: FogEQLDynamicGlobals value

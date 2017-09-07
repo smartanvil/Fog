@@ -1,6 +1,5 @@
 initialization
 installBuiltinBuffers
-	connection := FogConnection currentConnection.
 	namedbuffers at: #contract_instances put: (FogEQLContractInstancesBuffer onConnection: connection).
 	namedbuffers
 		at: #contract_descriptions

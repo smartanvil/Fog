@@ -1,13 +1,14 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "FogEQL-PersistingRuntime",
+	"category" : "FogEQL-Buffers",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"indexes",
-		"connection"
+		"connection",
+		"environment"
 	],
 	"name" : "FogEQLBuffer",
 	"type" : "normal"

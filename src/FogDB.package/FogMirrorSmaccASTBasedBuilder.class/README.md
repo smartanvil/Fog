@@ -1,0 +1,1 @@
+This visitor is in charge of build a contract mirror based on a SmaccSolidity AST 

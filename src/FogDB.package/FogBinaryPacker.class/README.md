@@ -1,0 +1,1 @@
+Binary packer encodes and decodes from and to binary representation

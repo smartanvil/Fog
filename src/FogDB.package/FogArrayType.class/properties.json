@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "SantiagoBragagnolo 12/16/2016 16:26",
 	"super" : "FogType",
-	"category" : "FogDB-Domain-Types",
+	"category" : "FogDB-Meta-Types",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

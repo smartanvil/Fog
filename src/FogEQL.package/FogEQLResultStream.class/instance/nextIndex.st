@@ -1,3 +1,3 @@
 accessing
 nextIndex
-	^ index collect: [ :i | i next ]
+	^ self index collect: [ :i | i next ]

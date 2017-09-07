@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEQLSemanticNode",
+	"category" : "FogEQL-SemanticAST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"filter"
+	],
+	"name" : "FogEQLWhere",
+	"type" : "normal"
+}

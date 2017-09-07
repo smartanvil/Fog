@@ -1,4 +1,3 @@
-accessing
+index
 indexOn: aString
-	^ indexes at: aString accessingLine.
-		
+	^ environment indexAt: (aString indexEntryTagOn: self).

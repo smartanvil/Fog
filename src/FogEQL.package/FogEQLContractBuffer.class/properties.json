@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FogEQLDirectoryBasedBuffer",
-	"category" : "FogEQL-PersistingRuntime",
+	"category" : "FogEQL-Buffers",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

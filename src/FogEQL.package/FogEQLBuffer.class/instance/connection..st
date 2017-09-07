@@ -1,3 +1,3 @@
-resolveingIds
+accessing
 connection: aConnection
 	connection := aConnection 

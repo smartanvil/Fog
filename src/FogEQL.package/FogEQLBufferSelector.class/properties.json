@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "SantiagoBragagnolo 8/14/2017 23:24",
+	"super" : "FogEQLSemanticNode",
+	"category" : "FogEQL-SemanticAST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"binding",
+		"selector"
+	],
+	"name" : "FogEQLBufferSelector",
+	"type" : "normal"
+}

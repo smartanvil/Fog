@@ -3,7 +3,7 @@
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FogBinaryPacker",
-	"commentStamp" : "",
+	"commentStamp" : "SantiagoBragagnolo 9/7/2017 15:18",
 	"super" : "Object",
 	"traitcomposition" : "TFogPack",
 	"type" : "normal",

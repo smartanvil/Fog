@@ -1,0 +1,3 @@
+*FogEQL
+acceptVisitor: aSemanticBuilder
+	^ nil

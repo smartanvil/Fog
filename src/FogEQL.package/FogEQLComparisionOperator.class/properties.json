@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
-	"super" : "FogEQLBinaryOperation",
-	"category" : "FogEQL-EQL-Interpreter",
+	"super" : "FogEQLBinaryOperator",
+	"category" : "FogEQL-SemanticAST-BinaryOperators",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

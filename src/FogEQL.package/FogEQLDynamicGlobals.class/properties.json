@@ -1,12 +1,13 @@
 {
 	"commentStamp" : "",
 	"super" : "DynamicVariable",
-	"category" : "FogEQL-PersistingRuntime",
+	"category" : "FogEQL-Buffers",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"default"
+		"default",
+		"connection"
 	],
 	"name" : "FogEQLDynamicGlobals",
 	"type" : "normal"

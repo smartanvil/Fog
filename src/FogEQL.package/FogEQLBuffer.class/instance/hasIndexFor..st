@@ -1,3 +1,3 @@
-testing
+index
 hasIndexFor: aFogNameAccesses
-	^ indexes includesKey: aFogNameAccesses accessingLine
+	^ environment includesIndex: (aFogNameAccesses indexEntryTagOn: self)

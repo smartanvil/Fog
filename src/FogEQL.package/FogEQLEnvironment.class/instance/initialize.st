@@ -1,5 +1,7 @@
 initialization
 initialize
-	super initialize .
-	namedbuffers := Dictionary new. 
-	self installBuiltinBuffers.
+	super initialize.
+	namedbuffers := Dictionary new.
+	indexRegistry := Dictionary new.
+	indexTags := Dictionary new.
+	

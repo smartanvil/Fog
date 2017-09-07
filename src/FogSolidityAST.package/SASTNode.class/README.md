@@ -1,1 +1,0 @@
-AST general node. It has just id, src pointing and attributes 

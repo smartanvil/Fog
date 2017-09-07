@@ -1,1 +1,0 @@
-AST Node representing an Function Type. It does not really exists in the output of solidity. but is needed . 

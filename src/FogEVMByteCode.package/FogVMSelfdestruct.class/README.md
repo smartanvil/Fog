@@ -1,1 +1,0 @@
-Halt execution and register account for later deletion

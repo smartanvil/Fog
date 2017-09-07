@@ -1,1 +1,0 @@
-This adds the name property. Still abstract 

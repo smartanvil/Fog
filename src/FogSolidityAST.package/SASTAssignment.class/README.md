@@ -1,1 +1,0 @@
-This nodes represents an assignation by the operator '=' 

@@ -1,3 +1,0 @@
-as yet unclassified
-accessable: somethingSuceptableToBeAccessedAsAStruct
-	accessable := somethingSuceptableToBeAccessedAsAStruct

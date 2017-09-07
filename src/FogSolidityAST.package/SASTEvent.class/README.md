@@ -1,1 +1,0 @@
-This node referes to an event declaration. It related type is a function type 

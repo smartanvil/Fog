@@ -1,1 +1,0 @@
-This node represents a variable decalration. It usually has a type name sometimes a default value 

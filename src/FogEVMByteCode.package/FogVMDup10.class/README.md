@@ -1,1 +1,0 @@
-Place 10 byte item on stack

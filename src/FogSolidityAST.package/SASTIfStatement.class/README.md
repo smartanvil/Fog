@@ -1,1 +1,0 @@
-This AST node represents an IF statement 

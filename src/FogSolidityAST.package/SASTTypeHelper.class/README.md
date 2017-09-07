@@ -1,1 +1,0 @@
-This object has the definition of the basic native types of solidity and it does works also as a pool of type.s 

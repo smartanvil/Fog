@@ -1,1 +1,0 @@
-this ast node referes to an struct clasical type declaration 

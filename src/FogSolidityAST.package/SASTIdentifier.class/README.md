@@ -1,1 +1,0 @@
-This AST Node represents an identifier .

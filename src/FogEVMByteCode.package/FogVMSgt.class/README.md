@@ -1,1 +1,0 @@
-Signed greater-than comparison

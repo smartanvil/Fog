@@ -1,1 +1,0 @@
-This is an error, is not clean at all, but since there are some crossed or recursive definitions we use this error for trying many times the types inference up to the moment when there is no more errors or no more successes . 

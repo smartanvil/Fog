@@ -1,1 +1,0 @@
-Get the block's beneficiary address

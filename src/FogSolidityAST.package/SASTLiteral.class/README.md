@@ -1,1 +1,0 @@
-This node represents a literal value. Normally is setted into the node . 

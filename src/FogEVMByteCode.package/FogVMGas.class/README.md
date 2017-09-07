@@ -1,1 +1,0 @@
-Get the amount of available gas, including the corresponding reduction 

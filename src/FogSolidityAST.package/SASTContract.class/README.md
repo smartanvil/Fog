@@ -1,1 +1,0 @@
-Contract node. is normally the main node of the AST . As well is a type 

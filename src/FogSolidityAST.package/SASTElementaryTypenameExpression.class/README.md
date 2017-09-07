@@ -1,1 +1,0 @@
-AST Node that referes to a type named reference. It ensures it is a native type . 

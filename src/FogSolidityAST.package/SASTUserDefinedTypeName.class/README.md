@@ -1,1 +1,0 @@
-This node referes to custom type named reference. It related with a userkind of type (enum, struct )

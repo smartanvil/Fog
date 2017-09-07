@@ -1,1 +1,0 @@
-This class is here to put together the hierrchy for the visiting pattern .

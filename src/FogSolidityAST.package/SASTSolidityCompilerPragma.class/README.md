@@ -1,1 +1,0 @@
-This specific kind of pragma does not have an equivalent in solidity output AST but is useful to type it  

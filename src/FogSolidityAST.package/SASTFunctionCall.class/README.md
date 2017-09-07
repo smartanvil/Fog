@@ -1,1 +1,0 @@
-This ast node represents a function call. It mixes a function with arguments 

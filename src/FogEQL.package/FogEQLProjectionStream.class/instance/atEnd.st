@@ -1,0 +1,3 @@
+accessing
+atEnd
+	^ source atEnd

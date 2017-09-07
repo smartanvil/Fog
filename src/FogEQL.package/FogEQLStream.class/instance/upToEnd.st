@@ -1,3 +1,6 @@
-as yet unclassified
+accessing
 upToEnd
-	self shouldBeImplemented.
+	| content |
+	content := OrderedCollection new.
+	[ self hasNext ] whileTrue: [ content add: self next ].
+	^ content

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogEQLTests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"loader",
+		"name"
+	],
+	"name" : "FogEQLDataExtractor",
+	"type" : "normal"
+}

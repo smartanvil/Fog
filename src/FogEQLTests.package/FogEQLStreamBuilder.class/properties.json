@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogEQLTests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"environment"
+	],
+	"name" : "FogEQLStreamBuilder",
+	"type" : "normal"
+}

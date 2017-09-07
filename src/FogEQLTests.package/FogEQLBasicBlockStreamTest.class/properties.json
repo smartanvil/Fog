@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEQLTestCase",
+	"category" : "FogEQLTests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream"
+	],
+	"name" : "FogEQLBasicBlockStreamTest",
+	"type" : "normal"
+}

@@ -1,3 +1,0 @@
-*FogDBContracts
-source
-	^ 'not-source'

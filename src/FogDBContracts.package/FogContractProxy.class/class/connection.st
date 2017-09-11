@@ -1,3 +1,0 @@
-accessing
-connection
-	^ FogConnection currentConnection

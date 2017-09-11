@@ -1,1 +1,0 @@
-In this cache, the creation of objects add registers the created object in the session. and returns it proxty 

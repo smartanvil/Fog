@@ -1,3 +1,0 @@
-*FogDBContracts
-fromFile
-	^ ' no-file '.

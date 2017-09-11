@@ -1,3 +1,0 @@
-building slots - variables
-buildClassVariables
-	^ ''

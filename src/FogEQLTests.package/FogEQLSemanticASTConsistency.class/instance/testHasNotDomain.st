@@ -1,3 +1,3 @@
 initialization
 testHasNotDomain
-	self assert: ast domain isNil.
+	self assert: ast domain species  equals: FogEQLEnvironment.

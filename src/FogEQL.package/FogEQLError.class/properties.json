@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Error",
+	"category" : "FogEQL-Errors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FogEQLError",
+	"type" : "normal"
+}

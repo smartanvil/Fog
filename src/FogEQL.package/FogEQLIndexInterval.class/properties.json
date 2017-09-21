@@ -9,7 +9,8 @@
 		"index",
 		"from",
 		"to",
-		"step"
+		"step",
+		"sortedCollection"
 	],
 	"name" : "FogEQLIndexInterval",
 	"type" : "normal"

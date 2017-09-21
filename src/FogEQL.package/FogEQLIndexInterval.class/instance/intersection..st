@@ -1,4 +1,4 @@
-as yet unclassified
+enumerating
 intersection: aFogEQLIndexInterval
 	^ self species = aFogEQLIndexInterval species
 		ifTrue: [ self index == aFogEQLIndexInterval index
@@ -6,5 +6,5 @@ intersection: aFogEQLIndexInterval
 						from: (from max: aFogEQLIndexInterval from);
 						to: (to min: aFogEQLIndexInterval to);
 						index: index ]
-				ifFalse: [ self asSet intersection: aFogEQLIndexInterval asSet ] ]
-		ifFalse: [ self asSet intersection: aFogEQLIndexInterval asSet ]
+				ifFalse: [ self asSortedCollection intersection: aFogEQLIndexInterval asSortedCollection ] ]
+		ifFalse: [ self asSortedCollection intersection: (aFogEQLIndexInterval reject: [ : i | i isNil ]) asSortedCollection ]

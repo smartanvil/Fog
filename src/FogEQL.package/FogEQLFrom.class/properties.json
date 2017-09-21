@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"datasources"
+		"mainsrc",
+		"joined"
 	],
 	"name" : "FogEQLFrom",
 	"type" : "normal"

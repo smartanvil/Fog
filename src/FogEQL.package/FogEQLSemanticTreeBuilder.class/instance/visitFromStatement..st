@@ -1,5 +1,6 @@
 visiting
 visitFromStatement: anEQLFromStatementNode
 	^ FogEQLFrom new
-		datasources: (anEQLFromStatementNode sources acceptVisitor: self);
+		mainsrc: (anEQLFromStatementNode base_source acceptVisitor: self);
+		joined: (anEQLFromStatementNode sourceses collect: [ : s | s acceptVisitor: self]);
 		yourself

@@ -1,15 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "FogEQLSemanticNode",
+	"super" : "FogEQLFunctionCall",
 	"category" : "FogEQL-SemanticAST",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"name",
-		"arguments",
-		"selector"
-	],
-	"name" : "FogEQLFunctionCall",
+	"instvars" : [ ],
+	"name" : "FogEQLMethodCall",
 	"type" : "normal"
 }

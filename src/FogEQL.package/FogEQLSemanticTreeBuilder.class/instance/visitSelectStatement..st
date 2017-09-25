@@ -4,7 +4,6 @@ visitSelectStatement: anEQLSelectStatementNode
 	domain := anEQLSelectStatementNode domain
 		ifNil: [ FogEQLDynamicGlobals value ]
 		ifNotNil: [ anEQLSelectStatementNode domain acceptVisitor: self ].
-		self halt. 
 	^ FogEQLSelect new
 		from: (anEQLSelectStatementNode from acceptVisitor: self);
 		domain: domain;

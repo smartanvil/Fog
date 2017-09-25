@@ -1,5 +1,5 @@
 as yet unclassified
 extract: aCollection
 	^ accesses
-		inject: (super extract: aCollection)
+		inject: (value extract: aCollection)
 		into: [ :ex :access | access perform: #innerExtract: withArguments: {ex} ]

@@ -1,3 +1,5 @@
 as yet unclassified
 fetchValueFromNestedDictionary: aDataObject
-	^ self fetchValueFromDictionary: aDataObject
+	| dic |
+	dic := aDataObject asDictionary.
+	^ dic at: value value

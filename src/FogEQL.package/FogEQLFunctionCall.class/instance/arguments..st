@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 arguments: aCollection 
-	arguments := aCollection
+	arguments := aCollection ifNil: [ arguments ]

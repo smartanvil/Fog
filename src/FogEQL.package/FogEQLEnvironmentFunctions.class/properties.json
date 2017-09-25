@@ -5,13 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"namedbuffers",
-		"connection",
-		"indexTags",
-		"indexRegistry",
-		"functions"
-	],
-	"name" : "FogEQLEnvironment",
+	"instvars" : [ ],
+	"name" : "FogEQLEnvironmentFunctions",
 	"type" : "normal"
 }

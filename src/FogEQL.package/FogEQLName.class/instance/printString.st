@@ -1,3 +1,3 @@
 printing
 printString
-	^ value value 
+	^ value string 

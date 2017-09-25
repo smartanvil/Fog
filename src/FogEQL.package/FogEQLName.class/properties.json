@@ -1,13 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "FogEQLSemanticNode",
-	"category" : "FogEQL-SemanticAST",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TEquality classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"value"
 	],
 	"name" : "FogEQLName",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "FogEQLSemanticNode",
+	"traitcomposition" : "TEquality",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FogEQL-SemanticAST"
 }

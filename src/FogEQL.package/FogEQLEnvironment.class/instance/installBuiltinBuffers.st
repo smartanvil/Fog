@@ -1,13 +1,16 @@
 initialization
 installBuiltinBuffers
-	namedbuffers at: #contract_instances put: (FogEQLContractInstancesBuffer onConnection: connection).
-	namedbuffers
-		at: #contract_descriptions
+	| contractNameSpace |
+	contractNameSpace := Dictionary new.
+	contractNameSpace at: #instances put: (FogEQLContractInstancesBuffer onConnection: connection).
+	contractNameSpace
+		at: #descriptions
 		put:
 			((FogEQLContractBuffer onConnection: connection)
 				directory: FileLocator contractsFolder;
 				yourself).
-	namedbuffers at: #contract_activations put: (FogEQLContractInstancesBuffer onConnection: connection).
+	contractNameSpace at: #activations put: (FogEQLContractInstancesBuffer onConnection: connection).
+	namedbuffers at: #contract put: contractNameSpace.
 	namedbuffers at: #blocks put: (FogEQLBlocksBuffer onConnection: connection).
 	namedbuffers at: #accounts put: (FogEQLAccountsBuffer onConnection: connection).
 	namedbuffers at: #transactions put: (FogEQLTransactionsBuffer onConnection: connection)

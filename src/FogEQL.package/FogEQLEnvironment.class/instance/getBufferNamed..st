@@ -1,3 +1,5 @@
 as yet unclassified
-getBufferNamed: aString 
-	^ namedbuffers at: aString ifAbsent: [ Error signal: ' Buffer  ', aString, ' does not exist ' ].
+getBufferNamed: aName
+	^ [(aName fetchValueFromNestedDictionary: namedbuffers)]
+		on: KeyNotFound
+		do: [ :e | Error signal: ' Buffer  ' , aName printString , ' does not exist ' ]

@@ -1,8 +1,7 @@
-as yet unclassified
+visiting
 visitMethodCall: anEQLMethodCallNode
-	self shouldBeImplemented.
 	^ FogEQLMethodCall new
-		receiver: (anEQLMethodCallNode value acceptVisitor: self);
+		receiver: (self visitMemberAccess: anEQLMethodCallNode);
 		selector: (anEQLMethodCallNode selector acceptVisitor: self);
 		arguments: (anEQLMethodCallNode arguments acceptVisitor: self);
 		yourself

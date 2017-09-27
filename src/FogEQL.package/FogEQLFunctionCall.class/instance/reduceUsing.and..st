@@ -1,3 +1,3 @@
 as yet unclassified
-reduceUsing: aCollectionOfArgs and: aFogEQLEnvironment
-	^ (selector selectFrom: aFogEQLEnvironment functions) valueWithArguments: aCollectionOfArgs
+reduceUsing: aCollectionOfArgs and: aReceiver
+	^ (selector selectFrom: aReceiver) valueWithArguments: aCollectionOfArgs

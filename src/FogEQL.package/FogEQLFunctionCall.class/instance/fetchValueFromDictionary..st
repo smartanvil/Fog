@@ -7,5 +7,5 @@ fetchValueFromDictionary: aCollection
 					(a isFogName or: [ a isFogFunction ])
 						ifTrue: [ a fetchValueFromDictionary: aCollection ]
 						ifFalse: [ a ] ].
-			self reduceUsing: argumentsToUse and: FogEQLDynamicGlobals value ]
+			self reduceUsing: argumentsToUse and: (self receiver: aCollection) ]
 		ifFalse: [ self reduce ]

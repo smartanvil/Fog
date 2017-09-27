@@ -6,4 +6,4 @@ reduce
 			a isFogFunction
 				ifTrue: [ a reduce ]
 				ifFalse: [ a ] ].
-	^ self reduceUsing: args and: FogEQLDynamicGlobals value
+	^ self reduceUsing: args and: self receiver 

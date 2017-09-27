@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"receiver"
+	],
 	"name" : "FogEQLMethodCall",
 	"type" : "normal"
 }

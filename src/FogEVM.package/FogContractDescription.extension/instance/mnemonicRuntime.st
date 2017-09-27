@@ -1,3 +1,3 @@
 *FogEVM
 mnemonicRuntime
-	^ FogEVMByteCode fromBinary: runtime
+	^ runtime ifNotNil: [ FogEVMByteCode fromBinary: runtime ]

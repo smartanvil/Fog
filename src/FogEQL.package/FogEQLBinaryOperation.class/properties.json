@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogEQL-Filters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"left",
+		"operation",
+		"right",
+		"operationSymbol"
+	],
+	"name" : "FogEQLBinaryOperation",
+	"type" : "normal"
+}

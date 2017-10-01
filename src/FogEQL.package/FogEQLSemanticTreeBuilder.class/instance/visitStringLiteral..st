@@ -1,3 +1,3 @@
-as yet unclassified
+visiting
 visitStringLiteral: anEQLStringLiteralNode 
 	^ anEQLStringLiteralNode value value 

@@ -1,6 +1,6 @@
 initialization
 installBuiltinBuffers
-	| contractNameSpace |
+	| contractNameSpace brief |
 	contractNameSpace := Dictionary new.
 	contractNameSpace at: #instances put: (FogEQLContractInstancesBuffer onConnection: connection).
 	contractNameSpace
@@ -13,4 +13,12 @@ installBuiltinBuffers
 	namedbuffers at: #contract put: contractNameSpace.
 	namedbuffers at: #blocks put: (FogEQLBlocksBuffer onConnection: connection).
 	namedbuffers at: #accounts put: (FogEQLAccountsBuffer onConnection: connection).
-	namedbuffers at: #transactions put: (FogEQLTransactionsBuffer onConnection: connection)
+	namedbuffers at: #transactions put: (FogEQLTransactionsBuffer onConnection: connection).
+	brief := namedbuffers associations
+		inject: OrderedCollection new
+		into: [ :col :each | 
+			each value isDictionary
+				ifTrue: [ col addAll: (each value keys collect: [ :k | (each key , '.' , k) asSymbol ]) ]
+				ifFalse: [ col add: each key ].
+			col ].
+	namedbuffers at: #buffers put: brief

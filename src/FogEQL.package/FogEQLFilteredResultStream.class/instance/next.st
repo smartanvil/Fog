@@ -5,5 +5,5 @@ next
 		doWhileFalse: [ ret ifNil: [ ^ nil ].
 			(ret allSatisfy: [ :f | f value isNotNil ])
 				ifFalse: [ ^ ret ].
-			filter individualResultMatches: ret ].
+			filter valueWithDictionaryArguments: ret ].
 	^ ret

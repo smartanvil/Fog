@@ -10,7 +10,8 @@
 		"connection",
 		"indexTags",
 		"indexRegistry",
-		"functions"
+		"functions",
+		"connections"
 	],
 	"name" : "FogEQLEnvironment",
 	"type" : "normal"

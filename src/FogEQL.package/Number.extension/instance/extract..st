@@ -1,0 +1,3 @@
+*FogEQL
+extract: aCollection 
+	^ self 

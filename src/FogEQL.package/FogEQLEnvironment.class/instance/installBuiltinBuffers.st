@@ -14,6 +14,8 @@ installBuiltinBuffers
 	namedbuffers at: #blocks put: (FogEQLBlocksBuffer onConnection: connection).
 	namedbuffers at: #accounts put: (FogEQLAccountsBuffer onConnection: connection).
 	namedbuffers at: #transactions put: (FogEQLTransactionsBuffer onConnection: connection).
+	namedbuffers at: #connections put: connections.
+	namedbuffers at: #indexes put: indexTags .
 	brief := namedbuffers associations
 		inject: OrderedCollection new
 		into: [ :col :each | 

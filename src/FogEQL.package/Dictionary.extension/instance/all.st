@@ -1,0 +1,3 @@
+*FogEQL
+all 
+	^ self keys

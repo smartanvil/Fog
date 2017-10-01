@@ -1,14 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "FogEQL-EQL-Interpreter",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TEquality classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"loader",
 		"name"
 	],
 	"name" : "FogEQLDataExtractor",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TEquality",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FogEQL-EQL-Interpreter"
 }

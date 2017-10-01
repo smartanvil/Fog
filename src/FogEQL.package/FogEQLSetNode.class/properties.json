@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FogEQLSemanticNode",
+	"category" : "FogEQL-EQL-Interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"firstCollection",
+		"secondCollection"
+	],
+	"name" : "FogEQLSetNode",
+	"type" : "normal"
+}

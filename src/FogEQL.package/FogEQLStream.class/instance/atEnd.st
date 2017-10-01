@@ -1,3 +1,3 @@
 accessing
 atEnd
-	self shouldBeImplemented.
+	self subclassResponsibility .

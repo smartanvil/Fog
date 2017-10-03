@@ -1,3 +1,0 @@
-private
-connection
-	^ FogConnection currentConnection 

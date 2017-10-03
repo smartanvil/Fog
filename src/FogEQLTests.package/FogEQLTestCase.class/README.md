@@ -1,1 +1,0 @@
-Basic test case implements some auxiliar methods 

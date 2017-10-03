@@ -1,3 +1,0 @@
-accessing
-at: aNumber
-	^ nil

@@ -1,3 +1,0 @@
-stream
-reset
-	currentBlockNumber := fromBlockNumber 

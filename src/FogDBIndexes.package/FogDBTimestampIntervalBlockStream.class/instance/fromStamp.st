@@ -1,3 +1,0 @@
-boundaries accessing
-fromStamp
-	^ fromStamp

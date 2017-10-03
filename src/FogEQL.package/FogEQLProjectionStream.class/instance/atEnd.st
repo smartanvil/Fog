@@ -1,3 +1,0 @@
-accessing
-atEnd
-	^ source atEnd

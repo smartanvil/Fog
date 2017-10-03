@@ -1,3 +1,0 @@
-accessing
-installContractHashIndex
-	environment register: self hashIndexTag forIndexBasedOn: FogEQLContractInstanceHashIndex

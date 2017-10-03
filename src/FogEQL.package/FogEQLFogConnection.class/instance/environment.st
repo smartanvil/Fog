@@ -1,3 +1,0 @@
-initialization
-environment
-	^ environment

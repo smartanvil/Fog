@@ -1,4 +1,0 @@
-accessing
-registerIndexUsages
-	self installContractHashIndex
-	

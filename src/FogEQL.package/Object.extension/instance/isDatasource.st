@@ -1,3 +1,0 @@
-*FogEQL
-isDatasource
-	^ false 

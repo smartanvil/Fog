@@ -1,3 +1,0 @@
-initialization
-registerIndexUsages
-	self installTimestampIndex.

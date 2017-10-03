@@ -1,3 +1,0 @@
-accessing
-bufferName
-	^ self subclassResponsibility 

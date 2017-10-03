@@ -1,3 +1,0 @@
-*FogEQL
-comparisionOperations
-	^ {'>' . '<' . '<=' . '>=' . '==' . '!=' . 'like'}

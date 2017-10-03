@@ -1,3 +1,0 @@
-*FogEQL
-all 
-	^ self keys

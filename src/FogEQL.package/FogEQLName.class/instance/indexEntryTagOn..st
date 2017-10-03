@@ -1,3 +1,0 @@
-accessing
-indexEntryTagOn: aBuffer
-	^ ''

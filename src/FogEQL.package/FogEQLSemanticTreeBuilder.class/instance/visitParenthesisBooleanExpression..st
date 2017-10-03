@@ -1,3 +1,0 @@
-as yet unclassified
-visitParenthesisBooleanExpression: anEQLParenthesisBooleanExpressionNode 
-	^ anEQLParenthesisBooleanExpressionNode exp acceptVisitor: self 

@@ -1,3 +1,0 @@
-printing
-operationSymbol
-	^ #different:

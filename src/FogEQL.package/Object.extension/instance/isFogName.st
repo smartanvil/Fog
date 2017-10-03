@@ -1,3 +1,0 @@
-*FogEQL
-isFogName
-	^ false 

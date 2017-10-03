@@ -1,6 +1,0 @@
-initialization
-installBuiltinIndexes
-	self installAccountHashIndex.
-	self installTimestampIndex.
-	self installTransactionsSizeIndex.
-	self installContractsHashIndex

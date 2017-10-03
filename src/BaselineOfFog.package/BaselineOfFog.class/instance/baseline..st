@@ -1,7 +1,7 @@
 baselines
 baseline: spec
 	<baseline>
-	spec
+	spec 
 		for: #common
 		do: [ spec blessing: #baseline.
 			spec baseline: 'Enma' with: [ spec repository: 'github://sbragagnolo/Enma/src' ].

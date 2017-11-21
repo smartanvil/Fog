@@ -1,3 +1,3 @@
-as yet unclassified
+visiting
 visitModifierDefinition: aSolModifierDefinitionNode 
-	"self shouldBeImplemented."
+	self halt. 

@@ -1,3 +1,3 @@
 as yet unclassified
 similarityThreshold
-	^ 0.25
+	^ 0.1

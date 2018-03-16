@@ -1,0 +1,3 @@
+*FogDB
+kind
+	^ #default

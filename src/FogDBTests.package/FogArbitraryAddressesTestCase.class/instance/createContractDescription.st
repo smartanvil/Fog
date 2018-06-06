@@ -1,11 +1,14 @@
 as yet unclassified
 createContractDescription
-	| file |
-	file := '/tmp/test-contract.sol' asFileReference.
+	| file code |
+	file := 'test/test-contract.sol' asFileReference.
+	file parent exists
+		ifFalse: [ file ensureCreateDirectory ].
 	file exists
 		ifTrue: [ file delete ].
+	code := String lf join: self code lines.
 	file writeStream
-		nextPutAll: self code;
+		nextPutAll: code;
 		flush;
 		close.
 	^ connection findContractDescriptionForFileReference: file entry

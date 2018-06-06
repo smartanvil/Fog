@@ -1,3 +1,3 @@
-as yet unclassified
+tests
 testGetExample
-	self assert: (FogUtils new sha3_256: 'getExample()') equals: (Keccak hashMessage: 'getExample()') asByteArray hex
+	self assert: 'bfdb629c6f75944815d014aa71431ccabcc563dbfb8087573f6551c48c054649' equals: (Keccak hashMessage: 'getExample()') asByteArray hex

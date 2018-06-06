@@ -1,3 +1,0 @@
-*FogDB
-kind
-	^ #'modifier-definition'

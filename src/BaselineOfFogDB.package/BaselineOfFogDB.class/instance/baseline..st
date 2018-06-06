@@ -9,13 +9,13 @@ baseline: spec
 				with: [ spec repository: 'github://sbragagnolo/taskit' ].
 			spec
 				baseline: 'Keccak'
-				with: [ spec repository: 'github://sbragagnolo/Keccak:v0.1.1/src' ].
+				with: [ spec repository: 'github://smartshackle/Keccak:v0.1.1/src' ].
 			spec
 				baseline: 'FogCommunication'
-				with: [ spec repository: 'github://sbragagnolo/Fog/src' ].
+				with: [ spec repository: 'github://smartshackle/Fog/src' ].
 			spec
 				baseline: 'SmaccSolidity'
-				with: [ spec repository: 'github://RMODINRIA-Blockchain/SmaCC-Solidity' ].
+				with: [ spec repository: 'github://smartshackle/SmaCC-Solidity' ].
 			spec
 				project: 'NeoJSON'
 				with: [ spec

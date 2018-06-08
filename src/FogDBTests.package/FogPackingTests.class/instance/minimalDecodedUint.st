@@ -1,3 +1,3 @@
 uint values
 minimalDecodedUint
-	^ self minimalDecodedUint128 
+	^ self minimalDecodedUint256 

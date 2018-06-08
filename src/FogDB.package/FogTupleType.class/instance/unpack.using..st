@@ -1,4 +1,4 @@
-as yet unclassified
+marshaling
 unpack: aString using: aFogPacker
 	| tupleStream |
 	tupleStream := aString readStream.

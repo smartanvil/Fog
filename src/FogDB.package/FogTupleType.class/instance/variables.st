@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 variables
 	^ types collect: #key

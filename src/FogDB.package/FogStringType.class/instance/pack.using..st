@@ -1,4 +1,4 @@
-as yet unclassified
+marshaling
 pack: aString using: aFogPacker
 	| pack size |
 	

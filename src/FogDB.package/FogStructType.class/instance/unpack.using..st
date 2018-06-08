@@ -1,4 +1,4 @@
-as yet unclassified
+marshaling
 unpack: aSetOfStrings using: anETHPacker
 	^ (aSetOfStrings
 		with: fields

@@ -1,4 +1,4 @@
-as yet unclassified
+marshaling
 pack: aCollection using: aFogPacker
 	| pack size |
 	pack := aCollection inject: '' into: [ :acc :each | acc , (inner pack: each using: aFogPacker) ].

@@ -1,4 +1,4 @@
-as yet unclassified
+marshaling
 unpackStream: aReadStream using: aFogPacker
 	| content substream |
 	content := aReadStream contents.

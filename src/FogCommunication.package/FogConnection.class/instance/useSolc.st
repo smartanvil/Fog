@@ -1,3 +1,0 @@
-initialization
-useSolc
-	useJson := true.

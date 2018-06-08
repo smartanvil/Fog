@@ -1,3 +1,3 @@
-as yet unclassified
+marshaling
 staticSlotSize
 	^ self class perform: ('sizeOf' , name capitalized) asSymbol

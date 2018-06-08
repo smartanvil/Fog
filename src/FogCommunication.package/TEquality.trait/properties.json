@@ -1,5 +1,7 @@
 {
-	"name" : "TEquality",
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:34",
-	"category" : "FogCommunication-Util"
+	"classinstvars" : [ ],
+	"category" : "FogCommunication-Util",
+	"instvars" : [ ],
+	"name" : "TEquality"
 }

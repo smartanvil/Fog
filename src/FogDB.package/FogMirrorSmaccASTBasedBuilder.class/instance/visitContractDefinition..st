@@ -1,3 +1,3 @@
 visiting
 visitContractDefinition: aSolContractDefinitionNode
-	aSolContractDefinitionNode contract_sources do: [ :cs | cs acceptVisitor: self ]
+	aSolContractDefinitionNode statements do: [ :cs | cs acceptVisitor: self ]

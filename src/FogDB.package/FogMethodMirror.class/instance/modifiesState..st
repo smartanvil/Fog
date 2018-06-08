@@ -1,3 +1,3 @@
 accessing
-modifiesState: aFalse 
+modifiesState: aFalse  
 	modifiesState := aFalse

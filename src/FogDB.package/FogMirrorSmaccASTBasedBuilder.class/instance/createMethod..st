@@ -1,17 +1,10 @@
 as yet unclassified
 createMethod: aSolFunctionDefinitionNode
 	| input output return parameters |
-
-	input := (aSolFunctionDefinitionNode param_list identifierTokens collect: #value)
-		with: aSolFunctionDefinitionNode param_list types
-		collect: [ :name :type | name -> (types at: type) ].
+	input := aSolFunctionDefinitionNode parameters parameters collect: [ :p | (p identifier acceptVisitor: self) -> (types at: p type) ].
 	output := aSolFunctionDefinitionNode returned_types
-		ifNotNil: [ aSolFunctionDefinitionNode returned_types identifierTokens size = aSolFunctionDefinitionNode returned_types types size
-				ifTrue: [ (aSolFunctionDefinitionNode returned_types identifierTokens collect: #value)
-						with: aSolFunctionDefinitionNode returned_types types
-						collect: [ :name :type | name -> (types at: type) ] ]
-				ifFalse: [ self assert: aSolFunctionDefinitionNode returned_types types size = 1.
-					{('return' -> (types at: aSolFunctionDefinitionNode returned_types types first))} ] ]
+		ifNotNil: [ aSolFunctionDefinitionNode returned_types parameters
+				collect: [ :p | (p identifier ifNil: [ #return ] ifNotNil: [ :i | i acceptVisitor: self ]) -> (types at: p type) ] ]
 		ifNil: [ {} ].
 	return := output size > 1
 		ifTrue: [ FogTupleType new
@@ -22,7 +15,7 @@ createMethod: aSolFunctionDefinitionNode
 		types: input;
 		yourself.
 	^ FogMethodMirror new
-		name: aSolFunctionDefinitionNode identifierToken value;
+		name: (aSolFunctionDefinitionNode identifier acceptVisitor: self);
 		parameters: parameters;
 		return: return;
 		modifiesState: aSolFunctionDefinitionNode isConstant not;

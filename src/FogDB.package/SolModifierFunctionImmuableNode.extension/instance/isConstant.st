@@ -1,0 +1,3 @@
+*FogDB
+isConstant
+	^ true 

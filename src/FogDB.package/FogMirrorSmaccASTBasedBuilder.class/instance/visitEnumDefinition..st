@@ -4,5 +4,5 @@ visitEnumDefinition: aSolEnumDefinitionNode
 		at: aSolEnumDefinitionNode
 		put:
 			(FogEnumType new
-				values: (aSolEnumDefinitionNode enum_value_ids collect: #value);
+				values: (aSolEnumDefinitionNode values acceptVisitor: self);
 				yourself)

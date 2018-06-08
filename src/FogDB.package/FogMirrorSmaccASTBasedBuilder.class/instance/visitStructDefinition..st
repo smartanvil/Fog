@@ -5,11 +5,11 @@ visitStructDefinition: aSolStructDefinitionNode
 		put:
 			(FogStructType new
 				fields:
-					(aSolStructDefinitionNode struct_var_decs 
+					(aSolStructDefinitionNode fields 
 						collect: [ :f | 
 							f type acceptVisitor: self.
 							FogStructField new
-								name: f identifierToken value;
+								name: (f identifier acceptVisitor:self);
 								type: (types at: f type);
 								yourself ]);
 				yourself)

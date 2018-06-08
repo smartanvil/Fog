@@ -1,3 +1,3 @@
 *FogDB
 isConstructor
-	^ identifierToken value = parent contract_id value 
+	^ identifier value = parent identifier value 

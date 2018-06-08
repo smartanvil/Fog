@@ -1,8 +1,10 @@
 as yet unclassified
 createConstructor: aSolFunctionDefinitionNode
 	| input parameters |
+	input := aSolFunctionDefinitionNode parameters parameters collect: [ :p | self halt ].
 
-	input := aSolFunctionDefinitionNode param_list identifierTokens with: aSolFunctionDefinitionNode param_list types collect: [ :name :type | name -> (types at: type) ].
+	"
+	 identifierTokens with: aSolFunctionDefinitionNode param_list types collect: [ :name :type | name -> (types at: type) ]."
 	parameters := FogTupleType new
 		types: input;
 		yourself.

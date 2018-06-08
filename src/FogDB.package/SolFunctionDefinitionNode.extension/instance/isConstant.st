@@ -1,3 +1,3 @@
 *FogDB
 isConstant
-	^ (modifiers collect: #value) includes: #constant
+	^ modifiers anySatisfy: #isConstant

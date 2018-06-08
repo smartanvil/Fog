@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FogDB-Connection",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"url",
+		"json",
+		"requestId",
+		"eth",
+		"service",
+		"connection"
+	],
+	"name" : "FogSession",
+	"type" : "normal"
+}

@@ -1,5 +1,5 @@
 initialization
 setUp
 	super setUp.
-	connection := FogCachedConnection on: self url.
+	connection := FogCachedSession on: self url.
 	self timeLimit: 3 minutes

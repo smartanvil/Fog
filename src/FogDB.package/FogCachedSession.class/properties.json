@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "SantiagoBragagnolo 5/12/2017 16:38",
-	"super" : "FogConnection",
+	"super" : "FogSession",
 	"category" : "FogDB-Connection",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -8,6 +8,6 @@
 	"instvars" : [
 		"cache"
 	],
-	"name" : "FogCachedConnection",
+	"name" : "FogCachedSession",
 	"type" : "normal"
 }

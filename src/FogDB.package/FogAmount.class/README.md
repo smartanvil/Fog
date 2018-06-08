@@ -1,1 +1,0 @@
-An amount is a number plus a unit. This is mainly for representing money units in ethereurm 

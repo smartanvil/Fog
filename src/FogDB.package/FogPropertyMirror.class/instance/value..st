@@ -1,3 +1,3 @@
 accessing
 value: aContractInstance
-	^ self type unpack: (layout fetchContentsFrom: aContractInstance) using: FogPacker new
+	^ self type unpack: (layout fetchContentsFrom: aContractInstance) using: FogHexadecimalPacker new

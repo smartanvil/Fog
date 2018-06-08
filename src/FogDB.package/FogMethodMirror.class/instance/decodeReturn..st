@@ -4,4 +4,4 @@ decodeReturn: aReturnValue
 	aReturnValue = '0x'
 		ifTrue: [ self error: 'Empty return!' ].
 	process := aReturnValue copyFrom: 3 to: aReturnValue size.
-	^ self returnType unpackReturn: process using: FogPacker new
+	^ self returnType unpackReturn: process using: FogHexadecimalPacker new

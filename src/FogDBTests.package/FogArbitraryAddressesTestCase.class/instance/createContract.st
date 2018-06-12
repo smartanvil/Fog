@@ -5,6 +5,8 @@ createContract
 	^ (description mirror constructor
 		applyOn: description
 		valueWithArguments: {}
-		sender: self ownerAccount)
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60)
 		waitIsReady;
 		yourself

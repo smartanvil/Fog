@@ -9,8 +9,7 @@
 		"modifiesState",
 		"name",
 		"parameters",
-		"return",
-		"signature"
+		"return"
 	],
 	"name" : "FogMethodMirror",
 	"type" : "normal"

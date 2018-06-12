@@ -1,4 +1,4 @@
-access db - contract accounts
+contract - remote activation
 apply: aMethodMirror on: anETHContractInstance arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount
 	^ aMethodMirror isStateModifier
 		ifTrue: [ self

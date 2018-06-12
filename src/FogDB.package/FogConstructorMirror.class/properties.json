@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "SantiagoBragagnolo 2/3/2017 12:14",
-	"super" : "FogConnectedObject",
+	"super" : "FogSessionObject",
 	"category" : "FogDB-Meta-Mirror",
 	"classinstvars" : [ ],
 	"pools" : [ ],

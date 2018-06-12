@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "SantiagoBragagnolo 12/7/2016 13:47",
-	"super" : "FogConnectedObject",
+	"super" : "FogSessionObject",
 	"category" : "FogDB-Domain",
 	"classinstvars" : [ ],
 	"pools" : [ ],

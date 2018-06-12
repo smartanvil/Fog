@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FogConnectedObject",
+	"instvars" : [
+		"session"
+	],
+	"name" : "FogSessionObject",
 	"type" : "normal"
 }

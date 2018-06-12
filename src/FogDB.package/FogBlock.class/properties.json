@@ -32,7 +32,7 @@
 	],
 	"name" : "FogBlock",
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:31",
-	"super" : "FogConnectedObject",
+	"super" : "FogSessionObject",
 	"traitcomposition" : "TEquality",
 	"type" : "normal",
 	"classinstvars" : [ ],

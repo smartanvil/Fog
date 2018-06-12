@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"connection"
+		"connection",
+		"session"
 	],
 	"name" : "FogTestCase",
 	"type" : "normal"

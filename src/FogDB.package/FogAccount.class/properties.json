@@ -7,7 +7,7 @@
 	],
 	"name" : "FogAccount",
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:30",
-	"super" : "FogConnectedObject",
+	"super" : "FogSessionObject",
 	"traitcomposition" : "TEquality",
 	"type" : "normal",
 	"classinstvars" : [ ],

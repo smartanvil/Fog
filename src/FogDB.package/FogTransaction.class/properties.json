@@ -21,7 +21,7 @@
 	],
 	"name" : "FogTransaction",
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:32",
-	"super" : "FogConnectedObject",
+	"super" : "FogSessionObject",
 	"traitcomposition" : "TEquality",
 	"type" : "normal",
 	"classinstvars" : [ ],

@@ -1,3 +1,3 @@
 as yet unclassified
 testGetBlockGivesABlock
-	self assert: ((connection findBlockByTag: 'latest' full: true) isKindOf: FogBlock)
+	self assert: ((session findBlockByTag: 'latest' full: true) isKindOf: FogBlock)

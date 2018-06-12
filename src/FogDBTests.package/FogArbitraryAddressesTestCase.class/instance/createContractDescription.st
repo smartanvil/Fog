@@ -11,4 +11,4 @@ createContractDescription
 		nextPutAll: code;
 		flush;
 		close.
-	^ connection findContractDescriptionForFileReference: file entry
+	^ session findContractDescriptionForFileReference: file entry

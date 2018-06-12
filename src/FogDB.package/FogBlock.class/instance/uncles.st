@@ -1,3 +1,3 @@
 accessing
 uncles
-	^ uncles ifNil: [ uncles := unclesHashes collect: [ :u | self connection findBlockByHash: u full: true ] ]
+	^ uncles ifNil: [ uncles := unclesHashes collect: [ :u | self session findBlockByHash: u full: true ] ]

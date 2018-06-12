@@ -1,3 +1,3 @@
 accessing
 to: aString
-	to := self connection findAccountByHash: aString blockNumber: blockNumber
+	to := self session findAccountByHash: aString blockNumber: blockNumber

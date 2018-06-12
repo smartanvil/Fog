@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "SantiagoBragagnolo 5/9/2017 11:30",
-	"super" : "Object",
+	"super" : "FogSessionObject",
 	"category" : "FogDB-Domain-Contracts",
 	"classinstvars" : [
 		"mirror"

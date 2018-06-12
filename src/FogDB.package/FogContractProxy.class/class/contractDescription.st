@@ -1,5 +1,5 @@
 as yet unclassified
 contractDescription
-	^ (self connection
+	^ (self session
 		findContractDescriptionByName: self contractDescriptionName
 		andVersionHash: self versionHash) 

@@ -1,3 +1,5 @@
 as yet unclassified
 hexa: aNumber
-	^ aNumber asBKHexa
+	^ (aNumber isString and: [ aNumber beginsWith: '0x' ])
+		ifTrue: [ aNumber ]
+		ifFalse: [ aNumber asBKHexa ]

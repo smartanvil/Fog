@@ -1,4 +1,4 @@
 private
 privateInflateTransactions
 	^ transactionsHashes
-		collect: [ :t | self connection findTransactionByDescription: t ]
+		collect: [ :t | self session findTransactionByDescription: t ]

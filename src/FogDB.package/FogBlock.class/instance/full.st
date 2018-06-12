@@ -1,5 +1,5 @@
 accessing
 full
 	^ full
-		ifFalse: [ self connection findBlockByHash: self privateBlockHash full: true ]
+		ifFalse: [ self session findBlockByHash: self privateBlockHash full: true ]
 		ifTrue: [ self ]

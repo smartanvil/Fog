@@ -1,4 +1,3 @@
 accessing
-getStorageAt: anInteger
-	<getStorageAt>
-	^ self connection eth getStorageAt: address upTo: anInteger blockTag: 'latest'
+getStorageAt: aSlotId
+	^ self session fetchSlot: aSlotId onContract: self address 

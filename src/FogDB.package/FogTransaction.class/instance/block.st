@@ -1,3 +1,3 @@
 accessing
 block
-	^ block ifNil: [ block := self connection findBlockByHash: blockHash full: true ]
+	^ block ifNil: [ block := self session findBlockByHash: blockHash full: true ]

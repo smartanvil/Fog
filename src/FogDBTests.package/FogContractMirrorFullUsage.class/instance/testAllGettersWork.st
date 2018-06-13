@@ -4,6 +4,7 @@ testAllGettersWork
 		select: [ :m | m name beginsWith: 'get' ]
 		thenDo: [ :m | 
 			m
+				using: session
 				applyOn: contract
 				valueWithArguments: {}
 				from: self ownerAccount

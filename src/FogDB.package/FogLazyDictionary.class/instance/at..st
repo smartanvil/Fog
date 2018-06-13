@@ -2,6 +2,6 @@ accessing
 at: aKey
 	^ dictionary
 		at: aKey
-		ifAbsentPut: [ type valueType
-				unpackStream: (bind getStorageAt: (self storageHashFor: aKey)) readStream
-				using: FogHexadecimalPacker new ]
+		ifAbsentPut: [ session
+				decodeStream: (session fetchSlot: (self storageHashFor: aKey) asHeadlessHexa onContract: bind address at: blockReference) readStream
+				type: type valueType ]

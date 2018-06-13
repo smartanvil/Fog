@@ -1,6 +1,6 @@
 as yet unclassified
-applyOn: anETHContractInstance at: aBlockHash valueWithArguments: aCollection from: anAccount 
-	^ session
+using: aSession applyOn: anETHContractInstance at: aBlockHash valueWithArguments: aCollection from: anAccount
+	^ aSession
 		apply: self
 		on: anETHContractInstance
 		at: aBlockHash

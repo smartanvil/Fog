@@ -6,6 +6,7 @@ testSetTwoStringEnumInt
 	future := FogTransactionMonitorService current
 		receiptFor:
 			(setString
+				using: session
 				applyOn: contract
 				valueWithArguments: {'HeyTwoStrings!' . #NEUTRAL . 123 . 'Yeahyou'}
 				from: self ownerAccount
@@ -15,6 +16,7 @@ testSetTwoStringEnumInt
 	self
 		assert:
 			((mirror method: #getString)
+				using: session
 				applyOn: contract
 				valueWithArguments: {}
 				from: self ownerAccount
@@ -24,6 +26,7 @@ testSetTwoStringEnumInt
 	self
 		assert:
 			((mirror method: #getEnum)
+				using: session
 				applyOn: contract
 				valueWithArguments: {}
 				from: self ownerAccount
@@ -33,6 +36,7 @@ testSetTwoStringEnumInt
 	self
 		assert:
 			((mirror method: #getPositiveInt)
+				using: session
 				applyOn: contract
 				valueWithArguments: {}
 				from: self ownerAccount

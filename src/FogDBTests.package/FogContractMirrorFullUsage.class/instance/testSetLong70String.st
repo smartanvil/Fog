@@ -5,6 +5,7 @@ testSetLong70String
 	future := FogTransactionMonitorService current
 		receiptFor:
 			(setString
+				using: session
 				applyOn: contract
 				valueWithArguments: {('AStringOf64Characters' padRightTo: 70 with: $-)}
 				from: self ownerAccount
@@ -14,6 +15,7 @@ testSetLong70String
 	self
 		assert:
 			((mirror method: #getString)
+				using: session
 				applyOn: contract
 				valueWithArguments: {}
 				from: self ownerAccount

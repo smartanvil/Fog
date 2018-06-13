@@ -5,6 +5,7 @@ testSetTwoString
 	future := FogTransactionMonitorService current
 		receiptFor:
 			(setString
+				using: session
 				applyOn: contract
 				valueWithArguments: {'Heeeey!' . 'Yeahytutuou'}
 				from: self ownerAccount
@@ -14,6 +15,7 @@ testSetTwoString
 	self
 		assert:
 			((mirror method: #getString)
+				using: session
 				applyOn: contract
 				valueWithArguments: {}
 				from: self ownerAccount

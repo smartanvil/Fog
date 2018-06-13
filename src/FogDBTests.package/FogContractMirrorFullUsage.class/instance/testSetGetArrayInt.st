@@ -4,6 +4,7 @@ testSetGetArrayInt
 	future := FogTransactionMonitorService current
 		receiptFor:
 			((mirror method: #setSimpleArray:)
+				using: session
 				applyOn: contract
 				valueWithArguments: {{1 . 2 . 3 . 4 . 6}}
 				from: self ownerAccount
@@ -11,6 +12,7 @@ testSetGetArrayInt
 				gasPrice: 60).
 	future synchronizeTimeout: 10 minutes.
 	example := (mirror method: #getArray)
+		using: session
 		applyOn: contract
 		valueWithArguments: {}
 		from: self ownerAccount

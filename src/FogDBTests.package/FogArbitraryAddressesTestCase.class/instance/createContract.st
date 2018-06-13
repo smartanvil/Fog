@@ -3,6 +3,7 @@ createContract
 	| description |
 	description := self createContractDescription.
 	^ (description mirror constructor
+		using: session
 		applyOn: description
 		valueWithArguments: {}
 		from: self ownerAccount

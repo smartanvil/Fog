@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "SantiagoBragagnolo 7/28/2017 15:57",
-	"super" : "Object",
+	"super" : "FogSessionObject",
 	"category" : "FogDB-Domain",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -9,7 +9,8 @@
 		"mapping",
 		"type",
 		"dictionary",
-		"bind"
+		"bind",
+		"blockReference"
 	],
 	"name" : "FogLazyDictionary",
 	"type" : "normal"

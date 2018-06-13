@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FogSessionObject",
+	"super" : "Object",
 	"category" : "FogDB-Meta-Mirror",
 	"classinstvars" : [ ],
 	"pools" : [ ],

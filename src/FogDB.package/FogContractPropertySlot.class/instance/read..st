@@ -3,5 +3,5 @@ read: aFogContractProxy
 	^ aFogContractProxy mirror
 		using: aFogContractProxy session
 		property: name
-		on: aFogContractProxy address
+		on: aFogContractProxy instance
 		at: aFogContractProxy blockReference

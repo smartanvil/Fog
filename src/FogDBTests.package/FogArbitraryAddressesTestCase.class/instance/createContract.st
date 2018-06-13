@@ -7,7 +7,7 @@ createContract
 		applyOn: description
 		valueWithArguments: {}
 		from: self ownerAccount
-		gas: 300000
+		gas: 3000000
 		gasPrice: 60)
 		waitIsReady;
 		yourself

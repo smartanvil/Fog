@@ -1,6 +1,7 @@
 tests
 testContractCallSetMethodInTransactionModifiesValue
 	| method transactionReceipt hash futureTransactionReceipt mirror |
+	self assert: session isNotNil.
 	mirror := simpleStorage contract mirror instanceMirror.
 	method := mirror methods detect: [ :m | m selector asSymbol = #set: ].
 	hash := method

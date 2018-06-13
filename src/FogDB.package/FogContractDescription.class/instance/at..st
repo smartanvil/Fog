@@ -1,6 +1,6 @@
 instance creation
 at: anAddress
-	^ FogContractInstanceBind new
+	^ FogContractInstance new
 		address: anAddress;
 		contract: self;
 		yourself

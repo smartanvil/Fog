@@ -1,5 +1,5 @@
 as yet unclassified
-using: aSession fetch: aMirrorProperty from: aContractInstanceBind at: aBlockTagNumberOrHash
+using: aSession fetch: aMirrorProperty from: aContractAddress at: aBlockTagNumberOrHash
 	^ aSession
-		decode: (self using: aSession fetchContentsFrom: aContractInstanceBind at: aBlockTagNumberOrHash)
+		decode: (self using: aSession fetchContentsFrom: aContractAddress at: aBlockTagNumberOrHash)
 		type: aMirrorProperty type

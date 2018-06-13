@@ -8,8 +8,8 @@
 	"instvars" : [
 		"code",
 		"abi",
-		"contractBind"
+		"contract"
 	],
-	"name" : "FogContractAccount",
+	"name" : "FogContractInstance",
 	"type" : "normal"
 }

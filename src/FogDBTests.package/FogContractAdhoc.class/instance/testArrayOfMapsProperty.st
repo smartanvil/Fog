@@ -1,3 +1,3 @@
 accessing
 testArrayOfMapsProperty
-	self assert: ((mirror property: #arrayOfMaps) value: contract) size equals: 0
+	self assert: ((mirror property: #arrayOfMaps) using: session value: contract address at: #latest) size equals: 0

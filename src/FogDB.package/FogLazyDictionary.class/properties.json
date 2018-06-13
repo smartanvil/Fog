@@ -10,7 +10,8 @@
 		"type",
 		"dictionary",
 		"bind",
-		"blockReference"
+		"blockReference",
+		"contractAddress"
 	],
 	"name" : "FogLazyDictionary",
 	"type" : "normal"

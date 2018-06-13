@@ -1,9 +1,9 @@
 as yet unclassified
 using: aSession applyOn: anETHContractInstance valueWithArguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice
-	^ self
-		using: aSession 
-		applyOn: anETHContractInstance
-		valueWithArguments: aCollection
+	^ aSession
+		apply: self
+		on: anETHContractInstance
+		arguments: aCollection
 		from: anAccount
 		gas: aGasAmount
 		gasPrice: aGasPrice

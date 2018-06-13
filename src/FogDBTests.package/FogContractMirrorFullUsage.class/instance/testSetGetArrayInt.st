@@ -19,4 +19,4 @@ testSetGetArrayInt
 		gas: 300000
 		gasPrice: 60.
 	self assert: example equals: {1 . 2 . 3 . 4 . 6}.
-	self assert: ((mirror property: #commonArray) value: contract) equals: {1 . 2 . 3 . 4 . 6}
+	self assert: ((mirror property: #commonArray) using: session value: contract address at: #latest) equals: {1 . 2 . 3 . 4 . 6}

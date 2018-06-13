@@ -1,6 +1,6 @@
 as yet unclassified
 for: aHash
 	^ self new
-		hash: aHash;
+		address: aHash;
 		name: 'Unknown account';
 		yourself

@@ -16,5 +16,5 @@ testAllFullUsageConstructorsDeploy
 	self assert: (instances allSatisfy: #isReady).
 	detectedContracts := instances
 		collect:
-			[ :i | (session findContractBindByHash: i address blockTag: 'latest') contract ].
+			[ :i | (session findContractInstanceByHash: i address blockTag: 'latest') contract ].
 	self assert: detectedContracts equals: (instances collect: #contract)

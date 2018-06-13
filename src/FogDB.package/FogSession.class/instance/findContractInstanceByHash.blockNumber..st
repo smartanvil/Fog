@@ -1,5 +1,5 @@
 access db - contract
-findContractBindByHash: aContractAddress blockNumber: aBlockNumber
+findContractInstanceByHash: aContractAddress blockNumber: aBlockNumber
 	| code description |
 	code := self eth getContractCode: aContractAddress blockNumber: aBlockNumber.
 	code = '0x'

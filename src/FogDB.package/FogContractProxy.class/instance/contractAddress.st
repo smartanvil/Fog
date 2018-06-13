@@ -1,3 +1,3 @@
 as yet unclassified
 contractAddress
-	^ bind address
+	^ instance address

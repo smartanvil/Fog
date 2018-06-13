@@ -1,3 +1,3 @@
 initialization
-using: aSession fetchContentsFrom: anETHContractInstanceBind at: aBlockTagNumberOrHash
-	^ mappings collect: [ :m | m using: aSession fetchContentsFrom: anETHContractInstanceBind at: aBlockTagNumberOrHash]
+using: aSession fetchContentsFrom: aContractAddress at: aBlockTagNumberOrHash
+	^ mappings collect: [ :m | m using: aSession fetchContentsFrom: aContractAddress at: aBlockTagNumberOrHash]

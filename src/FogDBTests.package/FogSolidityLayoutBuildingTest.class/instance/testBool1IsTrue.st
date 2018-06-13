@@ -1,3 +1,3 @@
 values
 testBool1IsTrue
-	self assert: ((mirror property: #bool1) value: contract) equals: true
+	self assert: ((mirror property: #bool1)  using: session value: contract at: #latest) equals: true

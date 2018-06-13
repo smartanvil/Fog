@@ -1,7 +1,7 @@
 accessing
-using: aSession value: aContractInstance at: aBlockTagNumberOrHash
+using: aSession value: aContractAddress at: aBlockTagNumberOrHash
 	^ layout
 		using: aSession
 		fetch: self
-		from: aContractInstance
+		from: aContractAddress
 		at: aBlockTagNumberOrHash

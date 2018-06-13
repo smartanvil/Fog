@@ -1,7 +1,7 @@
 access db - contract
-findContractBindByHash: aContractAddress blockNumber: aBlockNumber
+findContractInstanceByHash: aContractAddress blockTag: aBlockNumber
 	^  self cache 
 		detectContractBind: [ :instance | instance address = aContractAddress asAddress ]
 		ifNoneCreate: [ super
-				findContractBindByHash: aContractAddress
+				findContractInstanceByHash: aContractAddress
 				blockNumber: aBlockNumber ]

@@ -1,3 +1,3 @@
 equality
 valuesToCompareForEquality
-	^ { hash }
+	^ { address }

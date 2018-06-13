@@ -1,7 +1,7 @@
 values
 testArrayExampleHasStructsWithDictionariesContent
 	| arrayValue expected |
-	arrayValue := (mirror property: #arrayExample) value: contract.
+	arrayValue := (mirror property: #arrayExample)  using: session value: contract at: #latest.
 	expected := {{(#boolean -> true).
 	(#uservalue -> 'A').
 	(#commonvalue -> 134)} asDictionary .

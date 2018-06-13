@@ -2,8 +2,8 @@
 	"classtraitcomposition" : "TEquality classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"hash",
-		"name"
+		"name",
+		"address"
 	],
 	"name" : "FogAccount",
 	"commentStamp" : "SantiagoBragagnolo 12/5/2016 16:30",

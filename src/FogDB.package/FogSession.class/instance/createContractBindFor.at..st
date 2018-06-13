@@ -1,6 +1,7 @@
 creation
 createContractBindFor: aFogFileContractDescription at: aContractAddress
-	^ FogContractInstanceBind new
+	^ FogContractInstance new
 		address: aContractAddress;
 		contract: aFogFileContractDescription;
+		session: self;
 		yourself

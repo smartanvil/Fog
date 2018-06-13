@@ -1,3 +1,7 @@
 meta-object-protocol
 read: aFogContractProxy
-	^ aFogContractProxy mirror property: name at: aFogContractProxy bind.
+	^ aFogContractProxy mirror
+		using: aFogContractProxy session
+		property: name
+		on: aFogContractProxy address
+		at: aFogContractProxy blockReference

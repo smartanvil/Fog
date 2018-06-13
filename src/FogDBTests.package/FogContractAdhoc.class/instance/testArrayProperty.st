@@ -1,3 +1,3 @@
 accessing
 testArrayProperty
-	self assert: ((mirror property: #array) value: contract) equals: {1 . 2 . 3}
+	self assert: ((mirror property: #array)  using: session value: contract address at: #latest) equals: {1 . 2 . 3}

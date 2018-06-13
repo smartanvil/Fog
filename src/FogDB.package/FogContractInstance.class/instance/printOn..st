@@ -1,3 +1,3 @@
-as yet unclassified
+printing
 printOn: aStream
 	^ ('Contract ', self name) printOn: aStream

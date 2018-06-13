@@ -1,3 +1,3 @@
 values
 testOwnerIsTheGivenAccount
-	self assert: ((mirror property: #_owner) value: contract) equals: self ownerAccountAddress
+	self assert: ((mirror property: #_owner) using: session value: contract at: #latest) equals: self ownerAccountAddress

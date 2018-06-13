@@ -1,0 +1,3 @@
+initialization
+instance
+	^ instance

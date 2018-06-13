@@ -1,8 +1,8 @@
 initialization
-using: aSession fetchContentsFrom: anETHContractInstanceBind at: aBlockTagNumberOrHash
+using: aSession fetchContentsFrom: aContractAddress at: aBlockTagNumberOrHash
 	^ FogLazyDictionary new
 		mapping: self;
 		session: aSession;
 		blockReference: aBlockTagNumberOrHash;
-		bind: anETHContractInstanceBind;
+		contractAddress: aContractAddress;
 		yourself

@@ -1,3 +1,0 @@
-accessing
-bind
-	^ bind 

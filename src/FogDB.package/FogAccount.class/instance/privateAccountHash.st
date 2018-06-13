@@ -1,3 +1,3 @@
 equality
 privateAccountHash
-	^ hash
+	^ address

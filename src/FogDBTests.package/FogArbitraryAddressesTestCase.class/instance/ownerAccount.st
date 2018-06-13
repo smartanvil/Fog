@@ -1,6 +1,6 @@
 as yet unclassified
 ownerAccount
 	^ FogExternalAccount new
-		hash: self ownerAccountAddress ;
+		address: self ownerAccountAddress ;
 		name: 'Miner';
 		yourself

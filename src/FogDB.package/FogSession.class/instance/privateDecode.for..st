@@ -1,4 +1,4 @@
-contract - remote activation
+contract - remote activation private
 privateDecode: aReturnValue for: aMethodMirror
 	| process |
 	aReturnValue = '0x'

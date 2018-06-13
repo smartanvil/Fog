@@ -1,4 +1,4 @@
-contract - remote activation
+contract - remote activation private
 resolveTransactionalActivation: aMethodMirror on: anETHContractInstance arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount
 	^ connection eth
 		sendTransaction:

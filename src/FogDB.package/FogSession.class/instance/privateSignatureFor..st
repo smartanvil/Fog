@@ -1,4 +1,4 @@
-contract - remote activation
+contract - remote activation private
 privateSignatureFor: aMethodMirror
 	^ String
 		streamContents: [ :str | 

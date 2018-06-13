@@ -1,4 +1,4 @@
-contract - remote activation
+contract - remote activation private
 resolveAtBlock: aBlockHash functionalActivation: aMethodMirror on: anETHContractInstance arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount
 	| returnValue |
 	returnValue := connection eth

@@ -3,9 +3,9 @@ compilableClassMethod: aFogMethodMirror
 	| variables |
 	variables := '{' , (' . ' join: aFogMethodMirror parameters variables) , '}'.
 	^ '{1}
-	| bind |
-	bind := (self mirror method: #{2}) applyOn: self contractDescription valueWithArguments: {3} configuration: FogCache current configuration.
-	^ self forBind: (bind waitIsReady; yourself).
+	| instance |
+	instance := (self mirror method: #{2}) applyOn: self contractDescription valueWithArguments: {3} from: self session sessionAccount.
+	^ self forInstance: (bind waitIsReady; yourself) at: #latest.
 '
 		format:
 			{aFogMethodMirror selectorWithNames.

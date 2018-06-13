@@ -1,5 +1,6 @@
 building methods
 compilableClassMethods
 	^ {(self compilableClassMethod: description mirror constructor).
+	(self compilableClassMethodAmount: description mirror constructor).
 	self compilableVersionMethod.
 	self compilableDescriptionNameAccessor}

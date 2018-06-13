@@ -9,7 +9,7 @@ compilableMethod: aFogMethodMirror
 		^ self error:''the current proxy is pointing to an existing block. Only non-transactional methods can be executed''. 
 	].
 
-	^ method using: self session applyOn: self instance at: self blockReference valueWithArguments: {3} from: self session sessionAddress.
+	^ method using: self session applyOn: self instance at: self blockReference valueWithArguments: {3} from: self session sessionAccount.
 '
 		format:
 			{aFogMethodMirror selectorWithNames.

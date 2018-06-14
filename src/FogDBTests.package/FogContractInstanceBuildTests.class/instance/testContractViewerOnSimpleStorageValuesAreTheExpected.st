@@ -2,6 +2,7 @@ tests
 testContractViewerOnSimpleStorageValuesAreTheExpected
 	| mirror |
 	mirror := simpleStorage contract mirror instanceMirror.
+
 	self
 		assert:
 			(mirror

@@ -1,7 +1,7 @@
 tests
 testSetGetArrayInt
 	| future example |
-	future := session monitor
+	future := session 
 		receiptFor:
 			((mirror method: #setSimpleArray:)
 				using: session

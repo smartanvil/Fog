@@ -1,7 +1,6 @@
 stepping
 stepService
 	| timeout |
-
 	monitors do: #check.
 	monitors := monitors reject: #isResolved.
 	timeout := self timeout.

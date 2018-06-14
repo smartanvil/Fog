@@ -2,7 +2,7 @@ tests
 testSetLong64String
 	| future setString |
 	setString := mirror method: #setString:.
-	future := session monitor
+	future := session 
 		receiptFor:
 			(setString
 				using: session

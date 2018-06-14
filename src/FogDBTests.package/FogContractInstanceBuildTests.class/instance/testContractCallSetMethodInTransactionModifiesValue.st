@@ -11,7 +11,7 @@ testContractCallSetMethodInTransactionModifiesValue
 		from: self ownerAccount
 		gas: 300000
 		gasPrice: 60.
-	futureTransactionReceipt := session monitor receiptFor: hash.
+	futureTransactionReceipt := session receiptFor: hash.
 	transactionReceipt := futureTransactionReceipt synchronizeTimeout: 10 minutes.
 	self assert: (transactionReceipt at: #transactionHash) = hash.
 	self

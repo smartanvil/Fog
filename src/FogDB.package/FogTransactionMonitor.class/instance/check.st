@@ -4,4 +4,4 @@ check
 	[ receipt := session receiptForTransaction: transactionHash.
 	receipt ifNotNil: [ future deploySuccess: receipt ] ]
 		on: Error 
-		do: [ :e | future deployFailure: e ]
+		do: [ :e | self halt. future deployFailure: e ]

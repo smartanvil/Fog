@@ -2,7 +2,7 @@ tests
 testSetTwoString
 	| future setString |
 	setString := mirror method: #setTwoStrings:and:.
-	future := session monitor
+	future := session 
 		receiptFor:
 			(setString
 				using: session

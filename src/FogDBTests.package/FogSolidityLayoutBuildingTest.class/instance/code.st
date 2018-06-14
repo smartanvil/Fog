@@ -30,7 +30,9 @@ contract StructTestContract {
 	arrayExample.push(mystruct(true, myenum.A, 134));
 	arrayExample.push(mystruct(false, myenum.B, 235 ));
 	arrayExample.push(mystruct(true, myenum.C, 34 ));
+	mappingExample[1] = mystruct(false, myenum.A, 54 );
 	mappingExample[2] = mystruct(true, myenum.C, 34 );
+	mappingExample[3] = mystruct(false, myenum.B, 24 );
     }
    
     function kill() {

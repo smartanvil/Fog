@@ -1,3 +1,3 @@
 pack
 packUint128: anInteger
-	^ self dumpInt: anInteger size: 32
+	^ self dumpInt: anInteger size: 16

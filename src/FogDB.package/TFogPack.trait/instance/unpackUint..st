@@ -1,3 +1,3 @@
 unpack
 unpackUint: aString
-		^ self load: aString size: 256
+	^ self load: aString size: 256

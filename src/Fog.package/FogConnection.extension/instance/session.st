@@ -1,5 +1,5 @@
 *Fog
 session
 	^ FogCachedSession new
-		connection: self;
+		initializeWith: self;
 		yourself

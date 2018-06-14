@@ -2,7 +2,7 @@ tests
 testSetTwoString
 	| future setString |
 	setString := mirror method: #setTwoStrings:and:.
-	future := FogTransactionMonitorService current
+	future := session monitor
 		receiptFor:
 			(setString
 				using: session

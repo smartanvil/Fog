@@ -2,7 +2,7 @@ tests
 testSetLong260String
 	| future setString |
 	setString := mirror method: #setString:.
-	future := FogTransactionMonitorService current
+	future := session monitor
 		receiptFor:
 			(setString
 				using: session

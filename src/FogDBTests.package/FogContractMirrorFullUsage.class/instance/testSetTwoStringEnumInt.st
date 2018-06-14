@@ -3,7 +3,7 @@ testSetTwoStringEnumInt
 	| future setString |
 	"string value1, EnumDefinition valEnum, int256 valInt, string value2 "
 	setString := mirror method: #setTwoStringsEnumInt:and:and:and:.
-	future := FogTransactionMonitorService current
+	future := session monitor
 		receiptFor:
 			(setString
 				using: session

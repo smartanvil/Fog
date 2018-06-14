@@ -1,7 +1,7 @@
-as yet unclassified
+checking
 check
 	| receipt |
-	[ receipt := FogConnection currentConnection eth getTransactionReceipt: transactionHash.
+	[ receipt := session receiptForTransaction: transactionHash.
 	receipt ifNotNil: [ future deploySuccess: receipt ] ]
-		on: Error
+		on: Error 
 		do: [ :e | future deployFailure: e ]

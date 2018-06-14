@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "SantiagoBragagnolo 5/12/2017 16:38",
 	"super" : "FogSession",
-	"category" : "FogDB-Connection",
+	"category" : "FogDB-Session",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

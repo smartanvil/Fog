@@ -1,7 +1,7 @@
 tests
 testSetGetArrayInt
 	| future example |
-	future := FogTransactionMonitorService current
+	future := session monitor
 		receiptFor:
 			((mirror method: #setSimpleArray:)
 				using: session

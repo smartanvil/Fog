@@ -1,6 +1,6 @@
 Extension { #name : #SolStateVariableDeclarationNode }
 
 { #category : #'*FogDB' }
-SolStateVariableDeclarationNode classSide >> kind [
+SolStateVariableDeclarationNode class >> kind [
 	^ #declaration
 ]

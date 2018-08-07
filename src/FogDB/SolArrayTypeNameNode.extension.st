@@ -6,6 +6,6 @@ SolArrayTypeNameNode >> isUserDefined [
 ]
 
 { #category : #'*FogDB' }
-SolArrayTypeNameNode classSide >> kind [
+SolArrayTypeNameNode class >> kind [
 	^ #declaration
 ]

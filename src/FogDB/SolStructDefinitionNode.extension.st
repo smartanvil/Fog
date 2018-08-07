@@ -11,6 +11,6 @@ SolStructDefinitionNode >> isUserDefined [
 ]
 
 { #category : #'*FogDB' }
-SolStructDefinitionNode classSide >> kind [
+SolStructDefinitionNode class >> kind [
 	^ #'type-definition'
 ]

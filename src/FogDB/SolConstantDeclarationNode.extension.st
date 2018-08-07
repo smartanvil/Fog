@@ -1,6 +1,6 @@
 Extension { #name : #SolConstantDeclarationNode }
 
 { #category : #'*FogDB' }
-SolConstantDeclarationNode classSide >> kind [
+SolConstantDeclarationNode class >> kind [
 	^ #declaration
 ]

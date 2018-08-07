@@ -144,3 +144,8 @@ FogCachedSession >> registerInstantiationWithReceipt: transactionHash ofContract
 				registerInstantiationWithReceipt: transactionHash
 				ofContractDescription: aContractDescription)
 ]
+
+{ #category : #accesing }
+FogCachedSession >> sessionAccount [
+	^ self findAccountByHash: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0' blockTag: #latest .
+]

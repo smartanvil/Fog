@@ -11,6 +11,6 @@ SolFunctionDefinitionNode >> isConstructor [
 ]
 
 { #category : #'*FogDB' }
-SolFunctionDefinitionNode classSide >> kind [
+SolFunctionDefinitionNode class >> kind [
 	^ #'function-definition'
 ]

@@ -1,6 +1,6 @@
 Extension { #name : #SolMappingTypeNameNode }
 
 { #category : #'*FogDB' }
-SolMappingTypeNameNode classSide >> kind [
+SolMappingTypeNameNode class >> kind [
 	^ #declaration
 ]

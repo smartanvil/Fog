@@ -29,7 +29,7 @@ FogTransactionMonitorService >> monitors: aCollection [
 
 { #category : #accessing }
 FogTransactionMonitorService >> name [
-	^ 'Transaction monitor service'
+	^ 'Transaction monitor service' , self hash asString 
 ]
 
 { #category : #'contract - deploying' }

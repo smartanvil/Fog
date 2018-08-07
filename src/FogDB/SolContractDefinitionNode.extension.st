@@ -16,7 +16,7 @@ SolContractDefinitionNode >> isContract [
 ]
 
 { #category : #'*FogDB' }
-SolContractDefinitionNode classSide >> kind [
+SolContractDefinitionNode class >> kind [
 	^ #'type-definition'
 ]
 

@@ -1,2 +1,0 @@
-address value
-minimalDecodedAddress ^ self shouldBeImplemented

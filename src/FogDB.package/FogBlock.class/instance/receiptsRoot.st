@@ -1,3 +1,0 @@
-accessing
-receiptsRoot 
-	^ receiptsRoot 

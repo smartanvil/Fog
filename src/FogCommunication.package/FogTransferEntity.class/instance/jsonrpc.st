@@ -1,3 +1,0 @@
-accessor
-jsonrpc
-	^ jsonrpc

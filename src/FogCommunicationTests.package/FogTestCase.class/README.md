@@ -1,1 +1,0 @@
-Test case implements some assert code and setup. 

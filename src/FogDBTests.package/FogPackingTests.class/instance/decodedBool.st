@@ -1,2 +1,0 @@
-boolean values
-decodedBool ^ true

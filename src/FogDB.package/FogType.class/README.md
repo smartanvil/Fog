@@ -1,1 +1,0 @@
-Abstract type, it just declares some abstract methods 

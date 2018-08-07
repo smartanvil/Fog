@@ -1,3 +1,0 @@
-marshaling
-staticSlotSize
-	^ 32

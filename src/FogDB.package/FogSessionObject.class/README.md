@@ -1,1 +1,0 @@
-Connected object has some charting base methods and the connection message. 

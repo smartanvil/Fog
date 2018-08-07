@@ -1,3 +1,0 @@
-equality
-name
-	^ name

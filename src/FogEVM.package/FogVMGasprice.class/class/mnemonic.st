@@ -1,4 +1,0 @@
-generated
-mnemonic
-		^'GASPRICE'.
-	

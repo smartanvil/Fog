@@ -1,3 +1,0 @@
-reset
-reset
-	eth := nil

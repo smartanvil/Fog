@@ -1,2 +1,0 @@
-boolean values
-minimalEncodedBool ^ self shouldBeImplemented

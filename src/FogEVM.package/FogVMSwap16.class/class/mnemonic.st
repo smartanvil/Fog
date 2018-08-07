@@ -1,3 +1,0 @@
-generated
-mnemonic
-	^ 'SWAP16'

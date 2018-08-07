@@ -1,3 +1,0 @@
-accessing
-propertiesBuilder
-	^ FogMirrorSmaccASTBasedBuilder new

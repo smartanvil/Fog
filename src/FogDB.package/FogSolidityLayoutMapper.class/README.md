@@ -1,1 +1,0 @@
-It does the layout calculation. As well it contains the mappings, representing like this the memory distribution

@@ -1,1 +1,0 @@
-This service is polling for checking up transaction monitors resolution 

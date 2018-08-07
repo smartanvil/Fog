@@ -1,3 +1,0 @@
-uint values
-maximalEncodedUint
-	^'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'

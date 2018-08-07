@@ -1,3 +1,0 @@
-visitign
-visitLiteralIdentifier: aSolLiteralIdentifierNode
-	^ aSolLiteralIdentifierNode value value asSymbol

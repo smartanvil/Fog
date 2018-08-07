@@ -1,1 +1,0 @@
-Basic Abstract instruction definition 

@@ -1,3 +1,0 @@
-accessing
-binary
-	^ program toBinary

@@ -1,3 +1,0 @@
-*FogDB
-isUserDefined
-	^ false 

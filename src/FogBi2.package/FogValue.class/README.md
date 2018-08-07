@@ -1,1 +1,0 @@
-Value wrapper that provides some extra information and links in between objects 

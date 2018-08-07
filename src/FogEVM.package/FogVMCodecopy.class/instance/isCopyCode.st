@@ -1,3 +1,0 @@
-testing
-isCopyCode
-	^ true

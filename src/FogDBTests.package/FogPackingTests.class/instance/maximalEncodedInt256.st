@@ -1,3 +1,0 @@
-int values
-maximalEncodedInt256
-	^'7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'

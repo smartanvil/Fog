@@ -1,1 +1,0 @@
-Enum type marshal/unmarshal 

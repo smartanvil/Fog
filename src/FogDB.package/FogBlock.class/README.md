@@ -1,1 +1,0 @@
-Block. This is a full representation of a Ethereum block. It has some lazy initialization methods, as, parent, transactions, uncles. 

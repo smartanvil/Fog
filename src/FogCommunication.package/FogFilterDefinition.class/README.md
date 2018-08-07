@@ -1,1 +1,0 @@
-This is a filter definition transfert entity.It has the need information to installa filter.

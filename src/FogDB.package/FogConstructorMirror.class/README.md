@@ -1,1 +1,0 @@
-This is a specific kind of method, that is applied in a different way, and it represents a contructor. 

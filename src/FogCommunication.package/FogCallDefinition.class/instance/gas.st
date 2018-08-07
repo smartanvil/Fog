@@ -1,3 +1,0 @@
-accessing
-gas
-	^ gas

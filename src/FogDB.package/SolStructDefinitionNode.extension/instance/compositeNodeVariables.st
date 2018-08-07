@@ -1,3 +1,0 @@
-*FogDB
-compositeNodeVariables
-	^ #(#fields)

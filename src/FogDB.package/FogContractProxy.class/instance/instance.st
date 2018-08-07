@@ -1,3 +1,0 @@
-initialization
-instance
-	^ instance

@@ -1,1 +1,0 @@
-Get deposited value by the instruction/transaction responsible for this execution

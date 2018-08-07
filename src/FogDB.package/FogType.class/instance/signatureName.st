@@ -1,3 +1,0 @@
-accessing
-signatureName
-	^ self name

@@ -1,4 +1,0 @@
-generated
-expectedPops
-		^7.
-	

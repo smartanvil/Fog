@@ -1,1 +1,0 @@
-This represents a contract instance. With a block chain address (Sooner or later)

@@ -1,3 +1,0 @@
-marshaling
-staticSlotSize
-	^ self subclassResponsibility

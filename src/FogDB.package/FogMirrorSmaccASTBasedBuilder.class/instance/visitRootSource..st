@@ -1,3 +1,0 @@
-visiting
-visitRootSource: aSolRootSourceNode
-	aSolRootSourceNode sourceunits acceptVisitor: self

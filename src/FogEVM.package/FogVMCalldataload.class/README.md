@@ -1,1 +1,0 @@
-Get input data of current environment

@@ -1,1 +1,0 @@
-Get size of input data in current environment

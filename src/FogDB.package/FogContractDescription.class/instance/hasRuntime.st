@@ -1,3 +1,0 @@
-testing
-hasRuntime
-	^ runtime isNotNil

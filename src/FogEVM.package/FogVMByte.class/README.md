@@ -1,1 +1,0 @@
-Retrieve single byte from word

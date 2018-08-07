@@ -1,1 +1,0 @@
-Duplicates the item 15 at the stack and push it

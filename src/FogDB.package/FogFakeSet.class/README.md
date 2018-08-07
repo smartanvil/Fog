@@ -1,1 +1,0 @@
-Subclass of set that just does not save anything. 

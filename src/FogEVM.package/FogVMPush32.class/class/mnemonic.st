@@ -1,3 +1,0 @@
-generated
-mnemonic
-	^ 'PUSH32'

@@ -1,3 +1,0 @@
-initialization
-testBinaryCodeStreamHasConstructor
-	self assert: contractDescription mnemonicBinary readStream nextConstructor isNotEmpty

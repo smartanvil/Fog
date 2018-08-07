@@ -1,1 +1,0 @@
-This is a complex transfer entity for the case of the call and sendtransaction methods.  

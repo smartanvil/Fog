@@ -1,3 +1,0 @@
-int values
-encodedInt
-	^'00000000000000000000000000000000ffffffffffffffffffffffffffffffff'

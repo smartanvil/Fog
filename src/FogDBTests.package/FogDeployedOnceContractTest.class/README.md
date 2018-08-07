@@ -1,1 +1,0 @@
-Abstract initialization for mirror based tests

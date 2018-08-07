@@ -1,1 +1,0 @@
-This is a work-around object. We should implement the eliptic security for http. This object is used for querying some sites data as etherchain. 

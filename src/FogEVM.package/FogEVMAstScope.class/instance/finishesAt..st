@@ -1,3 +1,0 @@
-as yet unclassified
-finishesAt: aFogEVMMnemonicExecutableMemoryEntry
-	finishesAt := aFogEVMMnemonicExecutableMemoryEntry

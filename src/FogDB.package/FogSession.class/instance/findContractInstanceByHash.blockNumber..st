@@ -4,5 +4,5 @@ findContractInstanceByHash: aContractAddress blockNumber: aBlockNumber
 	code := self eth getContractCode: aContractAddress blockNumber: aBlockNumber.
 	code = '0x'
 		ifTrue: [ ^ nil ].
-	description := self findContractDescriptionForCode: code.
+	description := self findContractDescriptionForBinaryCode: code.
 	^ description at: aContractAddress

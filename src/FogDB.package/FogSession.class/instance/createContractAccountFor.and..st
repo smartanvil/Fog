@@ -1,3 +1,3 @@
 creation
 createContractAccountFor: compiledCode and: hashAccount
-	^ (self findContractDescriptionForCode: compiledCode) at: hashAccount
+	^ (self findContractDescriptionForBinaryCode: compiledCode) at: hashAccount 

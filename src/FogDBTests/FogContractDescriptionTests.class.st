@@ -8,9 +8,13 @@ Class {
 }
 
 { #category : #initialization }
+FogContractDescriptionTests >> contractDescriptions [
+	^ FogTestingContractProvider contractsDescriptions: session
+]
+
+{ #category : #initialization }
 FogContractDescriptionTests >> setUp [
 	super setUp.
-	self assert: self contractDescriptions isNotEmpty.
 	descriptions := self contractDescriptions
 ]
 

@@ -6,8 +6,7 @@ Class {
 
 { #category : #tests }
 FogAllKnownContractsCanBeDeployed >> contractDescriptions [
-	self assert:  FogCache current contractDescriptions isNotEmpty. 
-	^ FogCache current contractDescriptions
+	^ FogTestingContractProvider contractsDescriptions: session
 ]
 
 { #category : #initialization }

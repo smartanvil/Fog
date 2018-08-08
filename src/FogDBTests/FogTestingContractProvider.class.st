@@ -5,7 +5,12 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-FogTestingContractProvider class >> contractsDescriptions [
+FogTestingContractProvider class >> contractsDescriptions: aSession [
+	^ self contractsDescriptionsFiles collect: [ :f | aSession findContractDescriptionForFileReference: f ]
+]
+
+{ #category : #'as yet unclassified' }
+FogTestingContractProvider class >> contractsDescriptionsFiles [
 	| dir |
 	dir := (FileLocator imageDirectory / #'pharo-local' / #fog / #tests / #contracts) ensureCreateDirectory.
 	^ self contractsDescriptionsSrc

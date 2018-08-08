@@ -3,10 +3,21 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'connection',
-		'monitor'
+		'monitor',
+		'applicationAccount'
 	],
-	#category : 'FogDB-Session'
+	#category : #'FogDB-Session'
 }
+
+{ #category : #accessing }
+FogSession >> applicationAccount [
+	^ applicationAccount 
+]
+
+{ #category : #accessing }
+FogSession >> applicationAccount: anAccount [
+	applicationAccount := anAccount
+]
 
 { #category : #'contract - remote activation' }
 FogSession >> apply: aMethodMirror on: anETHContractInstance arguments: aCollection from: anAccount amount: anAmount [

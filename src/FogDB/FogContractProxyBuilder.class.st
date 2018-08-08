@@ -13,7 +13,7 @@ Class {
 
 { #category : #'building names' }
 FogContractProxyBuilder >> buildCategoryName [
-	^ 'Fog-Generated-' , self generationName
+	^ 'FogGenerated' , self generationName
 ]
 
 { #category : #'build - private' }
@@ -84,7 +84,7 @@ FogContractProxyBuilder >> compilableClassMethod: aFogMethodMirror [
 	instance := (self mirror method: #{2}) using: self session 
 				applyOn: self contractDescription 
 				valueWithArguments: {3} 
-				from: self session sessionAccount.
+				from: self resolveFromAccount.
 	^ self forInstance: (instance waitIsReady; yourself) at: #latest.
 '
 		format:
@@ -106,7 +106,7 @@ FogContractProxyBuilder >> compilableClassMethodAmount: aFogMethodMirror [
 		using: self session 
 		applyOn: self contractDescription 
 		valueWithArguments: {3} 
-		from: self session sessionAccount 
+		from: self resolveFromAccount 
 		amount: anAmountOfWeiToTransmitToTheContractOnDeploy.
 	^ self forInstance: (instance waitIsReady; yourself) at: #latest.
 '
@@ -152,7 +152,7 @@ FogContractProxyBuilder >> compilableMethod: aFogMethodMirror [
 		^ self error:''the current proxy is pointing to an existing block. Only non-transactional methods can be executed''. 
 	].
 
-	^ method using: self session applyOn: self instance at: self blockReference valueWithArguments: {3} from: self session sessionAccount.
+	^ method using: self session applyOn: self instance at: self blockReference valueWithArguments: {3} from: self resolveFromAccount.
 '
 		format:
 			{aFogMethodMirror selectorWithNames.
@@ -178,7 +178,7 @@ FogContractProxyBuilder >> compilableMethodAmount: aFogMethodMirror [
 				applyOn: self instance 
 				at: self blockReference 
 				valueWithArguments: {3} 
-				from: self session sessionAddress 
+				from: self resolveFromAccount
 				amount: anAmountInWeiForTransmitingWithTheApplication.
 '
 		format:

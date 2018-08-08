@@ -29,7 +29,9 @@ FogTestCase >> assertEntityFromMessage: aMessage equalsToJson: aString [
 FogTestCase >> setUp [
 	super setUp.
 	connection := FogConnection on: self url.
-	session := connection nonCachedSession .
+	session := connection nonCachedSession.
+	session
+		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0')
 ]
 
 { #category : #running }

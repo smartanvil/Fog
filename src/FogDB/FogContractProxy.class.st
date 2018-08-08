@@ -118,3 +118,8 @@ FogContractProxy >> mirror [
 FogContractProxy >> renderer [
 	^ (EnmaContractPropertyIterator new source: self) renderer
 ]
+
+{ #category : #'as yet unclassified' }
+FogContractProxy >> resolveFromAccount [
+	^ self session applicationAccount 
+]

@@ -60,6 +60,17 @@ FogContractProxyGenerationTest >> testClassMethodsWithNoParametersAreGenerated [
 ]
 
 { #category : #tests }
+FogContractProxyGenerationTest >> testCreateContractCreatesAContractAndTrait [
+	self deny: (Smalltalk globals at: builder buildClassName asSymbol ifPresent: [ true ] ifAbsent: [ false ]).
+	self deny: (Smalltalk globals at: builder buildTraitName asSymbol ifPresent: [ true ] ifAbsent: [ false ]).
+	builder createContractProxy.
+	self assert: (Smalltalk globals at: builder buildClassName asSymbol ifPresent: [ true ] ifAbsent: [ false ]).
+	self assert: (Smalltalk globals at: builder buildTraitName asSymbol ifPresent: [ true ] ifAbsent: [ false ]).
+	self assert: builder buildCategoryName asPackage classes size equals: 2.
+	builder buildCategoryName asPackage removeFromSystem
+]
+
+{ #category : #tests }
 FogContractProxyGenerationTest >> testMethodsDelegateToMethodAmountUnderstandableMessages [
 	| generated |
 	generated := mirror instanceMirror methods

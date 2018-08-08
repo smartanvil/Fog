@@ -11,18 +11,7 @@ FogTestingContractProvider class >> contractsDescriptions: aSession [
 
 { #category : #'as yet unclassified' }
 FogTestingContractProvider class >> contractsDescriptionsFiles [
-	| dir |
-	dir := (FileLocator imageDirectory / #'pharo-local' / #fog / #tests / #contracts) ensureCreateDirectory.
-	^ self contractsDescriptionsSrc
-		collect: [ :src | 
-			| file |
-			file := dir / (src hash asString , '.sol').
-			file exists
-				ifFalse: [ file writeStream
-						nextPutAll: src;
-						flush;
-						close ].
-			file ]
+	^ self contractsDescriptionsSrc collect: [ :src | self fileForSrc: src at: self srcDir ]
 ]
 
 { #category : #'as yet unclassified' }
@@ -32,6 +21,18 @@ FogTestingContractProvider class >> contractsDescriptionsSrc [
 	self public3StatesPollContractSrc.
 	self simpleSmartContractSrc.
 	self structSmartContractSrc}
+]
+
+{ #category : #'as yet unclassified' }
+FogTestingContractProvider class >> fileForSrc: src at: dir [
+	| file |
+	file := dir / (src hash asString , '.sol').
+	file exists
+		ifFalse: [ file writeStream
+				nextPutAll: src;
+				flush;
+				close ].
+	^ file
 ]
 
 { #category : #'as yet unclassified' }
@@ -200,6 +201,12 @@ contract StructTestContract {
 ]
 
 { #category : #'as yet unclassified' }
+FogTestingContractProvider class >> public3StatesPollContract: session [
+	^ session
+		findContractDescriptionForFileReference: (self fileForSrc: self public3StatesPollContractSrc at: self srcDir)
+]
+
+{ #category : #'as yet unclassified' }
 FogTestingContractProvider class >> public3StatesPollContractSrc [
 	^ 'pragma solidity ^0.4.2;
 
@@ -299,6 +306,11 @@ contract SimpleStorage {
     
     
 }'
+]
+
+{ #category : #'as yet unclassified' }
+FogTestingContractProvider class >> srcDir [
+	^ (FileLocator imageDirectory / #'pharo-local' / #fog / #tests / #contracts) ensureCreateDirectory
 ]
 
 { #category : #'as yet unclassified' }

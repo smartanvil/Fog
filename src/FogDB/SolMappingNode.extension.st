@@ -6,6 +6,6 @@ SolMappingNode >> isUserDefined [
 ]
 
 { #category : #'*FogDB' }
-SolMappingNode classSide >> kind [
+SolMappingNode class >> kind [
 	^ #'type-definition'
 ]

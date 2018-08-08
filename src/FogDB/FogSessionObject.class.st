@@ -16,6 +16,11 @@ FogSessionObject class >> collectionSelector [
 ]
 
 { #category : #accessing }
+FogSessionObject class >> session [
+	^ FogConnection createDefaultConnection session.
+]
+
+{ #category : #accessing }
 FogSessionObject >> session [
 	^ session
 ]

@@ -1,6 +1,6 @@
 Extension { #name : #SolEventDefinitionNode }
 
 { #category : #'*FogDB' }
-SolEventDefinitionNode classSide >> kind [
+SolEventDefinitionNode class >> kind [
 	^ #'event-definition'
 ]

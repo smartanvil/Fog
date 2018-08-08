@@ -6,6 +6,6 @@ SolEnumDefinitionNode >> isUserDefined [
 ]
 
 { #category : #'*FogDB' }
-SolEnumDefinitionNode classSide >> kind [
+SolEnumDefinitionNode class >> kind [
 	^ #'type-definition'
 ]

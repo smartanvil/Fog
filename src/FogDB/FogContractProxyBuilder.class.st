@@ -81,8 +81,11 @@ FogContractProxyBuilder >> compilableClassMethod: aFogMethodMirror [
 	variables := '{' , (' . ' join: aFogMethodMirror parameters variables) , '}'.
 	^ '{1}
 	| instance |
-	instance := (self mirror method: #{2}) applyOn: self contractDescription valueWithArguments: {3} from: self session sessionAccount.
-	^ self forInstance: (bind waitIsReady; yourself) at: #latest.
+	instance := (self mirror method: #{2}) using: self session 
+				applyOn: self contractDescription 
+				valueWithArguments: {3} 
+				from: self session sessionAccount.
+	^ self forInstance: (instance waitIsReady; yourself) at: #latest.
 '
 		format:
 			{aFogMethodMirror selectorWithNames.
@@ -92,17 +95,26 @@ FogContractProxyBuilder >> compilableClassMethod: aFogMethodMirror [
 
 { #category : #'building methods' }
 FogContractProxyBuilder >> compilableClassMethodAmount: aFogMethodMirror [
-	| variables |
+	| variables space |
+		space := aFogMethodMirror hasParameters
+		ifTrue: [ ' ' ]
+		ifFalse: [ '' ].
 	variables := '{' , (' . ' join: aFogMethodMirror parameters variables) , '}'.
-	^ '{1} amount: anAmountOfWeiToTransmitToTheContractOnDeploy
+	^ '{1}{4}amount: anAmountOfWeiToTransmitToTheContractOnDeploy
 	| instance |
-	instance := (self mirror method: #{2}) applyOn: self contractDescription valueWithArguments: {3} from: self session sessionAccount amount: anAmountOfWeiToTransmitToTheContractOnDeploy.
-	^ self forInstance: (bind waitIsReady; yourself) at: #latest.
+	instance := (self mirror method: #{2}) 
+		using: self session 
+		applyOn: self contractDescription 
+		valueWithArguments: {3} 
+		from: self session sessionAccount 
+		amount: anAmountOfWeiToTransmitToTheContractOnDeploy.
+	^ self forInstance: (instance waitIsReady; yourself) at: #latest.
 '
 		format:
 			{aFogMethodMirror selectorWithNames.
 			aFogMethodMirror selector.
-			variables}
+			variables.
+			space}
 ]
 
 { #category : #'building methods' }
@@ -150,21 +162,30 @@ FogContractProxyBuilder >> compilableMethod: aFogMethodMirror [
 
 { #category : #'building methods' }
 FogContractProxyBuilder >> compilableMethodAmount: aFogMethodMirror [
-	| variables |
+	| variables space |
+	space := aFogMethodMirror hasParameters
+		ifTrue: [ ' ' ]
+		ifFalse: [ '' ].
 	variables := '{' , (' . ' join: aFogMethodMirror parameters variables) , '}'.
-	^ '{1} amount: anAmountInWeiForTransmitingWithTheApplication
+	^ '{1}{4}amount: anAmountInWeiForTransmitingWithTheApplication
 	| method |
 	method := (self mirror method: #{2}).
 	(method isStateModifier and: [ self blockReference ~= #latest ]) ifTrue: [ 
 		^ self error:''the current proxy is pointing to an existing block. Only non-transactional methods can be executed''. 
 	].
 
-	^ method using: self session applyOn: self instance at: self blockReference valueWithArguments: {3} from: self session sessionAddress amount: anAmountInWeiForTransmitingWithTheApplication.
+	^ method using: self session 
+				applyOn: self instance 
+				at: self blockReference 
+				valueWithArguments: {3} 
+				from: self session sessionAddress 
+				amount: anAmountInWeiForTransmitingWithTheApplication.
 '
 		format:
 			{aFogMethodMirror selectorWithNames.
 			aFogMethodMirror selector.
-			variables}
+			variables.
+			space}
 ]
 
 { #category : #'building methods' }

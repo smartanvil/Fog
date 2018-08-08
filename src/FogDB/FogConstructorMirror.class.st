@@ -11,6 +11,11 @@ Class {
 	#category : 'FogDB-Meta-Mirror'
 }
 
+{ #category : #testing }
+FogConstructorMirror >> hasParameters [
+	^ parameters size > 0
+]
+
 { #category : #accessing }
 FogConstructorMirror >> name [
 	^ '{1}({2}) returns{3}'

@@ -1,6 +1,6 @@
 Extension { #name : #SolFunctionTypeNameNode }
 
 { #category : #'*FogDB' }
-SolFunctionTypeNameNode classSide >> kind [
+SolFunctionTypeNameNode class >> kind [
 	^ #'type-definition'
 ]

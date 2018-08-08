@@ -18,6 +18,11 @@ FogMethodMirror >> baseName [
 	^ name 
 ]
 
+{ #category : #'as yet unclassified' }
+FogMethodMirror >> hasParameters [
+	^ parameters size > 0
+]
+
 { #category : #testing }
 FogMethodMirror >> isStateModifier [
 	^ modifiesState
@@ -103,7 +108,8 @@ FogMethodMirror >> using: aSession applyOn: anETHContractInstance at: aBlockHash
 		at: aBlockHash
 		arguments: aCollection
 		from: anAccount
-		amount: 0
+		amount: 0.
+
 ]
 
 { #category : #'as yet unclassified' }

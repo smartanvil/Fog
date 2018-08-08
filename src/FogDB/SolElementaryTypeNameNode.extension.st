@@ -6,6 +6,6 @@ SolElementaryTypeNameNode >> isUserDefined [
 ]
 
 { #category : #'*FogDB' }
-SolElementaryTypeNameNode classSide >> kind [
+SolElementaryTypeNameNode class >> kind [
 	^ #declaration
 ]

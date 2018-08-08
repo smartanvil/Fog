@@ -1,7 +1,7 @@
 Extension { #name : #Keccak }
 
 { #category : #'*FogDB' }
-Keccak classSide >> hashEncode: aMessage [
+Keccak class >> hashEncode: aMessage [
 	^ self new hashEncode: aMessage
 ]
 

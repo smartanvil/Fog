@@ -201,7 +201,7 @@ FogSession >> decodeStream: aContent type: aType [
 { #category : #'contract - deploying' }
 FogSession >> deploy: aContractDescription applying: aConstructor arguments: aCollection from: anAccount amount: anAmount [
 	| transactionHash |
-	transactionHash := self connection eth
+	transactionHash := connection eth
 		sendTransaction:
 			(FogCallDefinition new
 				from: anAccount;
@@ -210,7 +210,7 @@ FogSession >> deploy: aContractDescription applying: aConstructor arguments: aCo
 				value: anAmount;
 				data: (self encode: aConstructor for: aContractDescription with: aCollection);
 				yourself).
-	^ connection registerInstantiationWithReceipt: transactionHash ofContractDescription: aContractDescription
+	^ self registerInstantiationWithReceipt: transactionHash ofContractDescription: aContractDescription
 ]
 
 { #category : #'contract - deploying' }
@@ -280,7 +280,7 @@ FogSession >> fetchSlot: aSlotId onContract: aContractAddress atBlock: aBlockHas
 { #category : #finalization }
 FogSession >> finalize [
 	super finalize.
-	monitor kill.
+	monitor ifNotNil:[ monitor  kill.].
 	monitor := nil.
 	connection := nil
 ]
@@ -474,12 +474,12 @@ FogSession >> findTransactionByHash: aTransactionHash [
 
 { #category : #'access db - external accounts' }
 FogSession >> getBalance: anAddress [
-	^ (connection getBalance: anAddress blockTag: #latest) asBKNumber
+	^ (connection eth getBalance: anAddress blockTag: #latest) asBKNumber
 ]
 
 { #category : #'access db - external accounts' }
 FogSession >> getBalance: anAddress block: aBlockNumberOrHash [
-	^ (connection getBalance: anAddress blockNumber: aBlockNumberOrHash) asBKNumber
+	^ (connection eth getBalance: anAddress blockNumber: aBlockNumberOrHash) asBKNumber
 ]
 
 { #category : #'encode decode' }

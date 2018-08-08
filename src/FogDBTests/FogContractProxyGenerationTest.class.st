@@ -16,6 +16,14 @@ FogContractProxyGenerationTest >> assertMethodSelector: body argumentAmountEqual
 ]
 
 { #category : #tests }
+FogContractProxyGenerationTest >> extractDelegationsToMethod: aMethodBody [
+	| captures | 
+	captures := FogRBAstMessageSendCapturer new.
+	(RBParser parseMethod: aMethodBody ) acceptVisitor: captures. 
+	^ captures messages 
+]
+
+{ #category : #tests }
 FogContractProxyGenerationTest >> extractSelector: body [
 	| stream selectorParts |
 	stream := body lines first readStream.
@@ -52,17 +60,63 @@ FogContractProxyGenerationTest >> testClassMethodsWithNoParametersAreGenerated [
 ]
 
 { #category : #tests }
+FogContractProxyGenerationTest >> testMethodsDelegateToMethodAmountUnderstandableMessages [
+	| generated |
+	generated := mirror instanceMirror methods
+		select: #hasParameters
+		thenCollect: [ :mm | builder compilableMethodAmount: mm ].
+	self assert: generated isNotEmpty.
+	generated
+		do: [ :g | 
+			| delegates |
+			delegates := self extractDelegationsToMethod: g.
+			self assert: delegates isNotEmpty.
+			delegates do: [ :s | self assert: (FogMethodMirror canUnderstand: s) ] ]
+]
+
+{ #category : #tests }
+FogContractProxyGenerationTest >> testMethodsDelegateToMethodUnderstandableMessages [
+	| generated |
+	generated := mirror instanceMirror methods
+		select: #hasParameters
+		thenCollect: [ :mm | builder compilableMethod: mm ].
+	self assert: generated isNotEmpty.
+	generated
+		do: [ :g | 
+			| delegates |
+			delegates := self extractDelegationsToMethod: g.
+			self assert: delegates isNotEmpty.
+			delegates do: [ :s | self assert: (FogMethodMirror canUnderstand: s) ] ]
+]
+
+{ #category : #tests }
 FogContractProxyGenerationTest >> testMethodsWithAmountNoParametersAreGenerated [
 	| generated |
 	generated := mirror instanceMirror methods reject: #hasParameters thenCollect: [ :mm | builder compilableMethodAmount: mm ].
+	self assert: generated isNotEmpty.
 	generated do: [ :g | self assertMethodSelector: g argumentAmountEquals: 1 ]
+]
+
+{ #category : #tests }
+FogContractProxyGenerationTest >> testMethodsWithAmountParametersAreGenerated [
+	| generated |
+	generated := mirror instanceMirror methods
+		select: #hasParameters
+		thenCollect: [ :mm | 
+			{(builder compilableMethodAmount: mm).
+			mm parameters size} ].
+	self assert: generated isNotEmpty.
+	generated do: [ :g | self assertMethodSelector: (g at: 1) argumentAmountEquals: (g at: 2) + 1 ]
 ]
 
 { #category : #tests }
 FogContractProxyGenerationTest >> testMethodsWithNoParametersAreGenerated [
 	| generated |
 	generated := mirror instanceMirror methods
-		reject: #hasParameters
-		thenCollect: [ :mm | builder compilableMethod: mm ].
-	generated do: [ :g | self assertMethodSelector: g argumentAmountEquals: 0 ]
+		select: #hasParameters
+		thenCollect: [ :mm | 
+			{(builder compilableMethod: mm).
+			mm parameters size} ].
+	self assert: generated isNotEmpty.
+	generated do: [ :g | self assertMethodSelector: (g at: 1) argumentAmountEquals: (g at: 2) ]
 ]

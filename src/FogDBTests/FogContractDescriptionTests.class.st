@@ -10,7 +10,8 @@ Class {
 { #category : #initialization }
 FogContractDescriptionTests >> setUp [
 	super setUp.
-	descriptions := FogCache current contractDescriptions 
+	self assert: self contractDescriptions isNotEmpty.
+	descriptions := self contractDescriptions
 ]
 
 { #category : #initialization }

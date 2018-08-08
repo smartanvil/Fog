@@ -6,6 +6,7 @@ Class {
 
 { #category : #tests }
 FogAllKnownContractsCanBeDeployed >> contractDescriptions [
+	self assert:  FogCache current contractDescriptions isNotEmpty. 
 	^ FogCache current contractDescriptions
 ]
 

@@ -1,1 +1,0 @@
-Load word from storage

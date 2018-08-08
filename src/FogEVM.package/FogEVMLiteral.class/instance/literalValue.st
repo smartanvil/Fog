@@ -1,3 +1,0 @@
-testing
-literalValue
-	^ value

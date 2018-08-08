@@ -1,3 +1,0 @@
-testing
-hasBinary
-	^ binary isNotNil

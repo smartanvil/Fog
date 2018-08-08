@@ -1,3 +1,0 @@
-properties
-size 
-	^ size

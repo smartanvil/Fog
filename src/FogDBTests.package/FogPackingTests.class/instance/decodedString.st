@@ -1,3 +1,0 @@
-string values
-decodedString
-	^ 'decodedString'

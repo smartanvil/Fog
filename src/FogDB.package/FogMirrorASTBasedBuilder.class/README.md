@@ -1,1 +1,0 @@
-This object is in charge of building a contract mirror from the analysis of a solidity AST

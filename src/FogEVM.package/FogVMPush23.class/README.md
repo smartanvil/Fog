@@ -1,1 +1,0 @@
-Place 23 byte item on stack

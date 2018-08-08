@@ -1,1 +1,0 @@
-Get price of gas in current environment

@@ -1,3 +1,0 @@
-testing
-hasAst
-	^ ast isNotNil

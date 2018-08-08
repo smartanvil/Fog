@@ -1,3 +1,0 @@
-visiting
-visitAstNode: aFogEVMAstNode
-	" pass "

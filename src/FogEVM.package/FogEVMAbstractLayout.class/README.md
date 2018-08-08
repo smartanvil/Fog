@@ -1,1 +1,0 @@
-Storage layout basic protocol 

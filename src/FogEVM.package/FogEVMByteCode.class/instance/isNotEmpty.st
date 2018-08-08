@@ -1,3 +1,0 @@
-converting
-isNotEmpty
-	^ content isNotEmpty 

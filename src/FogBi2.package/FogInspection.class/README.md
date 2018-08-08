@@ -1,1 +1,0 @@
-Just implements the logic for building up a FogValue based tabular inspector 

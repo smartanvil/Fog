@@ -1,1 +1,0 @@
-Full contract ob ject. ABI + Binary + Runtime . Normally pointing a block chain deployed contract 

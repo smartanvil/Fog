@@ -1,3 +1,0 @@
-accessing
-methodsBuilders
-	^ FogMirrorAbiMethodsBuilder new

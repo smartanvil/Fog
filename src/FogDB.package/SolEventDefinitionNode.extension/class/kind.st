@@ -1,3 +1,0 @@
-*FogDB
-kind
-	^ #'event-definition'

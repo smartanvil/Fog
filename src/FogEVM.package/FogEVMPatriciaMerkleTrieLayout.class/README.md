@@ -1,1 +1,0 @@
-To be implemented. This layout interfaces with a Patricia-Merkel Trie. 

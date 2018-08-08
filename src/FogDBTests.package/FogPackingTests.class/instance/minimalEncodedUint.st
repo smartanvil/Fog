@@ -1,3 +1,0 @@
-uint values
-minimalEncodedUint
-	^'00000000000000000000000000000000'

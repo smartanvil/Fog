@@ -1,3 +1,0 @@
-*FogCommunication
-instVarNamesForEqualityComparison
-	^self instVarNames

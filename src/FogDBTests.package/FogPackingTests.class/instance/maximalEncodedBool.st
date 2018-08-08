@@ -1,2 +1,0 @@
-boolean values
-maximalEncodedBool ^ self shouldBeImplemented

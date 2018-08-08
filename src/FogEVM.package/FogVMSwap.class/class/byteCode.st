@@ -1,3 +1,0 @@
-generated
-byteCode
-	^'no apply' 

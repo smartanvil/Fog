@@ -1,3 +1,0 @@
-accessing
-fromFile
-	^ ' no-file '.

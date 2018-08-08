@@ -1,3 +1,0 @@
-as yet unclassified
-address: aFogEVMMnemonicExecutableMemoryEntry
-	address := aFogEVMMnemonicExecutableMemoryEntry

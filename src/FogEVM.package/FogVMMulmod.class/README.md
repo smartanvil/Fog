@@ -1,1 +1,0 @@
-Modulo multiplication operation

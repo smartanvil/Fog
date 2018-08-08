@@ -1,3 +1,0 @@
-accessing
-hexaValue
-	^ value asBKHexa

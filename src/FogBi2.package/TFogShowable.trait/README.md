@@ -1,1 +1,0 @@
-This trait adds some GTTools capabilities 

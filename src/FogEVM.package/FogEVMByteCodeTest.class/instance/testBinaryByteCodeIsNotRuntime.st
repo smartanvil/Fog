@@ -1,3 +1,0 @@
-initialization
-testBinaryByteCodeIsNotRuntime
-	self deny: contractDescription mnemonicBinary isRuntime  

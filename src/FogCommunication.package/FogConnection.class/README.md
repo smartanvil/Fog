@@ -1,1 +1,0 @@
-Connection. It stores the number of request. It has the responsibilite of connecting the RPC server (rest) and managing base communication, asi deconding enconding 

@@ -1,1 +1,0 @@
-Testing of the Web3 api object 

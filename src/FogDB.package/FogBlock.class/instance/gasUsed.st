@@ -1,3 +1,0 @@
-accessing
-gasUsed
-	^ gasUsed asBKNumber

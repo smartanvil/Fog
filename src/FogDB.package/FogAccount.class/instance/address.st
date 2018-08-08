@@ -1,3 +1,0 @@
-equality
-address
-	^ self privateAccountHash

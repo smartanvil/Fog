@@ -1,1 +1,0 @@
-Contract proxy builder,  generates a proxy class for a given contract description 

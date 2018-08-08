@@ -1,3 +1,0 @@
-accessing
-amountOfTransactions 
-	^ transactionsHashes size

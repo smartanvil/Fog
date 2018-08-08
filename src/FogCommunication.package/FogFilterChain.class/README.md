@@ -1,1 +1,0 @@
-Superclass for and / or objects . It allows to chain conditions

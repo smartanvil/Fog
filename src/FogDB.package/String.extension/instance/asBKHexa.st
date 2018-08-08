@@ -1,3 +1,0 @@
-*FogDB
-asBKHexa
-	^ self 

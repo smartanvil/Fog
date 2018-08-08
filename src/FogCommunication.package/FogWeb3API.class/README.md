@@ -1,1 +1,0 @@
-Web3 subset of callable RPC messages 

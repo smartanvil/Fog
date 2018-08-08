@@ -1,3 +1,0 @@
-initialization
-testBinaryByteCodeIsBinary
-	self assert: contractDescription mnemonicBinary isBinary 

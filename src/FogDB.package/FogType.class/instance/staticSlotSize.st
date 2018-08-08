@@ -1,3 +1,0 @@
-testing
-staticSlotSize
-	^ self subclassResponsibility

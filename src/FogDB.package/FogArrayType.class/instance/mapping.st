@@ -1,3 +1,0 @@
-testing
-mapping
-	^ FogSolidityArrayLayoutMapping

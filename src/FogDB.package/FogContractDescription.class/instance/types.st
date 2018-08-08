@@ -1,3 +1,0 @@
-accessing
-types
-	^ ast types

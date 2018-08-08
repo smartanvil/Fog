@@ -1,1 +1,0 @@
-Testing of the ETH api object 

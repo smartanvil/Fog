@@ -1,3 +1,0 @@
-*FogCommunication
-asBKNumber
-	^ self

@@ -1,1 +1,0 @@
-Place 4 byte item on stack

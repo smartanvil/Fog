@@ -1,1 +1,0 @@
-Maps the special case of the mapping. 

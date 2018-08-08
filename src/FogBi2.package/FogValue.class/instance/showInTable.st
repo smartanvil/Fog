@@ -1,3 +1,0 @@
-accessing
-showInTable
-	^ true

@@ -1,1 +1,0 @@
-Contract storage represents the entry point of the storage. It layout 

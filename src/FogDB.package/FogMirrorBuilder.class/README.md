@@ -1,1 +1,0 @@
-Mirror builder has the responsibility of poutting together all the needed bricks-steps for building up a new mirror 

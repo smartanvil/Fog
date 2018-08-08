@@ -1,3 +1,0 @@
-equality
-isContract
-	^ false

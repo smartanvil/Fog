@@ -1,1 +1,0 @@
-Exchange 1st and 11 stack items.

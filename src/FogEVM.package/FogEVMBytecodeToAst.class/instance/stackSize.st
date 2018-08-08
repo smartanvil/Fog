@@ -1,3 +1,0 @@
-utility
-stackSize
-	^ stack size

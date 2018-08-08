@@ -1,3 +1,0 @@
-initialization
-testRuntimeCodeStreamConstructorHasMethodLookup
-	self assert: contractDescription mnemonicRuntime readStream nextMethodLookup isNotEmpty

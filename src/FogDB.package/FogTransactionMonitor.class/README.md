@@ -1,1 +1,0 @@
-A transaction monitor is in charge of resolving a related future, by digging into the geth client 

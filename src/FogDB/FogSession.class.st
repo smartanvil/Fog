@@ -376,10 +376,15 @@ FogSession >> findContractDescriptionByName: aContractDescriptionName [
 FogSession >> findContractDescriptionByName: aContractDescriptionName andVersionHash: aVersionHash [
 	| entry |
 	entry := {aContractDescriptionName asFileReference.
-	(FileLocator contractsFolder / (aContractDescriptionName , '.sol'))} select: [ :f | f exists ] thenCollect: [ :f | self findContractDescriptionForFileReference: f ].
+	(FileLocator contractsFolder / (aContractDescriptionName , '.sol'))}
+		select: [ :f | f exists ]
+		thenCollect: [ :f | self findContractDescriptionForFileReference: f ].
 	^ entry
 		detect: [ :c | c versionHash = aVersionHash ]
-		ifNone: [ self error: ' cannot found the contract file for: ' , aContractDescriptionName , '  It is not a valid contract name or file path' ]
+		ifNone: [ FogErrorContractFileNotFound
+				signal:
+					' cannot found the contract file for: ' , aContractDescriptionName
+						, '  It is not a valid contract name or file path' ]
 ]
 
 { #category : #'access db - contract' }

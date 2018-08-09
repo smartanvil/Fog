@@ -131,3 +131,12 @@ FogContractProxyGenerationTest >> testMethodsWithNoParametersAreGenerated [
 	self assert: generated isNotEmpty.
 	generated do: [ :g | self assertMethodSelector: (g at: 1) argumentAmountEquals: (g at: 2) ]
 ]
+
+{ #category : #tests }
+FogContractProxyGenerationTest >> testProxyIsDeployed [
+	| contract instance |
+
+	contract := builder createContractProxy.
+	instance := contract constructor.
+	self assert: instance address size > 20
+]

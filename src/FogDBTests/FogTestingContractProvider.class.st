@@ -207,6 +207,11 @@ FogTestingContractProvider class >> public3StatesPollContract: session [
 ]
 
 { #category : #'as yet unclassified' }
+FogTestingContractProvider class >> public3StatesPollContractFile [
+	^ self fileForSrc: self public3StatesPollContractSrc at: self srcDir
+]
+
+{ #category : #'as yet unclassified' }
 FogTestingContractProvider class >> public3StatesPollContractSrc [
 	^ 'pragma solidity ^0.4.2;
 

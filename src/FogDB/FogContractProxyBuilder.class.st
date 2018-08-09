@@ -96,7 +96,8 @@ FogContractProxyBuilder >> compilableClassMethod: aFogMethodMirror [
 { #category : #'building methods' }
 FogContractProxyBuilder >> compilableClassMethodAmount: aFogMethodMirror [
 	| variables space |
-		space := aFogMethodMirror hasParameters
+	" PUAajajajaja"
+	space := aFogMethodMirror hasParameters
 		ifTrue: [ ' ' ]
 		ifFalse: [ '' ].
 	variables := '{' , (' . ' join: aFogMethodMirror parameters variables) , '}'.
@@ -163,6 +164,7 @@ FogContractProxyBuilder >> compilableMethod: aFogMethodMirror [
 { #category : #'building methods' }
 FogContractProxyBuilder >> compilableMethodAmount: aFogMethodMirror [
 	| variables space |
+	" Puajjj "
 	space := aFogMethodMirror hasParameters
 		ifTrue: [ ' ' ]
 		ifFalse: [ '' ].

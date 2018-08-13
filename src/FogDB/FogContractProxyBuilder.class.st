@@ -77,20 +77,23 @@ FogContractProxyBuilder >> buildTraitName [
 
 { #category : #'building methods' }
 FogContractProxyBuilder >> compilableClassMethod: aFogMethodMirror [
-	| variables |
+	| variables space|
+		space := aFogMethodMirror hasParameters
+		ifTrue: [ ' session: aSession ' ]
+		ifFalse: [ 'Session: aSession ' ].
 	variables := '{' , (' . ' join: aFogMethodMirror parameters variables) , '}'.
-	^ '{1}
+	^ '{1}{4}
 	| instance |
-	instance := (self mirror method: #{2}) using: self session 
+	instance := (self mirror method: #{2}) using: aSession 
 				applyOn: self contractDescription 
 				valueWithArguments: {3} 
-				from: self resolveFromAccount.
+				from: (self resolveFromAccount: aSession).
 	^ self forInstance: (instance waitIsReady; yourself) at: #latest.
 '
 		format:
 			{aFogMethodMirror selectorWithNames.
 			aFogMethodMirror selector.
-			variables}
+			variables. space}
 ]
 
 { #category : #'building methods' }
@@ -98,16 +101,16 @@ FogContractProxyBuilder >> compilableClassMethodAmount: aFogMethodMirror [
 	| variables space |
 	" PUAajajajaja"
 	space := aFogMethodMirror hasParameters
-		ifTrue: [ ' ' ]
-		ifFalse: [ '' ].
+		ifTrue: [ ' session: aSession ' ]
+		ifFalse: [ 'Session: aSession ' ].
 	variables := '{' , (' . ' join: aFogMethodMirror parameters variables) , '}'.
 	^ '{1}{4}amount: anAmountOfWeiToTransmitToTheContractOnDeploy
 	| instance |
 	instance := (self mirror method: #{2}) 
-		using: self session 
+		using: aSession
 		applyOn: self contractDescription 
 		valueWithArguments: {3} 
-		from: self resolveFromAccount 
+		from: (self resolveFromAccount: aSession) 
 		amount: anAmountOfWeiToTransmitToTheContractOnDeploy.
 	^ self forInstance: (instance waitIsReady; yourself) at: #latest.
 '
@@ -123,13 +126,20 @@ FogContractProxyBuilder >> compilableClassMethods [
 	^ {(self compilableClassMethod: description mirror constructor).
 	(self compilableClassMethodAmount: description mirror constructor).
 	self compilableVersionMethod.
-	self compilableDescriptionNameAccessor}
+	self compilableDescriptionSton}
 ]
 
 { #category : #'building methods' }
-FogContractProxyBuilder >> compilableDescriptionNameAccessor [
-	^ 'contractDescriptionName
-	^ ''{1}''' format: {description name}
+FogContractProxyBuilder >> compilableDescriptionSton [
+	^ 'contractDescriptionSton
+	^ ''{1}'''
+		format:
+			{(String
+				streamContents: [ :stream | 
+					(STONWriter on: stream)
+						prettyPrint: true;
+						newLine: OSPlatform current lineEnding;
+						nextPut: description ]) utf8Encoded base64Encoded}
 ]
 
 { #category : #'building methods' }

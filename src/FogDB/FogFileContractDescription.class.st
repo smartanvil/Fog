@@ -63,3 +63,12 @@ FogFileContractDescription >> similarityThreshold [
 FogFileContractDescription >> source [
 	^ fromFile readStream upToEnd. 
 ]
+
+{ #category : #accessing }
+FogFileContractDescription >> versionHash [
+	^ '.'
+		join:
+			{(runtime ifNotNil: [ runtime hash ] ifNil: [ 0 ]).
+			(binary ifNotNil: [ binary hash ] ifNil: [ 0 ]).
+			fromFile readStream upToEnd hash}
+]

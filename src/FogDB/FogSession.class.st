@@ -215,7 +215,7 @@ FogSession >> deploy: aContractDescription applying: aConstructor arguments: aCo
 	transactionHash := connection eth
 		sendTransaction:
 			(FogCallDefinition new
-				from: anAccount;
+				from: anAccount address ;
 				gas: (self calculateGasForDeploying: aContractDescription with: aConstructor)
 					priced: (self calculateGasPriceForDeploying: aContractDescription with: aConstructor);
 				value: anAmount;

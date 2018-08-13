@@ -9,31 +9,37 @@ Class {
 		'instance'
 	],
 	#classInstVars : [
-		'mirror'
+		'mirror',
+		'contractDescription'
 	],
-	#category : 'FogDB-Domain-Contracts'
+	#category : #'FogDB-Domain-Contracts'
 }
 
-{ #category : #'generated-mirror-based' }
-FogContractProxy class >> constructor [
-	^ self subclassResponsibility 
+{ #category : #'instance creation' }
+FogContractProxy class >> constructor: aCollection session: aSession [
+	self subclassResponsibility 
+]
+
+{ #category : #'instance creation' }
+FogContractProxy class >> constructorSession: aSession [
+	self subclassResponsibility 
 ]
 
 { #category : #accessing }
-FogContractProxy class >> constructor: aCollection [
-	^ self subclassResponsibility
-]
-
-{ #category : #'as yet unclassified' }
 FogContractProxy class >> contractDescription [
-	^ (self session
-		findContractDescriptionByName: self contractDescriptionName
-		andVersionHash: self versionHash) 
+	^ contractDescription
+		ifNil: [ contractDescription := (STONReader
+				on: self contractDescriptionSton base64Decoded utf8Decoded readStream) next ]
+]
+
+{ #category : #'generated-mirror-based' }
+FogContractProxy class >> contractDescriptionName [
+	^ self contractDescription name
 ]
 
 { #category : #'as yet unclassified' }
-FogContractProxy class >> contractDescriptionName [
-	^ self subclassResponsibility 
+FogContractProxy class >> contractDescriptionSton [
+	self subclassResponsibility
 ]
 
 { #category : #'as yet unclassified' }
@@ -46,29 +52,34 @@ FogContractProxy class >> forInstance: aContractInstance at: aBlockTagNumberOrHa
 	^ super new initializeWith: aContractInstance and: aBlockTagNumberOrHash
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FogContractProxy class >> mirror [
-	^ mirror ifNil: [ mirror := self resolveMirror ]
+	^ mirror ifNil: [ mirror := self contractDescription mirror  ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 FogContractProxy class >> new [
-	self error: ' Only instantiable with ContractBind paramter '
+	^ self error: ' Use newWith: session instead '
 ]
 
-{ #category : #'as yet unclassified' }
-FogContractProxy class >> newWith: aCollection [
+{ #category : #'instance creation' }
+FogContractProxy class >> newWith: aCollection withSession: aSession [
 	^ aCollection
-		ifEmpty: [ self constructor ]
-		ifNotEmpty: [ self constructor: aCollection ]
+		ifEmpty: [ self constructorSession: aSession ]
+		ifNotEmpty: [ self constructor: aCollection session: aSession ]
+]
+
+{ #category : #'instance creation' }
+FogContractProxy class >> newWithSession: aSession [
+	^ self constructorSession: aSession.
 ]
 
 { #category : #'as yet unclassified' }
-FogContractProxy class >> resolveMirror [
-	^ self contractDescription mirror
+FogContractProxy class >> resolveFromAccount: aSession [
+	^ aSession applicationAccount
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #versions }
 FogContractProxy class >> versionHash [
 	^ self subclassResponsibility 
 ]
@@ -96,6 +107,16 @@ FogContractProxy >> contractDescription [
 { #category : #'generated-mirror-based' }
 FogContractProxy >> contractDescriptionName [
 	^ self class contractDescriptionName
+]
+
+{ #category : #initialization }
+FogContractProxy >> gtInspeactorInspector: composite [
+	<gtInspectorPresentationOrder: 0>
+	SmartInspect new
+		instance: instance;
+		reference: blockReference;
+		gtInspeactorInspectorNavigation: composite;
+		yourself
 ]
 
 { #category : #initialization }

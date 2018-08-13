@@ -260,5 +260,8 @@ FogContractDescription >> types [
 
 { #category : #accessing }
 FogContractDescription >> versionHash [
-	^ binary hash asString
+	^ '.' join: {
+	(runtime ifNotNil: [ runtime hash ] ifNil: [ 0 ]).
+	(binary ifNotNil: [ binary hash ] ifNil: [ 0 ]).
+	0} 
 ]

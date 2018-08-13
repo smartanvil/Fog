@@ -47,6 +47,7 @@ FogContractProxyGenerationTest >> setUp [
 	description := FogTestingContractProvider public3StatesPollContract: session.
 	builder description: description.
 	mirror := description mirror.
+	self timeLimit: 5 minutes.
 ]
 
 { #category : #tests }
@@ -135,8 +136,8 @@ FogContractProxyGenerationTest >> testMethodsWithNoParametersAreGenerated [
 { #category : #tests }
 FogContractProxyGenerationTest >> testProxyIsDeployed [
 	| contract instance |
-
 	contract := builder createContractProxy.
-	instance := contract constructor.
-	self assert: instance address size > 20
+	instance := contract constructorSession: session.
+	instance session: session. 
+	self assert: instance contractAddress size > 20.
 ]

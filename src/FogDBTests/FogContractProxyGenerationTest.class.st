@@ -52,12 +52,12 @@ FogContractProxyGenerationTest >> setUp [
 
 { #category : #tests }
 FogContractProxyGenerationTest >> testClassMethodsWithAmountNoParametersAreGenerated [
-	self assertMethodSelector: (builder compilableClassMethodAmount: mirror constructor) argumentAmountEquals: 1
+	self assertMethodSelector: (builder compilableClassMethodAmount: mirror constructor) argumentAmountEquals: 2
 ]
 
 { #category : #tests }
 FogContractProxyGenerationTest >> testClassMethodsWithNoParametersAreGenerated [
-	self assertMethodSelector: (builder compilableClassMethod: mirror constructor) argumentAmountEquals: 0
+	self assertMethodSelector: (builder compilableClassMethod: mirror constructor) argumentAmountEquals: 1
 ]
 
 { #category : #tests }

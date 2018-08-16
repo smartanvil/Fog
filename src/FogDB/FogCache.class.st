@@ -136,11 +136,6 @@ FogCache >> detectContractInstance: aBlock ifNoneCreate: aBlockInitialized [
 ]
 
 { #category : #'cache management' }
-FogCache >> detectFileContractDescriptionsOrNil: aBlock [
-	^ self contractDescriptions detect: [ :c | c isFileBased and: [ aBlock value: c ] ] ifNone: [ nil ]
-]
-
-{ #category : #'cache management' }
 FogCache >> detectTransactions: aBlock ifNoneCreate: aBlockInitialized [
 	^ self privateOnCacheCollection: #transactions detect: aBlock ifNoneCreate: aBlockInitialized
 ]

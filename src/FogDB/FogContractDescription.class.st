@@ -13,9 +13,10 @@ Class {
 		'mirror',
 		'methods',
 		'aTypeSet',
-		'contract'
+		'contract',
+		'source'
 	],
-	#category : 'FogDB-Meta-Description'
+	#category : #'FogDB-Meta-Description'
 }
 
 { #category : #accessing }
@@ -74,11 +75,6 @@ FogContractDescription >> createContract [
 	^ FogContractProxyBuilder new description: self; createContractProxy 
 ]
 
-{ #category : #accessing }
-FogContractDescription >> fromFile [
-	^ ' no-file '.
-]
-
 { #category : #testing }
 FogContractDescription >> hasAbi [
 	^ abi isNotNil
@@ -97,6 +93,11 @@ FogContractDescription >> hasBinary [
 { #category : #testing }
 FogContractDescription >> hasRuntime [
 	^ runtime isNotNil
+]
+
+{ #category : #accessing }
+FogContractDescription >> hasSource [
+	^ source isNotNil.
 ]
 
 { #category : #gttools }
@@ -222,6 +223,11 @@ FogContractDescription >> mirror [
 ]
 
 { #category : #accessing }
+FogContractDescription >> name [
+	^ name 
+]
+
+{ #category : #accessing }
 FogContractDescription >> name: aString [ 
 	name := aString
 ]
@@ -250,7 +256,7 @@ FogContractDescription >> similarityThreshold [
 
 { #category : #accessing }
 FogContractDescription >> source [
-	^ 'not-source'
+	^ source
 ]
 
 { #category : #accessing }
@@ -260,8 +266,11 @@ FogContractDescription >> types [
 
 { #category : #accessing }
 FogContractDescription >> versionHash [
-	^ '.' join: {
-	(runtime ifNotNil: [ runtime hash ] ifNil: [ 0 ]).
-	(binary ifNotNil: [ binary hash ] ifNil: [ 0 ]).
-	0} 
+	^ '.'
+		join:
+			{(runtime ifNotNil: [ self runtime hash ] ifNil: [ 0 ]).
+			(binary ifNotNil: [ self binary hash ] ifNil: [ 0 ]).
+			(self hasSource
+				ifTrue: [ self source hash ]
+				ifFalse: [ 0 ])}
 ]

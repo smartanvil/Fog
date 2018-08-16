@@ -105,14 +105,6 @@ FogSession >> calculateGasPriceForDeploying: aContractDescription with: aConstru
 	^ 60
 ]
 
-{ #category : #'access db - contract' }
-FogSession >> compileSolidity: sourceCode [
-	| compilationDictionary |
-	compilationDictionary := FogUtils new compileSolidity: sourceCode.
-	compilationDictionary at: #ast put: (self astFor: sourceCode).
-	^ self findFileContractDescriptionForCompilationOutput: compilationDictionary
-]
-
 { #category : #'access db - blocks' }
 FogSession >> connection: aConnection [
 	connection := aConnection
@@ -165,6 +157,18 @@ FogSession >> createContractDescriptionForBinary: aCode [
 		yourself
 ]
 
+{ #category : #'access db - contract' }
+FogSession >> createContractDescriptionFromSourceCode: aSourceCodeText [
+	| compilationDictionary |
+	compilationDictionary := FogUtils new compileSolidityText: aSourceCodeText.
+	^ FogContractDescription new
+		binary: (compilationDictionary at: #binary);
+		runtime: (compilationDictionary at: #runtime);
+		abi: (compilationDictionary at: #abi);
+		ast: (self astFor: aSourceCodeText);
+		yourself
+]
+
 { #category : #creation }
 FogSession >> createContractInstanceFor: aFogFileContractDescription at: aContractAddress [
 	^ FogContractInstance new
@@ -183,7 +187,7 @@ FogSession >> createExternalAccountFor: hashAccount [
 
 { #category : #creation }
 FogSession >> createFileContractDescriptionFor: description [
-	^ FogFileContractDescription new
+	^ FogContractDescription new
 		binary: (description at: #binary);
 		runtime: (description at: #runtime);
 		abi: (description at: #abi);
@@ -362,47 +366,13 @@ FogSession >> findContractAccountByHash: aString blockTag: aBlockTag [
 ]
 
 { #category : #'access db - contract' }
-FogSession >> findContractDescriptionByName: aContractDescriptionName [
-	| entry |
-	entry := {aContractDescriptionName asFileReference.
-	(FileLocator contractsFolder / aContractDescriptionName).
-	(FileLocator contractsFolder / (aContractDescriptionName , '.sol'))}
-		select: [ :f | f exists ]
-		thenCollect: [ :f | self findContractDescriptionForFileReference: f ].
-	^ entry anyOne
-]
-
-{ #category : #'access db - contract' }
-FogSession >> findContractDescriptionByName: aContractDescriptionName andVersionHash: aVersionHash [
-	| entry |
-	entry := {aContractDescriptionName asFileReference.
-	(FileLocator contractsFolder / (aContractDescriptionName , '.sol'))}
-		select: [ :f | f exists ]
-		thenCollect: [ :f | self findContractDescriptionForFileReference: f ].
-	^ entry
-		detect: [ :c | c versionHash = aVersionHash ]
-		ifNone: [ FogErrorContractFileNotFound
-				signal:
-					' cannot found the contract file for: ' , aContractDescriptionName
-						, '  It is not a valid contract name or file path' ]
-]
-
-{ #category : #'access db - contract' }
 FogSession >> findContractDescriptionForBinaryCode: aCode [
 	^ self createContractDescriptionForBinary: aCode
 ]
 
 { #category : #'access db - contract' }
-FogSession >> findContractDescriptionForFileReference: aFileReference [
-	| compiled |
-	compiled := (self findFileContractDescriptionByFileReference: aFileReference) ifNil: [ self compileSolidity: aFileReference ].
-	compiled fromFile: aFileReference.
-	^ compiled
-]
-
-{ #category : #'access db - contract' }
 FogSession >> findContractDescriptionForSourceCode: aCode [
-	^ self createContractDescriptionSourceFor: aCode
+	^ self createContractDescriptionFromSourceCode: aCode
 ]
 
 { #category : #'access db - contract' }
@@ -431,24 +401,6 @@ FogSession >> findExternalAccountByHash: aString [
 	acc :=  self findAccountByHash: aString blockTag: 'latest'.
 	self assert: acc isContract not description: ' External account expected '. 
 	^ acc
-]
-
-{ #category : #'access db - contract' }
-FogSession >> findFileContractDescriptionByFileReference: aFileReference [
-	^ nil
-]
-
-{ #category : #'access db - contract' }
-FogSession >> findFileContractDescriptionByName: aString [
-	| entry |
-	entry := {aString asFileReference.
-	(FileLocator contractsFolder / (aString , '.sol'))} detect: [ :f | f exists ] ifNone: [ self error: ' ' , aString , ' is not a valid contract name or file path' ].
-	^ self  findContractDescriptionForFileReference: entry
-]
-
-{ #category : #'access db - contract' }
-FogSession >> findFileContractDescriptionForCompilationOutput: description [
-	^ self createFileContractDescriptionFor: description
 ]
 
 { #category : #'access db - blocks' }

@@ -26,7 +26,7 @@ FogUtils >> chopBlanks: aString [
 { #category : #compiling }
 FogUtils >> compileSolidity: sourceCodeFile [
 	| command return compiled compiledStream binary binaryRuntime abi ast tmp2 |
-	tmp2 := '/tmp/out{1}.txt' format: {sourceCodeFile hash asString}.
+	tmp2 := FogConfiguration fogCompilingFolder / ('out{1}.txt' format: {sourceCodeFile hash asString}) asSymbol .
 	command := ' cd {3}; solc --abi --bin --bin-runtime {1} >{2}'
 		format:
 			{sourceCodeFile fullName.
@@ -67,6 +67,17 @@ FogUtils >> compileSolidity: sourceCodeFile [
 	(#runtime -> binaryRuntime).
 	(#abi -> (NeoJSONReader fromString: abi)).
 	(#ast -> (NeoJSONReader fromString: ast))} asDictionary
+]
+
+{ #category : #compiling }
+FogUtils >> compileSolidityText: aText [
+	| ref |
+	ref := FogConfiguration fogTempFolder / ('{1}.sol' format: {aText hash}) asSymbol.
+	ref writeStream
+		nextPutAll: aText;
+		flush;
+		close.
+	^ ref
 ]
 
 { #category : #'fetch - contract' }

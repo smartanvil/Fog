@@ -60,15 +60,15 @@ FogCachedSession >> findBlockByTag: aTag full: aBoolean [
 ]
 
 { #category : #'access db - contract' }
-FogCachedSession >> findContractDescriptionByName: aContractDescriptionName andVersionHash: aVersionHash [
-	^ self cache
-		detectContractDescriptions: [ :a | a versionHash = aVersionHash and: [ a name = aContractDescriptionName ] ]
-		ifNoneCreate: [ super findContractDescriptionByName: aContractDescriptionName andVersionHash: aVersionHash ]
+FogCachedSession >> findContractDescriptionForBinaryCode: aCode [
+	^  self cache  detectContractDescriptions: [ :a | a codeMatchesWith: aCode ] ifNoneCreate: [ super findContractDescriptionForBinaryCode: aCode ]
 ]
 
 { #category : #'access db - contract' }
-FogCachedSession >> findContractDescriptionForBinaryCode: aCode [
-	^  self cache  detectContractDescriptions: [ :a | a codeMatchesWith: aCode ] ifNoneCreate: [ super findContractDescriptionForBinaryCode: aCode ]
+FogCachedSession >> findContractDescriptionForSourceCode: aCode [
+	| ast |
+	ast := self astFor: aCode.
+	^ self cache detectContractDescriptions: [ :a | a ast = ast ] ifNoneCreate: [ super findContractDescriptionForSourceCode: aCode ]
 ]
 
 { #category : #'access db - contract' }
@@ -87,18 +87,6 @@ FogCachedSession >> findContractInstanceByHash: aContractAddress blockTag: aBloc
 		ifNoneCreate: [ super
 				findContractInstanceByHash: aContractAddress
 				blockNumber: aBlockNumber ]
-]
-
-{ #category : #'access db - contract' }
-FogCachedSession >> findFileContractDescriptionByFileReference: aFileReference [
-	^ self cache detectFileContractDescriptionsOrNil: [ :a | a fromFile = aFileReference ]
-]
-
-{ #category : #'access db - contract' }
-FogCachedSession >> findFileContractDescriptionForCompilationOutput: description [
-	^  self cache 
-		detectContractDescriptions: [ :a | a codeMatchesWith: (description at: #runtime) ]
-		ifNoneCreate: [ super findFileContractDescriptionForCompilationOutput: description ]
 ]
 
 { #category : #'access db - transactions' }

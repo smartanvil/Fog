@@ -26,7 +26,8 @@ FogUtils >> chopBlanks: aString [
 { #category : #compiling }
 FogUtils >> compileSolidity: sourceCodeFile [
 	| command return compiled compiledStream binary binaryRuntime abi ast tmp2 |
-	tmp2 := FogConfiguration fogCompilingFolder / ('out{1}.txt' format: {sourceCodeFile hash asString}) asSymbol .
+	tmp2 := (FogConfiguration fogCompilingFolder
+		/ ('out{1}.txt' format: {sourceCodeFile hash asString})) fullName asSymbol.
 	command := ' cd {3}; solc --abi --bin --bin-runtime {1} >{2}'
 		format:
 			{sourceCodeFile fullName.
@@ -39,9 +40,11 @@ FogUtils >> compileSolidity: sourceCodeFile [
 		argument: command ] asOSTask future.
 	compiled := return synchronizeTimeout: 10 seconds.
 	compiled := tmp2 asFileReference readStream upToEnd.
-	compiledStream := (((((compiled copyReplaceAll: String lf with: '') copyReplaceAll: 'Binary of the runtime part:' with: '^') copyReplaceAll: 'Binary:' with: '^')
-		copyReplaceAll: 'Contract JSON ABI'
-		with: '^') copyReplaceAll: ' ' with: '') readStream.
+	compiledStream := (((((compiled copyReplaceAll: String lf with: '')
+		copyReplaceAll: 'Binary of the runtime part:'
+		with: '^') copyReplaceAll: 'Binary:' with: '^') copyReplaceAll: 'Contract JSON ABI' with: '^')
+		copyReplaceAll: ' '
+		with: '') readStream.
 	compiledStream upTo: $^.
 	binary := compiledStream upTo: $^.
 	binaryRuntime := compiledStream upTo: $^.
@@ -51,7 +54,7 @@ FogUtils >> compileSolidity: sourceCodeFile [
 		format:
 			{sourceCodeFile fullName.
 			tmp2.
-			sourceCodeFile asFileReference  parent fullName}.
+			sourceCodeFile asFileReference parent fullName}.
 	return := [ :spec | 
 	spec
 		command: 'bash';
@@ -77,7 +80,7 @@ FogUtils >> compileSolidityText: aText [
 		nextPutAll: aText;
 		flush;
 		close.
-	^ ref
+	^self compileSolidity:  ref
 ]
 
 { #category : #'fetch - contract' }

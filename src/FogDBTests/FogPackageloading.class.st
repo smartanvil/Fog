@@ -9,9 +9,13 @@ Class {
 
 { #category : #'building suites' }
 FogPackageloading class >> testParameters [
-	^ super testParameters
-		forSelector: #package
-		addOptions: FogTestingContractProvider packagesDescriptions
+	^ ParametrizedTestMatrix new
+		forSelector: #connection addOptions: {[ FogConnection on: self url ]};
+		forSelector: #session
+			addOptions:
+			{[ :test | test connection session ].
+			[ :test | test connection nonCachedSession ]};
+		forSelector: #sourceCode addOptions: FogTestingContractProvider contractsDescriptionsSrc
 ]
 
 { #category : #tests }
@@ -20,9 +24,24 @@ FogPackageloading >> package: aPackage [
 ]
 
 { #category : #tests }
+FogPackageloading >> sourceCode: aSourceCode [
+	self package: (session loadPackageForCode: aSourceCode named: #test)
+]
+
+{ #category : #tests }
+FogPackageloading >> testContractsCanBeFetchedByRef [
+	package descriptions do: [ :d | self assert: d equals: (session findReference: d reference) ]
+]
+
+{ #category : #tests }
 FogPackageloading >> testLoadPackagePoll [
-	self assert: package isFogPackage.
-	self assert: package name equals: #test.
+	self assert: (package isKindOf: FogPackage).
+	self assert: package name equals: #test
+]
+
+{ #category : #tests }
+FogPackageloading >> testPackageCanBeFetchedByRef [
+	self assert: package equals: (session findReference: package reference)
 ]
 
 { #category : #tests }

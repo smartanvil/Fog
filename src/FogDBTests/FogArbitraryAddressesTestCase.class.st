@@ -80,8 +80,7 @@ FogArbitraryAddressesTestCase >> createContractDescription [
 		nextPutAll: code;
 		flush;
 		close.
-		
-	^ session findContractDescriptionForSourceCode: file entry asFileReference readStream upToEnd.
+	^ (session loadPackageForFileReference: file entry asFileReference) descriptions anyOne. 
 ]
 
 { #category : #'as yet unclassified' }

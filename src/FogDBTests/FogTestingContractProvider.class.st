@@ -12,7 +12,7 @@ FogTestingContractProvider class >> contractDescriptions [
 { #category : #'as yet unclassified' }
 FogTestingContractProvider class >> contractsDescriptions: aSession [
 	^ self contractsDescriptionsSrc
-		collect: [ :f | aSession findContractDescriptionForSourceCode: f ]
+		flatCollect: [ :f | (aSession loadPackageForCode: f named: UUID new asString) descriptions ]
 ]
 
 { #category : #'as yet unclassified' }
@@ -194,12 +194,13 @@ FogTestingContractProvider class >> packagesDescriptions [
 	| session |
 	session := FogSession new.
 	^ self contractsDescriptionsSrc
-		collect: [ :f | session findPackageForCode: f named: #test ]
+		collect: [ :f | session loadPackageForCode: f named: #test ]
 ]
 
 { #category : #'as yet unclassified' }
 FogTestingContractProvider class >> public3StatesPollContract: session [
-	^ session findContractDescriptionForSourceCode: self public3StatesPollContractSrc
+	^ (session loadPackageForCode: self public3StatesPollContractSrc named: #test)
+		descriptions anyOne
 ]
 
 { #category : #'as yet unclassified' }

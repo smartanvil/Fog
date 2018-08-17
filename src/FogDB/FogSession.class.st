@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'connection',
 		'monitor',
-		'applicationAccount'
+		'applicationAccount',
+		'packages'
 	],
 	#category : #'FogDB-Session'
 }
@@ -128,10 +129,11 @@ FogSession >> createContractAccountFor: compiledCode and: hashAccount [
 ]
 
 { #category : #'private - objects creation' }
-FogSession >> createContractBindFor: aFogFileContractDescription at: aContractAddress [
+FogSession >> createContractBindFor: aFogContractDescription at: aContractAddress [
+
 	^ FogContractInstance new
 		address: aContractAddress;
-		contract: aFogFileContractDescription;
+		contract: aFogContractDescription;
 		session: self;
 		yourself
 ]
@@ -153,20 +155,19 @@ FogSession >> createContractDescriptionForBinary: aCode [
 ]
 
 { #category : #'private - objects creation' }
-FogSession >> createContractDescriptionFrom: compilationDictionary ast: anAst [
+FogSession >> createContractDescriptionFrom: compilationDictionary [
 	^ FogContractDescription new
 		binary: (compilationDictionary at: #binary);
 		runtime: (compilationDictionary at: #runtime);
 		abi: (compilationDictionary at: #abi);
-		ast: anAst;
 		yourself
 ]
 
 { #category : #'private - objects creation' }
-FogSession >> createContractInstanceFor: aFogFileContractDescription at: aContractAddress [
+FogSession >> createContractInstanceFor: aFogContractDescription at: aContractAddress [
 	^ FogContractInstance new
 		address: aContractAddress;
-		contract: aFogFileContractDescription;
+		contract: aFogContractDescription;
 		session: self;
 		yourself
 ]
@@ -175,16 +176,6 @@ FogSession >> createContractInstanceFor: aFogFileContractDescription at: aContra
 FogSession >> createExternalAccountFor: hashAccount [
 	^ (FogExternalAccount for: hashAccount)
 		session: self;
-		yourself
-]
-
-{ #category : #'private - objects creation' }
-FogSession >> createFileContractDescriptionFor: description [
-	^ FogContractDescription new
-		binary: (description at: #binary);
-		runtime: (description at: #runtime);
-		abi: (description at: #abi);
-		ast: (description at: #ast);
 		yourself
 ]
 
@@ -413,13 +404,18 @@ FogSession >> findLastBlock [
 ]
 
 { #category : #'access db - package' }
-FogSession >> findPackageForCode: aCode named: aName [ 
-	^ self loadPackage: (self createPackage: aName) with: aCode 
+FogSession >> findPackageNamed: aName [
+	^ self findPackageReference: aName asFogReference
 ]
 
 { #category : #'access db - package' }
-FogSession >> findPackageForFileReference: aFileReference [
-	^ self findPackageForCode: aFileReference readStream upToEnd named: aFileReference basename
+FogSession >> findPackageReference: aReference [
+	^ aReference fetchFrom: packages 
+]
+
+{ #category : #'access db - package' }
+FogSession >> findReference: aReference [
+	^ aReference resolveWith: self
 ]
 
 { #category : #'access db - transactions' }
@@ -466,14 +462,16 @@ FogSession >> hexadecimalPacker [
 ]
 
 { #category : #initialization }
-FogSession >> initializeWith: aConnection [
-	connection := aConnection.
-	self ensureMonitor .
+FogSession >> initialize [
+	super initialize.
+	packages := Dictionary new
 ]
 
-{ #category : #'access db - package' }
-FogSession >> loadPackage: aFileReference [
-	
+{ #category : #initialization }
+FogSession >> initializeWith: aConnection [
+	connection := aConnection.
+	packages := Dictionary new.
+	self ensureMonitor
 ]
 
 { #category : #'access db - package' }
@@ -485,20 +483,34 @@ FogSession >> loadPackage: aPackage with: aCode [
 	compilation := FogUtils new compileSolidityText: aCode.
 	compilation
 		keysAndValuesDo: [ :k :v | 
-			| contractAst |
-			contractAst := (ast sourceunits select: #isContract)
-				detect: [ :d | d identifier value value = k ].
 			aPackage
 				addContractDescription:
-					((self createContractDescriptionFrom: v ast: contractAst)
+					((self createContractDescriptionFrom: v)
 						name: k;
+						package: aPackage;
 						yourself) ].
+	self registerPackage: aPackage.
 	^ aPackage
+]
+
+{ #category : #'access db - package' }
+FogSession >> loadPackageForCode: aCode named: aName [ 
+	^ self loadPackage: (self createPackage: aName) with: aCode 
+]
+
+{ #category : #'access db - package' }
+FogSession >> loadPackageForFileReference: aFileReference [
+	^ self loadPackageForCode: aFileReference readStream upToEnd named: aFileReference basename
 ]
 
 { #category : #initialization }
 FogSession >> monitor [
 	^ monitor
+]
+
+{ #category : #accessing }
+FogSession >> packages [
+	^ packages
 ]
 
 { #category : #'private - encoding decoding' }
@@ -545,6 +557,11 @@ FogSession >> registerInstantiationWithReceipt: transactionHash ofContractDescri
 	future := self receiptFor: transactionHash.
 	future onSuccessDo: [ :receipt | contractInstance address: (receipt at: #contractAddress) ].
 	^ contractInstance
+]
+
+{ #category : #'access db - package' }
+FogSession >> registerPackage: aPackage [
+	packages at: aPackage name asSymbol put: aPackage
 ]
 
 { #category : #'low-level api - contract - remote activation private' }

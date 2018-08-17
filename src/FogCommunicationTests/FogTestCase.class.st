@@ -13,14 +13,12 @@ Class {
 
 { #category : #'building suites' }
 FogTestCase class >> testParameters [
-	| connection |
-	connection := FogConnection on: self url.
 	^ ParametrizedTestMatrix new
-		forSelector: #connection addOptions: {connection};
+		forSelector: #connection addOptions: {[ FogConnection on: self url ]};
 		forSelector: #session
 			addOptions:
-			{connection session.
-			connection nonCachedSession}
+			{[ :test | test connection session ].
+			[ :test | test connection nonCachedSession ]}
 ]
 
 { #category : #'building suites' }
@@ -43,6 +41,11 @@ FogTestCase >> assertEntityFromMessage: aMessage equalsToJson: aString [
 ]
 
 { #category : #running }
+FogTestCase >> connection [
+	^ connection
+]
+
+{ #category : #running }
 FogTestCase >> connection: aConnection [
 	connection := aConnection
 ]
@@ -55,7 +58,9 @@ FogTestCase >> session: aSession [
 { #category : #running }
 FogTestCase >> setUp [
 	super setUp.
-	session applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0')
+	FogCache reset.
+	session
+		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0')
 ]
 
 { #category : #running }

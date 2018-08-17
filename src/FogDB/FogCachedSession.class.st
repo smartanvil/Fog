@@ -65,13 +65,6 @@ FogCachedSession >> findContractDescriptionForBinaryCode: aCode [
 ]
 
 { #category : #'access db - contract' }
-FogCachedSession >> findContractDescriptionForSourceCode: aCode [
-	| ast |
-	ast := SolidityParser parseStream: aCode readStream.
-	^ self cache detectContractDescriptions: [ :a | a ast = ast ] ifNoneCreate: [ super findContractDescriptionForSourceCode: aCode ]
-]
-
-{ #category : #'access db - contract' }
 FogCachedSession >> findContractInstanceByHash: aContractAddress blockNumber: aBlockNumber [
 	^  self cache 
 		detectContractBind: [ :instance | instance address = aContractAddress asAddress ]

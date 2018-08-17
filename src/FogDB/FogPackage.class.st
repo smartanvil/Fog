@@ -1,3 +1,10 @@
+"
+A package is the best name we found for a the representation ofthe contracts included in a solidity file. 
+Normally this object contains the source of the file, the full ast and the contract descirptions loaded .
+For navigation, a package must have a name.
+
+
+"
 Class {
 	#name : #FogPackage,
 	#superclass : #Object,
@@ -7,7 +14,7 @@ Class {
 		'ast',
 		'source'
 	],
-	#category : #'FogDB-Session'
+	#category : #'FogDB-Meta-Description'
 }
 
 { #category : #accessing }
@@ -36,11 +43,6 @@ FogPackage >> initialize [
 	descriptions := Set new . 
 ]
 
-{ #category : #testing }
-FogPackage >> isFogPackage [
-	^ true 
-]
-
 { #category : #accessing }
 FogPackage >> name [
 	^ name
@@ -49,6 +51,11 @@ FogPackage >> name [
 { #category : #accessing }
 FogPackage >> name: aString [ 
 	name := aString
+]
+
+{ #category : #accessing }
+FogPackage >> reference [
+	^ FogReference new / name
 ]
 
 { #category : #accessing }

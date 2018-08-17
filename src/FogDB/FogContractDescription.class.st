@@ -8,12 +8,12 @@ Class {
 		'binary',
 		'runtime',
 		'abi',
-		'ast',
 		'name',
 		'mirror',
 		'methods',
 		'contract',
-		'source'
+		'source',
+		'package'
 	],
 	#category : #'FogDB-Meta-Description'
 }
@@ -30,21 +30,10 @@ FogContractDescription >> abi: aString [
 
 { #category : #accessing }
 FogContractDescription >> ast [
+	| ast |
+	ast := (package ast sourceunits select: #isContract)
+		detect: [ :d | d identifier value value = name ].
 	^ ast
-]
-
-{ #category : #accessing }
-FogContractDescription >> ast: anAST [
-	ast := anAST
-]
-
-{ #category : #'instance creation' }
-FogContractDescription >> at: anAddress [
-	self error: 'shouldnt call this'.
-	^ FogContractInstance new
-		address: anAddress;
-		contract: self;
-		yourself
 ]
 
 { #category : #accessing }
@@ -81,7 +70,7 @@ FogContractDescription >> hasAbi [
 
 { #category : #testing }
 FogContractDescription >> hasAst [
-	^ ast isNotNil
+	^ self ast isNotNil 
 ]
 
 { #category : #testing }
@@ -215,7 +204,7 @@ FogContractDescription >> isFileBased [
 { #category : #accessing }
 FogContractDescription >> mirror [
 	mirror := FogMirrorBuilder new
-		ast: ast;
+		ast: self ast;
 		abi: abi;
 		mirror.
 	^ mirror
@@ -231,11 +220,26 @@ FogContractDescription >> name: aString [
 	name := aString
 ]
 
+{ #category : #accessing }
+FogContractDescription >> package [
+	^ package
+]
+
+{ #category : #accessing }
+FogContractDescription >> package: aPackage [
+	package := aPackage
+]
+
 { #category : #printing }
 FogContractDescription >> printOn: aStream [
 	^ aStream
 		nextPutAll: 'Contract ';
 		nextPutAll: (name ifNil: [ 'Unknown' ])
+]
+
+{ #category : #accessing }
+FogContractDescription >> reference [
+	^ package reference / name asSymbol
 ]
 
 { #category : #accessing }
@@ -260,7 +264,7 @@ FogContractDescription >> source [
 
 { #category : #accessing }
 FogContractDescription >> types [
-	^ ast types
+	^ self ast types
 ]
 
 { #category : #accessing }

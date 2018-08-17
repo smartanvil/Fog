@@ -149,6 +149,7 @@ FogContractProxyGenerationTest >> testProxyIsDeployed [
 	| contract instance |
 	contract := builder createContractProxy.
 	instance := contract constructorSession: session.
-	instance session: session. 
+	instance session: session.
 	self assert: instance contractAddress size > 20.
+	builder buildCategoryName asPackage removeFromSystem
 ]

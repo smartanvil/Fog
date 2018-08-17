@@ -3,16 +3,29 @@ Class {
 	#superclass : #FogTestCase,
 	#instVars : [
 		'builder',
-		'mirror'
+		'mirror',
+		'description'
 	],
 	#category : #FogDBTests
 }
+
+{ #category : #'building suites' }
+FogContractProxyGenerationTest class >> testParameters [
+	^ super testParameters
+		forSelector: #description
+		addOptions: FogTestingContractProvider contractDescriptions
+]
 
 { #category : #tests }
 FogContractProxyGenerationTest >> assertMethodSelector: body argumentAmountEquals: amount [
 	| selector |
 	selector := self extractSelector: body.
 	self assert: selector numArgs equals: amount
+]
+
+{ #category : #tests }
+FogContractProxyGenerationTest >> description: aDescription [
+	description := aDescription
 ]
 
 { #category : #tests }
@@ -41,13 +54,11 @@ FogContractProxyGenerationTest >> extractSelector: body [
 
 { #category : #tests }
 FogContractProxyGenerationTest >> setUp [
-	| description |
 	super setUp.
 	builder := FogContractProxyBuilder new.
-	description := FogTestingContractProvider public3StatesPollContract: session.
 	builder description: description.
 	mirror := description mirror.
-	self timeLimit: 5 minutes.
+	self timeLimit: 5 minutes
 ]
 
 { #category : #tests }

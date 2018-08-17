@@ -5,6 +5,11 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+FogTestingContractProvider class >> contractDescriptions [
+	^ self packagesDescriptions flatCollect: #descriptions
+]
+
+{ #category : #'as yet unclassified' }
 FogTestingContractProvider class >> contractsDescriptions: aSession [
 	^ self contractsDescriptionsSrc
 		collect: [ :f | aSession findContractDescriptionForSourceCode: f ]
@@ -182,6 +187,14 @@ contract StructTestContract {
     
 }
 '
+]
+
+{ #category : #'as yet unclassified' }
+FogTestingContractProvider class >> packagesDescriptions [
+	| session |
+	session := FogSession new.
+	^ self contractsDescriptionsSrc
+		collect: [ :f | session findPackageForCode: f named: #test ]
 ]
 
 { #category : #'as yet unclassified' }

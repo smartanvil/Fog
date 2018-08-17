@@ -12,7 +12,6 @@ Class {
 		'name',
 		'mirror',
 		'methods',
-		'aTypeSet',
 		'contract',
 		'source'
 	],

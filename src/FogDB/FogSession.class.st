@@ -19,7 +19,7 @@ FogSession >> applicationAccount: anAccount [
 	applicationAccount := anAccount
 ]
 
-{ #category : #'contract - remote activation' }
+{ #category : #'low-level api - contract - remote activation' }
 FogSession >> apply: aMethodMirror on: anETHContractInstance arguments: aCollection from: anAccount amount: anAmount [
 	^ self
 		apply: aMethodMirror
@@ -31,7 +31,7 @@ FogSession >> apply: aMethodMirror on: anETHContractInstance arguments: aCollect
 		amount: anAmount
 ]
 
-{ #category : #'contract - remote activation' }
+{ #category : #'low-level api - contract - remote activation' }
 FogSession >> apply: aMethodMirror on: anETHContractInstance arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
 	^ aMethodMirror isStateModifier
 		ifTrue: [ self
@@ -52,7 +52,7 @@ FogSession >> apply: aMethodMirror on: anETHContractInstance arguments: aCollect
 				amount: anAmount ]
 ]
 
-{ #category : #'contract - remote activation' }
+{ #category : #'low-level api - contract - remote activation' }
 FogSession >> apply: aMethodMirror on: anETHContractInstance at: aBlockHash arguments: aCollection from: anAccount amount: anAmount [
 	^ self
 		apply: aMethodMirror
@@ -65,7 +65,7 @@ FogSession >> apply: aMethodMirror on: anETHContractInstance at: aBlockHash argu
 		amount: anAmount
 ]
 
-{ #category : #'contract - remote activation' }
+{ #category : #'low-level api - contract - remote activation' }
 FogSession >> apply: aMethodMirror on: anETHContractInstance at: aBlockHash arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
 	^ aMethodMirror isStateModifier
 		ifTrue: [ self error: ' Selective block method activation is only available for querying methods' ]
@@ -80,44 +80,39 @@ FogSession >> apply: aMethodMirror on: anETHContractInstance at: aBlockHash argu
 				amount: anAmount ]
 ]
 
-{ #category : #'access db - contract' }
-FogSession >> astFor: sourceCode [
-	^ SolidityParser parseStream: sourceCode readStream
-]
-
-{ #category : #'contract activation gas calculation' }
+{ #category : #'low-level api - contract activation gas calculation' }
 FogSession >> calculateGasAmountFor: aMethodMirror on: anETHContractInstance [
 	^ 300000
 ]
 
-{ #category : #'contract activation gas calculation' }
+{ #category : #'low-level api - contract activation gas calculation' }
 FogSession >> calculateGasForDeploying: aContractDescription with: aConstructor [
 	^ 3000000
 ]
 
-{ #category : #'contract activation gas calculation' }
+{ #category : #'low-level api - contract activation gas calculation' }
 FogSession >> calculateGasPriceFor: aMethodMirror on: anETHContractInstance [
 	^ 60
 ]
 
-{ #category : #'contract activation gas calculation' }
+{ #category : #'low-level api - contract activation gas calculation' }
 FogSession >> calculateGasPriceForDeploying: aContractDescription with: aConstructor [
 	^ 60
 ]
 
-{ #category : #'access db - blocks' }
+{ #category : #accessing }
 FogSession >> connection: aConnection [
 	connection := aConnection
 ]
 
-{ #category : #creation }
+{ #category : #'private - objects creation' }
 FogSession >> createAccountFromCode: compiledCode andHash: hashAccount [
 	^ compiledCode
 		ifNotNil: [ self createContractAccountFor: compiledCode and: hashAccount ]
 		ifNil: [ self createExternalAccountFor: hashAccount ]
 ]
 
-{ #category : #creation }
+{ #category : #'private - objects creation' }
 FogSession >> createBlockFor: dataSource full: isFull [
 	dataSource ifNil: [ FogError signalInvalidBlockAccess ].
 	^ FogBlock new
@@ -127,12 +122,12 @@ FogSession >> createBlockFor: dataSource full: isFull [
 		yourself
 ]
 
-{ #category : #creation }
+{ #category : #'private - objects creation' }
 FogSession >> createContractAccountFor: compiledCode and: hashAccount [
 	^ (self findContractDescriptionForBinaryCode: compiledCode) at: hashAccount 
 ]
 
-{ #category : #creation }
+{ #category : #'private - objects creation' }
 FogSession >> createContractBindFor: aFogFileContractDescription at: aContractAddress [
 	^ FogContractInstance new
 		address: aContractAddress;
@@ -141,7 +136,7 @@ FogSession >> createContractBindFor: aFogFileContractDescription at: aContractAd
 		yourself
 ]
 
-{ #category : #creation }
+{ #category : #'private - objects creation' }
 FogSession >> createContractDescriptionFor: aCode [
 	^ FogContractDescription new
 		name: 'Unknown Contract';
@@ -149,7 +144,7 @@ FogSession >> createContractDescriptionFor: aCode [
 		yourself
 ]
 
-{ #category : #creation }
+{ #category : #'private - objects creation' }
 FogSession >> createContractDescriptionForBinary: aCode [
 	^ FogContractDescription new
 		name: 'Unknown Contract';
@@ -157,19 +152,17 @@ FogSession >> createContractDescriptionForBinary: aCode [
 		yourself
 ]
 
-{ #category : #'access db - contract' }
-FogSession >> createContractDescriptionFromSourceCode: aSourceCodeText [
-	| compilationDictionary |
-	compilationDictionary := FogUtils new compileSolidityText: aSourceCodeText.
+{ #category : #'private - objects creation' }
+FogSession >> createContractDescriptionFrom: compilationDictionary ast: anAst [
 	^ FogContractDescription new
 		binary: (compilationDictionary at: #binary);
 		runtime: (compilationDictionary at: #runtime);
 		abi: (compilationDictionary at: #abi);
-		ast: (self astFor: aSourceCodeText);
+		ast: anAst;
 		yourself
 ]
 
-{ #category : #creation }
+{ #category : #'private - objects creation' }
 FogSession >> createContractInstanceFor: aFogFileContractDescription at: aContractAddress [
 	^ FogContractInstance new
 		address: aContractAddress;
@@ -178,14 +171,14 @@ FogSession >> createContractInstanceFor: aFogFileContractDescription at: aContra
 		yourself
 ]
 
-{ #category : #creation }
+{ #category : #'private - objects creation' }
 FogSession >> createExternalAccountFor: hashAccount [
 	^ (FogExternalAccount for: hashAccount)
 		session: self;
 		yourself
 ]
 
-{ #category : #creation }
+{ #category : #'private - objects creation' }
 FogSession >> createFileContractDescriptionFor: description [
 	^ FogContractDescription new
 		binary: (description at: #binary);
@@ -195,7 +188,14 @@ FogSession >> createFileContractDescriptionFor: description [
 		yourself
 ]
 
-{ #category : #creation }
+{ #category : #creating }
+FogSession >> createPackage: aName [
+	^ FogPackage new
+		name: aName;
+		yourself
+]
+
+{ #category : #'private - objects creation' }
 FogSession >> createTransactionFor: dataSource [
 	^ FogTransaction new
 		source: dataSource;
@@ -203,17 +203,17 @@ FogSession >> createTransactionFor: dataSource [
 		yourself
 ]
 
-{ #category : #'encode decode' }
+{ #category : #'private - encoding decoding' }
 FogSession >> decode: aContent type: aType [
 	^ aType unpack: aContent using: self hexadecimalPacker
 ]
 
-{ #category : #'encode decode' }
+{ #category : #'private - encoding decoding' }
 FogSession >> decodeStream: aContent type: aType [
 	^ aType unpackStream: aContent using: self hexadecimalPacker
 ]
 
-{ #category : #'contract - deploying' }
+{ #category : #'low-level api - contract - deploying' }
 FogSession >> deploy: aContractDescription applying: aConstructor arguments: aCollection from: anAccount amount: anAmount [
 	| transactionHash |
 	transactionHash := connection eth
@@ -228,7 +228,7 @@ FogSession >> deploy: aContractDescription applying: aConstructor arguments: aCo
 	^ self registerInstantiationWithReceipt: transactionHash ofContractDescription: aContractDescription
 ]
 
-{ #category : #'contract - deploying' }
+{ #category : #'low-level api - contract - deploying' }
 FogSession >> deploy: aContractDescription applying: aConstructor arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
 	| transactionHash |
 	transactionHash := connection eth
@@ -244,12 +244,12 @@ FogSession >> deploy: aContractDescription applying: aConstructor arguments: aCo
 		ofContractDescription: aContractDescription
 ]
 
-{ #category : #'contract - deploying' }
+{ #category : #'low-level api - contract - deploying' }
 FogSession >> encode: aConstructor for: aContractDescription with: aCollection [
 	^ aContractDescription binary , (self encodeArguments: aCollection for: aConstructor)
 ]
 
-{ #category : #'contract - remote activation private' }
+{ #category : #'private - encoding decoding' }
 FogSession >> encodeArguments: aCollection for: aMethodMirror [
 	^ aMethodMirror parameters pack: aCollection with: self hexadecimalPacker
 ]
@@ -272,22 +272,22 @@ FogSession >> ensureMonitor [
 	^ monitor
 ]
 
-{ #category : #'access db - blocks' }
+{ #category : #accessing }
 FogSession >> eth [
 	^ connection eth
 ]
 
-{ #category : #'access db - contract accounts' }
+{ #category : #'low-level api - slots' }
 FogSession >> fetchSlot: aSlotId onContract: aContractAddress [
 	^ connection eth getStorageAt: aContractAddress upTo: aSlotId blockTag: #latest
 ]
 
-{ #category : #'access db - contract accounts' }
+{ #category : #'low-level api - slots' }
 FogSession >> fetchSlot: aSlotId onContract: aContractAddress at: aBlockTagOrNumberOrHash [
 	^ connection eth getStorageAt: aContractAddress address upTo: aSlotId block: aBlockTagOrNumberOrHash
 ]
 
-{ #category : #'access db - contract accounts' }
+{ #category : #'low-level api - slots' }
 FogSession >> fetchSlot: aSlotId onContract: aContractAddress atBlock: aBlockHashOrNumber [
 	^ connection eth getStorageAt: aContractAddress upTo: aSlotId blockNumber: aBlockHashOrNumber
 ]
@@ -412,6 +412,16 @@ FogSession >> findLastBlock [
 	^ latest
 ]
 
+{ #category : #'access db - package' }
+FogSession >> findPackageForCode: aCode named: aName [ 
+	^ self loadPackage: (self createPackage: aName) with: aCode 
+]
+
+{ #category : #'access db - package' }
+FogSession >> findPackageForFileReference: aFileReference [
+	^ self findPackageForCode: aFileReference readStream upToEnd named: aFileReference basename
+]
+
 { #category : #'access db - transactions' }
 FogSession >> findTransactionByBlockHash: aBlockHash andIndex: aTxIndex [
 
@@ -440,17 +450,17 @@ FogSession >> findTransactionByHash: aTransactionHash [
 	^ self createTransactionFor: (self eth getTransactionByHash: aTransactionHash)
 ]
 
-{ #category : #'access db - external accounts' }
+{ #category : #'low-level api - accounts' }
 FogSession >> getBalance: anAddress [
 	^ (connection eth getBalance: anAddress blockTag: #latest) asBKNumber
 ]
 
-{ #category : #'access db - external accounts' }
+{ #category : #'low-level api - accounts' }
 FogSession >> getBalance: anAddress block: aBlockNumberOrHash [
 	^ (connection eth getBalance: anAddress blockNumber: aBlockNumberOrHash) asBKNumber
 ]
 
-{ #category : #'encode decode' }
+{ #category : #'private - encoding decoding' }
 FogSession >> hexadecimalPacker [
 	^ FogHexadecimalPacker new
 ]
@@ -461,12 +471,37 @@ FogSession >> initializeWith: aConnection [
 	self ensureMonitor .
 ]
 
+{ #category : #'access db - package' }
+FogSession >> loadPackage: aFileReference [
+	
+]
+
+{ #category : #'access db - package' }
+FogSession >> loadPackage: aPackage with: aCode [
+	| compilation ast |
+	ast := SolidityParser parseStream: aCode readStream.
+	aPackage source: aCode.
+	aPackage ast: ast.
+	compilation := FogUtils new compileSolidityText: aCode.
+	compilation
+		keysAndValuesDo: [ :k :v | 
+			| contractAst |
+			contractAst := (ast sourceunits select: #isContract)
+				detect: [ :d | d identifier value value = k ].
+			aPackage
+				addContractDescription:
+					((self createContractDescriptionFrom: v ast: contractAst)
+						name: k;
+						yourself) ].
+	^ aPackage
+]
+
 { #category : #initialization }
 FogSession >> monitor [
 	^ monitor
 ]
 
-{ #category : #'contract - remote activation private' }
+{ #category : #'private - encoding decoding' }
 FogSession >> privateDecode: aReturnValue for: aMethodMirror [
 	| process |
 	aReturnValue = '0x'
@@ -475,7 +510,7 @@ FogSession >> privateDecode: aReturnValue for: aMethodMirror [
 	^ aMethodMirror returnType unpackReturn: process using: self hexadecimalPacker 
 ]
 
-{ #category : #'contract - remote activation private' }
+{ #category : #'private - encoding decoding' }
 FogSession >> privateEncode: aMethodMirror arguments: aCollection [
 	^ String
 		streamContents: [ :str | 
@@ -484,7 +519,7 @@ FogSession >> privateEncode: aMethodMirror arguments: aCollection [
 				nextPutAll: (self encodeArguments: aCollection for: aMethodMirror) ]
 ]
 
-{ #category : #'contract - remote activation private' }
+{ #category : #'private - convenient' }
 FogSession >> privateSignatureFor: aMethodMirror [
 	^ String
 		streamContents: [ :str | 
@@ -493,12 +528,12 @@ FogSession >> privateSignatureFor: aMethodMirror [
 				nextPutAll: ((connection web3 sha3_256: aMethodMirror signature) copyFrom: 1 to: 8) ]
 ]
 
-{ #category : #'contract - deploying' }
+{ #category : #'low-level api - contract - deploying' }
 FogSession >> receiptFor: aTransactionHash [
 	^ self ensureMonitor receiptFor: aTransactionHash
 ]
 
-{ #category : #'contract - deploying' }
+{ #category : #'low-level api - contract - deploying' }
 FogSession >> receiptForTransaction: aTransactionHash [
 	^ connection eth getTransactionReceipt: aTransactionHash
 ]
@@ -512,7 +547,7 @@ FogSession >> registerInstantiationWithReceipt: transactionHash ofContractDescri
 	^ contractInstance
 ]
 
-{ #category : #'contract - remote activation private' }
+{ #category : #'low-level api - contract - remote activation private' }
 FogSession >> resolveAtBlock: aBlockHash functionalActivation: aMethodMirror on: anETHContractInstance arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
 	| returnValue |
 	returnValue := connection eth
@@ -527,7 +562,7 @@ FogSession >> resolveAtBlock: aBlockHash functionalActivation: aMethodMirror on:
 	^ self privateDecode: returnValue for: aMethodMirror
 ]
 
-{ #category : #'contract - remote activation private' }
+{ #category : #'low-level api - contract - remote activation private' }
 FogSession >> resolveFunctionalActivation: aMethodMirror on: anETHContractInstance arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
 	^ self
 		resolveAtBlock: #latest
@@ -540,7 +575,7 @@ FogSession >> resolveFunctionalActivation: aMethodMirror on: anETHContractInstan
 		amount: anAmount
 ]
 
-{ #category : #'contract - remote activation private' }
+{ #category : #'low-level api - contract - remote activation private' }
 FogSession >> resolveTransactionalActivation: aMethodMirror on: anETHContractInstance arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
 	^ connection eth
 		sendTransaction:

@@ -6,7 +6,7 @@ Class {
 
 { #category : #tests }
 FogAllKnownContractsCanBeDeployed >> contractDescriptions [
-	^ FogTestingContractProvider contractsDescriptions: session
+	^ FogTestingContractProvider contractDescriptions
 ]
 
 { #category : #initialization }

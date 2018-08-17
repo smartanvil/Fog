@@ -67,7 +67,7 @@ FogCachedSession >> findContractDescriptionForBinaryCode: aCode [
 { #category : #'access db - contract' }
 FogCachedSession >> findContractDescriptionForSourceCode: aCode [
 	| ast |
-	ast := self astFor: aCode.
+	ast := SolidityParser parseStream: aCode readStream.
 	^ self cache detectContractDescriptions: [ :a | a ast = ast ] ifNoneCreate: [ super findContractDescriptionForSourceCode: aCode ]
 ]
 

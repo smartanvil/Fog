@@ -25,51 +25,20 @@ FogUtils >> chopBlanks: aString [
 
 { #category : #compiling }
 FogUtils >> compileSolidity: sourceCodeFile [
-	| command return compiled compiledStream binary binaryRuntime abi ast tmp2 |
-	tmp2 := (FogConfiguration fogCompilingFolder
-		/ ('out{1}.txt' format: {sourceCodeFile hash asString})) fullName asSymbol.
+	| command return compilationOutput |
+	compilationOutput := (FogConfiguration fogCompilingFolder / ('out{1}.txt' format: {sourceCodeFile hash asString})) fullName asSymbol.
 	command := ' cd {3}; solc --abi --bin --bin-runtime {1} >{2}'
 		format:
 			{sourceCodeFile fullName.
-			tmp2.
+			compilationOutput.
 			sourceCodeFile asFileReference parent fullName}.
 	return := [ :spec | 
 	spec
 		command: 'bash';
 		option: '-c';
 		argument: command ] asOSTask future.
-	compiled := return synchronizeTimeout: 10 seconds.
-	compiled := tmp2 asFileReference readStream upToEnd.
-	compiledStream := (((((compiled copyReplaceAll: String lf with: '')
-		copyReplaceAll: 'Binary of the runtime part:'
-		with: '^') copyReplaceAll: 'Binary:' with: '^') copyReplaceAll: 'Contract JSON ABI' with: '^')
-		copyReplaceAll: ' '
-		with: '') readStream.
-	compiledStream upTo: $^.
-	binary := compiledStream upTo: $^.
-	binaryRuntime := compiledStream upTo: $^.
-	abi := compiledStream upTo: $^.
-	tmp2 asFileReference delete.
-	command := ' cd {3}; solc --ast-json {1} 1> {2} '
-		format:
-			{sourceCodeFile fullName.
-			tmp2.
-			sourceCodeFile asFileReference parent fullName}.
-	return := [ :spec | 
-	spec
-		command: 'bash';
-		option: '-c';
-		argument: command ] asOSTask future.
-	compiled := return synchronizeTimeout: 30 seconds.
-	compiledStream := tmp2 asFileReference readStream.
-	compiledStream
-		upToAll: '=======';
-		upToAll: '======='.
-	ast := compiledStream upToAll: '======= SimpleStorage ======='.
-	^ {(#binary -> binary).
-	(#runtime -> binaryRuntime).
-	(#abi -> (NeoJSONReader fromString: abi)).
-	(#ast -> (NeoJSONReader fromString: ast))} asDictionary
+	return synchronizeTimeout: 10 seconds.
+	^ self loadSolcDataFromStream: compilationOutput asFileReference readStream
 ]
 
 { #category : #compiling }
@@ -138,10 +107,9 @@ FogUtils >> formatEtherscanContractAddress: address [
 ]
 
 { #category : #compiling }
-FogUtils >> loadSolcFile: aFileReference [
-	| dic compiled infoFor |
+FogUtils >> loadSolcDataFromStream: compiled [
+	| dic infoFor |
 	dic := Dictionary new.
-	compiled := aFileReference readStream.
 	compiled upToAll: '======='.
 	[ compiled atEnd ]
 		whileFalse: [ | binary runtime abi |
@@ -156,4 +124,9 @@ FogUtils >> loadSolcFile: aFileReference [
 			(dic at: infoFor) at: #runtime put: runtime.
 			(dic at: infoFor) at: #abi put: abi ].
 	^ dic
+]
+
+{ #category : #compiling }
+FogUtils >> loadSolcFile: aFileReference [
+	^ self loadSolcDataFromStream: aFileReference readStream
 ]

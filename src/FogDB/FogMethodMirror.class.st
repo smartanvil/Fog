@@ -88,8 +88,8 @@ FogMethodMirror >> selectorWithNames [
 	parameters types size = 1
 		ifTrue: [ ^ (name , ':' , (parameters variables at: 1)) asSymbol ].
 	^ ((2 to: parameters types size)
-		inject: name , ':'
-		into: [ :acc :each | acc , 'and:' , (parameters variables at: each) ]) asSymbol
+		inject: name , ':' , (parameters variables at: 1)
+		into: [ :acc :each | acc , ' and:' , (parameters variables at: each) ]) asSymbol
 ]
 
 { #category : #accessing }

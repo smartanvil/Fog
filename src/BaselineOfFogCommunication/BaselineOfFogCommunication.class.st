@@ -1,7 +1,7 @@
 Class {
 	#name : #BaselineOfFogCommunication,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfFogCommunication'
+	#category : #BaselineOfFogCommunication
 }
 
 { #category : #baselines }
@@ -17,6 +17,7 @@ BaselineOfFogCommunication >> baseline: spec [
 						className: #ConfigurationOfNeoJSON;
 						version: #stable;
 						repository: 'http://mc.stfx.eu/Neo' ].
+			spec baseline: 'ParametrizedTests' with: [ spec repository: 'github://tesonep/ParametrizedTests' ].
 			spec package: #FogCommunication with: [ spec requires: #('TaskItShell') ].
-			spec package: #FogCommunicationTests with: [ spec requires: #('FogCommunication') ] ]
+			spec package: #FogCommunicationTests with: [ spec requires: #('FogCommunication' 'ParametrizedTests') ] ]
 ]

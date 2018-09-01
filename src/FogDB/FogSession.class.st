@@ -322,6 +322,15 @@ FogSession >> findBlockByHash: aBlockHash full: aBoolean [
 ]
 
 { #category : #'access db - blocks' }
+FogSession >> findBlockByHashOrNumber: aBlockId full: aBoolean [
+	(aBlockId isString or: [ aBlockId isNil ])
+		ifTrue: [ ^ self findBlockByHash: aBlockId asAddress full: aBoolean ].
+	aBlockId isNumber
+		ifTrue: [ ^ self findBlockByNumber: aBlockId full: aBoolean ].
+	UQLLError signal: ' invalid id ' , aBlockId asString
+]
+
+{ #category : #'access db - blocks' }
 FogSession >> findBlockByNumber: aBlockBumber full: aBoolean [
 	^ self createBlockFor: (self eth getBlockByNumber: aBlockBumber full: aBoolean) full: aBoolean
 ]

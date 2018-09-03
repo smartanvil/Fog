@@ -139,6 +139,11 @@ FogTransaction >> printOn: aStream [
 ]
 
 { #category : #private }
+FogTransaction >> privateAddress [
+	^ hash 
+]
+
+{ #category : #private }
 FogTransaction >> privateTransactionHash [
 	^ hash 
 ]

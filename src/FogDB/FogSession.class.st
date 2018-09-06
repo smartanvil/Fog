@@ -125,7 +125,7 @@ FogSession >> createBlockFor: dataSource full: isFull [
 
 { #category : #'private - objects creation' }
 FogSession >> createContractAccountFor: compiledCode and: hashAccount [
-	^ (self findContractDescriptionForBinaryCode: compiledCode) at: hashAccount 
+	^ (self findContractDescriptionForBinaryCode: compiledCode) at: hashAccount
 ]
 
 { #category : #'private - objects creation' }

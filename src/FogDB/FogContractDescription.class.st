@@ -37,6 +37,14 @@ FogContractDescription >> ast [
 ]
 
 { #category : #accessing }
+FogContractDescription >> at: anAddress [
+	^ FogContractInstance new
+		address: anAddress;
+		contract: self;
+		yourself
+]
+
+{ #category : #accessing }
 FogContractDescription >> binary [
 	^ binary
 ]
@@ -50,7 +58,8 @@ FogContractDescription >> binary: aString [
 FogContractDescription >> codeMatchesWith: aCode [
 	| addCode |
 	addCode := aCode asAddress.
-	^ binary = addCode or: [ runtime = addCode or: [ ( addCode size/(addCode minus: runtime) size ) asFloat < self similarityThreshold. ] ]
+	^ binary = addCode
+		or: [ runtime isNotNil and: [ runtime = addCode or: [ (addCode size / (addCode minus: runtime) size) asFloat < self similarityThreshold ] ] ]
 ]
 
 { #category : #accessing }
@@ -235,6 +244,11 @@ FogContractDescription >> printOn: aStream [
 	^ aStream
 		nextPutAll: 'Contract ';
 		nextPutAll: (name ifNil: [ 'Unknown' ])
+]
+
+{ #category : #'cache polimorfism' }
+FogContractDescription >> privateAddress [
+	^ self hash 
 ]
 
 { #category : #accessing }

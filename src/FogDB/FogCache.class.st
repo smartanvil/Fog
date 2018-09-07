@@ -32,10 +32,7 @@ FogCache class >> newSessionCache [
 
 { #category : #accessing }
 FogCache class >> reset [
-	| childs |
-	childs := current ifNil: [ {} ] ifNotNil: [ current caches ].
-	current := nil.
-	childs do: [ :c | self current adoptCache: c ]
+	current := nil
 ]
 
 { #category : #'as yet unclassified' }
@@ -135,7 +132,10 @@ FogCache >> initialize [
 { #category : #'instance creation' }
 FogCache >> newCollection [
 	^ self caching
-		ifTrue: [ Dictionary new ]
+		ifTrue: [ LRUCache new
+				maximumWeight: 200;
+				beThreadSafe;
+				yourself ]
 		ifFalse: [ FogFakeSet new ]
 ]
 
@@ -149,6 +149,7 @@ FogCache >> newSubCache: aSubCache [
 FogCache >> privateOnCacheCollection: aCacheTag detect: anAddress ifNoneCreate: aBlockInitialized [
 	| collection |
 	collection := self cached: aCacheTag.
+
 	^ collection at: anAddress ifAbsent: [ self register: aBlockInitialized value into: aCacheTag ]
 ]
 

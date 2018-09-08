@@ -414,12 +414,12 @@ FogSession >> findLastBlock [
 
 { #category : #'access db - package' }
 FogSession >> findPackageNamed: aName [
-	^ self findPackageReference: aName asFogReference
+	^ self findPackageReference: aName  
 ]
 
 { #category : #'access db - package' }
 FogSession >> findPackageReference: aReference [
-	^ aReference fetchFrom: packages 
+	^  packages  at: aReference 
 ]
 
 { #category : #'access db - package' }
@@ -481,6 +481,11 @@ FogSession >> initializeWith: aConnection [
 	connection := aConnection.
 	packages := Dictionary new.
 	self ensureMonitor
+]
+
+{ #category : #'access db - package' }
+FogSession >> isRegistered: aPackageName [
+	^ packages includesKey: aPackageName
 ]
 
 { #category : #'access db - package' }

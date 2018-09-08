@@ -54,6 +54,11 @@ FogContractDescription >> binary: aString [
 	binary := aString asAddress
 ]
 
+{ #category : #gttools }
+FogContractDescription >> binaryHash [
+	^ (MD5 hashStream: binary asByteArray readStream) hex
+]
+
 { #category : #testing }
 FogContractDescription >> codeMatchesWith: aCode [
 	| addCode |
@@ -139,7 +144,7 @@ FogContractDescription >> inspectConstructor: composite [
 
 { #category : #gttools }
 FogContractDescription >> inspectDecompilation: composite [
-	<gtInspectorPresentationOrder: 8>
+	"<gtInspectorPresentationOrder: 8>"
 	composite text
 		title: 'Runtime Decompilation';
 		display: [ | decompiler stream |
@@ -266,6 +271,11 @@ FogContractDescription >> runtime: aString [
 	runtime := aString asAddress
 ]
 
+{ #category : #gttools }
+FogContractDescription >> runtimeHash [
+	^ (MD5 hashStream: runtime asByteArray readStream) hex
+]
+
 { #category : #'as yet unclassified' }
 FogContractDescription >> similarityThreshold [
 	^ 0
@@ -273,7 +283,7 @@ FogContractDescription >> similarityThreshold [
 
 { #category : #accessing }
 FogContractDescription >> source [
-	^ source
+	^ package source 
 ]
 
 { #category : #accessing }

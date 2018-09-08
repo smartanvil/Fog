@@ -189,6 +189,11 @@ FogMirrorSmaccASTBasedBuilder >> visitRootSource: aSolRootSourceNode [
 	aSolRootSourceNode sourceunits acceptVisitor: self
 ]
 
+{ #category : #'visit tokens' }
+FogMirrorSmaccASTBasedBuilder >> visitSmaccToken: aSmaCCToken [
+	^ aSmaCCToken value asSymbol
+]
+
 { #category : #'as yet unclassified' }
 FogMirrorSmaccASTBasedBuilder >> visitStateVariableDeclaration: aSolStateVariableDeclarationNode [
 	| slot |

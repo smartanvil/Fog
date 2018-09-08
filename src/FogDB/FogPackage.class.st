@@ -38,6 +38,11 @@ FogPackage >> descriptions [
 ]
 
 { #category : #accessing }
+FogPackage >> index [
+	^ (MD5 hashStream: source readStream) hex
+]
+
+{ #category : #accessing }
 FogPackage >> initialize [
 	super initialize .
 	descriptions := Set new . 
@@ -56,6 +61,11 @@ FogPackage >> name: aString [
 { #category : #accessing }
 FogPackage >> reference [
 	^ FogReference new / name
+]
+
+{ #category : #accessing }
+FogPackage >> source [
+	^ source
 ]
 
 { #category : #accessing }

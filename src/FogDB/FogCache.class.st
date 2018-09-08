@@ -132,10 +132,10 @@ FogCache >> initialize [
 { #category : #'instance creation' }
 FogCache >> newCollection [
 	^ self caching
-		ifTrue: [ LRUCache new
-				maximumWeight: 200;
+		ifTrue: [ Dictionary new	"LRUCache new
+				maximumWeight: 2000000;
 				beThreadSafe;
-				yourself ]
+				yourself" ]
 		ifFalse: [ FogFakeSet new ]
 ]
 

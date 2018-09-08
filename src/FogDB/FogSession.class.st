@@ -69,7 +69,15 @@ FogSession >> apply: aMethodMirror on: anETHContractInstance at: aBlockHash argu
 { #category : #'low-level api - contract - remote activation' }
 FogSession >> apply: aMethodMirror on: anETHContractInstance at: aBlockHash arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
 	^ aMethodMirror isStateModifier
-		ifTrue: [ self error: ' Selective block method activation is only available for querying methods' ]
+		ifTrue: [ self assert: aBlockHash == #latest.
+			self
+				resolveTransactionalActivation: aMethodMirror
+				on: anETHContractInstance
+				arguments: aCollection
+				from: anAccount
+				gas: aGasAmount
+				gasPrice: aGasPrice
+				amount: anAmount ]
 		ifFalse: [ self
 				resolveAtBlock: aBlockHash
 				functionalActivation: aMethodMirror
@@ -608,7 +616,8 @@ FogSession >> resolveFunctionalActivation: aMethodMirror on: anETHContractInstan
 
 { #category : #'low-level api - contract - remote activation private' }
 FogSession >> resolveTransactionalActivation: aMethodMirror on: anETHContractInstance arguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
-	^ connection eth
+	| receiptHash |
+	receiptHash := connection eth
 		sendTransaction:
 			(FogCallDefinition new
 				from: anAccount address;
@@ -616,5 +625,6 @@ FogSession >> resolveTransactionalActivation: aMethodMirror on: anETHContractIns
 				gas: aGasAmount priced: aGasPrice;
 				value: anAmount;
 				data: (self privateEncode: aMethodMirror arguments: aCollection);
-				yourself)
+				yourself).
+	^ self receiptFor: receiptHash
 ]

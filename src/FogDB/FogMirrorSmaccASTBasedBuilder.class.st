@@ -26,10 +26,8 @@ FogMirrorSmaccASTBasedBuilder >> buildInto: aFogContractMirror [
 { #category : #'as yet unclassified' }
 FogMirrorSmaccASTBasedBuilder >> createConstructor: aSolFunctionDefinitionNode [
 	| input parameters |
-	input := aSolFunctionDefinitionNode parameters parameters collect: [ :p | self halt ].
-
-	"
-	 identifierTokens with: aSolFunctionDefinitionNode param_list types collect: [ :name :type | name -> (types at: type) ]."
+	input := aSolFunctionDefinitionNode parameters parameters
+		collect: [ :p | (p identifier acceptVisitor: self) -> (p type acceptVisitor: self) ].
 	parameters := FogTupleType new
 		types: input;
 		yourself.
@@ -110,7 +108,7 @@ FogMirrorSmaccASTBasedBuilder >> visitElementaryTypeName: aSolElementaryTypeName
 		ifFalse: [ FogSimpleType new
 				name: symbol;
 				yourself ].
-	types at: aSolElementaryTypeNameNode ifAbsentPut: [ type ]
+	^types at: aSolElementaryTypeNameNode ifAbsentPut: [ type ]
 ]
 
 { #category : #'as yet unclassified' }

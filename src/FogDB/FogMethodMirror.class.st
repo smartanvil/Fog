@@ -125,6 +125,18 @@ FogMethodMirror >> using: aSession applyOn: anETHContractInstance at: aBlockHash
 
 { #category : #'as yet unclassified' }
 FogMethodMirror >> using: aSession applyOn: anETHContractInstance valueWithArguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice [
+	^ self
+		using: aSession
+		applyOn: anETHContractInstance
+		valueWithArguments: aCollection
+		from: anAccount
+		gas: aGasAmount
+		gasPrice: aGasPrice
+		amount: 0
+]
+
+{ #category : #'as yet unclassified' }
+FogMethodMirror >> using: aSession applyOn: anETHContractInstance valueWithArguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
 	^ aSession
 		apply: self
 		on: anETHContractInstance
@@ -132,5 +144,5 @@ FogMethodMirror >> using: aSession applyOn: anETHContractInstance valueWithArgum
 		from: anAccount
 		gas: aGasAmount
 		gasPrice: aGasPrice
-		amount: 0
+		amount: anAmount
 ]

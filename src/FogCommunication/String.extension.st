@@ -17,3 +17,8 @@ String >> asBKNumber [
 				ifFalse: [ '16r' , self ] ].
 	^ converting asNumber
 ]
+
+{ #category : #'*FogCommunication' }
+String >> asPackingAddress [
+	^ self
+]

@@ -74,6 +74,7 @@ FogContractProxyBuilder >> buildTraitName [
 { #category : #'building methods' }
 FogContractProxyBuilder >> compilableClassMethod: aFogMethodMirror [
 	| variables space|
+
 		space := aFogMethodMirror hasParameters
 		ifTrue: [ ' session: aSession ' ]
 		ifFalse: [ 'Session: aSession ' ].

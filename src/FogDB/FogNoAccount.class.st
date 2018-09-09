@@ -41,3 +41,8 @@ FogNoAccount >> initialize [
 	super initialize. 
 	name := ' No Account '.
 ]
+
+{ #category : #equality }
+FogNoAccount >> isAccount [
+	^ false
+]

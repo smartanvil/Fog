@@ -58,6 +58,11 @@ FogAccount >> hash [
 ]
 
 { #category : #equality }
+FogAccount >> isAccount [
+	^ true
+]
+
+{ #category : #equality }
 FogAccount >> isContract [
 	^ false
 ]

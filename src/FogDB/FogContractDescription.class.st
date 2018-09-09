@@ -84,7 +84,7 @@ FogContractDescription >> hasAbi [
 
 { #category : #testing }
 FogContractDescription >> hasAst [
-	^ self ast isNotNil 
+	^ package isNotNil and: [ package ast isNotNil ]
 ]
 
 { #category : #testing }

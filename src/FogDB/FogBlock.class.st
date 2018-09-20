@@ -238,6 +238,11 @@ FogBlock >> printOn: aStream [
 ]
 
 { #category : #private }
+FogBlock >> privateAddress [
+	^ blockHash
+]
+
+{ #category : #private }
 FogBlock >> privateBlockHash [
 	^ blockHash
 ]

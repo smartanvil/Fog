@@ -32,10 +32,7 @@ FogCache class >> newSessionCache [
 
 { #category : #accessing }
 FogCache class >> reset [
-	| childs |
-	childs := current ifNil: [ {} ] ifNotNil: [ current caches ].
-	current := nil.
-	childs do: [ :c | self current adoptCache: c ]
+	current := nil
 ]
 
 { #category : #'as yet unclassified' }
@@ -65,7 +62,7 @@ FogCache >> blocks [
 
 { #category : #accessing }
 FogCache >> cached: aSymbol [
-	^ (cache at: aSymbol ifAbsentPut: [ self newCollection ]) copy
+	^ (cache at: aSymbol ifAbsentPut: [ self newCollection ]) 
 ]
 
 { #category : #'convenience-access' }
@@ -116,28 +113,8 @@ FogCache >> detectBlocks: aBlock ifNoneCreate: aBlockInitialized [
 ]
 
 { #category : #'cache management' }
-FogCache >> detectContract: aBlock ifNoneCreate: aBlockInitialized [
-	^ self privateOnCacheCollection: #contracts detect: aBlock ifNoneCreate: aBlockInitialized
-]
-
-{ #category : #'cache management' }
 FogCache >> detectContractBind: aBlock ifNoneCreate: aBlockInitialized [
 	^ self privateOnCacheCollection: #contractBinds detect: aBlock ifNoneCreate: aBlockInitialized
-]
-
-{ #category : #'cache management' }
-FogCache >> detectContractDescriptions: aBlock ifNoneCreate: aBlockInitialized [
-	^ self privateOnCacheCollection: #contractDescriptions detect: aBlock ifNoneCreate: aBlockInitialized
-]
-
-{ #category : #'cache management' }
-FogCache >> detectContractInstance: aBlock ifNoneCreate: aBlockInitialized [
-	^ self privateOnCacheCollection: #contractInstances detect: aBlock ifNoneCreate: aBlockInitialized
-]
-
-{ #category : #'cache management' }
-FogCache >> detectFileContractDescriptionsOrNil: aBlock [
-	^ self contractDescriptions detect: [ :c | c isFileBased and: [ aBlock value: c ] ] ifNone: [ nil ]
 ]
 
 { #category : #'cache management' }
@@ -155,7 +132,10 @@ FogCache >> initialize [
 { #category : #'instance creation' }
 FogCache >> newCollection [
 	^ self caching
-		ifTrue: [ OrderedCollection  new ]
+		ifTrue: [ Dictionary new	"LRUCache new
+				maximumWeight: 2000000;
+				beThreadSafe;
+				yourself" ]
 		ifFalse: [ FogFakeSet new ]
 ]
 
@@ -166,10 +146,11 @@ FogCache >> newSubCache: aSubCache [
 ]
 
 { #category : #private }
-FogCache >> privateOnCacheCollection: aCacheTag detect: aBlock ifNoneCreate: aBlockInitialized [
+FogCache >> privateOnCacheCollection: aCacheTag detect: anAddress ifNoneCreate: aBlockInitialized [
 	| collection |
 	collection := self cached: aCacheTag.
-	^ collection detect: aBlock ifNone: [ self register: aBlockInitialized value into: aCacheTag ]
+
+	^ collection at: anAddress ifAbsent: [ self register: aBlockInitialized value into: aCacheTag ]
 ]
 
 { #category : #private }
@@ -179,7 +160,7 @@ FogCache >> privateWritableCache: aSymbol [
 
 { #category : #'convenience - register' }
 FogCache >> register: anObject into: aCacheTag [
-	^ (self privateWritableCache: aCacheTag) add: anObject
+	^ (self privateWritableCache: aCacheTag) at: anObject privateAddress put: anObject
 ]
 
 { #category : #'convenience - register' }
@@ -221,6 +202,20 @@ FogCache >> registerTransaction: aTransaction [
 FogCache >> resetWithParent: aParent [
 	self initialize.
 	parent := aParent
+]
+
+{ #category : #private }
+FogCache >> scanBlocks: aBlockCriteria ifNoneCreate: aBlockInitialized [
+	| collection |
+	collection := self cached: #blocks.
+	^ collection values detect: aBlockCriteria ifNone: [ self register: aBlockInitialized value into: #blocks ]
+]
+
+{ #category : #private }
+FogCache >> scanContractDescriptions: aBlockCriteria ifNoneCreate: aBlockInitialized [
+	| collection |
+	collection := self cached: #contractDescriptions.
+	^ collection values detect:  aBlockCriteria ifNone: [ self register: aBlockInitialized value into: #contractDescriptions ]
 ]
 
 { #category : #'convenience-access' }

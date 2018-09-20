@@ -80,7 +80,7 @@ FogArbitraryAddressesTestCase >> createContractDescription [
 		nextPutAll: code;
 		flush;
 		close.
-	^ session findContractDescriptionForFileReference: file entry
+	^ (session loadPackageForFileReference: file entry asFileReference) descriptions anyOne. 
 ]
 
 { #category : #'as yet unclassified' }

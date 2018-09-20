@@ -6,7 +6,7 @@ Class {
 
 { #category : #tests }
 FogAllKnownContractsCanBeDeployed >> contractDescriptions [
-	^ FogCache current contractDescriptions
+	^ FogTestingContractProvider contractDescriptions
 ]
 
 { #category : #initialization }
@@ -27,7 +27,7 @@ FogAllKnownContractsCanBeDeployed >> testAllEmptyConstructorsDeploy [
 				applyOn: d
 				valueWithArguments: {}
 				from: account
-				gas: 300000
+				gas: 3000000
 				gasPrice: 60 ].
 	instances do: [ :i | i waitIsReady ].
 	self assert: (instances allSatisfy: #isReady).
@@ -35,7 +35,9 @@ FogAllKnownContractsCanBeDeployed >> testAllEmptyConstructorsDeploy [
 		collect: [ :i | 
 			self contractDescriptions
 				detect: [ :c | c codeMatchesWith: i contract binary ] ].
-	self assert: detectedContracts equals: (instances collect: #contract)
+			
+
+	self assert: (detectedContracts collect: #ast) equals: (instances collect:[ : i | i contract ast ])
 ]
 
 { #category : #tests }
@@ -50,7 +52,7 @@ FogAllKnownContractsCanBeDeployed >> testAllFullUsageConstructorsDeploy [
 				applyOn: d
 				valueWithArguments: {'arbitraryString'}
 				from: account
-				gas: 300000
+				gas: 3000000
 				gasPrice: 60 ].
 	instances do: [ :i | i waitIsReady ].
 	self assert: (instances allSatisfy: #isReady).

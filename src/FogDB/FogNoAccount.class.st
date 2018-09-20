@@ -40,5 +40,9 @@ FogNoAccount >> hash [
 FogNoAccount >> initialize [
 	super initialize. 
 	name := ' No Account '.
-	hash := name hash asString.
+]
+
+{ #category : #equality }
+FogNoAccount >> isAccount [
+	^ false
 ]

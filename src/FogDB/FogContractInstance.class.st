@@ -18,6 +18,11 @@ FogContractInstance class >> kindOfAccount [
 ]
 
 { #category : #accessing }
+FogContractInstance >> binaryHash [
+	^ contract binaryHash
+]
+
+{ #category : #accessing }
 FogContractInstance >> contract [
 	^ contract
 ]

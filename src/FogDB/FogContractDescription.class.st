@@ -8,14 +8,14 @@ Class {
 		'binary',
 		'runtime',
 		'abi',
-		'ast',
 		'name',
 		'mirror',
 		'methods',
-		'aTypeSet',
-		'contract'
+		'contract',
+		'source',
+		'package'
 	],
-	#category : 'FogDB-Meta-Description'
+	#category : #'FogDB-Meta-Description'
 }
 
 { #category : #accessing }
@@ -30,17 +30,14 @@ FogContractDescription >> abi: aString [
 
 { #category : #accessing }
 FogContractDescription >> ast [
+	| ast |
+	ast := (package ast sourceunits select: #isContract)
+		detect: [ :d | d identifier value value = name ].
 	^ ast
 ]
 
 { #category : #accessing }
-FogContractDescription >> ast: anAST [
-	ast := anAST
-]
-
-{ #category : #'instance creation' }
 FogContractDescription >> at: anAddress [
-	self error: 'shouldnt call this'.
 	^ FogContractInstance new
 		address: anAddress;
 		contract: self;
@@ -57,11 +54,17 @@ FogContractDescription >> binary: aString [
 	binary := aString asAddress
 ]
 
+{ #category : #gttools }
+FogContractDescription >> binaryHash [
+	^ (MD5 hashStream: binary asByteArray readStream) hex
+]
+
 { #category : #testing }
 FogContractDescription >> codeMatchesWith: aCode [
 	| addCode |
 	addCode := aCode asAddress.
-	^ binary = addCode or: [ runtime = addCode or: [ ( addCode size/(addCode minus: runtime) size ) asFloat < self similarityThreshold. ] ]
+	^ binary = addCode
+		or: [ runtime isNotNil and: [ runtime = addCode or: [ (addCode size / (addCode minus: runtime) size) asFloat < self similarityThreshold ] ] ]
 ]
 
 { #category : #accessing }
@@ -74,11 +77,6 @@ FogContractDescription >> createContract [
 	^ FogContractProxyBuilder new description: self; createContractProxy 
 ]
 
-{ #category : #accessing }
-FogContractDescription >> fromFile [
-	^ ' no-file '.
-]
-
 { #category : #testing }
 FogContractDescription >> hasAbi [
 	^ abi isNotNil
@@ -86,7 +84,7 @@ FogContractDescription >> hasAbi [
 
 { #category : #testing }
 FogContractDescription >> hasAst [
-	^ ast isNotNil
+	^ package isNotNil and: [ package ast isNotNil ]
 ]
 
 { #category : #testing }
@@ -97,6 +95,11 @@ FogContractDescription >> hasBinary [
 { #category : #testing }
 FogContractDescription >> hasRuntime [
 	^ runtime isNotNil
+]
+
+{ #category : #accessing }
+FogContractDescription >> hasSource [
+	^ source isNotNil.
 ]
 
 { #category : #gttools }
@@ -141,7 +144,7 @@ FogContractDescription >> inspectConstructor: composite [
 
 { #category : #gttools }
 FogContractDescription >> inspectDecompilation: composite [
-	<gtInspectorPresentationOrder: 8>
+	"<gtInspectorPresentationOrder: 8>"
 	composite text
 		title: 'Runtime Decompilation';
 		display: [ | decompiler stream |
@@ -215,10 +218,15 @@ FogContractDescription >> isFileBased [
 { #category : #accessing }
 FogContractDescription >> mirror [
 	mirror := FogMirrorBuilder new
-		ast: ast;
+		ast: self ast;
 		abi: abi;
 		mirror.
 	^ mirror
+]
+
+{ #category : #accessing }
+FogContractDescription >> name [
+	^ name 
 ]
 
 { #category : #accessing }
@@ -226,11 +234,31 @@ FogContractDescription >> name: aString [
 	name := aString
 ]
 
+{ #category : #accessing }
+FogContractDescription >> package [
+	^ package
+]
+
+{ #category : #accessing }
+FogContractDescription >> package: aPackage [
+	package := aPackage
+]
+
 { #category : #printing }
 FogContractDescription >> printOn: aStream [
 	^ aStream
 		nextPutAll: 'Contract ';
 		nextPutAll: (name ifNil: [ 'Unknown' ])
+]
+
+{ #category : #'cache polimorfism' }
+FogContractDescription >> privateAddress [
+	^ self hash 
+]
+
+{ #category : #accessing }
+FogContractDescription >> reference [
+	^ package reference / name asSymbol
 ]
 
 { #category : #accessing }
@@ -243,6 +271,11 @@ FogContractDescription >> runtime: aString [
 	runtime := aString asAddress
 ]
 
+{ #category : #gttools }
+FogContractDescription >> runtimeHash [
+	^ (MD5 hashStream: runtime asByteArray readStream) hex
+]
+
 { #category : #'as yet unclassified' }
 FogContractDescription >> similarityThreshold [
 	^ 0
@@ -250,15 +283,21 @@ FogContractDescription >> similarityThreshold [
 
 { #category : #accessing }
 FogContractDescription >> source [
-	^ 'not-source'
+	^ package source 
 ]
 
 { #category : #accessing }
 FogContractDescription >> types [
-	^ ast types
+	^ self ast types
 ]
 
 { #category : #accessing }
 FogContractDescription >> versionHash [
-	^ binary hash asString
+	^ '.'
+		join:
+			{(runtime ifNotNil: [ self runtime hash ] ifNil: [ 0 ]).
+			(binary ifNotNil: [ self binary hash ] ifNil: [ 0 ]).
+			(self hasSource
+				ifTrue: [ self source hash ]
+				ifFalse: [ 0 ])}
 ]

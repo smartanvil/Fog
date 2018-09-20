@@ -38,7 +38,7 @@ TFogPack >> pack: aCollection withTypes: typeCollection [
 
 { #category : #pack }
 TFogPack >> packAddress: aString [ 
-	^ aString asAddress 
+	^ aString asPackingAddress 
 ]
 
 { #category : #pack }

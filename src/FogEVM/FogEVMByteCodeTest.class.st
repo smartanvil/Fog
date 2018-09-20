@@ -10,7 +10,7 @@ Class {
 { #category : #initialization }
 FogEVMByteCodeTest >> setUp [
 	super setUp.
-	contractDescription := FogCache current detectFileContractDescriptionsOrNil: [ :a | a fromFile basename = 'public_3states_poll.sol' ]
+	contractDescription := FogTestingContractProvider public3StatesPollContract: session
 ]
 
 { #category : #initialization }

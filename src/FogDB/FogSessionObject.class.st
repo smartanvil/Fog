@@ -10,16 +10,6 @@ Class {
 	#category : 'FogDB-Domain'
 }
 
-{ #category : #'as yet unclassified' }
-FogSessionObject class >> collectionSelector [
-	^ self subclassResponsibility
-]
-
-{ #category : #accessing }
-FogSessionObject class >> session [
-	^ FogConnection createDefaultConnection session.
-]
-
 { #category : #accessing }
 FogSessionObject >> session [
 	^ session

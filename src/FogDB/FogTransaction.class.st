@@ -22,9 +22,11 @@ Class {
 		'to',
 		'transactionIndex',
 		'v',
-		'block'
+		'block',
+		'toAddress',
+		'fromAddress'
 	],
-	#category : 'FogDB-Domain'
+	#category : #'FogDB-Domain'
 }
 
 { #category : #'as yet unclassified' }
@@ -79,12 +81,19 @@ FogTransaction >> blockNumber: aString [
 
 { #category : #accessing }
 FogTransaction >> from [
-	^ from
+	^ from ifNil: [ self session findAccountByHash: fromAddress blockNumber: blockNumber ]
 ]
 
 { #category : #accessing }
-FogTransaction >> from: aString [
-	from := self session findAccountByHash: aString blockNumber: blockNumber
+FogTransaction >> from: aValue [
+	aValue isString
+		ifTrue: [ fromAddress := aValue ]
+		ifFalse: [ from := aValue ]
+]
+
+{ #category : #accessing }
+FogTransaction >> fromAddress [
+	^ fromAddress
 ]
 
 { #category : #accessing }
@@ -133,9 +142,14 @@ FogTransaction >> nonce: aString [
 FogTransaction >> printOn: aStream [
 	^ ('{1} -> {2} ${3}'
 		format:
-			{(from ifNotNil: [ from name ] ifNil: [ '[From:Null]' ]).
-			(to ifNotNil: [ to name ] ifNil: [ '[To:Null]' ]).
+			{(fromAddress ifNotNil: [ fromAddress ] ifNil: [ '[From:Null]' ]).
+			(toAddress ifNotNil: [ toAddress ] ifNil: [ '[To:Null]' ]).
 			value asString}) printOn: aStream
+]
+
+{ #category : #private }
+FogTransaction >> privateAddress [
+	^ hash 
 ]
 
 { #category : #private }
@@ -166,12 +180,19 @@ FogTransaction >> timestamp [
 
 { #category : #accessing }
 FogTransaction >> to [
-	^to
+	^ to ifNil: [ to := self session findAccountByHash: toAddress blockNumber: blockNumber ]
 ]
 
 { #category : #accessing }
-FogTransaction >> to: aString [
-	to := self session findAccountByHash: aString blockNumber: blockNumber
+FogTransaction >> to: aValue [
+	aValue isString
+		ifTrue: [ toAddress := aValue ]
+		ifFalse: [ to := aValue ]
+]
+
+{ #category : #accessing }
+FogTransaction >> toAddress [
+	^ toAddress
 ]
 
 { #category : #accessing }

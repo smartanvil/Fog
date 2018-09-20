@@ -32,7 +32,7 @@ FogAccount >> = anObject [
 
 { #category : #equality }
 FogAccount >> address [
-	^ self privateAccountHash
+	^ self privateAddress
 ]
 
 { #category : #equality }
@@ -58,6 +58,11 @@ FogAccount >> hash [
 ]
 
 { #category : #equality }
+FogAccount >> isAccount [
+	^ true
+]
+
+{ #category : #equality }
 FogAccount >> isContract [
 	^ false
 ]
@@ -73,7 +78,7 @@ FogAccount >> name: anAccountName [
 ]
 
 { #category : #equality }
-FogAccount >> privateAccountHash [
+FogAccount >> privateAddress [
 	^ address
 ]
 

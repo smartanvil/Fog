@@ -27,10 +27,5 @@ FogConstantMirror >> using: session value: aContractBind at: aBlockTagNumberOrHa
 
 { #category : #'as yet unclassified' }
 FogConstantMirror >> value [
-	^ value 
-]
-
-{ #category : #accessing }
-FogConstantMirror >> value: aContractBind [
-	^ value 
+	^ self error: ' Should be using using:value:at:'
 ]

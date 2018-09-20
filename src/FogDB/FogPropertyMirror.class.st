@@ -80,8 +80,3 @@ FogPropertyMirror >> using: aSession value: aContractAddress at: aBlockTagNumber
 		from: aContractAddress
 		at: aBlockTagNumberOrHash
 ]
-
-{ #category : #accessing }
-FogPropertyMirror >> value: aContractInstance [
-	^ layout fetch: self from: aContractInstance
-]

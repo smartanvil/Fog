@@ -20,5 +20,5 @@ String >> asBKNumber [
 
 { #category : #'*FogCommunication' }
 String >> asPackingAddress [
-	^ self
+	^ self copyReplaceAll: '0x' with: ''
 ]

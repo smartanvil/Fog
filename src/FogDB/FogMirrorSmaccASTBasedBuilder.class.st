@@ -10,9 +10,11 @@ Class {
 		'variableSlots',
 		'mirror',
 		'methods',
-		'constructor'
+		'constructor',
+		'events',
+		'modifiers'
 	],
-	#category : 'FogDB-Meta-Mirror'
+	#category : #'FogDB-Meta-Mirror'
 }
 
 { #category : #'as yet unclassified' }
@@ -35,6 +37,15 @@ FogMirrorSmaccASTBasedBuilder >> createConstructor: aSolFunctionDefinitionNode [
 		name: #constructor;
 		parameters: parameters;
 		yourself
+]
+
+{ #category : #'creating event' }
+FogMirrorSmaccASTBasedBuilder >> createEvent: aSolEventDefinitionNode [
+	| event params |
+	event := FogEventMirror new.
+	event name: (aSolEventDefinitionNode identifier acceptVisitor: self).
+	event parameters: (aSolEventDefinitionNode parameters parameters collect: [ :p | (p identifier acceptVisitor: self) -> (types at: p type) ]).
+	^ event
 ]
 
 { #category : #'as yet unclassified' }
@@ -67,7 +78,9 @@ FogMirrorSmaccASTBasedBuilder >> initialize [
 	types := Dictionary new.
 	variableSlots := OrderedCollection new.
 	contractSlots := OrderedCollection new.
-	methods := OrderedCollection new
+	methods := OrderedCollection new.
+	events := OrderedCollection new. 
+	modifiers := OrderedCollection new 
 ]
 
 { #category : #'as yet unclassified' }
@@ -88,7 +101,7 @@ FogMirrorSmaccASTBasedBuilder >> visitConstantDeclaration: aSolConstantDeclarati
 	| slot |
 	aSolConstantDeclarationNode type acceptVisitor: self.
 	slot := FogConstantMirror new
-		name: aSolConstantDeclarationNode identifierToken value;
+		name: aSolConstantDeclarationNode identifier value;
 		type: (types at: aSolConstantDeclarationNode type);
 		constant: aSolConstantDeclarationNode constantToken value.
 	contractSlots add: slot.
@@ -122,15 +135,10 @@ FogMirrorSmaccASTBasedBuilder >> visitEnumDefinition: aSolEnumDefinitionNode [
 ]
 
 { #category : #visiting }
-FogMirrorSmaccASTBasedBuilder >> visitEventDefinition: aSolEventDefinitionNode [ 
-	| event | 
-	event := FogEventMirror new .
-	aSolEventDefinitionNode indexed_param_list acceptVisitor: self. 
-	
-	event name: 	aSolEventDefinitionNode event_id value .
-	
-	event.
-	self events add: event. 
+FogMirrorSmaccASTBasedBuilder >> visitEventDefinition: aSolEventDefinitionNode [
+	| event |
+	aSolEventDefinitionNode parameters parameters acceptVisitor: self.
+	events add: (self createEvent: aSolEventDefinitionNode)
 ]
 
 { #category : #'as yet unclassified' }
@@ -145,6 +153,11 @@ FogMirrorSmaccASTBasedBuilder >> visitFunctionDefinition: aSolFunctionDefinition
 	aSolFunctionDefinitionNode isConstructor
 		ifTrue: [ constructor := self createConstructor: aSolFunctionDefinitionNode ]
 		ifFalse: [ methods add: (self createMethod: aSolFunctionDefinitionNode) ]
+]
+
+{ #category : #visiting }
+FogMirrorSmaccASTBasedBuilder >> visitIndexedParameter: aSolIndexedParameterNode [
+	aSolIndexedParameterNode type acceptVisitor: self
 ]
 
 { #category : #visitign }
@@ -227,4 +240,10 @@ FogMirrorSmaccASTBasedBuilder >> visitUserDefinedTypeName: aSolUserDefinedTypeNa
 	keyToDefinedType := (types keys select: [ :t | t isUserDefined ])
 		detect: [ :k | k identifier value = aSolUserDefinedTypeNameNode value value ].
 	types at: aSolUserDefinedTypeNameNode put: (types at: keyToDefinedType)
+]
+
+{ #category : #visiting }
+FogMirrorSmaccASTBasedBuilder >> visitUserModifierDefinition: aSolUserModifierDefinitionNode [
+
+		
 ]

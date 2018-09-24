@@ -215,6 +215,7 @@ FogSession >> decodeStream: aContent type: aType [
 { #category : #'low-level api - contract - deploying' }
 FogSession >> deploy: aContractDescription applying: aConstructor arguments: aCollection from: anAccount amount: anAmount [
 	| transactionHash |
+
 	transactionHash := connection eth
 		sendTransaction:
 			(FogCallDefinition new

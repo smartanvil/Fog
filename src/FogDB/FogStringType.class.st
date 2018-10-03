@@ -12,6 +12,11 @@ FogStringType >> isArrayType [
 	^ true
 ]
 
+{ #category : #marshaling }
+FogStringType >> mapping [
+	^ FogSolidityStringLayoutMapping
+]
+
 { #category : #accessing }
 FogStringType >> name [
 	^ #string

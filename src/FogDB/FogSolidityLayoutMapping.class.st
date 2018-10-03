@@ -55,6 +55,7 @@ FogSolidityLayoutMapping >> toSlot: anInteger byte: anInteger2 [
 
 { #category : #'as yet unclassified' }
 FogSolidityLayoutMapping >> using: aSession fetch: aMirrorProperty from: aContractAddress at: aBlockTagNumberOrHash [
+
 	^ aSession
 		decode: (self using: aSession fetchContentsFrom: aContractAddress at: aBlockTagNumberOrHash)
 		type: aMirrorProperty type

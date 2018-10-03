@@ -74,6 +74,7 @@ FogPropertyMirror >> type: aType [
 
 { #category : #accessing }
 FogPropertyMirror >> using: aSession value: aContractAddress at: aBlockTagNumberOrHash [
+
 	^ layout
 		using: aSession
 		fetch: self

@@ -26,7 +26,8 @@ FogUtils >> chopBlanks: aString [
 { #category : #compiling }
 FogUtils >> compileSolidity: sourceCodeFile [
 	| command return compilationOutput |
-	compilationOutput := (FogConfiguration fogCompilingFolder / ('out{1}.txt' format: {sourceCodeFile hash asString})) fullName asSymbol.
+	compilationOutput := (FogConfiguration fogCompilingFolder
+		/ ('out{1}.txt' format: {sourceCodeFile hash asString})) fullName asSymbol.
 	command := ' cd {3}; solc --abi --bin --bin-runtime {1} >{2}'
 		format:
 			{sourceCodeFile fullName.
@@ -37,7 +38,7 @@ FogUtils >> compileSolidity: sourceCodeFile [
 		command: 'bash';
 		option: '-c';
 		argument: command ] asOSTask future.
-	return synchronizeTimeout: 10 seconds.
+	return synchronizeTimeout: 1 minute.
 	^ self loadSolcDataFromStream: compilationOutput asFileReference readStream
 ]
 

@@ -1,5 +1,6 @@
 "
-This object represents a map of a property in the memory layout
+This object represents a map of a property in the memory layout.
+https://solidity.readthedocs.io/en/latest/miscellaneous.html#layout-of-state-variables-in-storage
 "
 Class {
 	#name : #FogSolidityLayoutMapping,
@@ -10,7 +11,7 @@ Class {
 		'toSlot',
 		'toByte'
 	],
-	#category : 'FogDB-Meta-SolidityLayout'
+	#category : #'FogDB-Meta-SolidityLayout'
 }
 
 { #category : #'as yet unclassified' }

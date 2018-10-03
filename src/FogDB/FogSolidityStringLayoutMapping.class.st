@@ -19,9 +19,11 @@ FogSolidityStringLayoutMapping >> using: aSession fetchContentsFrom: aContractAd
 	| content stringLength length |
 	content := super using: aSession fetchContentsFrom: aContractAddress at: aBlockTagNumberOrHash.
 	stringLength := (content reverse readStream upTo: $0) reverse.
+	stringLength isEmpty
+		ifTrue: [ ^ '' ].
 	length := stringLength asBKNumber.
 	^ length <= 31
-		ifTrue: [ content copyFrom: 1 to: stringLength size ]
+		ifTrue: [ content copyFrom: 1 to: length ]
 		ifFalse: [ self
 				using: aSession
 				extractFrom: aContractAddress

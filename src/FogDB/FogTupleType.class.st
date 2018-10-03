@@ -26,8 +26,10 @@ FogTupleType >> pack: aCollection with: aFogPacker [
 		with: aCollection
 		do: [ :type :value | 
 			type isArrayType
-				ifTrue: [ staticStream nextPutAll: (aFogPacker packUint256: staticSize + (dynamicStream position / 2)).
-					dynamicStream nextPutAll: (type pack: value using: aFogPacker) ]
+				ifTrue: [ 
+					staticStream nextPutAll: (aFogPacker packUint256: staticSize + (dynamicStream position / 2)).
+					dynamicStream nextPutAll: (type pack: value using: aFogPacker) 
+				]
 				ifFalse: [ staticStream nextPutAll: ((type pack: value using: aFogPacker) padLeftTo: 64 with: $0) ] ].
 	^ staticStream contents , dynamicStream contents
 ]

@@ -215,17 +215,18 @@ FogSession >> decodeStream: aContent type: aType [
 { #category : #'low-level api - contract - deploying' }
 FogSession >> deploy: aContractDescription applying: aConstructor arguments: aCollection from: anAccount amount: anAmount [
 	| transactionHash |
-
 	transactionHash := connection eth
 		sendTransaction:
 			(FogCallDefinition new
-				from: anAccount address ;
+				from: anAccount address;
 				gas: (self calculateGasForDeploying: aContractDescription with: aConstructor)
 					priced: (self calculateGasPriceForDeploying: aContractDescription with: aConstructor);
 				value: anAmount;
 				data: (self encode: aConstructor for: aContractDescription with: aCollection);
 				yourself).
-	^ self registerInstantiationWithReceipt: transactionHash ofContractDescription: aContractDescription
+	^ self
+		registerInstantiationWithReceipt: transactionHash
+		ofContractDescription: aContractDescription
 ]
 
 { #category : #'low-level api - contract - deploying' }

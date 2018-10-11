@@ -22,6 +22,5 @@ BaselineOfFogDB >> baseline: spec [
 						version: #stable;
 						repository: 'http://mc.stfx.eu/Neo' ].
 			spec package: #FogDB with: [ spec requires: #('FogCommunication' 'TaskItShell' 'Keccak' 'SmaccSolidity') ].
-			spec package: #FogDBTests with: [ spec requires: #('FogDB' 'ParametrizedTests') ].
-			spec package: #FogEVM with: [ spec requires: #('FogDB') ] ]
+			spec package: #FogDBTests with: [ spec requires: #('FogDB' 'ParametrizedTests') ] ]
 ]

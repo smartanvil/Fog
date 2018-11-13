@@ -109,6 +109,11 @@ FogSession >> calculateGasPriceForDeploying: aContractDescription with: aConstru
 	^ 60
 ]
 
+{ #category : #'as yet unclassified' }
+FogSession >> coinBase [
+	^ connection eth coinBase
+]
+
 { #category : #accessing }
 FogSession >> connection: aConnection [
 	connection := aConnection
@@ -337,7 +342,7 @@ FogSession >> findBlockByHashOrNumber: aBlockId full: aBoolean [
 		ifTrue: [ ^ self findBlockByHash: aBlockId asAddress full: aBoolean ].
 	aBlockId isNumber
 		ifTrue: [ ^ self findBlockByNumber: aBlockId full: aBoolean ].
-	UQLLError signal: ' invalid id ' , aBlockId asString
+	FogError signal: ' invalid id ' , aBlockId asString
 ]
 
 { #category : #'access db - blocks' }

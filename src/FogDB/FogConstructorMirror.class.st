@@ -11,6 +11,11 @@ Class {
 	#category : 'FogDB-Meta-Mirror'
 }
 
+{ #category : #'as yet unclassified' }
+FogConstructorMirror >> encodeUsing: aSession for: aContractDescription with: anCollectionOfArgs [
+	^ aSession encode: self for: aContractDescription with: anCollectionOfArgs
+]
+
 { #category : #testing }
 FogConstructorMirror >> hasParameters [
 	^ parameters size > 0

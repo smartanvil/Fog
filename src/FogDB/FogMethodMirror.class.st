@@ -19,6 +19,11 @@ FogMethodMirror >> baseName [
 ]
 
 { #category : #'as yet unclassified' }
+FogMethodMirror >> encodeUsing: aSession for: aContractDescription with: anCollectionOfArgs [
+	^ aSession privateEncode: self arguments: anCollectionOfArgs
+]
+
+{ #category : #'as yet unclassified' }
 FogMethodMirror >> hasParameters [
 	^ parameters size > 0
 ]

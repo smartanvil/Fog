@@ -11,6 +11,11 @@ Class {
 }
 
 { #category : #accessing }
+FogTupleType >> associations [
+	^ types
+]
+
+{ #category : #accessing }
 FogTupleType >> name [
 	^ ',' join: (self types collect: #name)
 ]

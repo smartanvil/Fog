@@ -18,3 +18,20 @@
 14:52:49.828868 db@open done T·21.370658ms
 14:53:06.688728 db@close closing
 14:53:06.688799 db@close done T·70.033µs
+=============== Nov 13, 2018 (CET) ===============
+17:25:52.601805 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:25:52.602540 CURRENT: missing target file: MANIFEST-000004
+=============== Nov 13, 2018 (CET) ===============
+17:25:52.603542 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:25:52.603742 table@recovery F·1
+17:25:52.603763 table@recovery recovering @2
+17:25:52.605968 table@recovery recovered @2 Gk·780 Ck·0 Cb·0 S·69685 Q·780
+17:25:52.606031 table@recovery recovered F·1 N·780 Gk·780 Ck·0 Q·780
+17:25:52.607961 version@stat F·[1] S·68KiB[68KiB] Sc·[0.25]
+17:25:52.608202 db@open opening
+17:25:52.609626 version@stat F·[1] S·68KiB[68KiB] Sc·[0.25]
+17:25:52.610281 db@janitor F·3 G·0
+17:25:52.610364 db@open done T·2.120179ms
+=============== Nov 14, 2018 (CET) ===============
+13:15:33.033895 db@close closing
+13:15:33.039910 db@close done T·6.910715ms

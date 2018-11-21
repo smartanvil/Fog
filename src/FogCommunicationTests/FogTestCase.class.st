@@ -52,7 +52,7 @@ FogTestCase >> connection: aConnection [
 
 { #category : #running }
 FogTestCase >> session: aSession [
-	session := aSession 
+	session := aSession
 ]
 
 { #category : #running }

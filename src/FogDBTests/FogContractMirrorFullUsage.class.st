@@ -270,15 +270,13 @@ FogContractMirrorFullUsage >> testGetExample3 [
 { #category : #tests }
 FogContractMirrorFullUsage >> testSetGetArrayInt [
 	| future example |
-	future := session 
-		receiptFor:
-			((mirror method: #setSimpleArray:)
-				using: session
-				applyOn: contract
-				valueWithArguments: {{1 . 2 . 3 . 4 . 6}}
-				from: self ownerAccount
-				gas: 300000
-				gasPrice: 60).
+	future := (mirror method: #setSimpleArray:)
+		using: session
+		applyOn: contract
+		valueWithArguments: {{1 . 2 . 3 . 4 . 6}}
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
 	example := (mirror method: #getArray)
 		using: session
@@ -288,22 +286,20 @@ FogContractMirrorFullUsage >> testSetGetArrayInt [
 		gas: 300000
 		gasPrice: 60.
 	self assert: example equals: {1 . 2 . 3 . 4 . 6}.
-	self assert: ((mirror property: #commonArray) using: session value: contract  at: #latest) equals: {1 . 2 . 3 . 4 . 6}
+	self assert: ((mirror property: #commonArray) using: session value: contract at: #latest) equals: {1 . 2 . 3 . 4 . 6}
 ]
 
 { #category : #tests }
 FogContractMirrorFullUsage >> testSetLong128String [
 	| future setString |
 	setString := mirror method: #setString:.
-	future := session 
-		receiptFor:
-			(setString
-				using: session
-				applyOn: contract
-				valueWithArguments: {('AStringOf128Characters' padRightTo: 128 with: $#)}
-				from: self ownerAccount
-				gas: 300000
-				gasPrice: 60).
+	future := setString
+		using: session
+		applyOn: contract
+		valueWithArguments: {('AStringOf128Characters' padRightTo: 128 with: $#)}
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
 	self
 		assert:
@@ -321,15 +317,13 @@ FogContractMirrorFullUsage >> testSetLong128String [
 FogContractMirrorFullUsage >> testSetLong130String [
 	| future setString |
 	setString := mirror method: #setString:.
-	future := session 
-		receiptFor:
-			(setString
-				using: session
-				applyOn: contract
-				valueWithArguments: {('AStringOf128Characters' padRightTo: 130 with: $#)}
-				from: self ownerAccount
-				gas: 300000
-				gasPrice: 60).
+	future := setString
+		using: session
+		applyOn: contract
+		valueWithArguments: {('AStringOf128Characters' padRightTo: 130 with: $#)}
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
 	self
 		assert:
@@ -347,15 +341,13 @@ FogContractMirrorFullUsage >> testSetLong130String [
 FogContractMirrorFullUsage >> testSetLong256String [
 	| future setString |
 	setString := mirror method: #setString:.
-	future := session 
-		receiptFor:
-			(setString
-				using: session
-				applyOn: contract
-				valueWithArguments: {('AStringOf256Characters' padRightTo: 256 with: $#)}
-				from: self ownerAccount
-				gas: 300000
-				gasPrice: 60).
+	future := setString
+		using: session
+		applyOn: contract
+		valueWithArguments: {('AStringOf256Characters' padRightTo: 256 with: $#)}
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
 	self
 		assert:
@@ -373,15 +365,13 @@ FogContractMirrorFullUsage >> testSetLong256String [
 FogContractMirrorFullUsage >> testSetLong260String [
 	| future setString |
 	setString := mirror method: #setString:.
-	future := session 
-		receiptFor:
-			(setString
-				using: session
-				applyOn: contract
-				valueWithArguments: {('AStringOf256Characters' padRightTo: 260 with: $#)}
-				from: self ownerAccount
-				gas: 300000
-				gasPrice: 60).
+	future := setString
+		using: session
+		applyOn: contract
+		valueWithArguments: {('AStringOf256Characters' padRightTo: 260 with: $#)}
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
 	self
 		assert:
@@ -399,15 +389,13 @@ FogContractMirrorFullUsage >> testSetLong260String [
 FogContractMirrorFullUsage >> testSetLong64String [
 	| future setString |
 	setString := mirror method: #setString:.
-	future := session 
-		receiptFor:
-			(setString
-				using: session
-				applyOn: contract
-				valueWithArguments: {('AStringOf64Characters' padRightTo: 64 with: $-)}
-				from: self ownerAccount
-				gas: 300000
-				gasPrice: 60).
+	future := setString
+		using: session
+		applyOn: contract
+		valueWithArguments: {('AStringOf64Characters' padRightTo: 64 with: $-)}
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
 	self
 		assert:
@@ -425,15 +413,13 @@ FogContractMirrorFullUsage >> testSetLong64String [
 FogContractMirrorFullUsage >> testSetLong70String [
 	| future setString |
 	setString := mirror method: #setString:.
-	future := session 
-		receiptFor:
-			(setString
-				using: session
-				applyOn: contract
-				valueWithArguments: {('AStringOf64Characters' padRightTo: 70 with: $-)}
-				from: self ownerAccount
-				gas: 300000
-				gasPrice: 60).
+	future := setString
+		using: session
+		applyOn: contract
+		valueWithArguments: {('AStringOf64Characters' padRightTo: 70 with: $-)}
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
 	self
 		assert:
@@ -451,15 +437,13 @@ FogContractMirrorFullUsage >> testSetLong70String [
 FogContractMirrorFullUsage >> testSetString [
 	| future setString |
 	setString := mirror method: #setString:.
-	future := session 
-		receiptFor:
-			(setString
-				using: session
-				applyOn: contract
-				valueWithArguments: {'Hithere'}
-				from: self ownerAccount
-				gas: 300000
-				gasPrice: 60).
+	future := setString
+		using: session
+		applyOn: contract
+		valueWithArguments: {'Hithere'}
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
 	self
 		assert:
@@ -477,15 +461,13 @@ FogContractMirrorFullUsage >> testSetString [
 FogContractMirrorFullUsage >> testSetTwoString [
 	| future setString |
 	setString := mirror method: #setTwoStrings:and:.
-	future := session 
-		receiptFor:
-			(setString
-				using: session
-				applyOn: contract
-				valueWithArguments: {'Heeeey!' . 'Yeahytutuou'}
-				from: self ownerAccount
-				gas: 300000
-				gasPrice: 60).
+	future := setString
+		using: session
+		applyOn: contract
+		valueWithArguments: {'Heeeey!' . 'Yeahytutuou'}
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
 	self
 		assert:
@@ -504,15 +486,13 @@ FogContractMirrorFullUsage >> testSetTwoStringEnumInt [
 	| future setString |
 	"string value1, EnumDefinition valEnum, int256 valInt, string value2 "
 	setString := mirror method: #setTwoStringsEnumInt:and:and:and:.
-	future := session 
-		receiptFor:
-			(setString
-				using: session
-				applyOn: contract
-				valueWithArguments: {'HeyTwoStrings!' . #NEUTRAL . 123 . 'Yeahyou'}
-				from: self ownerAccount
-				gas: 300000
-				gasPrice: 60).
+	future := setString
+		using: session
+		applyOn: contract
+		valueWithArguments: {'HeyTwoStrings!' . #NEUTRAL . 123 . 'Yeahyou'}
+		from: self ownerAccount
+		gas: 300000
+		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
 	self
 		assert:

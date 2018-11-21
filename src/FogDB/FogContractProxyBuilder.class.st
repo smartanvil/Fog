@@ -201,7 +201,9 @@ FogContractProxyBuilder >> compilableMethodAmount: aFogMethodMirror [
 { #category : #'building methods' }
 FogContractProxyBuilder >> compilableSourceCode [
 	^ 'basedSourceCode
-	^ ''{1}''' format: {description source}
+	^ ''{1}'''
+		format: {(description source copyReplaceAll: $' asString with: $' asString , $' asString)}
+	
 ]
 
 { #category : #'building methods' }

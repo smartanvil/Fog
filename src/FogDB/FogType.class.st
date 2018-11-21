@@ -17,6 +17,11 @@ FogType >> isArrayType [
 	^ false 
 ]
 
+{ #category : #'as yet unclassified' }
+FogType >> isEmptyType [
+	^ false
+]
+
 { #category : #testing }
 FogType >> isStruct [
 	^ false. 

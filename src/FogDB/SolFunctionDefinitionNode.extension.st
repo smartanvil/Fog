@@ -2,7 +2,7 @@ Extension { #name : #SolFunctionDefinitionNode }
 
 { #category : #'*FogDB' }
 SolFunctionDefinitionNode >> isConstant [
-	^false 
+	^ modifiers anySatisfy: #isConstant
 ]
 
 { #category : #'*FogDB' }

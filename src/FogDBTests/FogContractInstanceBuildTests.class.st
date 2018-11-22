@@ -17,7 +17,7 @@ FogContractInstanceBuildTests >> setUp [
 
 { #category : #tests }
 FogContractInstanceBuildTests >> testContractCallSetMethodInTransactionModifiesValue [
-	| method transactionReceipt hash futureTransactionReceipt mirror |
+	| method transactionReceipt  futureTransactionReceipt mirror |
 	self assert: session isNotNil.
 	mirror := simpleStorage contract mirror instanceMirror.
 	method := mirror methods detect: [ :m | m selector asSymbol = #set: ].
@@ -29,7 +29,6 @@ FogContractInstanceBuildTests >> testContractCallSetMethodInTransactionModifiesV
 		gas: 300000
 		gasPrice: 60.
 	transactionReceipt := futureTransactionReceipt synchronizeTimeout: 10 minutes.
-	self assert: (transactionReceipt at: #transactionHash) = hash.
 	self
 		assert:
 			(mirror

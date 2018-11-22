@@ -66,7 +66,9 @@ FogTestCase >> setUp [
 { #category : #running }
 FogTestCase >> tearDown [
 	super tearDown.
-	session finalize
+	
+	session finalize.
+	FogTransactionMonitorService allInstances do:#stop.
 ]
 
 { #category : #'as yet unclassified' }

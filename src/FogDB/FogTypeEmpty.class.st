@@ -7,6 +7,11 @@ Class {
 	#category : 'FogDB-Meta-Types'
 }
 
+{ #category : #testing }
+FogTypeEmpty >> isEmptyType [
+	^ true
+]
+
 { #category : #accessing }
 FogTypeEmpty >> name [
 	^ 'Empty'

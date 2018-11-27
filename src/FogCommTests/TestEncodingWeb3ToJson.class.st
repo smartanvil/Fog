@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'web3'
 	],
-	#category : 'FogCommunicationTests'
+	#category : #FogCommTests
 }
 
 { #category : #'as yet unclassified' }

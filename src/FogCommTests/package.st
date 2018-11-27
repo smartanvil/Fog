@@ -1,1 +1,1 @@
-Package { #name : #FogCommunicationTests }
+Package { #name : #FogCommTests }

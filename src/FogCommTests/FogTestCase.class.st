@@ -8,7 +8,7 @@ Class {
 		'session',
 		'connection'
 	],
-	#category : #FogCommunicationTests
+	#category : #FogCommTests
 }
 
 { #category : #'building suites' }

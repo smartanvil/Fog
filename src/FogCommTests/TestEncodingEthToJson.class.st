@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'eth'
 	],
-	#category : 'FogCommunicationTests'
+	#category : #FogCommTests
 }
 
 { #category : #running }

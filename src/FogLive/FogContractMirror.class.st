@@ -9,7 +9,7 @@ Class {
 		'constructor',
 		'instanceMirror'
 	],
-	#category : 'FogDB-Meta-Mirror'
+	#category : 'FogLive-Meta-Mirror'
 }
 
 { #category : #accessing }

@@ -35,7 +35,7 @@ Class {
 		'relatedStorage',
 		'receiptRoot'
 	],
-	#category : 'FogDB-Domain'
+	#category : 'FogLive-Domain'
 }
 
 { #category : #'as yet unclassified' }

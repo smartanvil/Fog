@@ -1,11 +1,11 @@
 Extension { #name : #SolEnumDefinitionNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolEnumDefinitionNode >> isUserDefined [
 	^ true
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolEnumDefinitionNode class >> kind [
 	^ #'type-definition'
 ]

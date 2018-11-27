@@ -4,7 +4,7 @@ ETHWeb3API relative
 Class {
 	#name : #FogWeb3,
 	#superclass : #FogAPIAccess,
-	#category : 'FogDB-API'
+	#category : 'FogLive-API'
 }
 
 { #category : #'as yet unclassified' }

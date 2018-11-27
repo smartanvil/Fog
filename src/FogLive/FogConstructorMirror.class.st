@@ -8,7 +8,7 @@ Class {
 		'parameters',
 		'name'
 	],
-	#category : 'FogDB-Meta-Mirror'
+	#category : 'FogLive-Meta-Mirror'
 }
 
 { #category : #'as yet unclassified' }

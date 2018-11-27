@@ -4,7 +4,7 @@ It does the layout calculation. As well it contains the mappings, representing l
 Class {
 	#name : #FogSolidityLayoutMapper,
 	#superclass : #Object,
-	#category : 'FogDB-Meta-SolidityLayout'
+	#category : 'FogLive-Meta-SolidityLayout'
 }
 
 { #category : #'accessing structure variables' }

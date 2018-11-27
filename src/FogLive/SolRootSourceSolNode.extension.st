@@ -1,11 +1,11 @@
 Extension { #name : #SolRootSourceSolNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolRootSourceSolNode >> isConstant [
 	^ false 
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolRootSourceSolNode >> isContract [
 	^ false 
 ]

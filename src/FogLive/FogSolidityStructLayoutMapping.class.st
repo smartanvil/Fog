@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'mappings'
 	],
-	#category : 'FogDB-Meta-SolidityLayout'
+	#category : 'FogLive-Meta-SolidityLayout'
 }
 
 { #category : #initialization }

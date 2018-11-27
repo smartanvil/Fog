@@ -4,7 +4,7 @@ Readonly slot based on fog mirror properties
 Class {
 	#name : #FogContractPropertySlot,
 	#superclass : #Slot,
-	#category : 'FogDB-Domain-Contracts'
+	#category : 'FogLive-Domain-Contracts'
 }
 
 { #category : #'meta-object-protocol' }

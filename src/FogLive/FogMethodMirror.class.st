@@ -10,7 +10,7 @@ Class {
 		'parameters',
 		'return'
 	],
-	#category : 'FogDB-Meta-Mirror'
+	#category : 'FogLive-Meta-Mirror'
 }
 
 { #category : #accessing }

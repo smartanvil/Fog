@@ -4,7 +4,7 @@ This type reifies the absence of return
 Class {
 	#name : #FogTypeEmpty,
 	#superclass : #FogType,
-	#category : 'FogDB-Meta-Types'
+	#category : 'FogLive-Meta-Types'
 }
 
 { #category : #testing }

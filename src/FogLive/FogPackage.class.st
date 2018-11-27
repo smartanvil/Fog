@@ -14,7 +14,7 @@ Class {
 		'ast',
 		'source'
 	],
-	#category : #'FogDB-Meta-Description'
+	#category : #'FogLive-Meta-Description'
 }
 
 { #category : #accessing }

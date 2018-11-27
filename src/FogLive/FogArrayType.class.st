@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'inner'
 	],
-	#category : 'FogDB-Meta-Types'
+	#category : 'FogLive-Meta-Types'
 }
 
 { #category : #accessing }

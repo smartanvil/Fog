@@ -12,7 +12,7 @@ Class {
 	#classInstVars : [
 		'current'
 	],
-	#category : 'FogDB-Cache'
+	#category : 'FogLive-Cache'
 }
 
 { #category : #accessing }

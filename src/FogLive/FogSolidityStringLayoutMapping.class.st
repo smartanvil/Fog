@@ -1,7 +1,7 @@
 Class {
 	#name : #FogSolidityStringLayoutMapping,
 	#superclass : #FogSolidityLayoutMapping,
-	#category : #'FogDB-Meta-SolidityLayout'
+	#category : #'FogLive-Meta-SolidityLayout'
 }
 
 { #category : #'as yet unclassified' }

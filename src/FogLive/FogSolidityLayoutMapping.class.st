@@ -11,7 +11,7 @@ Class {
 		'toSlot',
 		'toByte'
 	],
-	#category : #'FogDB-Meta-SolidityLayout'
+	#category : #'FogLive-Meta-SolidityLayout'
 }
 
 { #category : #'as yet unclassified' }

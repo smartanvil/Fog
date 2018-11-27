@@ -12,7 +12,7 @@ Class {
 		'mirror',
 		'contractDescription'
 	],
-	#category : #'FogDB-Domain-Contracts'
+	#category : #'FogLive-Domain-Contracts'
 }
 
 { #category : #'instance creation' }

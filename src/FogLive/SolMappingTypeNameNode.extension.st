@@ -1,11 +1,11 @@
 Extension { #name : #SolMappingTypeNameNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolMappingTypeNameNode >> isUserDefined [
 	^ false 
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolMappingTypeNameNode class >> kind [
 	^ #declaration
 ]

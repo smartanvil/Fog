@@ -1,11 +1,11 @@
 Extension { #name : #SolElementaryTypeNameNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolElementaryTypeNameNode >> isUserDefined [
 	^ false
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolElementaryTypeNameNode class >> kind [
 	^ #declaration
 ]

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'name'
 	],
-	#category : 'FogDB-Meta-Types'
+	#category : 'FogLive-Meta-Types'
 }
 
 { #category : #'as yet unclassified' }

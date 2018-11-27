@@ -14,7 +14,7 @@ Class {
 		'events',
 		'modifiers'
 	],
-	#category : #'FogDB-Meta-Mirror'
+	#category : #'FogLive-Meta-Mirror'
 }
 
 { #category : #'as yet unclassified' }

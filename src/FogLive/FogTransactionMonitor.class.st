@@ -10,7 +10,7 @@ Class {
 		'timeLeft',
 		'session'
 	],
-	#category : 'FogDB-Session-Service'
+	#category : 'FogLive-Session-Service'
 }
 
 { #category : #checking }

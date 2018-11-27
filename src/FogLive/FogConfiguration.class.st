@@ -7,7 +7,7 @@ Class {
 		'fogCompilingFolder',
 		'fogTempFolder'
 	],
-	#category : #'FogDB-Util'
+	#category : #'FogLive-Util'
 }
 
 { #category : #'as yet unclassified' }

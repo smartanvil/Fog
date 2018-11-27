@@ -12,7 +12,7 @@ Class {
 		'blockReference',
 		'contractAddress'
 	],
-	#category : 'FogDB-Domain'
+	#category : 'FogLive-Domain'
 }
 
 { #category : #accessing }

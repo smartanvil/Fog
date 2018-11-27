@@ -1,16 +1,16 @@
 Extension { #name : #SolFunctionDefinitionNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolFunctionDefinitionNode >> isConstant [
 	^ modifiers anySatisfy: #isConstant
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolFunctionDefinitionNode >> isConstructor [
 	^ identifier value = parent identifier value 
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolFunctionDefinitionNode class >> kind [
 	^ #'function-definition'
 ]

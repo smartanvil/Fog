@@ -1,6 +1,6 @@
 Extension { #name : #ByteString }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 ByteString >> minus: aString [
 	| stream |
 	stream := '' writeStream.

@@ -4,7 +4,7 @@ ETHAdminAPI relative
 Class {
 	#name : #FogAdmin,
 	#superclass : #FogAPIAccess,
-	#category : 'FogDB-API'
+	#category : 'FogLive-API'
 }
 
 { #category : #'as yet unclassified' }

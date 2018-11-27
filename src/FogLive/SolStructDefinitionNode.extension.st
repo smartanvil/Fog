@@ -1,16 +1,16 @@
 Extension { #name : #SolStructDefinitionNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolStructDefinitionNode >> compositeNodeVariables [
 	^ #(#fields)
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolStructDefinitionNode >> isUserDefined [
 	^ true
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolStructDefinitionNode class >> kind [
 	^ #'type-definition'
 ]

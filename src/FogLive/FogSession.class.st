@@ -7,7 +7,7 @@ Class {
 		'applicationAccount',
 		'packages'
 	],
-	#category : #'FogDB-Session'
+	#category : #'FogLive-Session'
 }
 
 { #category : #accessing }

@@ -6,7 +6,7 @@ Class {
 	#superclass : #Object,
 	#traits : 'TFogPack',
 	#classTraits : 'TFogPack classTrait',
-	#category : 'FogDB-Util'
+	#category : 'FogLive-Util'
 }
 
 { #category : #packing }

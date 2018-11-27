@@ -1,26 +1,26 @@
 Extension { #name : #SolContractDefinitionNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolContractDefinitionNode >> eventDefinitions [
 	^ self contract_sources select:[ : c | c class kind = #'event-definition' ]
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolContractDefinitionNode >> functionDefinitions [
 	^ self contract_sources select:[ : c | c class kind = #'function-definition' ]
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolContractDefinitionNode >> isContract [
 	^ true 
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolContractDefinitionNode class >> kind [
 	^ #'type-definition'
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolContractDefinitionNode >> modifierDefinitions [
 	^ self contract_sources select:[ : c | c class kind = #'modifier-definition' ]
 ]

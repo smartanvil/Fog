@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'cache'
 	],
-	#category : 'FogDB-Session'
+	#category : 'FogLive-Session'
 }
 
 { #category : #accessing }

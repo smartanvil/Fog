@@ -7,7 +7,7 @@ for defining the way of encoding
 "
 Trait {
 	#name : #TFogPack,
-	#category : 'FogDB-Util'
+	#category : 'FogLive-Util'
 }
 
 { #category : #required }

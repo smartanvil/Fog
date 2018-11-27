@@ -1,16 +1,16 @@
 Extension { #name : #FileLocator }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 FileLocator class >> contractsFolder [
 	^ self findFolderInHierarchy: #contracts
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 FileLocator class >> etherscanFolder [
 	^ self findFolderInHierarchy: #etherscan
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 FileLocator class >> findFolderInHierarchy: aFolderName [
 	| folder |
 	folder := self image resolve.
@@ -22,7 +22,7 @@ FileLocator class >> findFolderInHierarchy: aFolderName [
 	^ folder / aFolderName
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 FileLocator class >> indexFolder [
 	^ self findFolderInHierarchy: #index
 ]

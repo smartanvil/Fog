@@ -1,11 +1,11 @@
 Extension { #name : #SolUserDefinedTypeNameNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolUserDefinedTypeNameNode >> isUserDefined [
 	^ false 
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolUserDefinedTypeNameNode class >> kind [
 	^ #declaration
 ]

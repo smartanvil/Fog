@@ -1,11 +1,11 @@
 Extension { #name : #SolArrayTypeNameNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolArrayTypeNameNode >> isUserDefined [
 	^ false 
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolArrayTypeNameNode class >> kind [
 	^ #declaration
 ]

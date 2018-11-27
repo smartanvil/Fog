@@ -1,6 +1,6 @@
 Extension { #name : #SolModifierFunctionImmuableNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolModifierFunctionImmuableNode >> isConstant [
 	^ true 
 ]

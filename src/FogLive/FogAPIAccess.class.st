@@ -8,7 +8,7 @@ Class {
 		'connection',
 		'api'
 	],
-	#category : 'FogDB-API'
+	#category : 'FogLive-API'
 }
 
 { #category : #'as yet unclassified' }

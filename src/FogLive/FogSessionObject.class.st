@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'session'
 	],
-	#category : 'FogDB-Domain'
+	#category : 'FogLive-Domain'
 }
 
 { #category : #accessing }

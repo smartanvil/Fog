@@ -9,7 +9,7 @@ Class {
 		'abi',
 		'contract'
 	],
-	#category : 'FogDB-Domain'
+	#category : 'FogLive-Domain'
 }
 
 { #category : #'as yet unclassified' }

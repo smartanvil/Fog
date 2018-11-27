@@ -4,7 +4,7 @@ Reifies the string type
 Class {
 	#name : #FogStringType,
 	#superclass : #FogType,
-	#category : 'FogDB-Meta-Types'
+	#category : 'FogLive-Meta-Types'
 }
 
 { #category : #testing }

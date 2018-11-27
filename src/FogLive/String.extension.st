@@ -1,16 +1,16 @@
 Extension { #name : #String }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 String >> asBKHexa [
 	^ self 
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 String >> asHeadlessHexa [
 	^ self copyReplaceAll: '0x' with: ''
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 String >> minus: aString [
 	| index to |
 	^ aString

@@ -8,7 +8,7 @@ Class {
 		'monitors',
 		'session'
 	],
-	#category : 'FogDB-Session-Service'
+	#category : 'FogLive-Session-Service'
 }
 
 { #category : #'as yet unclassified' }

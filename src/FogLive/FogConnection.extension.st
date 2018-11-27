@@ -1,13 +1,13 @@
 Extension { #name : #FogConnection }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 FogConnection >> nonCachedSession [
 	^ FogSession new
 		initializeWith: self;
 		yourself
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 FogConnection >> session [
 	^ FogCachedSession new
 		initializeWith: self;

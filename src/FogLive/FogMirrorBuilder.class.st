@@ -8,7 +8,7 @@ Class {
 		'ast',
 		'abi'
 	],
-	#category : 'FogDB-Meta-Mirror'
+	#category : 'FogLive-Meta-Mirror'
 }
 
 { #category : #accessing }

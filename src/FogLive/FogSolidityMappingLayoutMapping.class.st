@@ -8,7 +8,7 @@ Class {
 		'keyMapping',
 		'valueMapping'
 	],
-	#category : 'FogDB-Meta-SolidityLayout'
+	#category : 'FogLive-Meta-SolidityLayout'
 }
 
 { #category : #accessing }

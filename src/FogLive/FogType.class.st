@@ -4,7 +4,7 @@ Abstract type, it just declares some abstract methods
 Class {
 	#name : #FogType,
 	#superclass : #Object,
-	#category : 'FogDB-Meta-Types'
+	#category : 'FogLive-Meta-Types'
 }
 
 { #category : #collecting }

@@ -1,6 +1,6 @@
 Extension { #name : #SolFallbackFunctionDefinitionNode }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SolFallbackFunctionDefinitionNode class >> kind [
 	^ #'function-definition'
 ]

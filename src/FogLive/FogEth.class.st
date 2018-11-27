@@ -4,7 +4,7 @@ ETHEthereumAPI  relative
 Class {
 	#name : #FogEth,
 	#superclass : #FogAPIAccess,
-	#category : 'FogDB-API'
+	#category : 'FogLive-API'
 }
 
 { #category : #accessing }

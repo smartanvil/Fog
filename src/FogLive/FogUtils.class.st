@@ -4,7 +4,7 @@ This is a work-around object. We should implement the eliptic security for http.
 Class {
 	#name : #FogUtils,
 	#superclass : #Object,
-	#category : 'FogDB-Util'
+	#category : 'FogLive-Util'
 }
 
 { #category : #private }

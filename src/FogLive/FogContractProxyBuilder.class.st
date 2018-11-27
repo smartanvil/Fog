@@ -8,7 +8,7 @@ Class {
 		'description',
 		'name'
 	],
-	#category : 'FogDB-Domain-Contracts'
+	#category : 'FogLive-Domain-Contracts'
 }
 
 { #category : #'building names' }

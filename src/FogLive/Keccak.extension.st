@@ -1,11 +1,11 @@
 Extension { #name : #Keccak }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 Keccak class >> hashEncode: aMessage [
 	^ self new hashEncode: aMessage
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 Keccak >> hashEncode: aMessage [
 	^ (self hashMessage: aMessage) asByteArray hex
 ]

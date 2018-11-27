@@ -11,7 +11,7 @@ Class {
 		'methods',
 		'contractMirror'
 	],
-	#category : 'FogDB-Meta-Mirror'
+	#category : 'FogLive-Meta-Mirror'
 }
 
 { #category : #adding }

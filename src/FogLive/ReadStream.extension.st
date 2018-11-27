@@ -1,6 +1,6 @@
 Extension { #name : #ReadStream }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 ReadStream >> previous: anInteger [
 	| ans endPosition |
 	endPosition := position - anInteger max: 1.
@@ -9,7 +9,7 @@ ReadStream >> previous: anInteger [
 	^ ans
 ]
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 ReadStream >> retroReading [
 	position := readLimit + 1.
 	^ self 

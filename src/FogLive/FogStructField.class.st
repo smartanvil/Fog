@@ -8,7 +8,7 @@ Class {
 		'name',
 		'type'
 	],
-	#category : 'FogDB-Meta-Types'
+	#category : 'FogLive-Meta-Types'
 }
 
 { #category : #accessing }

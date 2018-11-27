@@ -8,7 +8,7 @@ Class {
 		'slot',
 		'contractInstance'
 	],
-	#category : 'FogDB-Domain'
+	#category : 'FogLive-Domain'
 }
 
 { #category : #'as yet unclassified' }

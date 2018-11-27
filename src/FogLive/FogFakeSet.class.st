@@ -4,7 +4,7 @@ Subclass of set that just does not save anything.
 Class {
 	#name : #FogFakeSet,
 	#superclass : #Set,
-	#category : 'FogDB-Cache'
+	#category : 'FogLive-Cache'
 }
 
 { #category : #'as yet unclassified' }

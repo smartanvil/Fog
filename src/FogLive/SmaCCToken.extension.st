@@ -1,6 +1,6 @@
 Extension { #name : #SmaCCToken }
 
-{ #category : #'*FogDB' }
+{ #category : #'*FogLive' }
 SmaCCToken >> acceptVisitor: aFogMirrorSmaccASTBasedBuilder [ 
 	^ aFogMirrorSmaccASTBasedBuilder visitSmaccToken: self 
 ]

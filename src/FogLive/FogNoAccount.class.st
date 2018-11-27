@@ -9,7 +9,7 @@ Class {
 	#classInstVars : [
 		'singleInstance'
 	],
-	#category : 'FogDB-Domain'
+	#category : 'FogLive-Domain'
 }
 
 { #category : #'as yet unclassified' }

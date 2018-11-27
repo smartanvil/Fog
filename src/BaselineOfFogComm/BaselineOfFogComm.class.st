@@ -1,7 +1,7 @@
 Class {
-	#name : #BaselineOfFogCommunication,
+	#name : #BaselineOfFogComm,
 	#superclass : #BaselineOf,
-	#category : #BaselineOfFogCommunication
+	#category : #BaselineOfFogComm
 }
 
 { #category : #baselines }

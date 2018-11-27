@@ -1,7 +1,7 @@
 Class {
-	#name : #BaselineOfFogDB,
+	#name : #BaselineOfFogLive,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfFogDB'
+	#category : 'BaselineOfFogLive'
 }
 
 { #category : #baselines }

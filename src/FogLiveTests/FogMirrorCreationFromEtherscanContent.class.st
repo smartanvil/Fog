@@ -8,7 +8,7 @@ Class {
 	#classVars : [
 		'testingContract'
 	],
-	#category : #FogDBTests
+	#category : #FogLiveTests
 }
 
 { #category : #'building suites' }

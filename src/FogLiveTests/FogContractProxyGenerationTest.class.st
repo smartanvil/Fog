@@ -6,7 +6,7 @@ Class {
 		'mirror',
 		'description'
 	],
-	#category : #FogDBTests
+	#category : #FogLiveTests
 }
 
 { #category : #'building suites' }

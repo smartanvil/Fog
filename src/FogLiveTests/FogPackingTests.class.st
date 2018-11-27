@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'packer'
 	],
-	#category : 'FogDBTests'
+	#category : 'FogLiveTests'
 }
 
 { #category : #'address value' }

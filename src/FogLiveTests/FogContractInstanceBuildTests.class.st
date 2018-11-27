@@ -4,7 +4,7 @@ Class {
 	#classVars : [
 		'simpleStorage'
 	],
-	#category : 'FogDBTests'
+	#category : 'FogLiveTests'
 }
 
 { #category : #initialization }

@@ -1,7 +1,7 @@
 Class {
 	#name : #FogAllKnownContractsCanBeDeployed,
 	#superclass : #FogArbitraryAddressesTestCase,
-	#category : 'FogDBTests'
+	#category : 'FogLiveTests'
 }
 
 { #category : #tests }

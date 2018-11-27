@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'eth'
 	],
-	#category : 'FogDBTests'
+	#category : 'FogLiveTests'
 }
 
 { #category : #'as yet unclassified' }

@@ -11,7 +11,7 @@ Class {
 	#classInstVars : [
 		'contract'
 	],
-	#category : 'FogDBTests'
+	#category : 'FogLiveTests'
 }
 
 { #category : #accessing }

@@ -1,7 +1,7 @@
 Class {
 	#name : #FogSolidityLayoutBuildingTest,
 	#superclass : #FogDeployedOnceContractTest,
-	#category : 'FogDBTests'
+	#category : 'FogLiveTests'
 }
 
 { #category : #accessing }

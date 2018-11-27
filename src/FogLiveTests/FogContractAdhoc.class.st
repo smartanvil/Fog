@@ -1,7 +1,7 @@
 Class {
 	#name : #FogContractAdhoc,
 	#superclass : #FogDeployedOnceContractTest,
-	#category : 'FogDBTests'
+	#category : 'FogLiveTests'
 }
 
 { #category : #accessing }

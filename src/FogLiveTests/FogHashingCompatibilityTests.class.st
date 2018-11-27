@@ -1,7 +1,7 @@
 Class {
 	#name : #FogHashingCompatibilityTests,
 	#superclass : #TestCase,
-	#category : 'FogDBTests'
+	#category : 'FogLiveTests'
 }
 
 { #category : #tests }

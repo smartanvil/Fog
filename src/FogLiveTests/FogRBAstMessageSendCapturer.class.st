@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'messages'
 	],
-	#category : #FogDBTests
+	#category : #FogLiveTests
 }
 
 { #category : #visiting }

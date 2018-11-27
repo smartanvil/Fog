@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'package'
 	],
-	#category : #FogDBTests
+	#category : #FogLiveTests
 }
 
 { #category : #'building suites' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #FogTestingContractProvider,
 	#superclass : #Object,
-	#category : #FogDBTests
+	#category : #FogLiveTests
 }
 
 { #category : #'as yet unclassified' }

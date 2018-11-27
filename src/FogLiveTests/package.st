@@ -1,1 +1,1 @@
-Package { #name : #FogDBTests }
+Package { #name : #FogLiveTests }

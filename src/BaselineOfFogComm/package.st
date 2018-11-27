@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfFogCommunication }
+Package { #name : #BaselineOfFogComm }

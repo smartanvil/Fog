@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #baselines }
-BaselineOfFogCommunication >> baseline: spec [
+BaselineOfFogComm >> baseline: spec [
 	<baseline>
 	spec
 		for: #common

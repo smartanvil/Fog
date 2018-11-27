@@ -8,7 +8,7 @@ Class {
 		'a',
 		'b'
 	],
-	#category : 'FogCommunication-Transfer-Filters'
+	#category : 'FogComm-Transfer-Filters'
 }
 
 { #category : #accessing }

@@ -4,7 +4,7 @@ chains by or conjugation
 Class {
 	#name : #FogFilterChainOr,
 	#superclass : #FogFilterChain,
-	#category : 'FogCommunication-Transfer-Filters'
+	#category : 'FogComm-Transfer-Filters'
 }
 
 { #category : #'as yet unclassified' }

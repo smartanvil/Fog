@@ -4,7 +4,7 @@ Null filter is there the not use the nil
 Class {
 	#name : #FogNullFilter,
 	#superclass : #Object,
-	#category : 'FogCommunication-Transfer-Filters'
+	#category : 'FogComm-Transfer-Filters'
 }
 
 { #category : #'as yet unclassified' }

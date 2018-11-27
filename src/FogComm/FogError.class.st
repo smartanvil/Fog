@@ -1,7 +1,7 @@
 Class {
 	#name : #FogError,
 	#superclass : #Error,
-	#category : 'FogCommunication-Connection'
+	#category : 'FogComm-Connection'
 }
 
 { #category : #'as yet unclassified' }

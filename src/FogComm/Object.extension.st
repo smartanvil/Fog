@@ -1,21 +1,21 @@
 Extension { #name : #Object }
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 Object class >> allInstVarNamesForEqualityComparison [
 	^self superclass allInstVarNamesForEqualityComparison, self instVarNamesForEqualityComparison
 ]
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 Object class >> instVarNamesForEqualityComparison [
 	^self instVarNames
 ]
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 Object >> instVarNamesForEqualityComparison [
 	^self class allInstVarNamesForEqualityComparison
 ]
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 Object >> valuesToCompareForEquality [
 	^ self instVarNamesForEqualityComparison collect: [ :ivName | self instVarNamed: ivName ]
 ]

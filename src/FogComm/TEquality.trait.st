@@ -3,7 +3,7 @@ Trait that implements an equality by attirbutes
 "
 Trait {
 	#name : #TEquality,
-	#category : 'FogCommunication-Util'
+	#category : 'FogComm-Util'
 }
 
 { #category : #equality }

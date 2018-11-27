@@ -10,7 +10,7 @@ Class {
 	#classInstVars : [
 		'any'
 	],
-	#category : 'FogCommunication-Transfer-Filters'
+	#category : 'FogComm-Transfer-Filters'
 }
 
 { #category : #'as yet unclassified' }

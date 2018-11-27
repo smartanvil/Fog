@@ -1,6 +1,6 @@
 Extension { #name : #ProtoObject }
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 ProtoObject class >> allInstVarNamesForEqualityComparison [
 	^ #()
 ]

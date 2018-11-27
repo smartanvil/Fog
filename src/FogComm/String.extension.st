@@ -1,13 +1,13 @@
 Extension { #name : #String }
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 String >> asAddress [
 	^ (self beginsWith: '0x')
 		ifTrue: [ self ]
 		ifFalse: [ '0x' , self ]
 ]
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 String >> asBKNumber [
 	| converting |
 	converting := (self beginsWith: '0x')
@@ -18,7 +18,7 @@ String >> asBKNumber [
 	^ converting asNumber
 ]
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 String >> asPackingAddress [
 	^ self copyReplaceAll: '0x' with: ''
 ]

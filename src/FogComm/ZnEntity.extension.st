@@ -1,6 +1,6 @@
 Extension { #name : #ZnEntity }
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 ZnEntity class >> json: text [
 	^ self stringEntityClass json: text
 ]

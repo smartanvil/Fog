@@ -11,7 +11,7 @@ Class {
 		'jsonrpc',
 		'message'
 	],
-	#category : 'FogCommunication-Transfer'
+	#category : 'FogComm-Transfer'
 }
 
 { #category : #'as yet unclassified' }

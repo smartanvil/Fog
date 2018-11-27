@@ -4,7 +4,7 @@ Web3 subset of callable RPC messages
 Class {
 	#name : #FogWeb3API,
 	#superclass : #Object,
-	#category : 'FogCommunication-API'
+	#category : 'FogComm-API'
 }
 
 { #category : #'api web3' }

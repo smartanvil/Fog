@@ -1,6 +1,6 @@
 Extension { #name : #ZnStringEntity }
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 ZnStringEntity class >> json: string [
 	^ (self type: ZnMimeType applicationJson)
 		string: string;

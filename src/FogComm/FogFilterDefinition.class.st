@@ -10,7 +10,7 @@ Class {
 		'from',
 		'to'
 	],
-	#category : 'FogCommunication-Transfer-Filters'
+	#category : 'FogComm-Transfer-Filters'
 }
 
 { #category : #'as yet unclassified' }

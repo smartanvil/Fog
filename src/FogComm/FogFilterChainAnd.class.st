@@ -4,7 +4,7 @@ Chains by and conjugation
 Class {
 	#name : #FogFilterChainAnd,
 	#superclass : #FogFilterChain,
-	#category : 'FogCommunication-Transfer-Filters'
+	#category : 'FogComm-Transfer-Filters'
 }
 
 { #category : #'as yet unclassified' }

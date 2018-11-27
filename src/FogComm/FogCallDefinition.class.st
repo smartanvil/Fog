@@ -13,7 +13,7 @@ Class {
 		'data',
 		'nounce'
 	],
-	#category : 'FogCommunication-Transfer-Call'
+	#category : 'FogComm-Transfer-Call'
 }
 
 { #category : #'as yet unclassified' }

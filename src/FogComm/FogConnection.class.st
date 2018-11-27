@@ -14,7 +14,7 @@ Class {
 	#classInstVars : [
 		'connection'
 	],
-	#category : 'FogCommunication-Connection'
+	#category : 'FogComm-Connection'
 }
 
 { #category : #'as yet unclassified' }

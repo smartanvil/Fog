@@ -10,7 +10,7 @@ Class {
 		'method',
 		'parameters'
 	],
-	#category : 'FogCommunication-Transfer'
+	#category : 'FogComm-Transfer'
 }
 
 { #category : #equality }

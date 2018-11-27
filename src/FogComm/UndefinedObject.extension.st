@@ -1,11 +1,11 @@
 Extension { #name : #UndefinedObject }
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 UndefinedObject >> asAddress [
 	^ 0 asBKHexa
 ]
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 UndefinedObject >> asBKHexa [
 	^ 0 asBKHexa
 ]

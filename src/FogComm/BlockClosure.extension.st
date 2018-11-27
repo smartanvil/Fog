@@ -1,16 +1,16 @@
 Extension { #name : #BlockClosure }
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 BlockClosure >> && anOtherValuable [
 	^ [ self value and: anOtherValuable ]
 ]
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 BlockClosure >> not [
 	^ [ self value not ]
 ]
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 BlockClosure >> || anOtherValuable [
 	^ [ self value or: anOtherValuable ]
 ]

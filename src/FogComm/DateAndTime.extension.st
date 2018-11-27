@@ -1,6 +1,6 @@
 Extension { #name : #DateAndTime }
 
-{ #category : #'*FogCommunication' }
+{ #category : #'*FogComm' }
 DateAndTime >> asDateAndHour [
 	^ self class
 		year: self year

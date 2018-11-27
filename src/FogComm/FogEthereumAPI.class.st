@@ -4,7 +4,7 @@ Ethereum subset of RPC Calls
 Class {
 	#name : #FogEthereumAPI,
 	#superclass : #Object,
-	#category : 'FogCommunication-API'
+	#category : 'FogComm-API'
 }
 
 { #category : #'as yet unclassified' }

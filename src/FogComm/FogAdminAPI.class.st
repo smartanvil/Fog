@@ -4,7 +4,7 @@ Admin subset of RPC calls
 Class {
 	#name : #FogAdminAPI,
 	#superclass : #Object,
-	#category : 'FogCommunication-API'
+	#category : 'FogComm-API'
 }
 
 { #category : #'as yet unclassified' }

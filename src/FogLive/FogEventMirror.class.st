@@ -9,6 +9,11 @@ Class {
 }
 
 { #category : #accessing }
+FogEventMirror >> createEventRegistrationUsing: aSession [
+	aSession createEventRegistrationFor: self
+]
+
+{ #category : #accessing }
 FogEventMirror >> name [
 	^ name
 ]
@@ -26,4 +31,12 @@ FogEventMirror >> parameters [
 { #category : #accessing }
 FogEventMirror >> parameters: aCollection [ 
 	parameters := aCollection
+]
+
+{ #category : #accessing }
+FogEventMirror >> signature [
+	^ '{1}({2})'
+		format:
+			{name.
+			(',' join: (parameters collect: [ :p | p signatureName ]))}
 ]

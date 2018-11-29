@@ -46,14 +46,14 @@ FogEthereumAPI >> messageCall: aETHCallDefinition block: blockRef [
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #deprecated }
 FogEthereumAPI >> messageCoinBase [
 	^ FogMessage new
 		method: 'eth_coinbase';
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #deprecated }
 FogEthereumAPI >> messageCompileLLL: aLLLSourceCodeString [
 	^ FogMessage new
 		method: 'eth_compileLLL';
@@ -61,7 +61,7 @@ FogEthereumAPI >> messageCompileLLL: aLLLSourceCodeString [
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #deprecated }
 FogEthereumAPI >> messageCompileSerpent: aSourceCodeString [ 
 ^ FogMessage new
 		method: 'eth_compileSerpent';

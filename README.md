@@ -11,7 +11,6 @@ Is based on the Javascript canonical implementation done by Ethereum community [
 
 ## Dependencies 
 
-``` 
 ### Solidity
 ``` 
  npm install solc
@@ -34,6 +33,7 @@ You may want to use this version for having access to some scripts and contracts
 ```
 git checkout git@github.com:sbragagnolo/Fog.git
 ```
+
 ```
 Metacello
 	new

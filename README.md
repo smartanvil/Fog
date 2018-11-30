@@ -294,23 +294,22 @@ Or to register some callbacks
 
 ## Misc
 
-  For testing the usage, the checked out project provides a script called dev.sh, at the script folder. This script executes the client with some accounts already created, and in a isolated network, with a single miner. 
+ For testing the usage, the checked out project provides a script called dev.sh, at the script folder. This script executes the client with some accounts already created, and in a isolated network, with a single miner. 
   
-  You will need to run some time this client for having enough ether for being able to deploy and execute contracts. And you will need to check the account hash of your related miner. 
+ You will need to run some time this client for having enough ether for being able to deploy and execute contracts. And you will need to check the account hash of your related miner. 
   
-  For the rest of the methods implemented on the connection you can use the ehereum javascript api, since they are the same .
-  
-  
+ For the rest of the methods implemented on the connection you can use the ehereum javascript api, since they are the same .
   
   
   
-# FogComm
+## FogComm
 ## Manifest
 FogComm project defines the minimal library for accessing to GETH RPC Client. 
 Based on the JSON-RPC Specification: 
 	https://github.com/ethereum/wiki/wiki/JSON-RPC
 
 ## Project Examples
+
 ```smalltalk
 exampleCreateDefaulConnection
 	| default |

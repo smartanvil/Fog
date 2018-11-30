@@ -18,6 +18,7 @@ BaselineOfFogComm >> baseline: spec [
 						version: #stable;
 						repository: 'http://mc.stfx.eu/Neo' ].
 			spec baseline: 'ParametrizedTests' with: [ spec repository: 'github://tesonep/ParametrizedTests' ].
-			spec package: #FogComm with: [ spec requires: #('TaskItShell') ].
+			spec baseline: 'Pragmatic' with: [ spec repository: 'github://sbragagnolo/Pragmatic' ].
+			spec package: #FogComm with: [ spec requires: #('TaskItShell' 'Pragmatic') ].
 			spec package: #FogCommTests with: [ spec requires: #('FogComm' 'ParametrizedTests') ] ]
 ]

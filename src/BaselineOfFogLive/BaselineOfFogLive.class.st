@@ -11,9 +11,9 @@ BaselineOfFogLive >> baseline: spec [
 		for: #common
 		do: [ spec blessing: #baseline.
 			spec baseline: 'TaskItShell' with: [ spec repository: 'github://sbragagnolo/taskit:dev-1.1' ].
-			spec baseline: 'Keccak' with: [ spec repository: 'github://smartshackle/Keccak:v0.1.1/src' ].
-			spec baseline: 'FogComm' with: [ spec repository: 'github://smartshackle/Fog/src' ].
-			spec baseline: 'SmaccSolidity' with: [ spec repository: 'github://smartshackle/SmaCC-Solidity' ].
+			spec baseline: 'Keccak' with: [ spec repository: 'github://smartanvil/Keccak:v0.1.1/src' ].
+			spec baseline: 'FogComm' with: [ spec repository: 'github://smartanvil/Fog/src' ].
+			spec baseline: 'SmaccSolidity' with: [ spec repository: 'github://smartanvil/SmaCC-Solidity' ].
 			spec baseline: 'ParametrizedTests' with: [ spec repository: 'github://tesonep/ParametrizedTests' ].
 			spec
 				project: 'NeoJSON'

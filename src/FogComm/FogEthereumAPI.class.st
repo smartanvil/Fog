@@ -1,6 +1,6 @@
 "
 Ethereum subset of RPC Calls 
-https://github.com/ethereum/wiki/wiki/JSON-RPC#json-rpc-api-reference
+
 "
 Class {
 	#name : #FogEthereumAPI,

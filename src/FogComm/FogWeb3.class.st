@@ -14,6 +14,11 @@ FogWeb3 >> clientVersion [
 ]
 
 { #category : #'as yet unclassified' }
+FogWeb3 >> setApi [
+	api := FogWeb3API new
+]
+
+{ #category : #'as yet unclassified' }
 FogWeb3 >> sha3: aString [
 	<doc: 'Returns Keccak-256 (<em>not</em> the standardized SHA3-256) of the given data.'>
 	^ self send: (api messageSha3: aString)

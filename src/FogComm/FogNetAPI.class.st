@@ -1,6 +1,6 @@
 "
 Net subset of callable RPC messages 
-https://github.com/ethereum/wiki/wiki/JSON-RPC#json-rpc-api-reference
+
 "
 Class {
 	#name : #FogNetAPI,

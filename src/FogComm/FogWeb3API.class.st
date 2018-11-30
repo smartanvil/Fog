@@ -1,6 +1,6 @@
 "
 Web3 subset of callable RPC messages 
-https://github.com/ethereum/wiki/wiki/JSON-RPC#json-rpc-api-reference
+
 "
 Class {
 	#name : #FogWeb3API,

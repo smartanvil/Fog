@@ -11,7 +11,6 @@ Is based on the Javascript canonical implementation done by Ethereum community [
 
 ## Dependencies 
 
-``` 
 ### Solidity
 ``` 
  npm install solc

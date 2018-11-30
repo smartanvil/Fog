@@ -11,6 +11,7 @@ Is based on the Javascript canonical implementation done by Ethereum community [
 
 ## Dependencies 
 
+``` 
 ### Solidity
 ``` 
  npm install solc
@@ -33,7 +34,6 @@ You may want to use this version for having access to some scripts and contracts
 ```
 git checkout git@github.com:sbragagnolo/Fog.git
 ```
-
 ```
 Metacello
 	new
@@ -300,9 +300,7 @@ Or to register some callbacks
   
  For the rest of the methods implemented on the connection you can use the ehereum javascript api, since they are the same .
   
-  
-  
-## FogComm
+# FogComm - Generated Doc
 ## Manifest
 FogComm project defines the minimal library for accessing to GETH RPC Client. 
 Based on the JSON-RPC Specification: 
@@ -373,14 +371,9 @@ Set up the URL to GETH RPC endpoint
 Get an API Access object. responsible to resolve the eth_ kind of messages (more in FogEth)
 
 
-### Class Methods
 
 ## FogEth
-ETHEthereumAPI  relative 
-
-### Properties
-connection
-api
+FogEthereumAPI  relative 
 
 ### Methods
 #### FogEth>>getUncleByBlockTag: var1 andIndex: var2
@@ -528,13 +521,10 @@ Returns compiled LLL code.
 Returns information about a transaction by block hash and transaction index position.
 
 
-### Class Methods
 
 ## FogEthereumAPI
 Ethereum subset of RPC Calls 
 
-
-### Properties
 
 ### Methods
 #### FogEthereumAPI>>messageSubmitHashrate: aHashRateIn32BytesHexa clientId: aClientUUID    
@@ -691,14 +681,9 @@ Encodes a message entity for the RPC message eth_getTransactionByBlockHashAndInd
 Encodes a message entity for the RPC message eth_getCompilers
 
 
-### Class Methods
 
 ## FogNet
-ETHAdminAPI relative 
-
-### Properties
-connection
-api
+FogNetAPI relative 
 
 ### Methods
 #### FogNet>>listening
@@ -708,13 +693,10 @@ Returns <code>true</code> if client is actively listening for network connection
 Returns the current network id.
 
 
-### Class Methods
 
 ## FogNetAPI
 Net subset of callable RPC messages 
 
-
-### Properties
 
 ### Methods
 #### FogNetAPI>>messageNetListening 
@@ -724,14 +706,9 @@ Encodes a message entity for the RPC message net_listening
 Encodes a message entity for the RPC message net_version
 
 
-### Class Methods
 
 ## FogWeb3
-ETHWeb3API relative 
-
-### Properties
-connection
-api
+FogWeb3API relative 
 
 ### Methods
 #### FogWeb3>>sha3_256: aString
@@ -744,13 +721,10 @@ Returns Keccak-256 (<em>not</em> the standardized SHA3-256) of the given data.
 Returns the current client version.
 
 
-### Class Methods
 
 ## FogWeb3API
 Web3 subset of callable RPC messages 
 
-
-### Properties
 
 ### Methods
 #### FogWeb3API>>messageClientVersion 
@@ -760,7 +734,6 @@ Encodes a message entity for the RPC message web3_clientVersion
 Encodes a message entity for the RPC message web3_sha3
 
 
-### Class Methods
 
 
 

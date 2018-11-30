@@ -9,18 +9,19 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-FogNetAPI >> messageNetListening [
-	<doc: 'Returns <code>true</code> if client is actively listening for network connections.'>
+FogNetAPI >> messageNetListening [ 
+	<doc:'Encodes a message entity for the RPC message net_listening'>
 	^ FogMessage new
 		method: 'net_listening';
 		yourself
+	
 ]
 
 { #category : #'as yet unclassified' }
-FogNetAPI >> messageNetVersion [  
-	<doc:'Returns the current network id.'>
+FogNetAPI >> messageNetVersion [   
+	<doc:'Encodes a message entity for the RPC message net_version'>
 	^ FogMessage new
 		method: 'net_version';
 		yourself
-
+	
 ]

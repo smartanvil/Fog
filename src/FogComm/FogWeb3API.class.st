@@ -9,19 +9,20 @@ Class {
 }
 
 { #category : #'api web3' }
-FogWeb3API >> messageClientVersion [
-	<doc: 'Returns the current client version.'>
+FogWeb3API >> messageClientVersion [ 
+	<doc:'Encodes a message entity for the RPC message web3_clientVersion'>
 	^ FogMessage new
 		method: 'web3_clientVersion';
 		yourself
+	
 ]
 
 { #category : #'as yet unclassified' }
-FogWeb3API >> messageSha3: aString [  
-	<doc: 'Returns Keccak-256 (<em>not</em> the standardized SHA3-256) of the given data.'>
+FogWeb3API >> messageSha3: aString [   
+	<doc:'Encodes a message entity for the RPC message web3_sha3'>
 	^ FogMessage new
 		method: 'web3_sha3';
 		parameters: {aString};
 		yourself
-
+	
 ]

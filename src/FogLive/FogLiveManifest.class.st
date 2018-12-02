@@ -14,7 +14,7 @@ For points of extension you may want to check on:
 Class {
 	#name : #FogLiveManifest,
 	#superclass : #PackageManifest,
-	#category : #'FogLive-Cache'
+	#category : #'FogLive-Manifest'
 }
 
 { #category : #'e- apply methods by reflection' }
@@ -34,7 +34,7 @@ FogLiveManifest class >> exampleApplyConstructorByUsingMirrors [
 		applyOn: contract
 		valueWithArguments: {}
 		from: session applicationAccount
-		gas: 40000000
+		gas: 400000
 		gasPrice: 3
 		amount: 0
 	"deployedContract waitIsReady."	" Uncomment this for forcing to wait for the contract to be fully deployed"
@@ -45,21 +45,15 @@ FogLiveManifest class >> exampleApplyMethodByUsingMirrors [
 	<example>
 	| session package contract constructor deployedContract method methodResult |
 	session := FogConnection createDefaultConnection nonCachedSession.
-	session
-		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
-	package := session
-		loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc
-		named: #test.
+	session applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
+	package := session loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
 	constructor := contract mirror constructor.
 	deployedContract := constructor
 		using: session
 		applyOn: contract
 		valueWithArguments: {}
-		from: session applicationAccount
-		gas: 40000000
-		gasPrice: 3
-		amount: 0.
+		from: session applicationAccount.
 	deployedContract waitIsReady.
 	method := contract mirror instanceMirror method: #allParticipantsHaveVoted.
 	methodResult := method
@@ -113,6 +107,28 @@ FogLiveManifest class >> exampleContractDescriptionLoadingByReference [
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll
 ]
 
+{ #category : #'e- apply methods by reflection' }
+FogLiveManifest class >> exampleContractPropertyMirrorAccess [
+	<example>
+	| session package contract constructor deployedContract property value |
+	session := FogConnection createDefaultConnection nonCachedSession.
+	session applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
+	package := session loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc named: #test.
+	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
+	constructor := contract mirror constructor.
+	deployedContract := constructor
+		using: session
+		applyOn: contract
+		valueWithArguments: {}
+		from: session applicationAccount
+		gas: 400000
+		gasPrice: 3
+		amount: 0.
+	deployedContract waitIsReady.
+	property := contract mirror instanceMirror property: #owner.
+	value := property using: session value: deployedContract at: #latest.
+]
+
 { #category : #'d- contract proxy generation' }
 FogLiveManifest class >> exampleContractProxyDeploy [
 	<example>
@@ -139,6 +155,7 @@ FogLiveManifest class >> exampleContractProxyDeployAndApplyMethod [
 		named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
 	poll := contract contract newWithSession: session.
+	poll session: session.
 	self assert: poll allParticipantsHaveVoted = true
 ]
 
@@ -202,7 +219,8 @@ FogLiveManifest class >> exampleContractProxyPropertyAccess [
 		named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
 	poll := contract contract newWithSession: session.
-	poll owner
+	poll session: session.
+	poll readSlotNamed: #owner. " For having access to var owner, you should define the accessor at the class ContractPublic3StatesPoll. "
 ]
 
 { #category : #'a- create session' }
@@ -297,7 +315,7 @@ FogLiveManifest class >> examplePackageLoading [
 	package := session
 		loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc
 		named: #test.
-	package inspect.
+
 ]
 
 { #category : #'a- create session' }

@@ -205,7 +205,7 @@ FogTestingContractProvider class >> public3StatesPollContract: session [
 
 { #category : #'as yet unclassified' }
 FogTestingContractProvider class >> public3StatesPollContractSrc [
-	^ 'pragma solidity ^0.4.2;
+	^ 'pragma solidity ^0.4.8;
 
 contract Public3StatesPoll {
 
@@ -254,7 +254,7 @@ contract Public3StatesPoll {
                 votes = votes +1;
         }
     }
-    function allParticipantsHaveVoted () returns (bool) {
+    function allParticipantsHaveVoted () view returns (bool) {
 	for(uint x = 0; x < pollTable.length; x = x +1) {
             if (!pollTable[x].hasVoted) return false;
         }

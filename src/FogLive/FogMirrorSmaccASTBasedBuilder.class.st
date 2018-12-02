@@ -64,6 +64,7 @@ FogMirrorSmaccASTBasedBuilder >> createMethod: aSolFunctionDefinitionNode [
 	parameters := FogTupleType new
 		types: input;
 		yourself.
+		
 	^ FogMethodMirror new
 		name: (aSolFunctionDefinitionNode identifier acceptVisitor: self);
 		parameters: parameters;

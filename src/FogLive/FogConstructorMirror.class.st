@@ -18,6 +18,7 @@ FogConstructorMirror >> encodeUsing: aSession for: aContractDescription with: an
 
 { #category : #testing }
 FogConstructorMirror >> hasParameters [
+	<doc: 'Returns true if it has parameters. False if it does not expect any parameter'>
 	^ parameters size > 0
 ]
 
@@ -67,6 +68,9 @@ FogConstructorMirror >> selectorWithNames [
 
 { #category : #'as yet unclassified' }
 FogConstructorMirror >> using: aSession applyOn: aContractDescription valueWithArguments: aCollection from: anAccount [
+	<doc:
+		'Returns a contract instance, result of applying the contructor (what means a contract deployment) using the given setup variables. It delegates the calculation of gas and gas price to the session. It transfers no money during the deployment.
+		'>
 	^ aSession
 		deploy: aContractDescription
 		applying: self
@@ -76,7 +80,9 @@ FogConstructorMirror >> using: aSession applyOn: aContractDescription valueWithA
 ]
 
 { #category : #'as yet unclassified' }
-FogConstructorMirror >> using: aSession applyOn: aContractDescription valueWithArguments: aCollection from: anAccount  amount: anAmount [
+FogConstructorMirror >> using: aSession applyOn: aContractDescription valueWithArguments: aCollection from: anAccount amount: anAmount [
+	<doc:
+		'Returns a contract instance, result of applying the contructor (what means a contract deployment) using the given setup variables. It delegates the calculation of gas and gas price to the session '>
 	^ aSession
 		deploy: aContractDescription
 		applying: self
@@ -87,6 +93,8 @@ FogConstructorMirror >> using: aSession applyOn: aContractDescription valueWithA
 
 { #category : #'as yet unclassified' }
 FogConstructorMirror >> using: aSession applyOn: aContractDescription valueWithArguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice [
+	<doc:
+		'Returns a contract instance,  result of applying the contructor (what means a contract deployment) using the given setup variables. It transfer no money during contract deployment'>
 	^ self
 		using: aSession
 		applyOn: aContractDescription
@@ -99,6 +107,7 @@ FogConstructorMirror >> using: aSession applyOn: aContractDescription valueWithA
 
 { #category : #'as yet unclassified' }
 FogConstructorMirror >> using: aSession applyOn: aContractDescription valueWithArguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
+	<doc: 'Returns a contract instance,  result of applying the contructor (what means a contract deployment) using the given setup variables.'>
 	^ aSession
 		deploy: aContractDescription
 		applying: self

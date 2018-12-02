@@ -19,6 +19,7 @@ FogTransactionMonitorService >> initialize [
 
 { #category : #'as yet unclassified' }
 FogTransactionMonitorService >> monitors [
+	<doc: 'It returns all the transaction''s monitors used by this service'>
 	^ monitors
 ]
 

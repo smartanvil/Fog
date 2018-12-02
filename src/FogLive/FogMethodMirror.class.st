@@ -25,11 +25,13 @@ FogMethodMirror >> encodeUsing: aSession for: aContractDescription with: anColle
 
 { #category : #'as yet unclassified' }
 FogMethodMirror >> hasParameters [
+	<doc: 'Returns true if it has parameters. False if it does not expect any parameter'>
 	^ parameters size > 0
 ]
 
 { #category : #testing }
 FogMethodMirror >> isStateModifier [
+	<doc: 'Returns true the method is supposed to modify state on call'>
 	^ modifiesState
 ]
 
@@ -40,6 +42,7 @@ FogMethodMirror >> modifiesState: aFalse [
 
 { #category : #accessing }
 FogMethodMirror >> name [
+	<doc: 'Returns the method''s name'>
 	^ '{1}({2}) returns ({3})'
 		format:
 			{name.
@@ -54,6 +57,7 @@ FogMethodMirror >> name: aString [
 
 { #category : #'as yet unclassified' }
 FogMethodMirror >> parameters [
+	<doc: 'Returns the method''s parameters: Name and type'>
 	^ parameters
 ]
 
@@ -74,6 +78,7 @@ FogMethodMirror >> return: aCollection [
 
 { #category : #accessing }
 FogMethodMirror >> returnType [
+	<doc: 'Returns the returning type'>
 	^ return 
 ]
 
@@ -99,6 +104,7 @@ FogMethodMirror >> selectorWithNames [
 
 { #category : #accessing }
 FogMethodMirror >> signature [
+	<doc: 'Returns the method signature.'>
 	^ '{1}({2})'
 		format:
 			{name.
@@ -107,18 +113,23 @@ FogMethodMirror >> signature [
 
 { #category : #'as yet unclassified' }
 FogMethodMirror >> using: aSession applyOn: anETHContractInstance at: aBlockHash valueWithArguments: aCollection from: anAccount [
+	<doc:
+		'Returns a result of applying the method (depending on the kind of method if may respond with data or with a future) using the given setup variables. It delegates the calculation of gas and gas price to the session. It transfers no money during the execution.
+		'>
 	^ aSession
 		apply: self
 		on: anETHContractInstance
 		at: aBlockHash
 		arguments: aCollection
 		from: anAccount
-		amount: 0.
-
+		amount: 0
 ]
 
 { #category : #'as yet unclassified' }
 FogMethodMirror >> using: aSession applyOn: anETHContractInstance at: aBlockHash valueWithArguments: aCollection from: anAccount amount: anAmount [
+	<doc:
+		'Returns a result of applying the method (depending on the kind of method if may respond with data or with a future) using the given setup variables. It delegates the calculation of gas and gas price to the session. 
+		'>
 	^ aSession
 		apply: self
 		on: anETHContractInstance
@@ -130,6 +141,9 @@ FogMethodMirror >> using: aSession applyOn: anETHContractInstance at: aBlockHash
 
 { #category : #'as yet unclassified' }
 FogMethodMirror >> using: aSession applyOn: anETHContractInstance valueWithArguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice [
+	<doc:
+		'Returns a result of applying the method (depending on the kind of method if may respond with data or with a future) using the given setup variables. It transfers no money during the execution.
+		'>
 	^ self
 		using: aSession
 		applyOn: anETHContractInstance
@@ -142,6 +156,9 @@ FogMethodMirror >> using: aSession applyOn: anETHContractInstance valueWithArgum
 
 { #category : #'as yet unclassified' }
 FogMethodMirror >> using: aSession applyOn: anETHContractInstance valueWithArguments: aCollection from: anAccount gas: aGasAmount gasPrice: aGasPrice amount: anAmount [
+	<doc:
+		'Returns a result of applying the method (depending on the kind of method if may respond with data or with a future) using the given setup variables. 
+		'>
 	^ aSession
 		apply: self
 		on: anETHContractInstance

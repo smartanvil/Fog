@@ -15,16 +15,18 @@ Class {
 
 { #category : #checking }
 FogTransactionMonitor >> check [
+	<doc: 'It checks if the transaction has been executed, in which case it deploys the related future.'>
 	| receipt |
 	[ receipt := session receiptForTransaction: transactionHash.
 	receipt ifNotNil: [ future deploySuccess: receipt ] ]
-		on: Error 
+		on: Error
 		do: [ :e | future deployFailure: e ]
 ]
 
 { #category : #'as yet unclassified' }
 FogTransactionMonitor >> future [
-	^ future ifNil: [  future := TKTFuture new ]
+	<doc: 'It returns the future for the ongoing transaction. It usage is highly discouraged.'>
+	^ future ifNil: [ future := TKTFuture new ]
 ]
 
 { #category : #'as yet unclassified' }
@@ -34,6 +36,7 @@ FogTransactionMonitor >> isResolved [
 
 { #category : #'as yet unclassified' }
 FogTransactionMonitor >> register: aDuration [
+	<doc: 'It registers a time window. Used by the monitor service to expire the monitors.'>
 	timeLeft := self timeLeft - aDuration.
 	timeLeft asSeconds <= 0
 		ifTrue: [ future
@@ -50,6 +53,7 @@ FogTransactionMonitor >> session: aSession [
 
 { #category : #'as yet unclassified' }
 FogTransactionMonitor >> timeLeft [
+	<doc: 'It returns the time to live of this monitor. The default initial value is 30 minutes'>
 	^ timeLeft ifNil: [ timeLeft := 30 minutes ]
 ]
 

@@ -4,7 +4,12 @@ FogLive is a project that aims to provide object reifications for each of the ma
 FogLive allows to use Blocks, Transactions, Accounts and Contracts as objects, providing along side a Meta programming layer that allows many levels of abstraction going from protocol level and memory access to Contract transparent proxies.
 
 
+For points of extension you may want to check on: 
 
+   FogSession / FogCachedSession . For the articulation of FogLive with FogComm.
+   FogContractDescription . For the building of meta types of contracts from source code. 
+   FogContractMirror / FogMirrorSmaccASTBasedBuilder. For what is to the generation of remote mirrors 
+   FogContractProxyBuilder / FogContractProxy. For what it goes to code generation for transparent proxy 
 "
 Class {
 	#name : #FogLiveManifest,
@@ -17,7 +22,11 @@ FogLiveManifest class >> exampleApplyConstructorByUsingMirrors [
 	<example>
 	| session package contract constructor deployedContract |
 	session := FogConnection createDefaultConnection nonCachedSession.
-	package := session loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc named: #test.
+	session
+		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
+	package := session
+		loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc
+		named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
 	constructor := contract mirror constructor.
 	deployedContract := constructor
@@ -36,7 +45,11 @@ FogLiveManifest class >> exampleApplyMethodByUsingMirrors [
 	<example>
 	| session package contract constructor deployedContract method methodResult |
 	session := FogConnection createDefaultConnection nonCachedSession.
-	package := session loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc named: #test.
+	session
+		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
+	package := session
+		loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc
+		named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
 	constructor := contract mirror constructor.
 	deployedContract := constructor
@@ -103,25 +116,29 @@ FogLiveManifest class >> exampleContractDescriptionLoadingByReference [
 { #category : #'d- contract proxy generation' }
 FogLiveManifest class >> exampleContractProxyDeploy [
 	<example>
-	| session package contract poll|
+	| session package contract poll |
 	session := FogConnection createDefaultConnection nonCachedSession.
+	session
+		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
 	package := session
 		loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc
 		named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
-	poll := contract contract newWithSession: session. 
+	poll := contract contract newWithSession: session
 ]
 
 { #category : #'d- contract proxy generation' }
 FogLiveManifest class >> exampleContractProxyDeployAndApplyMethod [
 	<example>
-	| session package contract poll|
+	| session package contract poll |
 	session := FogConnection createDefaultConnection nonCachedSession.
+	session
+		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
 	package := session
 		loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc
 		named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
-	poll := contract contract newWithSession: session. 
+	poll := contract contract newWithSession: session.
 	self assert: poll allParticipantsHaveVoted = true
 ]
 
@@ -130,12 +147,14 @@ FogLiveManifest class >> exampleContractProxyGeneration [
 	<example>
 	| session package contract |
 	session := FogConnection createDefaultConnection nonCachedSession.
+	session
+		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
 	package := session
 		loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc
 		named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
 	self assert: contract contract name = #ContractPublic3StatesPoll.
-	contract contract browse 
+	contract contract browse
 ]
 
 { #category : #'d- contract proxy generation' }
@@ -143,12 +162,15 @@ FogLiveManifest class >> exampleContractProxyGenerationCreateInstanceForExisting
 	<example>
 	| session package contract |
 	session := FogConnection createDefaultConnection nonCachedSession.
+	session
+		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
 	package := session
 		loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc
 		named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
 	self assert: contract contract name = #ContractPublic3StatesPoll.
-	contract contract forInstance: '#provide here a hash'
+	contract contract
+		forInstance: (session findContractInstanceByHash: '#provide here a hash' blockTag: #latest)
 ]
 
 { #category : #'d- contract proxy generation' }
@@ -156,27 +178,31 @@ FogLiveManifest class >> exampleContractProxyGenerationCreateInstanceForExisting
 	<example>
 	| session package contract |
 	session := FogConnection createDefaultConnection nonCachedSession.
+	session
+		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
 	package := session
 		loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc
 		named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
 	self assert: contract contract name = #ContractPublic3StatesPoll.
 	contract contract
-		forInstance: '#provide here a hash'
+		forInstance: (session findContractInstanceByHash: '#provide here a hash' blockTag: #latest)
 		at: #'provide here some block number or hash'
 ]
 
 { #category : #'d- contract proxy generation' }
 FogLiveManifest class >> exampleContractProxyPropertyAccess [
 	<example>
-	| session package contract poll|
+	| session package contract poll |
 	session := FogConnection createDefaultConnection nonCachedSession.
+	session
+		applicationAccount: (session createExternalAccountFor: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0').
 	package := session
 		loadPackageForCode: FogTestingContractProvider public3StatesPollContractSrc
 		named: #test.
 	contract := session findReference: FogReference new / #test / #Public3StatesPoll.
-	poll := contract contract newWithSession: session. 
-	poll owner 
+	poll := contract contract newWithSession: session.
+	poll owner
 ]
 
 { #category : #'a- create session' }

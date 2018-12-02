@@ -30,7 +30,7 @@ And if you are wondering how to run a node only for testing, maybe you want to e
 geth  --nodiscover --mine --minerthreads 1 --maxpeers 0 --verbosity 3 --unlock "0"  --rpcapi eth,web3,net,admin --rpc --testnet
 ``` 
 
-Finally if you don't want to deal with the creation of the accounts, passwords, etc. Then you may want to check what is happening in this [folder](../blob/master/scripts/dev.sh) of this project. 
+Finally if you don't want to deal with the creation of the accounts, passwords, etc. Then you may want to check what is happening in this [folder](./scripts/dev.sh) of this project. 
 
 
 
@@ -76,7 +76,7 @@ Metacello
   And you will have a almost free connection. (No services, no major object instantiation, etc). 
   
   
-  A FogConnection instance, as we can see in the extended [documentation](../blob/master/FogComm.md)  of the library, allows us already to do many things. 
+  A FogConnection instance, as we can see in the extended [documentation](./FogComm.md)  of the library, allows us already to do many things. 
   But the main idea of the split in between Connection and Session is to be able to provide different flavours of connections, decoupling the domain objects from the data endpoint. 
   
   
@@ -97,7 +97,7 @@ Metacello
   The session is always distributed with a side service (provided by TaskIt - https://github.com/sbragagnolo/taskit), with the mission of allowing polling to the connection and permanent syncing. 
   
   
-  The session will be then, your favourite entry point in Fog. And you can see the [extended documentation here](../blob/master/FogLive.md).
+  The session will be then, your favourite entry point in Fog. And you can see the [extended documentation here](./FogLive.md).
   
 ### Create an account
    For interacting with contracts you will need to have an account. For the database side you may want to check out the documentation [Account management](http://ethdocs.org/en/latest/account-management.html). 
@@ -239,7 +239,7 @@ package := session
 
    After loading a package, and accessing to a contract description, feel free to inspect it. This object is the Meta type reyfication of a contract. We will use it for mostly every exchange with a deployed contract. 
 
-   The contract description understands many messages, extensively covered in the [documentation](../blob/master/FogLive.md). Here we will only remark the most useful, in terms of the cycle of usage. 
+   The contract description understands many messages, extensively covered in the [documentation](./FogLive.md). Here we will only remark the most useful, in terms of the cycle of usage. 
    
    A contract description understands #mirror and #contract. 
    

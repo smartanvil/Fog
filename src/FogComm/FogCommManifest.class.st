@@ -13,7 +13,7 @@ Class {
 	#category : #'FogComm-Manifest'
 }
 
-{ #category : #examples }
+{ #category : #'b- examples' }
 FogCommManifest class >> exampleAccessBlock [
 	<example>
 	| connection |
@@ -21,7 +21,7 @@ FogCommManifest class >> exampleAccessBlock [
 	^ connection eth getBlockByTag: #latest full: true.
 ]
 
-{ #category : #examples }
+{ #category : #'b- examples' }
 FogCommManifest class >> exampleAccessContract [
 	<example>
 	| connection |
@@ -29,7 +29,7 @@ FogCommManifest class >> exampleAccessContract [
 	^ connection eth getContractCode: '0xcc70db1ac810677c06d9cc1cdd8c953b12edd3fa' blockTag: #latest
 ]
 
-{ #category : #examples }
+{ #category : #'b- examples' }
 FogCommManifest class >> exampleAccessTransaction [
 	<example>
 	| connection |
@@ -37,15 +37,15 @@ FogCommManifest class >> exampleAccessTransaction [
 	^ connection eth getTransactionByHash: '0x576a713667837f7375643c5a5cdc93d5ca7ba15cf96eebc27a523c42debe436e'
 ]
 
-{ #category : #examples }
+{ #category : #'a- examples' }
 FogCommManifest class >> exampleCreateCustomConnection [
 	<example>
 	| custom |
 	custom := FogConnection on: 'http://localhost:8545'
 ]
 
-{ #category : #examples }
-FogCommManifest class >> exampleCreateDefaulConnection [
+{ #category : #'a- examples' }
+FogCommManifest class >> exampleCreateDefaultConnection [
 	<example>
 	| default |
 	default :=FogConnection createDefaultConnection

@@ -1,5 +1,5 @@
 "
-ETHEthereumAPI  relative 
+FogEthereumAPI  relative 
 "
 Class {
 	#name : #FogEth,

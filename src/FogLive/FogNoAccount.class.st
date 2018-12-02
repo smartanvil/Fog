@@ -1,5 +1,5 @@
 "
-No account objet. For avoiding nil
+No account objet. For avoiding nil on transactions of contract deployment
 "
 Class {
 	#name : #FogNoAccount,
@@ -9,7 +9,7 @@ Class {
 	#classInstVars : [
 		'singleInstance'
 	],
-	#category : 'FogLive-Domain'
+	#category : #'FogLive-Domain'
 }
 
 { #category : #'as yet unclassified' }
@@ -44,5 +44,7 @@ FogNoAccount >> initialize [
 
 { #category : #equality }
 FogNoAccount >> isAccount [
+	<doc:
+		'The NoAccount is not an account and is not a contract'>
 	^ false
 ]

@@ -1,5 +1,5 @@
 "
-ETHWeb3API relative 
+FogWeb3API relative 
 "
 Class {
 	#name : #FogWeb3,

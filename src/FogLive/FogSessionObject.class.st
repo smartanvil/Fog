@@ -1,5 +1,5 @@
 "
-Connected object has some charting base methods and the connection message. 
+A session object is an object that needs to be set up with a session in order to be fully functional. 
 "
 Class {
 	#name : #FogSessionObject,
@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'session'
 	],
-	#category : 'FogLive-Domain'
+	#category : #'FogLive-Domain'
 }
 
 { #category : #accessing }

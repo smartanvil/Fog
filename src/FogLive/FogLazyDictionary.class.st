@@ -12,7 +12,7 @@ Class {
 		'blockReference',
 		'contractAddress'
 	],
-	#category : 'FogLive-Domain'
+	#category : #'FogLive-Meta-Types'
 }
 
 { #category : #accessing }

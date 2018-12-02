@@ -14,6 +14,7 @@ Class {
 
 { #category : #initialization }
 FogReference >> / aPart [
+	<doc: 'Allows to add a name to navigate a reference. It works as analogy of file reference, but for packages and contract descriptions'> 
 	parts add: aPart
 ]
 

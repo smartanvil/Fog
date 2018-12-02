@@ -1,5 +1,5 @@
 "
-ETHAdminAPI relative 
+FogNetAPI relative 
 "
 Class {
 	#name : #FogNet,

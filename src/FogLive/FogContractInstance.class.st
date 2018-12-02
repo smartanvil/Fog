@@ -24,6 +24,7 @@ FogContractInstance >> binaryHash [
 
 { #category : #accessing }
 FogContractInstance >> contract [
+	<doc: 'Returns the account''s contract description. This object represents the MetaType of a Contract'>
 	^ contract
 ]
 
@@ -34,6 +35,8 @@ FogContractInstance >> contract: aContractDescription [
 
 { #category : #testing }
 FogContractInstance >> isContract [
+	<doc:
+		'A contract account is a contract. This method returns always true in this subclass'>
 	^ true
 ]
 
@@ -44,6 +47,7 @@ FogContractInstance >> isReady [
 
 { #category : #accessing }
 FogContractInstance >> mirror [
+	<doc: 'Returns the contract''s instance mirror'>
 	^ contract mirror instanceMirror
 ]
 
@@ -64,11 +68,15 @@ FogContractInstance >> printOn: aStream [
 
 { #category : #accessing }
 FogContractInstance >> proxy [
+	<doc:
+		'Returns a proxy object to the contract at the current #latest state. '>
 	^ contract contract forInstance: self
 ]
 
 { #category : #accessing }
 FogContractInstance >> proxyAt: aBlockTagNumberOrHash [
+<doc:
+		'Returns a proxy object to the contract at the a given state (blockhash -tag - number).'>
 	^ contract contract forInstance: self at: aBlockTagNumberOrHash
 ]
 

@@ -12,6 +12,7 @@ Class {
 
 { #category : #accessing }
 FogCachedSession >> cache [
+	<doc: 'It returns the Cache used by the session. The default is the singleton located in FogCache current. '>
 	^ cache ifNil: [ FogCache current ]
 ]
 
@@ -122,9 +123,4 @@ FogCachedSession >> registerInstantiationWithReceipt: transactionHash ofContract
 			(super
 				registerInstantiationWithReceipt: transactionHash
 				ofContractDescription: aContractDescription)
-]
-
-{ #category : #accesing }
-FogCachedSession >> sessionAccount [
-	^ self findAccountByHash: '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0' blockTag: #latest .
 ]

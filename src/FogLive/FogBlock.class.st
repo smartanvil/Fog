@@ -52,21 +52,25 @@ FogBlock >> = anObject [
 
 { #category : #accessing }
 FogBlock >> accounts [
+	<doc: 'Returns a collection with all accounts related with this block'>
 	^ ((self transactions collect: #from) , (self transactions collect: #to) , {FogNoAccount nilAccount}) asSet
 ]
 
 { #category : #accessing }
 FogBlock >> amountOfTransactions [ 
+	<doc: 'Returns the amount of transactions stored in this block'>
 	^ transactionsHashes size
 ]
 
 { #category : #private }
 FogBlock >> blockHash [
+	<doc: 'Returns Block''s hash'>
 	^ blockHash
 ]
 
 { #category : #accessing }
-FogBlock >> difficulty [ 
+FogBlock >> difficulty [
+	<doc: 'Returns the block''s dificulty'>
 	^ difficulty
 ]
 
@@ -77,6 +81,7 @@ FogBlock >> difficulty: anObject [
 
 { #category : #accessing }
 FogBlock >> extraData [ 
+	<doc: 'Returns the block''s extraData field'>
 	^ extraData
 ]
 
@@ -87,6 +92,7 @@ FogBlock >> extraData: anObject [
 
 { #category : #private }
 FogBlock >> forceLoad [
+	<doc: 'Forces the creation of each of the related objects: transactions, parent block, uncle blocks'>
 	self transactions.
 	self parent. 
 	self uncles.
@@ -106,7 +112,8 @@ FogBlock >> full: aBoolean [
 ]
 
 { #category : #accessing }
-FogBlock >> gasLimit [ 
+FogBlock >> gasLimit [
+	<doc: 'Returns the limit of gas applyed to this block'>
 	^ gasLimit
 ]
 
@@ -117,6 +124,7 @@ FogBlock >> gasLimit: anObject [
 
 { #category : #accessing }
 FogBlock >> gasUsed [
+	<doc: 'Returns the gas used in this block'>
 	^ gasUsed asBKNumber
 ]
 
@@ -144,13 +152,14 @@ FogBlock >> isFull [
 
 { #category : #testing }
 FogBlock >> isTheSameBlockAs: aETHBlock [
+	
 	^ self privateBlockHash = aETHBlock privateBlockHash
 ]
 
 { #category : #accessing }
-FogBlock >> logsBloom [ 
+FogBlock >> logsBloom [
+	<doc: 'Returns the block''s logs bloom field'>
 	^ logsBloom
-	
 ]
 
 { #category : #accessing }
@@ -159,9 +168,9 @@ FogBlock >> logsBloom: anObject [
 ]
 
 { #category : #accessing }
-FogBlock >> miner [ 
+FogBlock >> miner [
+	<doc: 'Returns the miner hash'>
 	^ miner
-	
 ]
 
 { #category : #accessing }
@@ -170,9 +179,9 @@ FogBlock >> miner: anObject [
 ]
 
 { #category : #accessing }
-FogBlock >> mixHash [ 
+FogBlock >> mixHash [
+	<doc: 'Returns the block''s mixHash field'>
 	^ mixHash
-	
 ]
 
 { #category : #accessing }
@@ -182,14 +191,15 @@ FogBlock >> mixHash: anObject [
 
 { #category : #accessing }
 FogBlock >> next [
+	<doc: 'Returns the block holding the next block number'>
 	^ self session findBlockByNumber: self number + 1 full: true.
 
 ]
 
 { #category : #accessing }
-FogBlock >> nonce [ 
+FogBlock >> nonce [
+	<doc: 'Returns the block''s nounce'>
 	^ nonce
-	
 ]
 
 { #category : #accessing }
@@ -198,9 +208,9 @@ FogBlock >> nonce: anObject [
 ]
 
 { #category : #properties }
-FogBlock >> number [ 
+FogBlock >> number [
+	<doc: 'Returns the block''s number'>
 	^ number
-	
 ]
 
 { #category : #accessing }
@@ -210,12 +220,14 @@ FogBlock >> number: anObject [
 
 { #category : #accessing }
 FogBlock >> parent [
+	<doc: 'Returns the block''s parent block object'>
 	^ parent ifNil: [ parent := [self session findBlockByHash: self parentHash full: true ] on: Error do: [ parent := nil ]]
 ]
 
 { #category : #accessing }
-FogBlock >> parentHash [ 
-	^ parentHash 
+FogBlock >> parentHash [
+	<doc: 'Returns the block''s parent hash'>
+	^ parentHash
 ]
 
 { #category : #accessing }
@@ -225,7 +237,7 @@ FogBlock >> parentHash: anObject [
 
 { #category : #accessing }
 FogBlock >> previous [
-"self haltIf: [ ('2016-05-23T19:51:02+02:00' asDateAndTime - self timestamp) abs < 10 days ]."
+	<doc: 'Returns the block holding the previous block number'>
 	^ self session findBlockByNumber: self number - 1 full: true
 ]
 
@@ -244,17 +256,20 @@ FogBlock >> privateAddress [
 
 { #category : #private }
 FogBlock >> privateBlockHash [
+	<doc: 'Returns the block''s hash. This name is renamed to avoid problems with the object''s hash definition'>
 	^ blockHash
 ]
 
 { #category : #private }
 FogBlock >> privateInflateTransactions [
+	
 	^ transactionsHashes
 		collect: [ :t | self session findTransactionByDescription: t ]
 ]
 
 { #category : #'as yet unclassified' }
 FogBlock >> receiptRoot: aString [
+	<doc: 'Returns block''s receiptRoot field'>
 	receiptRoot := aString
 ]
 
@@ -269,8 +284,9 @@ FogBlock >> receiptsRoot: anObject [
 ]
 
 { #category : #accessing }
-FogBlock >> sha3Uncles [ 
-	^ sha3Uncles 
+FogBlock >> sha3Uncles [
+	<doc: 'Returns the addresses of the block''s uncles'>
+	^ sha3Uncles
 ]
 
 { #category : #accessing }
@@ -279,7 +295,8 @@ FogBlock >> sha3Uncles: anObject [
 ]
 
 { #category : #properties }
-FogBlock >> size [ 
+FogBlock >> size [
+	<doc: 'Returns the size of the block'>
 	^ size
 ]
 
@@ -295,7 +312,8 @@ FogBlock >> source: aCollection [
 ]
 
 { #category : #accessing }
-FogBlock >> stateRoot [ 
+FogBlock >> stateRoot [
+	<doc: 'Returns block''s stateRoot field'>
 	^ stateRoot
 ]
 
@@ -305,7 +323,8 @@ FogBlock >> stateRoot: anObject [
 ]
 
 { #category : #accessing }
-FogBlock >> timestamp [ 
+FogBlock >> timestamp [
+	<doc: 'Returns the block''s timestamp field'>
 	^ timestamp
 ]
 
@@ -316,7 +335,8 @@ FogBlock >> timestamp: anObject [
 ]
 
 { #category : #accessing }
-FogBlock >> totalDifficulty [ 
+FogBlock >> totalDifficulty [
+	<doc: 'Returns the block''s totalDifficulty field'>
 	^ totalDifficulty asBKNumber
 ]
 
@@ -327,6 +347,7 @@ FogBlock >> totalDifficulty: anObject [
 
 { #category : #accessing }
 FogBlock >> transactions [
+	<doc: 'Returns a collection with all the transaction objects belonging to this block'>
 	^ transactions ifNil: [ transactions := self privateInflateTransactions ]
 ]
 
@@ -337,11 +358,13 @@ FogBlock >> transactions: anObject [
 
 { #category : #private }
 FogBlock >> transactionsHashes [
+	<doc: 'Returns a collection with all the transaction hashes  belonging to this block'>
 	^ transactionsHashes
 ]
 
 { #category : #accessing }
-FogBlock >> transactionsRoot [ 
+FogBlock >> transactionsRoot [
+	<doc: 'Returns the block''s transactionRoot field'>
 	^ transactionsRoot
 ]
 
@@ -352,6 +375,7 @@ FogBlock >> transactionsRoot: anObject [
 
 { #category : #accessing }
 FogBlock >> uncles [
+	<doc: 'Returns a collection with all uncle blocks of this block. '>
 	^ uncles ifNil: [ uncles := unclesHashes collect: [ :u | self session findBlockByHash: u full: true ] ]
 ]
 

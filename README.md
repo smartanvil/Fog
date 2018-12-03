@@ -47,14 +47,14 @@ Finally if you don't want to deal with the creation of the accounts, passwords, 
 Metacello
 	new
 	baseline: 'Fog';
-	repository: 'github://sbragagnolo/Fog/src';
+	repository: 'github://smartanvil/Fog/src';
 	load.
 ```
 
 ### By hand 
 You may want to use this version for having access to some scripts and contracts samples. 
 ```
-git checkout git@github.com:sbragagnolo/Fog.git
+git checkout git@github.com:smartanvil/Fog.git
 ```
 ```
 Metacello

@@ -37,7 +37,7 @@ FogUtils >> compileSolidity: sourceCodeFile [
 	spec
 		command: 'bash';
 		option: '-c';
-		argument: command ] asOSTask future.
+		argument: command ] asOSTask future: TKTNewProcessTaskRunner new.
 	return synchronizeTimeout: 1 minute.
 	^ self loadSolcDataFromStream: compilationOutput asFileReference readStream
 ]

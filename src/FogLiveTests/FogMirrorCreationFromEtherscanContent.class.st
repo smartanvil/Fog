@@ -3,10 +3,8 @@ Class {
 	#superclass : #FogTestCase,
 	#instVars : [
 		'contract',
-		'contractSelector'
-	],
-	#classVars : [
-		'testingContract'
+		'contractSelector',
+		'stream'
 	],
 	#category : #FogLiveTests
 }
@@ -14,46 +12,52 @@ Class {
 { #category : #'building suites' }
 FogMirrorCreationFromEtherscanContent class >> testParameters [
 	^ super testParameters
-		forSelector: #contractSelector
-		addOptions: (SmGContractsContents selectors reject: [ :s | s beginsWith: 'base64' ])
+		forSelector: #stream addOptions: {STRSolidityFilesProvider default readStream};
+		forSelector: #contractSelector addOptions: STRSolidityFilesProvider default generateNexts
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FogMirrorCreationFromEtherscanContent >> contractSelector: aSelector [
 	 contractSelector := aSelector
 ]
 
-{ #category : #running }
+{ #category : #accessing }
 FogMirrorCreationFromEtherscanContent >> setUp [
 	super setUp.
-	contract := SmGContractsContents new perform: contractSelector
+	contract := stream next.
 ]
 
-{ #category : #running }
+{ #category : #accessing }
+FogMirrorCreationFromEtherscanContent >> stream: aStream [
+	stream := aStream
+]
+
+{ #category : #accessing }
 FogMirrorCreationFromEtherscanContent >> testDescriptionCreation [
 	| package |
-	package := session loadPackageForCode: contract named: contractSelector.
+	package := session loadPackageForCode: contract named: contract hash asString.
 	self assert: (package isKindOf: FogPackage).
 	self assert: package descriptions isNotEmpty.
 	self assert: package ast isNotNil.
 
 ]
 
-{ #category : #running }
+{ #category : #accessing }
 FogMirrorCreationFromEtherscanContent >> testMirrorClassSideIsCreated [
 	| package |
-	package := session loadPackageForCode: contract named: contractSelector.
+	package := session loadPackageForCode: contract named: contract hash asString.
 	self assert: (package descriptions allSatisfy: [ : d | d mirror isNotNil ]).
-	self assert: (package descriptions allSatisfy: [ : d | d mirror constructor isNotNil ]).
+	self assert: (package descriptions anySatisfy: [ : d | d mirror constructor isNotNil ]).
 
 
 ]
 
-{ #category : #running }
+{ #category : #accessing }
 FogMirrorCreationFromEtherscanContent >> testMirrorInstanceSideIsCreated [
+	"running"
+
 	| package |
-	package := session loadPackageForCode: contract named: contractSelector.
+	package := session loadPackageForCode: contract named: contract hash asString.
 	self assert: (package descriptions allSatisfy: [ :d | d mirror instanceMirror isNotNil ]).
-	self
-		assert: (package descriptions allSatisfy: [ :d | d mirror instanceMirror methods isNotEmpty ])
+	self assert: (package descriptions allSatisfy: [ :d | d mirror instanceMirror methods isNotEmpty ])
 ]

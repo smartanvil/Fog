@@ -15,6 +15,7 @@ BaselineOfFogLive >> baseline: spec [
 			spec baseline: 'FogComm' with: [ spec repository: 'github://smartanvil/Fog/src' ].
 			spec baseline: 'SmaccSolidity' with: [ spec repository: 'github://smartanvil/SmaCC-Solidity' ].
 			spec baseline: 'ParametrizedTests' with: [ spec repository: 'github://tesonep/ParametrizedTests' ].
+			spec package:'SolidityTestingResources' with: [ spec repository: 'github://smartanvil/SolidityTestingResources' ].
 			spec
 				project: 'NeoJSON'
 				with: [ spec
@@ -22,5 +23,5 @@ BaselineOfFogLive >> baseline: spec [
 						version: #stable;
 						repository: 'http://mc.stfx.eu/Neo' ].
 			spec package: #FogLive with: [ spec requires: #('FogComm' 'TaskItShell' 'Keccak' 'SmaccSolidity') ].
-			spec package: #FogLiveTests with: [ spec requires: #('FogLive' 'ParametrizedTests') ] ]
+			spec package: #FogLiveTests with: [ spec requires: #('FogLive' 'ParametrizedTests' 'SolidityTestingResources') ] ]
 ]

@@ -373,15 +373,10 @@ constructorSession: aSession
    
 ### Deploy a contract using reflection
 
-First we need to access what we call the Contract description. This object relates the source code with it AST, binary and deployable representations. 
-
-```
- contractDescription := FogFileContractDescription fromFile: 'path/to/contract'
-```
 The contract description object respond to the #mirror message. Giving as return a FogContractMirror. This mirror is the representation of the Contract class side. Exposes the constructor method.
 
 ```
-   constructor := contractDescription mirror constructor.
+   constructor := pollDescription mirror constructor.
 ```
 This constructor method is as well a mirror of the contructing method, and it allows to execute the remote method by sending the proper message to the object.
 Before showing how to do it, we may need to explain the configuration association array: 
@@ -389,14 +384,17 @@ Ethereum method activation ask for execution metadata. As the ammount of gas the
 For this meta data we use an array of associations. 
 
 ```
-  configuration := 
-  {(#from -> account address).
-	(#gas -> 3000000).
-	(#gasPrice -> 60)}.
-  
-	contractInstance := constructor applyOn: contractDescription valueWithArguments: {} configuration: configuration
+  poll := constructor
+	using: session
+	applyOn: contract
+	valueWithArguments: {}
+	from: session applicationAccount
+	gas: 400000
+	gasPrice: 3
+	amount: 0
 ```
-  The contractInstance variable, now points to a deployed contract instance, of the class FogContractInstanceBind. 
+
+  The poll variable, now points to a deployed contract instance, of the class FogContractInstance. 
   This contract instance it may not be ready, since the transaction will be reduced when the new proof of work is solved. 
   
   For being sure that this object is ready to use, you may want to send the message #waitIsReady to it. It will force a synchronisation. Disclaimer: this may take some minutes. 
@@ -419,39 +417,37 @@ For this meta data we use an array of associations.
   * N > 1 argument selector uses the name of the function plus $: character and adds #and: for each extra parameter. 
   
 ```
-  getMethod := instanceMirror method: #get. 
-  setMethod := instanceMirror method: #set:. 
-  twoParamsMethod: instanceMirror method: #method:and:
+	method := instanceMirror method: #allParticipantsHaveVoted.
 ```
   
-  Finally with the method and the bind object at hand we can activate it by sending a similar message as the one we used to the constructor. Depending on the kind of message, if it changes or no state the kind of return of the activation may be different
+  Finally with the method and the contract instance object at hand we can activate it by sending a similar message as the one we used to the constructor. Depending on the kind of message, if it changes or no state the kind of return of the activation may be different
   
   The following case shows a getter. It should not mean any change of state. So the return is a regular value. 
 ```
-  configuration := 
-  {(#from -> account address).
-	(#gas -> 3000000).
-	(#gasPrice -> 60)}.
-  
-  directReturn := getMethod applyOn: contractInstance valueWithArguments: {} configuration: configuration.
+	methodResult := method
+		using: session
+		applyOn: deployedContract
+		valueWithArguments: {}
+		from: session applicationAccount
+		gas: 1000000
+		gasPrice: 2
+		amount: 0
 ```
 
-  The following case illustrates a setter. It means of course a change of state. Then the return will be a transaction receipt hash. 
+  The following case illustrates a #addVoter:. It means of course a change of state. Then the return will be a future. 
   
 ```
-  configuration := 
-  {(#from -> account address).
-	(#gas -> 3000000).
-	(#gasPrice -> 60)}.
-  
-  receiptHash := setMethod applyOn: contractInstance valueWithArguments: { #Value } configuration: configuration.
+    method := instanceMirror method: #addVoter:.
+	future := method
+		using: session
+		applyOn: deployedContract
+		valueWithArguments: { '0xaValidHash' }
+		from: session applicationAccount
+		gas: 1000000
+		gasPrice: 2
+		amount: 0
 ```
- This receipt hash may be used for synchronizing or checking the remote state of the execution by the user if needed by using the transaction monitor, whom will provide us a future to deal with this execution. 
- 
-```
-  future := FogTransactionMonitorService current receiptFor: receiptHash. 
-```
- The future is a TaskIt Future. You can learn more about futures on the [TaskIt project documentation](https://github.com/sbragagnolo/taskit).
+
 
 Quick some of the things we can do with a future is to force a synchronization:
 ```
@@ -474,23 +470,26 @@ Or to register some callbacks
   This property mirror allow us to have read access to remote variables even if they do not have any getter. For accessing it value, just execute: 
 
 ```
-  value := property value: contractInstance. 
+  value := property using: session value: deployedContract at: #latest.
 ```
-  So far we do support any kind of simple type and structs. We do not yet support arrays (strings neither) or dictionaries. 
-  
-
-
-## Misc
-
- For testing the usage, the checked out project provides a script called dev.sh, at the script folder. This script executes the client with some accounts already created, and in a isolated network, with a single miner. 
-  
- You will need to run some time this client for having enough ether for being able to deploy and execute contracts. And you will need to check the account hash of your related miner. 
-  
- For the rest of the methods implemented on the connection you can use the ehereum javascript api, since they are the same .
-  
+   
 
 
 
 
+# Further documentation
 
+  Do not hesitate in reviewing the extended documentations 
 
+[FogComm](./FogComm.md)
+[FogLive](./FogLive.md)
+
+ Both of this documentations are generated from the PackageManifest (FogCommManifest / FogLiveManifest).
+ Both of this classes, on the class side, have defined the sited examples. 
+ 
+ Just browse them and execute, inspect play :) .
+ 
+ 
+ 
+ 
+ 

@@ -12,8 +12,8 @@ Class {
 { #category : #'building suites' }
 FogMirrorCreationFromEtherscanContent class >> testParameters [
 	^ super testParameters
-		forSelector: #stream addOptions: {STRSolidityFilesProvider default readStream};
-		forSelector: #contractSelector addOptions: STRSolidityFilesProvider default generateNexts
+		forSelector: #stream addOptions: {STRSolidityFilesProvider default };
+		forSelector: #contractSelector addOptions: (1 to: 20 )
 ]
 
 { #category : #accessing }
@@ -24,7 +24,7 @@ FogMirrorCreationFromEtherscanContent >> contractSelector: aSelector [
 { #category : #accessing }
 FogMirrorCreationFromEtherscanContent >> setUp [
 	super setUp.
-	contract := stream next.
+	contract := stream at: contractSelector.
 ]
 
 { #category : #accessing }

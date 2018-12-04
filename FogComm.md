@@ -4,6 +4,22 @@ FogComm project defines the minimal library for accessing to GETH RPC Client.
 Based on the JSON-RPC Specification: 
 	https://github.com/ethereum/wiki/wiki/JSON-RPC
 
+
+## Getting the project
+
+FogComm depends on Keccack 256 project. Which is running yet only in 32 bits platforms. Therefore, use Pharo 32 bits for loading this project.
+
+FogComm is tested on pharo 6.1 and pharo 7.0
+
+
+```smalltalk
+Metacello new
+  baseline: 'FogComm';
+  repository: 'github://smartanvil/Fog';
+  load.
+
+```
+
 ## Project Examples
 ```smalltalk
 exampleCreateCustomConnection

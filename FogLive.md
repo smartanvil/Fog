@@ -7,7 +7,25 @@ For points of extension you may want to check on:
    FogSession / FogCachedSession . For the articulation of FogLive with FogComm.
    FogContractDescription . For the building of meta types of contracts from source code. 
    FogContractMirror / FogMirrorSmaccASTBasedBuilder. For what is to the generation of remote mirrors 
-   FogContractProxyBuilder / FogContractProxy. For what it goes to code generation for transparent proxy ## Project Examples
+   FogContractProxyBuilder / FogContractProxy. For what it goes to code generation for transparent proxy 
+   
+   
+## Getting the project
+
+FogLive depends on Keccack 256 project. Which is running yet only in 32 bits platforms. Therefore, use Pharo 32 bits for loading this project.
+
+FogLive is tested on pharo 6.1 and pharo 7.0
+
+
+```smalltalk
+Metacello new
+  baseline: 'FogLive';
+  repository: 'github://smartanvil/Fog';
+  load.
+
+```
+
+## Project Examples
 ```smalltalk
 exampleSetUpDefaultApplicationAccount
 	| session |

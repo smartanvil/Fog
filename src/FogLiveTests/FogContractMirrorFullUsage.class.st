@@ -5,11 +5,6 @@ Class {
 }
 
 { #category : #accessing }
-FogContractMirrorFullUsage class >> reset [
-	contract := nil.
-]
-
-{ #category : #accessing }
 FogContractMirrorFullUsage >> code [
 	^ 'pragma solidity ^0.4.2;
 
@@ -320,11 +315,12 @@ FogContractMirrorFullUsage >> testSetLong130String [
 	future := setString
 		using: session
 		applyOn: contract
-		valueWithArguments: {('AStringOf128Characters' padRightTo: 130 with: $#)}
+		valueWithArguments: {('AStringOf130Characters' padRightTo: 130 with: $#)}
 		from: self ownerAccount
 		gas: 300000
 		gasPrice: 60.
 	future synchronizeTimeout: 10 minutes.
+	self halt.
 	self
 		assert:
 			((mirror method: #getString)
@@ -334,7 +330,7 @@ FogContractMirrorFullUsage >> testSetLong130String [
 				from: self ownerAccount
 				gas: 300000
 				gasPrice: 60)
-		equals: ('AStringOf128Characters' padRightTo: 130 with: $#)
+		equals: ('AStringOf130Characters' padRightTo: 130 with: $#)
 ]
 
 { #category : #tests }
@@ -368,7 +364,7 @@ FogContractMirrorFullUsage >> testSetLong260String [
 	future := setString
 		using: session
 		applyOn: contract
-		valueWithArguments: {('AStringOf256Characters' padRightTo: 260 with: $#)}
+		valueWithArguments: {('AStringOf260Characters' padRightTo: 260 with: $#)}
 		from: self ownerAccount
 		gas: 300000
 		gasPrice: 60.
@@ -382,7 +378,7 @@ FogContractMirrorFullUsage >> testSetLong260String [
 				from: self ownerAccount
 				gas: 300000
 				gasPrice: 60)
-		equals: ('AStringOf256Characters' padRightTo: 260 with: $#)
+		equals: ('AStringOf260Characters' padRightTo: 260 with: $#)
 ]
 
 { #category : #tests }
@@ -416,7 +412,7 @@ FogContractMirrorFullUsage >> testSetLong70String [
 	future := setString
 		using: session
 		applyOn: contract
-		valueWithArguments: {('AStringOf64Characters' padRightTo: 70 with: $-)}
+		valueWithArguments: {('AStringOf70Characters' padRightTo: 70 with: $-)}
 		from: self ownerAccount
 		gas: 300000
 		gasPrice: 60.
@@ -430,7 +426,7 @@ FogContractMirrorFullUsage >> testSetLong70String [
 				from: self ownerAccount
 				gas: 300000
 				gasPrice: 60)
-		equals: ('AStringOf64Characters' padRightTo: 70 with: $-)
+		equals: ('AStringOf70Characters' padRightTo: 70 with: $-)
 ]
 
 { #category : #tests }

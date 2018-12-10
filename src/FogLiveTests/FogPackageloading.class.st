@@ -10,7 +10,7 @@ Class {
 { #category : #'building suites' }
 FogPackageloading class >> testParameters [
 	^ ParametrizedTestMatrix new
-		forSelector: #connection addOptions: {[ FogConnection on: self url ]};
+		forSelector: #connection addOptions: {[ FogTestingConnection on: self url ]};
 		forSelector: #session
 			addOptions:
 			{[ :test | test connection session ].

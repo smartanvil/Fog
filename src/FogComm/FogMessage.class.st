@@ -42,6 +42,11 @@ FogMessage >> method: aString [
 	method := aString
 ]
 
+{ #category : #accessing }
+FogMessage >> module [
+	^ ('_' split: method) first asSymbol
+]
+
 { #category : #'as yet unclassified' }
 FogMessage >> parameters [
 	^ parameters
@@ -58,4 +63,9 @@ FogMessage >> printOn: aStream [
 		format:
 			{method.
 			parameters asString}) printOn: aStream
+]
+
+{ #category : #accessing }
+FogMessage >> serviceSelector [
+	^( ('_' split: method) second, ':') asSymbol
 ]

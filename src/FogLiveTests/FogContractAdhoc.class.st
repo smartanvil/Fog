@@ -5,11 +5,6 @@ Class {
 }
 
 { #category : #accessing }
-FogContractAdhoc class >> reset [
-	contract := nil
-]
-
-{ #category : #accessing }
 FogContractAdhoc >> code [
 	^ 'pragma solidity ^0.4.2;
 

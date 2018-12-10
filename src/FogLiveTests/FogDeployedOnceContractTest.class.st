@@ -24,14 +24,18 @@ FogDeployedOnceContractTest class >> contract: aTestinContract [
 	contract := aTestinContract
 ]
 
+{ #category : #accessing }
+FogDeployedOnceContractTest class >> reset [
+	contract := nil
+]
+
 { #category : #initialization }
 FogDeployedOnceContractTest >> setUp [
 	super setUp.
 	self timeLimit: 3 minutes.
-	self class contract
-		ifNil: [ contract := self createContract.
-			contract waitIsReady.
-			self class contract: contract ].
+	contract := self createContract.
+	contract waitIsReady.
+	self class contract: contract.
 	contract := self class contract.
 	mirror := contract mirror
 ]

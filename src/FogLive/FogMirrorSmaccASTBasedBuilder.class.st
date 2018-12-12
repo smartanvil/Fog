@@ -25,6 +25,15 @@ FogMirrorSmaccASTBasedBuilder >> buildInto: aFogContractMirror [
 	aFogContractMirror constructor: constructor.
 ]
 
+{ #category : #accessing }
+FogMirrorSmaccASTBasedBuilder >> constructor: aConstructor [
+	self
+		assert: constructor isNil
+		description:
+			'Constructor was already setted! Solidity does not allow more than one constructor, please check your solidity code'.
+	constructor := aConstructor 
+]
+
 { #category : #'as yet unclassified' }
 FogMirrorSmaccASTBasedBuilder >> createConstructor: aSolFunctionDefinitionNode [
 	| input parameters |
@@ -84,7 +93,7 @@ FogMirrorSmaccASTBasedBuilder >> initialize [
 	modifiers := OrderedCollection new 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitArrayTypeName: aSolArrayTypeNameNode [ 
 	| inner |
 	aSolArrayTypeNameNode type acceptVisitor: self.
@@ -109,11 +118,17 @@ FogMirrorSmaccASTBasedBuilder >> visitConstantDeclaration: aSolConstantDeclarati
 ]
 
 { #category : #visiting }
+FogMirrorSmaccASTBasedBuilder >> visitConstructorDefinition: aSolConstructorDefinitionNode [
+	aSolConstructorDefinitionNode parameters parameters do: [ :t | t acceptVisitor: self ].
+	self constructor: (self createConstructor: aSolConstructorDefinitionNode).
+]
+
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitContractDefinition: aSolContractDefinitionNode [
 	aSolContractDefinitionNode statements do: [ :cs | cs acceptVisitor: self ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitElementaryTypeName: aSolElementaryTypeNameNode [
 	| type symbol |
 	symbol := aSolElementaryTypeNameNode type acceptVisitor: self.
@@ -125,7 +140,7 @@ FogMirrorSmaccASTBasedBuilder >> visitElementaryTypeName: aSolElementaryTypeName
 	^types at: aSolElementaryTypeNameNode ifAbsentPut: [ type ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitEnumDefinition: aSolEnumDefinitionNode [ 
 	^ types
 		at: aSolEnumDefinitionNode
@@ -142,17 +157,18 @@ FogMirrorSmaccASTBasedBuilder >> visitEventDefinition: aSolEventDefinitionNode [
 	events add: (self createEvent: aSolEventDefinitionNode)
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitFallbackFunctionDefinition: aSolFallbackFunctionDefinitionNode [ 
 	"self shouldBeImplemented."
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitFunctionDefinition: aSolFunctionDefinitionNode [
 	aSolFunctionDefinitionNode parameters parameters do: [ :t | t acceptVisitor: self ].
-	aSolFunctionDefinitionNode returned_types ifNotNil: [ :ret | ret parameters do: [ :t | t acceptVisitor: self ] ].
+	aSolFunctionDefinitionNode returned_types
+		ifNotNil: [ :ret | ret parameters do: [ :t | t acceptVisitor: self ] ].
 	aSolFunctionDefinitionNode isConstructor
-		ifTrue: [ constructor := self createConstructor: aSolFunctionDefinitionNode ]
+		ifTrue: [ self constructor: (self createConstructor: aSolFunctionDefinitionNode) ]
 		ifFalse: [ methods add: (self createMethod: aSolFunctionDefinitionNode) ]
 ]
 
@@ -161,12 +177,12 @@ FogMirrorSmaccASTBasedBuilder >> visitIndexedParameter: aSolIndexedParameterNode
 	aSolIndexedParameterNode type acceptVisitor: self
 ]
 
-{ #category : #visitign }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitLiteralIdentifier: aSolLiteralIdentifierNode [
 	^ aSolLiteralIdentifierNode value value asSymbol
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitMappingTypeName: aSolMappingTypeNameNode [
 	| key value |
 	aSolMappingTypeNameNode key_type acceptVisitor: self.
@@ -191,7 +207,7 @@ FogMirrorSmaccASTBasedBuilder >> visitParameter: aSolParameterNode [
 	aSolParameterNode type acceptVisitor: self 
 ]
 
-{ #category : #viisting }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitPragmaDirective: aSolPragmaDirectiveNode [ 
 	" nothing to do here yet "
 ]
@@ -206,7 +222,7 @@ FogMirrorSmaccASTBasedBuilder >> visitSmaccToken: aSmaCCToken [
 	^ aSmaCCToken value asSymbol
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitStateVariableDeclaration: aSolStateVariableDeclarationNode [
 	| slot |
 	aSolStateVariableDeclarationNode type acceptVisitor: self.
@@ -218,7 +234,7 @@ FogMirrorSmaccASTBasedBuilder >> visitStateVariableDeclaration: aSolStateVariabl
 	contractSlots add: slot
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitStructDefinition: aSolStructDefinitionNode [ 
 	^ types
 		at: aSolStructDefinitionNode
@@ -235,7 +251,7 @@ FogMirrorSmaccASTBasedBuilder >> visitStructDefinition: aSolStructDefinitionNode
 				yourself)
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visiting }
 FogMirrorSmaccASTBasedBuilder >> visitUserDefinedTypeName: aSolUserDefinedTypeNameNode [
 	| keyToDefinedType |
 	keyToDefinedType := (types keys select: [ :t | t isUserDefined ])

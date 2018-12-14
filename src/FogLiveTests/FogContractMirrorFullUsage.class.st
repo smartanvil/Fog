@@ -23,7 +23,7 @@ contract FullUsage {
     string str2;
     
      /* Constructor */
-    constructor () public { 
+   function FullUsage () public { 
         owner = msg.sender;
 	negativeInt = -1;
 	positiveInt = 255; 

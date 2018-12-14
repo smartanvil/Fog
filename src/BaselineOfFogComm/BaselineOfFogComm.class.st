@@ -17,8 +17,9 @@ BaselineOfFogComm >> baseline: spec [
 						className: #ConfigurationOfNeoJSON;
 						version: #stable;
 						repository: 'http://mc.stfx.eu/Neo' ].
+			spec baseline: 'Equals' with: [ spec repository: 'github://bouraqadi/PharoMisc' ].
 			spec baseline: 'ParametrizedTests' with: [ spec repository: 'github://tesonep/ParametrizedTests' ].
 			spec baseline: 'Pragmatic' with: [ spec repository: 'github://sbragagnolo/Pragmatic' ].
-			spec package: #FogComm with: [ spec requires: #('TaskItShell' 'Pragmatic') ].
+			spec package: #FogComm with: [ spec requires: #('TaskItShell' 'Pragmatic' 'Equals') ].
 			spec package: #FogCommTests with: [ spec requires: #('FogComm' 'ParametrizedTests') ] ]
 ]

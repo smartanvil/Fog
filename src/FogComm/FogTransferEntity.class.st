@@ -26,14 +26,14 @@ FogTransferEntity class >> neoJsonMapping: mapper [
 				mapAccessor: #parameters to: #params ]
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogTransferEntity >> = anObject [
 	self species = anObject species
 		ifFalse: [ ^ false ].
 	^ self valuesToCompareForEquality = anObject valuesToCompareForEquality
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogTransferEntity >> hash [
 	^self valuesToCompareForEquality inject: self species hash into: [:hash :comparisonValue|
 		(hash bitXor: comparisonValue hash) hashMultiply]

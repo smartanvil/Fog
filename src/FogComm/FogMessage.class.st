@@ -13,14 +13,14 @@ Class {
 	#category : 'FogComm-Transfer'
 }
 
-{ #category : #equality }
+{ #category : #comparing }
 FogMessage >> = anObject [
 	self species = anObject species
 		ifFalse: [ ^ false ].
 	^ self valuesToCompareForEquality = anObject valuesToCompareForEquality
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogMessage >> hash [
 	^self valuesToCompareForEquality inject: self species hash into: [:hash :comparisonValue|
 		(hash bitXor: comparisonValue hash) hashMultiply]

@@ -170,7 +170,7 @@ TFogPack >> unpack: aString withTypes: aCollection [
 
 { #category : #unpack }
 TFogPack >> unpackAddress: aString [ 
-	^ aString asBKNumber asBKHexa
+	^ aString read0xHexadecimal write0xHexadecimal
 ]
 
 { #category : #unpack }

@@ -41,3 +41,8 @@ FogBinaryPacker >> pack: aCollection with: aCollectionOfTypeNames [
 			typePacker := ('pack' , (aCollectionOfTypeNames at: id) capitalized , ':') asSymbol.
 			self perform: typePacker withArguments: {data} ]) asByteArray
 ]
+
+{ #category : #unpack }
+FogBinaryPacker >> unpackAddress: aString [ 
+	^ aString read0xHexadecimal write0xHexadecimal
+]

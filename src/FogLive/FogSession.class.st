@@ -479,12 +479,12 @@ FogSession >> findTransactionByHash: aTransactionHash [
 
 { #category : #'low-level api - accounts' }
 FogSession >> getBalance: anAddress [
-	^ (connection eth getBalance: anAddress blockTag: #latest) asBKNumber
+	^ (connection eth getBalance: anAddress blockTag: #latest) read0xHexadecimal
 ]
 
 { #category : #'low-level api - accounts' }
 FogSession >> getBalance: anAddress block: aBlockNumberOrHash [
-	^ (connection eth getBalance: anAddress blockNumber: aBlockNumberOrHash) asBKNumber
+	^ (connection eth getBalance: anAddress blockNumber: aBlockNumberOrHash) read0xHexadecimal
 ]
 
 { #category : #'private - encoding decoding' }

@@ -22,14 +22,14 @@ FogExternalAccount class >> kindOfAccount [
 	^ 'Account'
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogExternalAccount >> = anObject [
 	self species = anObject species
 		ifFalse: [ ^ false ].
 	^ self valuesToCompareForEquality = anObject valuesToCompareForEquality
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogExternalAccount >> hash [
 	^self valuesToCompareForEquality inject: self species hash into: [:hash :comparisonValue|
 		(hash bitXor: comparisonValue hash) hashMultiply]

@@ -13,7 +13,7 @@ FogEthereumAPI >> hexa: aNumber [
 	<doc:'Encodes a message entity for the RPC message '>
 	^ (aNumber isString and: [ aNumber beginsWith: '0x' ])
 		ifTrue: [ aNumber ]
-		ifFalse: [ aNumber asBKHexa ]
+		ifFalse: [ aNumber write0xHexadecimal ]
 	
 ]
 

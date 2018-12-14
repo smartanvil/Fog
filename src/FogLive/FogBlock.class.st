@@ -43,7 +43,7 @@ FogBlock class >> collectionSelector [
 	^ #blocks
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogBlock >> = anObject [
 	self species = anObject species
 		ifFalse: [ ^ false ].
@@ -76,7 +76,7 @@ FogBlock >> difficulty [
 
 { #category : #accessing }
 FogBlock >> difficulty: anObject [ 
-	difficulty := anObject asBKNumber
+	difficulty := anObject read0xHexadecimal
 ]
 
 { #category : #accessing }
@@ -119,21 +119,21 @@ FogBlock >> gasLimit [
 
 { #category : #accessing }
 FogBlock >> gasLimit: anObject [
-	gasLimit := anObject asBKNumber
+	gasLimit := anObject read0xHexadecimal
 ]
 
 { #category : #accessing }
 FogBlock >> gasUsed [
 	<doc: 'Returns the gas used in this block'>
-	^ gasUsed asBKNumber
+	^ gasUsed read0xHexadecimal
 ]
 
 { #category : #accessing }
 FogBlock >> gasUsed: anObject [
-	gasUsed := anObject asBKNumber
+	gasUsed := anObject read0xHexadecimal
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogBlock >> hash [
 	^self valuesToCompareForEquality inject: self species hash into: [:hash :comparisonValue|
 		(hash bitXor: comparisonValue hash) hashMultiply]
@@ -215,7 +215,7 @@ FogBlock >> number [
 
 { #category : #accessing }
 FogBlock >> number: anObject [ 
-	number := anObject asBKNumber
+	number := anObject read0xHexadecimal
 ]
 
 { #category : #accessing }
@@ -330,14 +330,14 @@ FogBlock >> timestamp [
 
 { #category : #accessing }
 FogBlock >> timestamp: anObject [ 
-	timestamp := DateAndTime fromUnixTime: (anObject asBKNumber)
+	timestamp := DateAndTime fromUnixTime: (anObject read0xHexadecimal)
 	
 ]
 
 { #category : #accessing }
 FogBlock >> totalDifficulty [
 	<doc: 'Returns the block''s totalDifficulty field'>
-	^ totalDifficulty asBKNumber
+	^ totalDifficulty read0xHexadecimal
 ]
 
 { #category : #accessing }

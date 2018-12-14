@@ -16,7 +16,7 @@ FogEth >> accounts [
 { #category : #accessing }
 FogEth >> blockNumber [
 		<doc: 'Returns the number of most recent block.'>
-		^ (self send: api messageBlockNumber) asBKNumber 
+		^ (self send: api messageBlockNumber) read0xHexadecimal 
 	
 ]
 

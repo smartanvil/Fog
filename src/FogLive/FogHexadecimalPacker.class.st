@@ -16,12 +16,12 @@ FogHexadecimalPacker class >> packSlotId: anInteger [
 
 { #category : #pack }
 FogHexadecimalPacker >> dumpInt: anInteger size: aSize [
-	^ anInteger asBKHexa: aSize * 2
+	^ anInteger write0xHexadecimal: aSize * 2
 ]
 
 { #category : #unpack }
 FogHexadecimalPacker >> load: aString size: aSize [
-	^ aString asBKNumber 
+	^ aString read0xHexadecimal 
 ]
 
 { #category : #pack }
@@ -35,4 +35,9 @@ FogHexadecimalPacker >> pack: aCollection with: aCollectionOfTypeNames [
 		typePacker := ('pack' , (aCollectionOfTypeNames at: id) capitalized , ':') asSymbol.
 		pack add: (self perform: typePacker withArguments: {data}) ].
 	^ '' join: pack
+]
+
+{ #category : #unpack }
+FogHexadecimalPacker >> unpackAddress: aString [ 
+	^ aString read0xHexadecimal write0xHexadecimal
 ]

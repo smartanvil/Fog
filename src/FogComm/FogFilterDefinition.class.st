@@ -47,7 +47,7 @@ FogFilterDefinition >> from: anInteger [
 
 { #category : #'as yet unclassified' }
 FogFilterDefinition >> fromBlock [
-	^ from ifNil: [ nil ] ifNotNil: [ from asBKHexa ]
+	^ from ifNil: [ nil ] ifNotNil: [ from write0xHexadecimal ]
 ]
 
 { #category : #'as yet unclassified' }
@@ -67,7 +67,7 @@ FogFilterDefinition >> to: aBlockNumber [
 
 { #category : #'as yet unclassified' }
 FogFilterDefinition >> toBlock [
-	^ to ifNil: [ nil ] ifNotNil: [ to asBKHexa ]
+	^ to ifNil: [ nil ] ifNotNil: [ to write0xHexadecimal ]
 ]
 
 { #category : #'as yet unclassified' }

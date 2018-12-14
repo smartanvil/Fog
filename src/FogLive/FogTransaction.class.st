@@ -41,7 +41,7 @@ FogTransaction class >> on: aCollection [
 		yourself
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogTransaction >> = anObject [
 	self species = anObject species
 		ifFalse: [ ^ false ].
@@ -82,7 +82,7 @@ FogTransaction >> blockNumber [
 
 { #category : #accessing }
 FogTransaction >> blockNumber: aString [
-	blockNumber := aString asBKNumber
+	blockNumber := aString read0xHexadecimal
 ]
 
 { #category : #accessing }
@@ -115,7 +115,7 @@ FogTransaction >> gas [
 
 { #category : #accessing }
 FogTransaction >> gas: aString [
-	gas := aString asBKNumber
+	gas := aString read0xHexadecimal
 ]
 
 { #category : #accessing }
@@ -126,10 +126,10 @@ FogTransaction >> gasPrice [
 
 { #category : #accessing }
 FogTransaction >> gasPrice: aString [
-	gasPrice := aString asBKNumber
+	gasPrice := aString read0xHexadecimal
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogTransaction >> hash [
 	^self valuesToCompareForEquality inject: self species hash into: [:hash :comparisonValue|
 		(hash bitXor: comparisonValue hash) hashMultiply]
@@ -148,7 +148,7 @@ FogTransaction >> input: aString [
 
 { #category : #accessing }
 FogTransaction >> nonce: aString [ 
-	nonce := aString asBKNumber 
+	nonce := aString read0xHexadecimal 
 ]
 
 { #category : #printing }
@@ -222,7 +222,7 @@ FogTransaction >> transactionIndex [
 
 { #category : #accessing }
 FogTransaction >> transactionIndex: aString [
-	transactionIndex := aString asBKNumber
+	transactionIndex := aString read0xHexadecimal
 ]
 
 { #category : #accessing }
@@ -232,7 +232,7 @@ FogTransaction >> v: aString [
 
 { #category : #accessing }
 FogTransaction >> value: aString [
-	value := aString asBKNumber
+	value := aString read0xHexadecimal
 ]
 
 { #category : #equality }

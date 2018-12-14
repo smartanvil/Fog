@@ -22,14 +22,14 @@ FogNoAccount class >> nilAccount [
 	^ singleInstance ifNil: [ singleInstance := FogNoAccount new ]
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogNoAccount >> = anObject [
 	self species = anObject species
 		ifFalse: [ ^ false ].
 	^ self valuesToCompareForEquality = anObject valuesToCompareForEquality
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogNoAccount >> hash [
 	^self valuesToCompareForEquality inject: self species hash into: [:hash :comparisonValue|
 		(hash bitXor: comparisonValue hash) hashMultiply]

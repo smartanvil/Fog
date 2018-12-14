@@ -23,7 +23,7 @@ FogAccount class >> nilAccount [
 	^ FogNoAccount nilAccount
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogAccount >> = anObject [
 	self species = anObject species
 		ifFalse: [ ^ false ].
@@ -53,7 +53,7 @@ FogAccount >> balanceOn: aBlockNumberOrHash [
 	^ self session getBalance: self address block: aBlockNumberOrHash
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogAccount >> hash [
 	^self valuesToCompareForEquality inject: self species hash into: [:hash :comparisonValue|
 		(hash bitXor: comparisonValue hash) hashMultiply]

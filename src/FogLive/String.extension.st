@@ -1,11 +1,6 @@
 Extension { #name : #String }
 
 { #category : #'*FogLive' }
-String >> asBKHexa [
-	^ self 
-]
-
-{ #category : #'*FogLive' }
 String >> asHeadlessHexa [
 	^ self copyReplaceAll: '0x' with: ''
 ]

@@ -1,11 +1,6 @@
 Extension { #name : #String }
 
 { #category : #'*FogLive' }
-String >> asHeadlessHexa [
-	^ self copyReplaceAll: '0x' with: ''
-]
-
-{ #category : #'*FogLive' }
 String >> minus: aString [
 	| index to |
 	^ aString

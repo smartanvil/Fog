@@ -17,10 +17,14 @@ FogSolidityArrayLayoutMapping >> mapping: aMapping [
 
 { #category : #initialization }
 FogSolidityArrayLayoutMapping >> using: aSession fetchContentsFrom: aContractAddress at: aBlockTagNumberOrHash [
-	| hash size |
+	| hash size hexa |
 	" Aaaaaa, no habia que mandar aBKNumber no? Que bueno que estas en australia ahora. "
+	hexa := Hexadecimal new.
 	size := (super using: aSession fetchContentsFrom: aContractAddress at: aBlockTagNumberOrHash) read0xHexadecimal.
 	hash := (Keccak hashEncode: (FogBinaryPacker packSlotId: fromSlot)) read0xHexadecimal.
 	^ (hash to: hash + size - 1)
-		collect: [ :i | (aSession fetchSlot: i asHeadlessHexa onContract: aContractAddress at: aBlockTagNumberOrHash) asHeadlessHexa ]
+		collect: [ :idx | 
+			| i |
+			i := hexa writeHeadlessHexadecimal: idx.
+			hexa writeHeadlessHexadecimal: (aSession fetchSlot: i onContract: aContractAddress at: aBlockTagNumberOrHash) ]
 ]

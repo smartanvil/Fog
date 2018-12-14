@@ -29,7 +29,9 @@ FogLazyDictionary class >> neoJsonMapping: mapper [
 FogLazyDictionary >> at: aKey [
 	^ dictionary
 		at: aKey
-		ifAbsentPut: [ self session decodeStream: (self session fetchSlot: (self storageHashFor: aKey) asHeadlessHexa onContract: contractAddress at: blockReference) readStream type: type valueType ]
+		ifAbsentPut: [ self session
+				decodeStream: (self session fetchSlot: (self storageHashFor: aKey) onContract: contractAddress at: blockReference) readStream
+				type: type valueType ]
 ]
 
 { #category : #accessing }

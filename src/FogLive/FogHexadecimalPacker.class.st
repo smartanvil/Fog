@@ -16,7 +16,7 @@ FogHexadecimalPacker class >> packSlotId: anInteger [
 
 { #category : #pack }
 FogHexadecimalPacker >> dumpInt: anInteger size: aSize [
-	^ anInteger write0xHexadecimal: aSize * 2
+	^ anInteger writeHeadlessHexadecimal: aSize * 2
 ]
 
 { #category : #unpack }

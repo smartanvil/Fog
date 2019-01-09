@@ -14,7 +14,7 @@ FogSolidityStringLayoutMapping >> using: aSession extractFrom: aContractAddress 
 		collect: [ :idx | 
 			| i |
 			i := hexa writeHeadlessHexadecimal: idx.
-			hexa writeHeadlessHexadecimal: (aSession fetchSlot: i onContract: aContractAddress at: aBlockTagNumberOrHash) ].
+			hexa chopHeaders: (aSession fetchSlot: i onContract: aContractAddress at: aBlockTagNumberOrHash) ].
 	^ '' join: parts
 ]
 

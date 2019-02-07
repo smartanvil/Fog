@@ -27,7 +27,6 @@ FogTupleType >> pack: aCollection with: aFogPacker [
 	staticStream := '' writeStream.
 	dynamicStream := '' writeStream.
 	staticSize := self staticSlotSize.
-	self halt.
 	self types
 		with: aCollection
 		do: [ :type :value | 

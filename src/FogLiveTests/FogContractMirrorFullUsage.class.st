@@ -350,6 +350,7 @@ FogContractMirrorFullUsage >> testSetLong256String [
 { #category : #tests }
 FogContractMirrorFullUsage >> testSetLong260String [
 	| future setString |
+	
 	setString := mirror method: #setString:.
 	future := setString
 		using: session

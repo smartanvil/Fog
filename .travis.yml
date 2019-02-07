@@ -1,22 +1,24 @@
 language: smalltalk
 sudo: required
 
-os:
-  - linux
- 	before_install:
-		- sudo add-apt-repository ppa:ethereum/ethereum -y
-		- sudo apt-get update 
-		- sudo apt-get install ethereum
-		- sudo apt-get install solc
-   - osx
-   	before_install:
-		- brew update
-		- brew upgrade
-		- brew tap ethereum/ethereum
-		- brew install ethereum
-		- brew install solidity
-#before_script:
-#	- ./scripts/dev.sh >> /dev/null & 
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      before_install:
+      - sudo add-apt-repository ppa:ethereum/ethereum -y
+      - sudo apt-get update 
+      - sudo apt-get install ethereum
+      - sudo apt-get install solc
+    - os: osx
+      before_install:
+      - brew update
+      - brew upgrade
+      - brew tap ethereum/ethereum
+      - brew install ethereum
+      - brew install solidity
+after_script:
+- ./scripts/dev.sh >> /dev/null & 
 smalltalk: 
   - Pharo-7.0
   - Pharo-8.0

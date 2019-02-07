@@ -4,10 +4,7 @@ This test case just hold some magic numbers.
 Class {
 	#name : #FogArbitraryAddressesTestCase,
 	#superclass : #FogTestCase,
-	#classVars : [
-		'testingContract'
-	],
-	#category : 'FogLiveTests'
+	#category : #FogLiveTests
 }
 
 { #category : #accessing }

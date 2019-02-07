@@ -15,3 +15,8 @@ FogTestingConnection >> initialize [
 	service := FogEVMRPCService new.
 
 ]
+
+{ #category : #'rpc call' }
+FogTestingConnection >> isTestingConnection [
+	^ true
+]

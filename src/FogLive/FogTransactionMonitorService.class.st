@@ -6,26 +6,28 @@ Class {
 	#superclass : #TKTService,
 	#instVars : [
 		'monitors',
-		'session'
+		'session',
+		'mutex'
 	],
-	#category : 'FogLive-Session-Service'
+	#category : #'FogLive-Session-Service'
 }
 
 { #category : #'as yet unclassified' }
 FogTransactionMonitorService >> initialize [
 	super initialize.
-	monitors := Set new
+	monitors := Set new.
+	mutex := Mutex new .
 ]
 
 { #category : #'as yet unclassified' }
 FogTransactionMonitorService >> monitors [
 	<doc: 'It returns all the transaction''s monitors used by this service'>
-	^ monitors
+	^ monitors copy
 ]
 
 { #category : #'as yet unclassified' }
-FogTransactionMonitorService >> monitors: aCollection [ 
-	monitors := aCollection
+FogTransactionMonitorService >> monitors: aCollection [
+	mutex critical: [ monitors := aCollection ]
 ]
 
 { #category : #accessing }
@@ -35,32 +37,35 @@ FogTransactionMonitorService >> name [
 
 { #category : #'contract - deploying' }
 FogTransactionMonitorService >> receiptFor: aTransactionHash [
-	^ (monitors
-		add:
-			(FogTransactionMonitor new
-				transactionHash: aTransactionHash;
-				session: session;
-				yourself)) future
+	| monitor |
+	monitor := FogTransactionMonitor new
+		transactionHash: aTransactionHash;
+		session: session;
+		yourself.
+	mutex critical: [ monitors add: monitor ].
+	^ monitor future
 ]
 
 { #category : #accessing }
 FogTransactionMonitorService >> session: aSession [
-	session := aSession
+	mutex critical: [ session := aSession ]
 ]
 
 { #category : #stepping }
 FogTransactionMonitorService >> stepService [
-	| timeout |
-	monitors do: #check.
-	monitors := monitors reject: #isResolved.
+	| timeout stepMonitors remove |
+	mutex critical: [ stepMonitors := monitors copy ].
+	stepMonitors do: #check.
+	remove := stepMonitors select: #isResolved.
+	mutex critical: [ monitors removeAll: remove ].
 	timeout := self timeout.
 	timeout wait.
-	monitors do: [ :m | m register: timeout ]
+	stepMonitors do: [ :m | m register: timeout ]
 ]
 
 { #category : #stepping }
 FogTransactionMonitorService >> timeout [
 	^ monitors isEmpty
 		ifTrue: [ 1 seconds ]
-		ifFalse: [ 1 second ]
+		ifFalse: [ 0.5 second ]
 ]

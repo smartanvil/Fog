@@ -67,6 +67,11 @@ FogConnection >> initialize [
 ]
 
 { #category : #accessing }
+FogConnection >> isTestingConnection [
+	^ false
+]
+
+{ #category : #accessing }
 FogConnection >> net [
 	<doc: 'Get an API Access object. responsible to resolve the net_ kind of messages (more in FogNet)'>
 	^ FogNet new

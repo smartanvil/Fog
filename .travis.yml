@@ -15,8 +15,8 @@ os:
 		- brew tap ethereum/ethereum
 		- brew install ethereum
 		- brew install solidity
-before_script:
-	- ./scripts/dev.sh >> /dev/null & 
+#before_script:
+#	- ./scripts/dev.sh >> /dev/null & 
 smalltalk: 
   - Pharo-7.0
   - Pharo-8.0

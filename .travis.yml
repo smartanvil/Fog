@@ -1,10 +1,11 @@
+dist: bionic
 language: smalltalk
 sudo: required
 
 matrix:
   include:
     - os: linux
-      dist: xenial
+      dist: bionic
       before_install:
       - sudo add-apt-repository ppa:ethereum/ethereum -y
       - sudo apt-get update 

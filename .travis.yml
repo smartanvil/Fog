@@ -12,7 +12,7 @@ matrix:
       - sudo add-apt-repository ppa:ethereum/ethereum -y
       - sudo apt-get update 
       - sudo apt-get install -y -f ethereum
-      - npm install solc
+      - npm install -g solc
 after_script:
 - ./scripts/dev.sh >> /dev/null & 
 smalltalk: 

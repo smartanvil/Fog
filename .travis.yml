@@ -10,13 +10,7 @@ matrix:
       - sudo apt-get update 
       - sudo apt-get install ethereum
       - sudo apt-get install solc
-    - os: osx
-      before_install:
-      - brew update
-      - brew upgrade
-      - brew tap ethereum/ethereum
-      - brew install ethereum
-      - brew install solidity
+
 after_script:
 - ./scripts/dev.sh >> /dev/null & 
 smalltalk: 

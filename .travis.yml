@@ -9,8 +9,9 @@ matrix:
       - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6b05f25d762e3157
       - sudo add-apt-repository ppa:ethereum/ethereum -y
       - sudo apt-get update 
-      - sudo apt-get install -y -f ethereum
       - sudo apt-get install -y -f solc
+      - sudo apt-get install -y -f ethereum
+
 after_script:
   - ./scripts/dev.sh >> /dev/null & 
 smalltalk: 

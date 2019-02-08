@@ -16,6 +16,6 @@ matrix:
 	  - npm install -g solc
 	  
 after_script:
-- ./scripts/dev.sh >> /dev/null & 
+  - ./scripts/dev.sh >> /dev/null & 
 smalltalk: 
   - Pharo-7.0

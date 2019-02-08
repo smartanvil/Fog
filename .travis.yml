@@ -1,7 +1,9 @@
 dist: xenial
 language: smalltalk
 sudo: required
-
+node_js:
+  - "9.4.0"
+  
 matrix:
   include:
     - os: linux

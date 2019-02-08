@@ -8,8 +8,9 @@ matrix:
       before_install:
       - sudo add-apt-repository ppa:ethereum/ethereum -y
       - sudo apt-get update 
+	  - sudo apt-get upgrade
       - sudo apt-get install ethereum
-      - sudo apt-get install solidity
+      - sudo apt-get install solc
 
 after_script:
 - ./scripts/dev.sh >> /dev/null & 

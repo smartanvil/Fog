@@ -1,12 +1,22 @@
-os: osx
 language: smalltalk
-sudo: required
-before_install:
-- brew tap ethereum/ethereum
-- brew install ethereum
-- brew install solidity
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      sudo: required
+      before_install:
+      - sudo apt-get install build-essential
+      - sudo add-apt-repository ppa:ethereum/ethereum -y
+      - sudo apt-get update 
+      - sudo apt-get upgrade
+      - sudo apt-get install ethereum
+      - sudo apt-get install solc
+    - os: osx
+      before_install:
+      - brew tap ethereum/ethereum
+      - brew install ethereum
+      - brew install solidity
 after_script:
-  - ./scripts/dev.sh >> /dev/null & 
+- ./scripts/dev.sh >> /dev/null & 
 smalltalk: 
   - Pharo-7.0
-

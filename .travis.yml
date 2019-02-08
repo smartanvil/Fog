@@ -1,13 +1,15 @@
 dist: xenial
 language: smalltalk
 sudo: required
-node_js:
-  - "9.4.0"
+
   
 matrix:
   include:
     - os: linux
       dist: xenial
+      language: 'node_js'
+      node_js:
+      - "9.4.0"
       before_install:
       - sudo add-apt-repository ppa:ethereum/ethereum -y
       - sudo apt-get update 

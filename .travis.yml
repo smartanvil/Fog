@@ -1,14 +1,17 @@
 dist: xenial
 language: smalltalk
 sudo: required
-addons:
-   apt:
-    sources: 
-    - sourceline: 'ppa:ethereum/ethereum'
-    packages:
-    - ethereum
-    - solc
-
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      language: 'node_js'
+      before_install:
+      - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6b05f25d762e3157
+      - sudo add-apt-repository ppa:ethereum/ethereum -y
+      - sudo apt-get update 
+      - sudo apt-get install -y -f ethereum
+	  - sudo apt-get install -y -f solc
 after_script:
   - ./scripts/dev.sh >> /dev/null & 
 smalltalk: 

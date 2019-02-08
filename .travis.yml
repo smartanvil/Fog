@@ -1,13 +1,10 @@
-os: linux
-dist: trusty
+os: osx
 language: smalltalk
 sudo: required
 before_install:
-- sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6b05f25d762e3157
-- sudo add-apt-repository ppa:ethereum/ethereum -y
-- sudo apt-get update 
-- sudo apt-get install -y -f solc
-- sudo apt-get install -y -f ethereum
+- brew tap ethereum/ethereum
+- brew install ethereum
+- brew install solidity
 after_script:
   - ./scripts/dev.sh >> /dev/null & 
 smalltalk: 

@@ -1,21 +1,8 @@
 language: smalltalk
-matrix:
-  include:
-    - os: linux
-      dist: xenial
-      sudo: required
-      before_install:
-      - sudo apt-get -y install build-essential cmake
-      - sudo add-apt-repository ppa:ethereum/ethereum -y
-      - sudo apt-get update 
-      - sudo apt-get install ethereum
-      - sudo apt-get install solc
-    - os: osx
-      before_install:
-      - brew tap ethereum/ethereum
-      - brew install ethereum
-      - brew install solidity
-after_script:
-- ./scripts/dev.sh >> /dev/null & 
-smalltalk: 
+os:
+  - linux
+  - osx
+smalltalk:
+  - Pharo-alpha
   - Pharo-7.0
+  - Pharo-6.1

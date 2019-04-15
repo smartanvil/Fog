@@ -78,7 +78,7 @@ FogCachedSession >> findContractInstanceByHash: aContractAddress blockTag: aBloc
 		detectContractBind:  aContractAddress asAddress 
 		ifNoneCreate: [ super
 				findContractInstanceByHash: aContractAddress
-				blockNumber: aBlockNumber ]
+				blockTag: aBlockNumber ]
 ]
 
 { #category : #'access db - transactions' }

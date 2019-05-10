@@ -18,7 +18,6 @@ FogTestingContractProvider class >> contractsDescriptions: aSession [
 { #category : #'as yet unclassified' }
 FogTestingContractProvider class >> contractsDescriptionsSrc [
 	^ {self fullUsageContractSrc.
-	self multipleTestContractSrc.
 	self public3StatesPollContractSrc.
 	self simpleSmartContractSrc.
 	self structSmartContractSrc}
@@ -145,51 +144,6 @@ contract FullUsage {
 ]
 
 { #category : #'as yet unclassified' }
-FogTestingContractProvider class >> multipleTestContractSrc [
-	^ 'pragma solidity ^0.4.2;
-
-contract StructTestContract {
-
-    enum myenum { A, B, C }
-
-    struct  mystruct {
-        bool    boolean;
-        myenum  uservalue;
-        uint32  commonvalue;
-    }
-    address     _owner;
-    bool bool1;
-    int16 midint;
-    mystruct simpleExample;
-    bool bool2;
-    mystruct[] arrayExample;
-    mapping(uint=>mystruct) mappingExample;
-
-    function StructTestContract (){
-        _owner = msg.sender;
-	bool1 = true;
-	bool2 = true;
-	midint = 32;
-	simpleExample.boolean = true; 
-	simpleExample.uservalue = myenum.B;
-	simpleExample.commonvalue = 6355432;
-	arrayExample.push(mystruct(true, myenum.A, 134));
-	arrayExample.push(mystruct(false, myenum.B, 235 ));
-	arrayExample.push(mystruct(true, myenum.C, 34 ));
-	mappingExample[2] = mystruct(true, myenum.C, 34 );
-	mappingExample[10] = mystruct(true, myenum.C, 34 );
-    }
-   
-    function kill() {
-        suicide(_owner);
-    }
-       
-    
-}
-'
-]
-
-{ #category : #'as yet unclassified' }
 FogTestingContractProvider class >> packagesDescriptions [
 	| session |
 	session := FogSession new.
@@ -205,7 +159,7 @@ FogTestingContractProvider class >> public3StatesPollContract: session [
 
 { #category : #'as yet unclassified' }
 FogTestingContractProvider class >> public3StatesPollContractSrc [
-	^ 'pragma solidity ^0.4.2;
+	^ 'pragma solidity ^0.4.8;
 
 contract Public3StatesPoll {
 
@@ -254,7 +208,7 @@ contract Public3StatesPoll {
                 votes = votes +1;
         }
     }
-    function allParticipantsHaveVoted () returns (bool) {
+    function allParticipantsHaveVoted () view returns (bool) {
 	for(uint x = 0; x < pollTable.length; x = x +1) {
             if (!pollTable[x].hasVoted) return false;
         }

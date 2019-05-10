@@ -37,8 +37,8 @@ TFogPack >> pack: aCollection withTypes: typeCollection [
 ]
 
 { #category : #pack }
-TFogPack >> packAddress: aString [ 
-	^ aString asPackingAddress 
+TFogPack >> packAddress: aString [
+	^ aString asPackingAddress
 ]
 
 { #category : #pack }
@@ -170,7 +170,7 @@ TFogPack >> unpack: aString withTypes: aCollection [
 
 { #category : #unpack }
 TFogPack >> unpackAddress: aString [ 
-	^ aString asBKNumber asBKHexa
+	^ aString read0xHexadecimal write0xHexadecimal
 ]
 
 { #category : #unpack }

@@ -29,33 +29,30 @@ FogConnection class >> on: anUrl [
 		yourself
 ]
 
-{ #category : #accessing }
-FogConnection >> admin [
-	^ FogAdmin new
-		connection: self;
-		yourself
-]
-
 { #category : #'rpc call' }
-FogConnection >> call: aETHMessageSend [
+FogConnection >> call: aFogMessage [
 	| response |
-	response := ZnEasy post: url data: (ZnEntity json: (self encode: aETHMessageSend)).
+	<doc: 'Encodes a FogMessage and send it to an GETH RPC end point'>
+	response := ZnEasy post: url data: (ZnEntity json: (self encode: aFogMessage)).
 	self processResponse: response.
 	^ self decode: response entity
 ]
 
 { #category : #converting }
 FogConnection >> decode: aString [
+	<doc: 'Decodes a message according to the JSON based GETH protocol definition'>
 	^ (NeoJSONReader on: aString readStream) next
 ]
 
 { #category : #converting }
 FogConnection >> encode: aETHMessage [
+	<doc: 'Encodes a message according to the JSON based GETH protocol definition'>
 	^ NeoJSONWriter toString: (self transferEntityFromMessage: aETHMessage)
 ]
 
 { #category : #accessing }
 FogConnection >> eth [
+	<doc: 'Get an API Access object. responsible to resolve the eth_ kind of messages (more in FogEth)'>
 	^ eth
 		ifNil: [ eth := FogEth new
 				connection: self;
@@ -69,7 +66,20 @@ FogConnection >> initialize [
 
 ]
 
-{ #category : #'rpc call' }
+{ #category : #accessing }
+FogConnection >> isTestingConnection [
+	^ false
+]
+
+{ #category : #accessing }
+FogConnection >> net [
+	<doc: 'Get an API Access object. responsible to resolve the net_ kind of messages (more in FogNet)'>
+	^ FogNet new
+		connection: self;
+		yourself
+]
+
+{ #category : #private }
 FogConnection >> nextRequestId [
 	| nextId |
 	nextId := requestId.
@@ -77,7 +87,7 @@ FogConnection >> nextRequestId [
 	^ nextId
 ]
 
-{ #category : #'rpc call' }
+{ #category : #private }
 FogConnection >> processResponse: aZnResponse [ 
 	"nothing yet"
 ]
@@ -87,12 +97,7 @@ FogConnection >> protocolVersion [
 	^ '2.0'
 ]
 
-{ #category : #reset }
-FogConnection >> reset [
-	eth := nil
-]
-
-{ #category : #'rpc call' }
+{ #category : #private }
 FogConnection >> transferEntityFromMessage: aETHMessage [
 	^ FogTransferEntity new
 		message: aETHMessage;
@@ -103,11 +108,13 @@ FogConnection >> transferEntityFromMessage: aETHMessage [
 
 { #category : #accessing }
 FogConnection >> url: anUndefinedObject [ 
+	<doc: 'Set up the URL to GETH RPC endpoint'>
 	url := anUndefinedObject
 ]
 
 { #category : #accessing }
 FogConnection >> web3 [
+	<doc: 'Get an API Access object. responsible to resolve the web3_ kind of messages (more in FogWeb3)'>
 	^ FogWeb3 new
 		connection: self;
 		yourself

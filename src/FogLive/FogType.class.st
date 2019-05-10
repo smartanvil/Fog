@@ -32,6 +32,12 @@ FogType >> mapping [
 	^ FogSolidityLayoutMapping
 ]
 
+{ #category : #marshaling }
+FogType >> pack: aString using: aFogPacker [
+	<doc: 'Subclass responsibilty. It packs (or marshal ) a content according to the type, using a packing object '>
+	self subclassResponsibility
+]
+
 { #category : #accessing }
 FogType >> signatureName [
 	^ self name
@@ -44,7 +50,8 @@ FogType >> staticSlotSize [
 
 { #category : #marshaling }
 FogType >> unpack: aString using: aFogPacker [
-	self subclassResponsibility 
+	<doc: 'Subclass responsibilty. It unpacks (or unmarshal ) a content according to the type, using a packing object '>
+	self subclassResponsibility
 ]
 
 { #category : #marshaling }

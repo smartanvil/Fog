@@ -88,13 +88,17 @@ FogContractProxyGenerationTest >> testMethodsDelegateToMethodAmountUnderstandabl
 	generated := mirror instanceMirror methods
 		select: #hasParameters
 		thenCollect: [ :mm | builder compilableMethodAmount: mm ].
-	self assert: generated isNotEmpty.
+	self
+		assert:
+			(generated isNotEmpty
+				or: [ mirror instanceMirror methods noneSatisfy: #hasParameters ]).
 	generated
 		do: [ :g | 
 			| delegates |
 			delegates := self extractDelegationsToMethod: g.
 			self assert: delegates isNotEmpty.
-			delegates do: [ :s | self assert: (FogMethodMirror canUnderstand: s) ] ]
+			delegates
+				do: [ :s | self assert: (FogMethodMirror canUnderstand: s) ] ]
 ]
 
 { #category : #tests }
@@ -103,13 +107,17 @@ FogContractProxyGenerationTest >> testMethodsDelegateToMethodUnderstandableMessa
 	generated := mirror instanceMirror methods
 		select: #hasParameters
 		thenCollect: [ :mm | builder compilableMethod: mm ].
-	self assert: generated isNotEmpty.
+	self
+		assert:
+			(generated isNotEmpty
+				or: [ mirror instanceMirror methods noneSatisfy: #hasParameters ]).
 	generated
 		do: [ :g | 
 			| delegates |
 			delegates := self extractDelegationsToMethod: g.
 			self assert: delegates isNotEmpty.
-			delegates do: [ :s | self assert: (FogMethodMirror canUnderstand: s) ] ]
+			delegates
+				do: [ :s | self assert: (FogMethodMirror canUnderstand: s) ] ]
 ]
 
 { #category : #tests }
@@ -128,8 +136,15 @@ FogContractProxyGenerationTest >> testMethodsWithAmountParametersAreGenerated [
 		thenCollect: [ :mm | 
 			{(builder compilableMethodAmount: mm).
 			mm parameters size} ].
-	self assert: generated isNotEmpty.
-	generated do: [ :g | self assertMethodSelector: (g at: 1) argumentAmountEquals: (g at: 2) + 1 ]
+	self
+		assert:
+			(generated isNotEmpty
+				or: [ mirror instanceMirror methods noneSatisfy: #hasParameters ]).
+	generated
+		do: [ :g | 
+			self
+				assertMethodSelector: (g at: 1)
+				argumentAmountEquals: (g at: 2) + 1 ]
 ]
 
 { #category : #tests }
@@ -140,8 +155,13 @@ FogContractProxyGenerationTest >> testMethodsWithNoParametersAreGenerated [
 		thenCollect: [ :mm | 
 			{(builder compilableMethod: mm).
 			mm parameters size} ].
-	self assert: generated isNotEmpty.
-	generated do: [ :g | self assertMethodSelector: (g at: 1) argumentAmountEquals: (g at: 2) ]
+	self
+		assert:
+			(generated isNotEmpty
+				or: [ mirror instanceMirror methods noneSatisfy: #hasParameters ]).
+	generated
+		do:
+			[ :g | self assertMethodSelector: (g at: 1) argumentAmountEquals: (g at: 2) ]
 ]
 
 { #category : #tests }

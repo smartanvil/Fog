@@ -33,6 +33,7 @@ FogContractInstanceMirror >> method: aString [
 
 { #category : #'as yet unclassified' }
 FogContractInstanceMirror >> methods [
+	<doc: 'Returns all the methods of this contract instance'>
 	^ methods
 ]
 
@@ -43,6 +44,7 @@ FogContractInstanceMirror >> methods: aCollection [
 
 { #category : #'as yet unclassified' }
 FogContractInstanceMirror >> properties [
+	<doc: 'Returns all the properties of a contract instance'>
 	^ properties
 ]
 
@@ -53,11 +55,13 @@ FogContractInstanceMirror >> properties: aCollection [
 
 { #category : #adding }
 FogContractInstanceMirror >> property: aName [
+	<doc: 'It returns the property mirror named as the given parameter'>
 	^ properties detect: [ :p | p name = aName ]
 ]
 
 { #category : #adding }
 FogContractInstanceMirror >> using: session property: aPropertyName on: anInstance at: aBlockTagNumberOrHash [
+	<doc: 'It returns the state of a property by name on the given state'>
 	^ (properties detect: [ :p | p name = aPropertyName ]) using: session value: anInstance  at: aBlockTagNumberOrHash
 ]
 

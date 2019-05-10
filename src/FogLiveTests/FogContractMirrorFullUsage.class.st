@@ -5,22 +5,8 @@ Class {
 }
 
 { #category : #accessing }
-FogContractMirrorFullUsage class >> reset [
-	contract := nil.
-]
-
-{ #category : #accessing }
 FogContractMirrorFullUsage >> code [
 	^ 'pragma solidity ^0.4.2;
-
-
-/*
-	This example implements all the possible types for method call, and return
-	So far there is not support for:
-		Struct,
-		Mapping
-		FixedPointType 
-*/
 
 contract FullUsage {
 
@@ -37,7 +23,7 @@ contract FullUsage {
     string str2;
     
      /* Constructor */
-    function FullUsage () { 
+   function FullUsage () public { 
         owner = msg.sender;
 	negativeInt = -1;
 	positiveInt = 255; 
@@ -48,38 +34,38 @@ contract FullUsage {
     }
 
 
-    function setString (string value) {
+    function setString ( string memory value) public {
       str = value;
     }
-    function getString () constant returns (string ret) {
+    function getString () view public returns (string memory ret)  {
       ret = str;
     }
-    function setTwoStrings( string value1, string value2 ) {
+    function setTwoStrings(string memory value1, string memory value2 ) public {
       str = value1;
       str2 = value2;
     }
-    function setTwoStringsEnumInt( string value1, EnumDefinition valEnum, int256 valInt, string value2 ) {
+    function setTwoStringsEnumInt( string memory value1, EnumDefinition valEnum, int256 valInt, string memory value2 ) public {
       str = value1;
       str2 = value2;
       enumEntry = valEnum;
       positiveInt = valInt;
     }
 
-    function getExample () constant returns (int256 val, string val2, string val4, int256 val3, EnumDefinition en) {
+    function getExample () view public returns (int256 val, string memory val2, string memory val4, int256 val3, EnumDefinition en) {
 	val = positiveInt;
 	val2 = str;
 	val4 = str;
 	val3 = negativeInt;
 	en = enumEntry; 
     }
-    function getExample2 () constant returns (string val2, int256 val, int256 val3, EnumDefinition en, string val4) {
+    function getExample2 () view public returns (string memory val2, int256 val, int256 val3, EnumDefinition en, string memory val4) {
 	val = positiveInt;
 	val2 = str;
 	val4 = str;
 	val3 = negativeInt;
 	en = enumEntry; 
     }
-    function getExample3 () constant returns (int256 val, string val2, EnumDefinition en,  string val4, int256 val3) {
+    function getExample3 () view public returns (int256 val, string memory val2, EnumDefinition en, string memory val4, int256 val3) {
 	val = positiveInt;
 	val2 = str;
 	val4 = str;
@@ -87,37 +73,37 @@ contract FullUsage {
 	en = enumEntry; 
     }
   /* Setting And getting array */
-    function setSimpleArray (int256 [] value) {
+    function setSimpleArray (int256 [] memory value) public {
           commonArray = value;
     }
  
   /* Setting And getting signed int */
-    function setNegativeInt(int256 negative) {
-      if (negative > 0) throw; 
+    function setNegativeInt(int256 negative) public {
+      assert (negative > 0); 
       negativeInt = negative;
     }
     
-    function setPositiveInt(int256 positive) {
-      if (positive < 0) throw;
+    function setPositiveInt(int256 positive) public {
+      assert (positive < 0) ;
       positiveInt = positive;
     }
     
-    function getNegativeInt() constant returns (int256 ret) {
+    function getNegativeInt() view public returns (int256 ret) {
        ret = negativeInt;
     }
 
-    function getPositiveInt() constant returns (int256 ret) {
+    function getPositiveInt() view public returns (int256 ret) {
        ret = positiveInt;
     }
 
-    function getArray () constant returns (int256 []) {
+    function getArray () view public returns (int256 [] memory) {
 	return commonArray;
     } 
  /* Setting And getting Enum  */
-    function setEnum (EnumDefinition value) {
+    function setEnum (EnumDefinition value)public  {
         enumEntry = value;
     }
-    function getEnum () constant returns (EnumDefinition value) {
+    function getEnum () view public returns (EnumDefinition value) {
         value =  enumEntry ;
     }
 
@@ -320,7 +306,7 @@ FogContractMirrorFullUsage >> testSetLong130String [
 	future := setString
 		using: session
 		applyOn: contract
-		valueWithArguments: {('AStringOf128Characters' padRightTo: 130 with: $#)}
+		valueWithArguments: {('AStringOf130Characters' padRightTo: 130 with: $#)}
 		from: self ownerAccount
 		gas: 300000
 		gasPrice: 60.
@@ -334,7 +320,7 @@ FogContractMirrorFullUsage >> testSetLong130String [
 				from: self ownerAccount
 				gas: 300000
 				gasPrice: 60)
-		equals: ('AStringOf128Characters' padRightTo: 130 with: $#)
+		equals: ('AStringOf130Characters' padRightTo: 130 with: $#)
 ]
 
 { #category : #tests }
@@ -364,11 +350,12 @@ FogContractMirrorFullUsage >> testSetLong256String [
 { #category : #tests }
 FogContractMirrorFullUsage >> testSetLong260String [
 	| future setString |
+	
 	setString := mirror method: #setString:.
 	future := setString
 		using: session
 		applyOn: contract
-		valueWithArguments: {('AStringOf256Characters' padRightTo: 260 with: $#)}
+		valueWithArguments: {('AStringOf260Characters' padRightTo: 260 with: $#)}
 		from: self ownerAccount
 		gas: 300000
 		gasPrice: 60.
@@ -382,7 +369,7 @@ FogContractMirrorFullUsage >> testSetLong260String [
 				from: self ownerAccount
 				gas: 300000
 				gasPrice: 60)
-		equals: ('AStringOf256Characters' padRightTo: 260 with: $#)
+		equals: ('AStringOf260Characters' padRightTo: 260 with: $#)
 ]
 
 { #category : #tests }
@@ -416,7 +403,7 @@ FogContractMirrorFullUsage >> testSetLong70String [
 	future := setString
 		using: session
 		applyOn: contract
-		valueWithArguments: {('AStringOf64Characters' padRightTo: 70 with: $-)}
+		valueWithArguments: {('AStringOf70Characters' padRightTo: 70 with: $-)}
 		from: self ownerAccount
 		gas: 300000
 		gasPrice: 60.
@@ -430,7 +417,7 @@ FogContractMirrorFullUsage >> testSetLong70String [
 				from: self ownerAccount
 				gas: 300000
 				gasPrice: 60)
-		equals: ('AStringOf64Characters' padRightTo: 70 with: $-)
+		equals: ('AStringOf70Characters' padRightTo: 70 with: $-)
 ]
 
 { #category : #tests }

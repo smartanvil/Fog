@@ -81,22 +81,22 @@ FogCallDefinition >> gasPrice: anObject [
 
 { #category : #accessing }
 FogCallDefinition >> hexaGas [
-	^ gas asBKHexa
+	^ gas write0xHexadecimal
 ]
 
 { #category : #accessing }
 FogCallDefinition >> hexaGasPrice [
-	^ gasPrice asBKHexa
+	^ gasPrice write0xHexadecimal
 ]
 
 { #category : #accessing }
 FogCallDefinition >> hexaNounce [
-	^ nounce asBKHexa
+	^ nounce write0xHexadecimal
 ]
 
 { #category : #accessing }
 FogCallDefinition >> hexaValue [
-	^ value asBKHexa
+	^ value write0xHexadecimal
 ]
 
 { #category : #actions }

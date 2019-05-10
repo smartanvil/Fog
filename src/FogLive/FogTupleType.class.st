@@ -22,7 +22,7 @@ FogTupleType >> name [
 
 { #category : #pack }
 FogTupleType >> pack: aCollection with: aFogPacker [
-	| staticStream dynamicStream staticSize | 
+	| staticStream dynamicStream staticSize |
 	self assert: aCollection size = self types size.
 	staticStream := '' writeStream.
 	dynamicStream := '' writeStream.
@@ -33,8 +33,7 @@ FogTupleType >> pack: aCollection with: aFogPacker [
 			type isArrayType
 				ifTrue: [ 
 					staticStream nextPutAll: (aFogPacker packUint256: staticSize + (dynamicStream position / 2)).
-					dynamicStream nextPutAll: (type pack: value using: aFogPacker) 
-				]
+					dynamicStream nextPutAll: ((type pack: value using: aFogPacker) padRightTo: 64 with: $0) ]
 				ifFalse: [ staticStream nextPutAll: ((type pack: value using: aFogPacker) padLeftTo: 64 with: $0) ] ].
 	^ staticStream contents , dynamicStream contents
 ]

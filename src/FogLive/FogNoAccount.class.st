@@ -1,5 +1,5 @@
 "
-No account objet. For avoiding nil
+No account objet. For avoiding nil on transactions of contract deployment
 "
 Class {
 	#name : #FogNoAccount,
@@ -9,7 +9,7 @@ Class {
 	#classInstVars : [
 		'singleInstance'
 	],
-	#category : 'FogLive-Domain'
+	#category : #'FogLive-Domain'
 }
 
 { #category : #'as yet unclassified' }
@@ -22,14 +22,14 @@ FogNoAccount class >> nilAccount [
 	^ singleInstance ifNil: [ singleInstance := FogNoAccount new ]
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogNoAccount >> = anObject [
 	self species = anObject species
 		ifFalse: [ ^ false ].
 	^ self valuesToCompareForEquality = anObject valuesToCompareForEquality
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogNoAccount >> hash [
 	^self valuesToCompareForEquality inject: self species hash into: [:hash :comparisonValue|
 		(hash bitXor: comparisonValue hash) hashMultiply]
@@ -44,5 +44,7 @@ FogNoAccount >> initialize [
 
 { #category : #equality }
 FogNoAccount >> isAccount [
+	<doc:
+		'The NoAccount is not an account and is not a contract'>
 	^ false
 ]

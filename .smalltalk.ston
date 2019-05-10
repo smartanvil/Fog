@@ -1,0 +1,14 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Fog',
+      #directory : 'src',
+      #platforms : [ #pharo ]
+    }
+  ],
+  #testing : {
+   #include : {
+      #packages : [ 'FogComm.*' , 'FogEVM.*' , 'FogLive.*' ]
+    }
+  }
+}

@@ -4,10 +4,7 @@ This test case just hold some magic numbers.
 Class {
 	#name : #FogArbitraryAddressesTestCase,
 	#superclass : #FogTestCase,
-	#classVars : [
-		'testingContract'
-	],
-	#category : 'FogLiveTests'
+	#category : #FogLiveTests
 }
 
 { #category : #accessing }
@@ -95,4 +92,11 @@ FogArbitraryAddressesTestCase >> ownerAccount [
 FogArbitraryAddressesTestCase >> ownerAccountAddress [
 	^ '0x81bfba8301a073a010e9fb71fab514e53d1cc3f0'"'0xb4ebf466889c4a0239379125a7d0f9c4e8bf2a14'"
 	  
+]
+
+{ #category : #'as yet unclassified' }
+FogArbitraryAddressesTestCase >> setUp [
+	super setUp.
+	TKTConfiguration profileNamed: #development.
+	TKTConfiguration profileNamed: #test
 ]

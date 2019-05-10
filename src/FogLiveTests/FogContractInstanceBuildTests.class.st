@@ -11,8 +11,8 @@ Class {
 FogContractInstanceBuildTests >> setUp [
 	super setUp.
 	self timeLimit: 3 minutes.
-	simpleStorage ifNil: [ simpleStorage := self createContract ]
-	
+	(connection isTestingConnection or: [ simpleStorage isNil ])
+		ifTrue: [ simpleStorage := self createContract ]
 ]
 
 { #category : #tests }

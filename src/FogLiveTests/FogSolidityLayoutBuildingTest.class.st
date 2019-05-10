@@ -5,11 +5,6 @@ Class {
 }
 
 { #category : #accessing }
-FogSolidityLayoutBuildingTest class >> reset [
-	contract := nil.
-]
-
-{ #category : #accessing }
 FogSolidityLayoutBuildingTest >> code [
 	^ 'pragma solidity ^0.4.2;
 

@@ -24,6 +24,7 @@ FogPackage >> addContractDescription: aFogContractDescription [
 
 { #category : #accessing }
 FogPackage >> ast [
+	<doc: 'Returns the AST of the package'>
 	^ ast
 ]
 
@@ -34,6 +35,7 @@ FogPackage >> ast: aSolRootSourceNode [
 
 { #category : #accessing }
 FogPackage >> descriptions [
+	<doc: 'It returns all the contract descriptions loaded from this package (or file)'>
 	^ descriptions
 ]
 
@@ -60,11 +62,13 @@ FogPackage >> name: aString [
 
 { #category : #accessing }
 FogPackage >> reference [
+	<doc: 'Returns a reference to point this package in a specific session.'>
 	^ FogReference new / name
 ]
 
 { #category : #accessing }
 FogPackage >> source [
+	<doc: 'It returns the source code of the package'>
 	^ source
 ]
 

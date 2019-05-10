@@ -17,6 +17,7 @@ Class {
 
 { #category : #'as yet unclassified ' }
 FogPropertyMirror >> id [
+	<doc: 'It returns the ID of the property. what means it position in the contract'> 
 	^ id
 ]
 
@@ -35,6 +36,7 @@ FogPropertyMirror >> instance: anETHContractInstance [
 
 { #category : #'as yet unclassified' }
 FogPropertyMirror >> layout [
+	<doc: 'It returns the layout of the property. Object in charge of the memory mapping'> 
 	^ layout
 ]
 
@@ -45,6 +47,7 @@ FogPropertyMirror >> layout: aLayout [
 
 { #category : #'as yet unclassified' }
 FogPropertyMirror >> name [
+	<doc: 'It returns name of the property'> 
 	^ name
 ]
 
@@ -64,6 +67,7 @@ FogPropertyMirror >> printOn: aStream [
 
 { #category : #'as yet unclassified' }
 FogPropertyMirror >> type [
+	<doc: 'It returns the type of the property'> 
 	^ type
 ]
 
@@ -74,7 +78,7 @@ FogPropertyMirror >> type: aType [
 
 { #category : #accessing }
 FogPropertyMirror >> using: aSession value: aContractAddress at: aBlockTagNumberOrHash [
-
+	<doc: 'It returns the value of this property by using a given session, a contract and a block number '>
 	^ layout
 		using: aSession
 		fetch: self

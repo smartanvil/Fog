@@ -1,3 +1,19 @@
+"
+A session works as a facade for accessing the Fog connection, but recovering nice objects, allowing some very basic queries.
+A session as well works as a facade for the same domain objects to know about their basic encoding, and it dispatches the messages through the given connection. 
+This allows a really nice point of extention, allowin programmers to change some specifities of: 
+
+	- encoding 
+	- gas calculation 
+	- gas price calculation 
+	- caching access to specific objects
+	- dispathing to other kind of connections to use other kind of blockchain clients.
+	
+Each session provides a transaction monitor which allows the usage of futures on transactional calls. 
+
+
+
+"
 Class {
 	#name : #FogSession,
 	#superclass : #Object,
@@ -12,11 +28,13 @@ Class {
 
 { #category : #accessing }
 FogSession >> applicationAccount [
+	<doc: 'It returns application account setted up in this session'>
 	^ applicationAccount 
 ]
 
 { #category : #accessing }
 FogSession >> applicationAccount: anAccount [
+	<doc: 'It allows the setup of an application account. This account would be used for covering the expenses of the transactions, as used as #from field by default'>
 	applicationAccount := anAccount
 ]
 
@@ -111,11 +129,13 @@ FogSession >> calculateGasPriceForDeploying: aContractDescription with: aConstru
 
 { #category : #'as yet unclassified' }
 FogSession >> coinBase [
+	<doc: 'It returns the coin base of the related Ethereum client.'>
 	^ connection eth coinBase
 ]
 
 { #category : #accessing }
 FogSession >> connection: aConnection [
+	<doc: 'It allows to setup the connection'>
 	connection := aConnection
 ]
 
@@ -300,6 +320,7 @@ FogSession >> fetchSlot: aSlotId onContract: aContractAddress atBlock: aBlockHas
 
 { #category : #finalization }
 FogSession >> finalize [
+	<doc: 'It finalizes a session. This method is mean to be called by the garbage collector. It finalizes the monitor service attached to the session.'>
 	super finalize.
 	monitor ifNotNil:[ monitor  kill.].
 	monitor := nil.
@@ -308,6 +329,7 @@ FogSession >> finalize [
 
 { #category : #'access db - accounts' }
 FogSession >> findAccountByHash: aString blockHash: aBlockHash [
+	<doc: 'It returns an already existing Account object or it creates one, pointing to the state at an specific block hash '>
 	| block |
 	block := self findBlockByHash: aBlockHash full: false.
 	^ self findAccountByHash: aString blockNumber: block number
@@ -315,7 +337,8 @@ FogSession >> findAccountByHash: aString blockHash: aBlockHash [
 
 { #category : #'access db - accounts' }
 FogSession >> findAccountByHash: aString blockNumber: aBlockNumber [
-	| compiledCode hashAccount  |
+	<doc: 'It returns an already existing Account object or it creates one, pointing to the state at an specific block number '>
+	| compiledCode hashAccount |
 	aString ifNil: [ ^ FogAccount nilAccount ].
 	hashAccount := aString asAddress.
 	compiledCode := self eth getContractCode: hashAccount blockNumber: aBlockNumber.
@@ -324,7 +347,8 @@ FogSession >> findAccountByHash: aString blockNumber: aBlockNumber [
 
 { #category : #'access db - accounts' }
 FogSession >> findAccountByHash: aString blockTag: aBlockTag [
-	| compiledCode hashAccount  |
+	<doc: 'It returns an already existing Account object or it creates one, pointing to the state at an specific block tag '>
+	| compiledCode hashAccount |
 	aString ifNil: [ ^ FogAccount nilAccount ].
 	hashAccount := aString asAddress.
 	compiledCode := self eth getContractCode: hashAccount blockTag: aBlockTag.
@@ -333,11 +357,13 @@ FogSession >> findAccountByHash: aString blockTag: aBlockTag [
 
 { #category : #'access db - blocks' }
 FogSession >> findBlockByHash: aBlockHash full: aBoolean [
+	<doc: 'It returns an already existing Block (fully loaded or not) object or it creates one, for the given block hash '>
 	^ self createBlockFor: (self eth getBlockByHash: aBlockHash full: aBoolean) full: aBoolean
 ]
 
 { #category : #'access db - blocks' }
 FogSession >> findBlockByHashOrNumber: aBlockId full: aBoolean [
+	<doc: 'It returns an already existing Block (fully loaded or not) object or it creates one, for the given block hash or number '>
 	(aBlockId isString or: [ aBlockId isNil ])
 		ifTrue: [ ^ self findBlockByHash: aBlockId asAddress full: aBoolean ].
 	aBlockId isNumber
@@ -347,51 +373,25 @@ FogSession >> findBlockByHashOrNumber: aBlockId full: aBoolean [
 
 { #category : #'access db - blocks' }
 FogSession >> findBlockByNumber: aBlockBumber full: aBoolean [
+	<doc: 'It returns an already existing Block (fully loaded or not) object or it creates one, for the given block number '>
 	^ self createBlockFor: (self eth getBlockByNumber: aBlockBumber full: aBoolean) full: aBoolean
 ]
 
 { #category : #'access db - blocks' }
 FogSession >> findBlockByTag: aTag full: aBoolean [
+	<doc: 'It returns an already existing Block (fully loaded or not) object or it creates one, for the given block tag '>
 	^ self createBlockFor: (self eth getBlockByTag: aTag full: aBoolean) full: aBoolean
-	
-]
-
-{ #category : #'access db - contract accounts' }
-FogSession >> findContractAccountByHash: aString blockHash: aHash [
-	| acc |
-	acc := self findAccountByHash: aString blockHash: aHash.
-	self assert: acc isContract description: ' Contract account expected '.
-	^ acc
-]
-
-{ #category : #'access db - contract accounts' }
-FogSession >> findContractAccountByHash: aString blockNumber: aBlockNumber [
-	| acc |
-	acc := self findAccountByHash: aString blockNumber: aBlockNumber.
-	self assert: acc isContract description: ' Contract account expected '.
-	^ acc
-]
-
-{ #category : #'access db - contract accounts' }
-FogSession >> findContractAccountByHash: aString blockTag: aBlockTag [
-	| acc |
-	acc := self findAccountByHash: aString blockTag: aBlockTag.
-	self assert: acc isContract description: ' Contract account expected '.
-	^ acc
 ]
 
 { #category : #'access db - contract' }
 FogSession >> findContractDescriptionForBinaryCode: aCode [
+	<doc: 'It returns an already existing ContractDescription object or it creates one, pointing to the contract bytecode at the given block number'>
 	^ self createContractDescriptionForBinary: aCode
 ]
 
 { #category : #'access db - contract' }
-FogSession >> findContractDescriptionForSourceCode: aCode [
-	^ self createContractDescriptionFromSourceCode: aCode
-]
-
-{ #category : #'access db - contract' }
 FogSession >> findContractInstanceByHash: aContractAddress blockNumber: aBlockNumber [
+	<doc: 'It returns an already existing ContractInstance object or it creates one, pointing to the contract state at the given block number'>
 	| code description |
 	code := self eth getContractCode: aContractAddress blockNumber: aBlockNumber.
 	code = '0x'
@@ -402,6 +402,7 @@ FogSession >> findContractInstanceByHash: aContractAddress blockNumber: aBlockNu
 
 { #category : #'access db - contract' }
 FogSession >> findContractInstanceByHash: aContractAddress blockTag: aBlockTag [
+	<doc: 'It returns an already existing ContractInstance object or it creates one, pointing to the contract state at the given block tag'>
 	| code description |
 	code := self eth getContractCode: aContractAddress blockTag: aBlockTag.
 	code = '0x'
@@ -411,15 +412,18 @@ FogSession >> findContractInstanceByHash: aContractAddress blockTag: aBlockTag [
 ]
 
 { #category : #'access db - external accounts' }
-FogSession >> findExternalAccountByHash: aString [ 
-	|acc|
-	acc :=  self findAccountByHash: aString blockTag: 'latest'.
-	self assert: acc isContract not description: ' External account expected '. 
+FogSession >> findExternalAccountByHash: aString [
+	<doc:
+		'It returns an already existing ExternalAccount object or it creates one, pointing to the account state at the given block number. It ensure the ExternalAccount type'>
+	| acc |
+	acc := self findAccountByHash: aString blockTag: 'latest'.
+	self assert: acc isContract not description: ' External account expected '.
 	^ acc
 ]
 
 { #category : #'access db - blocks' }
 FogSession >> findLastBlock [
+	<doc: 'It returns an already existing fully loaded Block object or it creates one, for the latest block '>
 	| latest |
 	latest := self findBlockByTag: #latest full: true.
 	latest number = 0
@@ -429,12 +433,14 @@ FogSession >> findLastBlock [
 
 { #category : #'access db - package' }
 FogSession >> findPackageNamed: aName [
-	^ self findPackageReference: aName  
+	<doc: 'It returns Package named as the given name'>
+	^ self findPackageReference: aName
 ]
 
 { #category : #'access db - package' }
 FogSession >> findPackageReference: aReference [
-	^  packages  at: aReference 
+	<doc: 'It returns Package referenced as the given reference '>
+	^ packages at: aReference
 ]
 
 { #category : #'access db - package' }
@@ -444,20 +450,20 @@ FogSession >> findReference: aReference [
 
 { #category : #'access db - transactions' }
 FogSession >> findTransactionByBlockHash: aBlockHash andIndex: aTxIndex [
-
+	<doc: 'It returns the transaction at the given index of an specific block hash'>
 	^ self createTransactionFor: (self eth getTransactionByBlockHash: aBlockHash andIndex: aTxIndex)
 ]
 
 { #category : #'access db - transactions' }
 FogSession >> findTransactionByBlockNumber: aBlockNumber andIndex: anIndex [
-	^ self
-		createTransactionFor: (self eth getTransactionByBlockNumber: aBlockNumber andIndex: anIndex)
+	<doc: 'It returns the transaction at the given index of an specific block number'>
+	^ self createTransactionFor: (self eth getTransactionByBlockNumber: aBlockNumber andIndex: anIndex)
 ]
 
 { #category : #'access db - transactions' }
 FogSession >> findTransactionByBlockTag: aBlockTag andIndex: anIndex [
-	^ self
-		createTransactionFor: (self eth getTransactionByBlockTag: aBlockTag andIndex: anIndex)
+	<doc: 'It returns the transaction at the given index of an specific block tag'>
+	^ self createTransactionFor: (self eth getTransactionByBlockTag: aBlockTag andIndex: anIndex)
 ]
 
 { #category : #'access db - transactions' }
@@ -467,17 +473,18 @@ FogSession >> findTransactionByDescription: aTransactionDescription [
 
 { #category : #'access db - transactions' }
 FogSession >> findTransactionByHash: aTransactionHash [
+	<doc: 'It returns the transaction at the transaction hash'>
 	^ self createTransactionFor: (self eth getTransactionByHash: aTransactionHash)
 ]
 
 { #category : #'low-level api - accounts' }
 FogSession >> getBalance: anAddress [
-	^ (connection eth getBalance: anAddress blockTag: #latest) asBKNumber
+	^ (connection eth getBalance: anAddress blockTag: #latest) read0xHexadecimal
 ]
 
 { #category : #'low-level api - accounts' }
 FogSession >> getBalance: anAddress block: aBlockNumberOrHash [
-	^ (connection eth getBalance: anAddress blockNumber: aBlockNumberOrHash) asBKNumber
+	^ (connection eth getBalance: anAddress blockNumber: aBlockNumberOrHash) read0xHexadecimal
 ]
 
 { #category : #'private - encoding decoding' }
@@ -505,6 +512,7 @@ FogSession >> isRegistered: aPackageName [
 
 { #category : #'access db - package' }
 FogSession >> loadPackage: aPackage with: aCode [
+	<doc: 'It loades a package object into the session, by using the given source code.'>
 	| compilation ast |
 	ast := SolidityParser parseStream: aCode readStream.
 	aPackage source: aCode.
@@ -524,21 +532,25 @@ FogSession >> loadPackage: aPackage with: aCode [
 
 { #category : #'access db - package' }
 FogSession >> loadPackageForCode: aCode named: aName [ 
+	<doc: 'It loades a new package object into the session, named as the given name, by using the given source code.'>
 	^ self loadPackage: (self createPackage: aName) with: aCode 
 ]
 
 { #category : #'access db - package' }
 FogSession >> loadPackageForFileReference: aFileReference [
+	<doc: 'It loades a new package object into the session, named as the name of a given fileReference, by using the source code in this file reference.'>
 	^ self loadPackageForCode: aFileReference readStream upToEnd named: aFileReference basename
 ]
 
 { #category : #initialization }
 FogSession >> monitor [
+	<doc: 'It returns the monitor service of the session'>
 	^ monitor
 ]
 
-{ #category : #accessing }
+{ #category : #'access db - package' }
 FogSession >> packages [
+	<doc: 'It returns all the available packages'>
 	^ packages
 ]
 

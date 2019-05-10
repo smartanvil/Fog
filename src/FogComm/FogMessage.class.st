@@ -13,14 +13,14 @@ Class {
 	#category : 'FogComm-Transfer'
 }
 
-{ #category : #equality }
+{ #category : #comparing }
 FogMessage >> = anObject [
 	self species = anObject species
 		ifFalse: [ ^ false ].
 	^ self valuesToCompareForEquality = anObject valuesToCompareForEquality
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 FogMessage >> hash [
 	^self valuesToCompareForEquality inject: self species hash into: [:hash :comparisonValue|
 		(hash bitXor: comparisonValue hash) hashMultiply]
@@ -42,6 +42,11 @@ FogMessage >> method: aString [
 	method := aString
 ]
 
+{ #category : #accessing }
+FogMessage >> module [
+	^ ('_' split: method) first asSymbol
+]
+
 { #category : #'as yet unclassified' }
 FogMessage >> parameters [
 	^ parameters
@@ -58,4 +63,9 @@ FogMessage >> printOn: aStream [
 		format:
 			{method.
 			parameters asString}) printOn: aStream
+]
+
+{ #category : #accessing }
+FogMessage >> serviceSelector [
+	^( ('_' split: method) second, ':') asSymbol
 ]

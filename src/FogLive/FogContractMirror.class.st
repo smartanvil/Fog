@@ -14,6 +14,7 @@ Class {
 
 { #category : #accessing }
 FogContractMirror >> constructor [
+	<doc: 'Returns the constructor of this contract.'>
 	^ constructor
 ]
 
@@ -31,7 +32,8 @@ FogContractMirror >> initialize [
 
 { #category : #accessing }
 FogContractMirror >> instanceMirror [
-	^ instanceMirror 
+	<doc: 'Returns the contract''s instance side mirror'>
+	^ instanceMirror
 ]
 
 { #category : #'as yet unclassified' }
@@ -43,6 +45,7 @@ FogContractMirror >> method: aString [
 
 { #category : #accessing }
 FogContractMirror >> types [
+	<doc: 'Returns the types used by the contract'>
 	^ types
 ]
 

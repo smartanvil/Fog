@@ -22,6 +22,7 @@ FogConstantMirror >> instance: bla [
 
 { #category : #accessing }
 FogConstantMirror >> using: session value: aContractBind at: aBlockTagNumberOrHash [
+	<doc: 'Polimorphic with the superclass, it only redefines this method which returns always the same value'> 
 	^ value
 ]
 

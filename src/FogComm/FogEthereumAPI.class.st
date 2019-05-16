@@ -196,6 +196,18 @@ FogEthereumAPI >> messageGetBlockTransactionCountByNumber: aBlockNumber [
 ]
 
 { #category : #'as yet unclassified' }
+FogEthereumAPI >> messageGetCode: anAddress blockHash: aBlockHash [ 
+	<doc:'Encodes a message entity for the RPC message eth_getCode'>
+	^ FogMessage new
+		method: 'eth_getCode';
+		parameters:
+			{anAddress.
+			(self hexa: aBlockHash)};
+		yourself
+	
+]
+
+{ #category : #'as yet unclassified' }
 FogEthereumAPI >> messageGetCode: anAddress blockNumber: aBlockNumber [ 
 	<doc:'Encodes a message entity for the RPC message eth_getCode'>
 	^ FogMessage new

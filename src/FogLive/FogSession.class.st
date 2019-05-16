@@ -29,7 +29,7 @@ Class {
 { #category : #accessing }
 FogSession >> applicationAccount [
 	<doc: 'It returns application account setted up in this session'>
-	^ applicationAccount 
+	^ applicationAccount ifNil: [ self error: 'Application account is not Setted up.' ]
 ]
 
 { #category : #accessing }
@@ -387,6 +387,17 @@ FogSession >> findBlockByTag: aTag full: aBoolean [
 FogSession >> findContractDescriptionForBinaryCode: aCode [
 	<doc: 'It returns an already existing ContractDescription object or it creates one, pointing to the contract bytecode at the given block number'>
 	^ self createContractDescriptionForBinary: aCode
+]
+
+{ #category : #'access db - contract' }
+FogSession >> findContractInstanceByHash: aContractAddress blockHash: aBlockHash [
+	<doc: 'It returns an already existing ContractInstance object or it creates one, pointing to the contract state at the given block number'>
+	| code description |
+	code := self eth getContractCode: aContractAddress blockHash: aBlockHash. 
+	code = '0x'
+		ifTrue: [ ^ nil ].
+	description := self findContractDescriptionForBinaryCode: code.
+	^ description at: aContractAddress
 ]
 
 { #category : #'access db - contract' }

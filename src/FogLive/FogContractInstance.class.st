@@ -33,6 +33,14 @@ FogContractInstance >> contract: aContractDescription [
 	contract := aContractDescription.
 ]
 
+{ #category : #accessing }
+FogContractInstance >> fetchSlot: aSlotId at: aBlockTagOrNumberOrHash [
+	^ session
+		fetchSlot: aSlotId
+		onContract: self
+		at: aBlockTagOrNumberOrHash
+]
+
 { #category : #testing }
 FogContractInstance >> isContract [
 	<doc:

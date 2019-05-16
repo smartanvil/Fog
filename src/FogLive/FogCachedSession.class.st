@@ -23,6 +23,13 @@ FogCachedSession >> finalize [
 ]
 
 { #category : #'access db - accounts' }
+FogCachedSession >> findAccountByHash: hashAccount blockHash: aBlockHash [
+	^ self cache
+		detectAccount: hashAccount asAddress
+		ifNoneCreate: [ super findAccountByHash: hashAccount blockHash: aBlockHash ]
+]
+
+{ #category : #'access db - accounts' }
 FogCachedSession >> findAccountByHash: hashAccount blockNumber: aBlockNumber [
 	^ self cache
 		detectAccount: hashAccount asAddress
@@ -61,6 +68,15 @@ FogCachedSession >> findBlockByTag: aTag full: aBoolean [
 FogCachedSession >> findContractDescriptionForBinaryCode: aCode [
 	^  self cache  scanContractDescriptions: [ :a | a codeMatchesWith: aCode ] ifNoneCreate: [ super findContractDescriptionForBinaryCode: aCode ]
 	
+]
+
+{ #category : #'access db - contract' }
+FogCachedSession >> findContractInstanceByHash: aContractAddress blockHash: aBlockHash [
+	^ self cache
+		detectContractBind: aContractAddress asAddress
+		ifNoneCreate: [ super
+				findContractInstanceByHash: aContractAddress
+				blockHash: aBlockHash ]
 ]
 
 { #category : #'access db - contract' }

@@ -118,6 +118,16 @@ FogEth >> getCompilers [
 ]
 
 { #category : #'as yet unclassified' }
+FogEth >> getContractCode: aContractAddress blockHash: aBlockHash [
+	| code |
+	code := self
+		send: (api messageGetCode: aContractAddress blockHash: aBlockHash).
+	^ code = '0x'
+		ifTrue: [ nil ]
+		ifFalse: [ code ]
+]
+
+{ #category : #'as yet unclassified' }
 FogEth >> getContractCode: aContractAddress blockNumber: aBlockNumber [
 	| code |
 	code := self send: (api messageGetCode: aContractAddress blockNumber: aBlockNumber).

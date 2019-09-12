@@ -10,7 +10,7 @@ BaselineOfFogLive >> baseline: spec [
 	spec
 		for: #common
 		do: [ spec blessing: #baseline.
-			spec baseline: 'TaskItShell' with: [ spec repository: 'github://sbragagnolo/taskit:dev-1.1' ].
+			spec baseline: 'TaskItShell' with: [ spec repository: 'github://sbragagnolo/taskit' ].
 			spec baseline: 'Keccak' with: [ spec repository: 'github://smartanvil/Keccak:v0.1.1/src' ].
 			spec baseline: 'FogComm' with: [ spec repository: 'github://smartanvil/Fog/src' ].
 			spec baseline: 'SmaccSolidity' with: [ spec repository: 'github://smartanvil/SmaCC-Solidity' ].
